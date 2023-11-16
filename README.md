@@ -1,29 +1,4 @@
 
-## Criterios y Requisitos del Proyecto Final
-
-### El proyecto final que el equipo deberá presentar tiene como requisito lo siguiente:
-
-Usar como base el framework visto en clase aplicando los conceptos de MVC (simplePHPMvcOop)
-El proyecto debe se un negocio de los siguientes categorías: Productos Inventariables, Servicio con capacidad limintada instalada o Productos Digitales.
-El proyecto debe contener un adecuado esquema de seguridad.
-El proyecto debe contener un catalogo de productos o servicios de acuerdo a todos los criterios vistos en clase.
-El proyecto debe manejar una carretilla de compra con todos los criterios visto en clase
-El proyecto debe SIMULAR una pasarela de pago y gardar la transacción realizada. (Puede usar el sandbox de PayPal)
-El proyecto debe mostrar un histórico de las transacciones realizadas.
-El proyecto debe estar públicado en un repositorio en linea (github) accesible al público. Se deberá entregar el docente todos el proyecto incluyendo un script de la estructura de la base de datos (export o dump) y un archivo txt con los nombres y no de cuentas de los integrantes del equipo de desarrollo.
-
-El proyecto de se presentará en un periodo no mas de 15 minutos en un video subido a Youtube o Vimeo y de alcance público. Todos los miembros del grupod deben participar. Mostrar 10 minutos cada uno de los elementos de la evaluación y 5 minutos el funcionamiento del proyecto.
-
-Los Criterios de Evaluación son:
-
-- Uso de MVC (20pts)
-- Esquema de Seguridad (20 pts)
-- Catalogo y Carrito de Compra (20 pts)
-- Pasarela de Pagos (20 pts)
-- Histórico de Transacciones por usuario (10 pts)
-- Presentación del Proyecto  en vivo (10 pts)
-
-###
 
 ## SkullCandy - Aplicación de Negocio Electrónico
 
@@ -81,5 +56,34 @@ SkullCandy es una aplicación web de negocio electrónico diseñada para ofrecer
 ## Licencia
 
 Este proyecto está bajo la licencia MIT. Para más detalles, revisa el archivo `LICENSE`.
+
+
+
+
+## Criterios y Requisitos del Proyecto Final
+
+### El proyecto final que el equipo deberá presentar tiene como requisito lo siguiente:
+
+Usar como base el framework visto en clase aplicando los conceptos de MVC (simplePHPMvcOop)
+El proyecto debe se un negocio de los siguientes categorías: Productos Inventariables, Servicio con capacidad limintada instalada o Productos Digitales.
+El proyecto debe contener un adecuado esquema de seguridad.
+El proyecto debe contener un catalogo de productos o servicios de acuerdo a todos los criterios vistos en clase.
+El proyecto debe manejar una carretilla de compra con todos los criterios visto en clase
+El proyecto debe SIMULAR una pasarela de pago y gardar la transacción realizada. (Puede usar el sandbox de PayPal)
+El proyecto debe mostrar un histórico de las transacciones realizadas.
+El proyecto debe estar públicado en un repositorio en linea (github) accesible al público. Se deberá entregar el docente todos el proyecto incluyendo un script de la estructura de la base de datos (export o dump) y un archivo txt con los nombres y no de cuentas de los integrantes del equipo de desarrollo.
+
+El proyecto de se presentará en un periodo no mas de 15 minutos en un video subido a Youtube o Vimeo y de alcance público. Todos los miembros del grupod deben participar. Mostrar 10 minutos cada uno de los elementos de la evaluación y 5 minutos el funcionamiento del proyecto.
+
+Los Criterios de Evaluación son:
+
+- Uso de MVC (20pts)
+- Esquema de Seguridad (20 pts)
+- Catalogo y Carrito de Compra (20 pts)
+- Pasarela de Pagos (20 pts)
+- Histórico de Transacciones por usuario (10 pts)
+- Presentación del Proyecto  en vivo (10 pts)
+
+###
 
 ---
