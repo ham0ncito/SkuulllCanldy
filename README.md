@@ -17,7 +17,7 @@ SkullCandy es una aplicación web de negocio electrónico diseñada para ofrecer
 - **Tailwind CSS:** Utilizado para el diseño y estilos responsivos.
 - **JavaScript:** Para mejorar la experiencia del usuario con interacciones dinámicas.
 - **PHP:** Para la lógica del servidor y la manipulación de datos.
-
+- **Node Js:** Para librerias
 ## Instalación y Uso
 
 1. **Clona el Repositorio:**
