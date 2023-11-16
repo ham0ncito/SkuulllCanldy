@@ -37,14 +37,22 @@ SkullCandy es una aplicación web de negocio electrónico diseñada para ofrecer
 3. **Configuración de Tailwind CSS:**
    - Instala las dependencias de Tailwind CSS.
    ```bash
-   npm install tailwindcss
+   $ npm install tailwindcss
    ```
    - Compila los estilos de Tailwind CSS.
    ```bash
-   npx tailwindcss build styles.css -o output.css
+   $ npx tailwindcss build styles.css -o output.css
    ```
-
-4. **Ejecución de la Aplicación:**
+   -Instala Splide JS
+  ```bash
+   $ npm install @splidejs/splide
+ ```
+-Instala Normalize
+  ```bash
+   $ npm install normalize.css
+ ```
+   
+5. **Ejecución de la Aplicación:**
    - Inicia el servidor web y accede a la aplicación desde tu navegador.
 
 ## Contribución
