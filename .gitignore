@@ -1,7 +1,7 @@
 parameters.env
 .DS_Store
 .phpdoc
-data
+vendor
 .vscode
 .htaccess
 docs/manual_tecnico
