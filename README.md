@@ -3,6 +3,7 @@
 ## SkullCandy - Aplicación de Negocio Electrónico
 
 SkullCandy es una aplicación web de negocio electrónico diseñada para ofrecer una experiencia de compra eficiente y atractiva para los usuarios. Esta aplicación utiliza Tailwind CSS para estilos rápidos y personalizables, JavaScript para funcionalidades interactivas y PHP para el manejo del lado del servidor.
+<image src="[/images/picture.jp](https://th.bing.com/th/id/OIP.YYv6MX12zKM4FBeuArUgsAHaCT?rs=1&pid=ImgDetMain)" alt="Descripción de la imagen">
 
 ## Características Principales
 
