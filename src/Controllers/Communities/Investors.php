@@ -1,0 +1,18 @@
+<?php
+namespace Controllers\Communities;
+use Controllers\PublicController;
+use Views\Renderer;
+use Utilities\Site;
+use Utilities\Validators;
+use Utilities\Context;
+use Utilities\Paging;
+class Investors extends PublicController {
+ 
+
+    public function run(): void
+    {
+        $viewData['name'] = 'Investors';
+        $viewData['BASE_DIR'] = "SkuulllCanldy";
+        Renderer::render("links\aboutus", $viewData);
+    }
+}

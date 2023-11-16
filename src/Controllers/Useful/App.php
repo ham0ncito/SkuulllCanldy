@@ -1,0 +1,19 @@
+<?php
+namespace Controllers\Useful;
+use Controllers\PublicController;
+use Views\Renderer;
+use Utilities\Site;
+use Utilities\Validators;
+use Utilities\Context;
+use Utilities\Paging;
+class App extends PublicController {
+ 
+    public function run(): void
+    {
+        $viewData['name'] = 'App';
+        $viewData['BASE_DIR'] = "SkuulllCanldy";
+        Renderer::render("links\aboutus", $viewData);
+    }
+}
+
+  
