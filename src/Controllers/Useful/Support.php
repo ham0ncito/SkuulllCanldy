@@ -4,6 +4,8 @@ namespace Controllers\Useful;
 
 use Controllers\PublicController;
 use Views\Renderer;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 use Utilities\Site;
 use Utilities\Validators;
 use Utilities\Context;
@@ -90,40 +92,40 @@ class Support extends PublicController
 </div>
 </div>'
 
-],
+                ],
 
-]
-];
-$viewData['BASE_DIR'] = "SkuulllCanldy";
-$this->verifyData();
-Renderer::render("components\post", $viewData);
+            ]
+        ];
+        $viewData['BASE_DIR'] = "SkuulllCanldy";
+        $this->verifyData();
 
-}
-public static function verifyData()
-{
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        Renderer::render("components\post", $viewData);
+    }
+    public static function verifyData()
+    {
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-$name = isset($_POST['name']) ? $_POST['name'] : '';
-$email = isset($_POST['email']) ? $_POST['email'] : '';
-$message = isset($_POST['message']) ? $_POST['message'] : '';
+            $name = isset($_POST['name']) ? $_POST['name'] : '';
+            $email = isset($_POST['email']) ? $_POST['email'] : '';
+            $message = isset($_POST['message']) ? $_POST['message'] : '';
 
 
-if (empty($name) || empty($email) || empty($message)) {
+            if (empty($name) || empty($email) || empty($message)) {
 
-echo '<script>
+                echo '<script>
 alert("Please fill in all fields.");
 </script>';
-} else {
+            } else {
 
-echo '<script>
+                echo '<script>
 ';
-echo 'alert("Thank you for contacting us!\n\nName: '.$name.
-'\nEmail: '.$email.
-'\nMessage: '.$message.
-'");';
-echo '
+                echo 'alert("Thank you for contacting us!\n\nName: ' . $name .
+                    '\nEmail: ' . $email .
+                    '\nMessage: ' . $message .
+                    '");';
+                echo '
 </script>';
-}
-}
-}
+            }
+        }
+    }
 }
