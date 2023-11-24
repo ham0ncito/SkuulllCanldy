@@ -7,11 +7,15 @@
 
 <link rel="stylesheet" href="/{{BASE_DIR}}/node_modules/@splidejs/splide/dist/css/splide.min.css">
 <link rel="stylesheet" href="/{{BASE_DIR}}/node_modules/normalize.css/normalize.css">
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
   <link rel="icon" href="/{{BASE_DIR}}/public/imgs/favicon/favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  
   <link rel="shortcut icon" href="/{{BASE_DIR}}/public/imgs/favicon/favicon.ico" type="image/x-icon">
   <script src="https://kit.fontawesome.com/{{FONT_AWESOME_KIT}}.js" crossorigin="anonymous"></script>
+     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="anime.min.js"></script>
   {{foreach SiteLinks}}
     <link rel="stylesheet" href="/{{~BASE_DIR}}/{{this}}" />
   {{endfor SiteLinks}}
@@ -45,10 +49,10 @@
       </nav>
     </div>
   </header>
-  <main class="bg-gray-700 flex-grow">
+  <main class="bg-gradient-to-t from-blue-200 to-indigo-900 flex-grow">
     <div class="container mx-auto py-10">
       <div class="flex items-center justify-around">
-        <div class="w-full rounded-lg p-8 bg-gray-900 text-white">
+        <div class="w-full rounded-lg p-8 text-white">
           {{{page_content}}}
         </div>
       </div>
@@ -62,7 +66,7 @@
           <div class="w-12 h-12 md:w-16 md:h-16 bg-gray-200 rounded-full">
             <img src="/{{BASE_DIR}}/public/imgs/logo/logoSkuul.png" alt="Logo" class="w-full h-full object-cover" />
           </div>
-          <span class="font-semibold align-center justify-center text-4xl hover:text-pink-500 pl-4 hover:text-6xl">Skul2Canldy</span>
+          <a href="index.php?page=Index" class="font-semibold align-center justify-center text-4xl hover:text-pink-500 pl-4 hover:text-6xl">Skul2Canldy</a>
         </div>
         <div class="space-around center flex space-around items-center">
           <span class="font-semibold text-lg text-2xl p-4 hover:text-blue-500">Social</span>
@@ -77,7 +81,7 @@
                     <img src="/{{BASE_DIR}}/public/imgs/social/twitter.png" alt="X" class="w-4 h-4 md:w-6 md:h-6 object-cover" />
                 </a>
               </div>
-              <div class="w-8 h-8 md:w-12 md:h-12 bg-gray-200 rounded-full flex items-center justify-center">
+              <div class="w-8 h-8 md:w-12 md:h-12 bg-gray-200 hover:bg-blue-500 rounded-full flex items-center justify-center">
                 <a href="https://www.instagram.com/" class="w-6 h-6">
                     <img src="/{{BASE_DIR}}/public/imgs/social/instagram.png" alt="Instagram" class="w-4 h-4 md:w-6 md:h-6 object-cover"/>
                 </a>
@@ -118,6 +122,7 @@
   
   </footer>
   
+
   
   {{foreach EndScripts}}
     <script src="/{{~BASE_DIR}}/{{this}}"></script>
@@ -132,6 +137,8 @@
       }
     }
   </script>
-  
+  <script>
+    import Highway from '@dogstudio/highway/src/highway';
+  </script>
 </body>
 </html>

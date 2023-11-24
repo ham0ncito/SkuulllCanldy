@@ -1,4 +1,4 @@
-<section class="bg-gray-700 text-white min-h-screen flex flex-col md:flex-row md:p-4 md:items-center">
+<section class="bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg  text-white min-h-screen flex flex-col md:flex-row md:p-4 md:items-center">
   
   <div class="hidden md:block overflow-hidden relative w-full md:w-1/2 h-1/2 pt-5 pl-5">
     <img src="/{{BASE_DIR}}/public/imgs/security/login.jpeg" alt="Login" id="login_image" class="object-cover w-full h-full rounded-full p-2" />
