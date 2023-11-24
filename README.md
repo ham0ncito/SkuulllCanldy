@@ -20,6 +20,9 @@ SkullCandy es una aplicación web de negocio electrónico diseñada para ofrecer
 - **Tailwind CSS:** Utilizado para el diseño y estilos responsivos.
 - **JavaScript:** Para mejorar la experiencia del usuario con interacciones dinámicas.
 - **PHP:** Para la lógica del servidor y la manipulación de datos.
+- **Animista CSS** Para Animaciones
+- **Splide Js** Para Carrousel
+- **Alpine Js** Para Animaciones
 - **Node Js:** Para librerias
 
 <image src="https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/161211091/original/9452a5b3d1e3200e95e20b979a665e2636fa8298/do-any-work-using-html-css-javascript-php-mysql.jpg" alt="php">
@@ -55,7 +58,7 @@ SkullCandy es una aplicación web de negocio electrónico diseñada para ofrecer
   ```bash
   $ npm install animejs --save
  ```
-
+Instala AlpineJs
    
 5. **Ejecución de la Aplicación:**
    - Inicia el servidor web y accede a la aplicación desde tu navegador.
