@@ -9,7 +9,7 @@ SkullCandy es una aplicación web de negocio electrónico diseñada para ofrecer
 
 ## Características Principales
 
-- **Catálogo de Productos:** Visualiza una amplia gama de productos disponibles para compra, con detalles y opciones de filtrado.
+- **Catálogo de Musica:** Visualiza una amplia gama de música y videos con detalles y opciones de filtrado.
 - **Carrito de Compras:** Agrega productos al carrito, modifica cantidades y finaliza la compra de manera segura.
 - **Procesamiento de Pedidos:** Gestiona y procesa pedidos de manera eficiente y sencilla.
 - **Autenticación de Usuarios:** Regístrate, inicia sesión y gestiona tu perfil de usuario.
@@ -51,6 +51,11 @@ SkullCandy es una aplicación web de negocio electrónico diseñada para ofrecer
   ```bash
    $ npm install normalize.css
  ```
+-Instala AnimeJs
+  ```bash
+  $ npm install animejs --save
+ ```
+
    
 5. **Ejecución de la Aplicación:**
    - Inicia el servidor web y accede a la aplicación desde tu navegador.
