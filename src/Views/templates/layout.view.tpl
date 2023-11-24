@@ -42,6 +42,7 @@
         </button>
         <ul id="mobileMenu" class="hidden md:flex items-center space-x-6">
           <li><a href="index.php?page={{PUBLIC_DEFAULT_CONTROLLER}}" class="text-white hover:text-pink-500">Home</a></li>
+          <li><a href="index.php?page={{PUBLIC_DEFAULT_CONTROLLER}}#store" class="text-white hover:text-pink-500">Store</a></li>
           {{foreach PUBLIC_NAVIGATION}}
             <li><a href="{{nav_url}}" class="text-white hover:text-pink-500">{{nav_label}}</a></li>
           {{endfor PUBLIC_NAVIGATION}}
@@ -92,7 +93,7 @@
       <div class="col-span-3 grid grid-cols-1 md:grid-cols-3 gap-8">
      
         <div class="p-4">
-          <span class="font-semibold text-3xl hover:text-pink-500 ">Company</span>
+          <a href="index.php?page=Company_Company"  class="font-semibold text-3xl hover:text-pink-500 ">Company</a>
           <ul class="space-y-2 p-4">
             <li class="hover:text-blue-500"><a href="index.php?page=Company_AboutUs">About Us</a></li>
             <li class="hover:text-blue-500"><a href="index.php?page=Company_Jobs">Jobs</a></li>
@@ -100,7 +101,7 @@
           </ul>
         </div>
         <div class="p-4">
-          <span class="font-semibold text-3xl hover:text-pink-500">Communities</span>
+          <a href="index.php?page=Communities_Communities" class="font-semibold text-3xl hover:text-pink-500">Communities</a>
           <ul class="space-y-2 p-4">
             <li class="hover:text-blue-500"><a href="index.php?page=Communities_Artists" >For Artists</a></li>
             <li class="hover:text-blue-500"><a href="index.php?page=Communities_Developers">Developers</a></li>
@@ -109,7 +110,7 @@
           </ul>
         </div>
         <div class="p-4">
-          <span class="font-semibold text-3xl hover:text-pink-500">Useful Links</span>
+          <a href="index.php?page=Useful_Useful" class="font-semibold text-3xl hover:text-pink-500">Useful Links</a>
           <ul class="space-y-2 p-4">
             <li class="hover:text-blue-500"><a href="index.php?page=Useful_Support">Support</a></li>
             <li class="hover:text-blue-500"><a href="index.php?page=Useful_WebPlayer">Web Player</a></li>

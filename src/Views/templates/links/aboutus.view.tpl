@@ -1,4 +1,4 @@
-<section class="rounded-md h-screen p-10">
+<section class="rounded-md p-10">
   <h2 class="text-white text-6xl text-center mb-4">{{name}}</h2>
   <div class=" items-center justify-center">
     <div class="bg-gray-100 rounded-lg shadow-lg overflow-hidden p-10 mx-auto lg:flex">

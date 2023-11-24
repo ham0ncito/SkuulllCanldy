@@ -40,6 +40,7 @@
         </button>
         <ul id="mobileMenu" class="hidden md:flex items-center space-x-6">
           <li><a href="index.php?page={{PUBLIC_DEFAULT_CONTROLLER}}" class="text-white hover:text-pink-500">Home</a></li>
+     
           {{foreach PUBLIC_NAVIGATION}}
             <li><a href="{{nav_url}}" class="text-white hover:text-pink-500">{{nav_label}}</a></li>
           {{endfor PUBLIC_NAVIGATION}}

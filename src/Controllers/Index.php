@@ -136,6 +136,34 @@ class Index extends PublicController
                 'imageUrl'=> 'https://th.bing.com/th/id/OIP.Q81yghKi4zMC6QysLdsQ5QHaHa?rs=1&pid=ImgDetMain',
                 'id'=>'15'
             ],
+            [
+                'artist' => 'MADONNA',
+                'product' => 'MDNA WORLD SHANGHAI TICKET',
+                'price'=> '$99.99',
+                'imageUrl'=> 'https://th.bing.com/th/id/R.7b50b88909672799f9ba8fc02fe488a1?rik=87%2f588deV6LVEQ&riu=http%3a%2f%2f3.bp.blogspot.com%2f-3Dc1EnaBhjw%2fT24TKa0O_tI%2fAAAAAAAADyc%2fk8H5zt1iUxA%2fs576%2fMDNA%252520%252528101%252529.jpg&ehk=qpT2p7M9D5XUceg%2bTY3y3X5MghilgWYH15K1NOuJqzY%3d&risl=&pid=ImgRaw&r=0',
+                'id'=>'15'
+            ],
+            [
+                'artist' => 'MADONNA',
+                'product' => 'MDNA WORLD BERLIN TICKET',
+                'price'=> '$99.99',
+                'imageUrl'=> 'https://th.bing.com/th/id/R.7b50b88909672799f9ba8fc02fe488a1?rik=87%2f588deV6LVEQ&riu=http%3a%2f%2f3.bp.blogspot.com%2f-3Dc1EnaBhjw%2fT24TKa0O_tI%2fAAAAAAAADyc%2fk8H5zt1iUxA%2fs576%2fMDNA%252520%252528101%252529.jpg&ehk=qpT2p7M9D5XUceg%2bTY3y3X5MghilgWYH15K1NOuJqzY%3d&risl=&pid=ImgRaw&r=0',
+                'id'=>'15'
+            ],
+            [
+                'artist' => 'MADONNA',
+                'product' => 'MDNA WORLD PARIS TICKET',
+                'price'=> '$99.99',
+                'imageUrl'=> 'https://th.bing.com/th/id/R.7b50b88909672799f9ba8fc02fe488a1?rik=87%2f588deV6LVEQ&riu=http%3a%2f%2f3.bp.blogspot.com%2f-3Dc1EnaBhjw%2fT24TKa0O_tI%2fAAAAAAAADyc%2fk8H5zt1iUxA%2fs576%2fMDNA%252520%252528101%252529.jpg&ehk=qpT2p7M9D5XUceg%2bTY3y3X5MghilgWYH15K1NOuJqzY%3d&risl=&pid=ImgRaw&r=0',
+                'id'=>'15'
+            ],
+            [
+                'artist' => 'MADONNA',
+                'product' => 'MDNA WORLD NYC TICKET',
+                'price'=> '$99.99',
+                'imageUrl'=> 'https://th.bing.com/th/id/R.7b50b88909672799f9ba8fc02fe488a1?rik=87%2f588deV6LVEQ&riu=http%3a%2f%2f3.bp.blogspot.com%2f-3Dc1EnaBhjw%2fT24TKa0O_tI%2fAAAAAAAADyc%2fk8H5zt1iUxA%2fs576%2fMDNA%252520%252528101%252529.jpg&ehk=qpT2p7M9D5XUceg%2bTY3y3X5MghilgWYH15K1NOuJqzY%3d&risl=&pid=ImgRaw&r=0',
+                'id'=>'15'
+            ],
             
         
         ];

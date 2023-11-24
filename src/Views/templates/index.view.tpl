@@ -67,7 +67,7 @@
       <div class="flex items-center justify-center h-full text-center text-white">
         <div class="pt-60">
           <h2 class="text-4xl sm:text-5xl md:text-7xl font-bold mb-5">More than music</h2>
-          <p class="text-lg sm:text-xl md:text-2xl">Explore an infinitew world of countless posibilities</p>
+          <p class="text-lg sm:text-xl md:text-2xl">Explore an infinite world of countless posibilities</p>
         </div>
       </div>
       
@@ -223,7 +223,17 @@
 
     {{endfor products}}
   </div>
+
   </section>
+  <div class="bg-cover bg-center min-h-screen object-cover" style="background-image: url('/{{BASE_DIR}}/public/imgs/hero/hero4.jpg')">
+  <div class="flex items-center justify-center h-full text-center text-white">
+    <div class="pt-60">
+      <h2 class="text-4xl sm:text-5xl md:text-7xl font-bold mb-5">Coming</h2>
+      <p class="text-lg sm:text-xl md:text-2xl">Concerts Nearby You</p>
+    </div>
+  </div>
+  
+</div>
 
 
 
