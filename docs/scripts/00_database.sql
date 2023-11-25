@@ -1,1 +1,1 @@
-CREATE SCHEMA `ecommerce` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE SCHEMA `skull2canldydb` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;

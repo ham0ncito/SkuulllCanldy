@@ -141,5 +141,28 @@
   <script>
     import Highway from '@dogstudio/highway/src/highway';
   </script>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyATwKVjzXVNNNFdbgrBAzLVTM6eB-FWUkw",
+      authDomain: "skulllcandl.firebaseapp.com",
+      projectId: "skulllcandl",
+      storageBucket: "skulllcandl.appspot.com",
+      messagingSenderId: "814076910954",
+      appId: "1:814076910954:web:4716cabe516c677353d913",
+      measurementId: "G-NGMVYML38B"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
 </body>
 </html>

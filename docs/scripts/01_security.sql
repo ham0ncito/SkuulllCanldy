@@ -1,6 +1,6 @@
 CREATE TABLE
     `usuario` (
-        `usercod` bigint(10) NOT NULL AUTO_INCREMENT,
+        `usercod` varchar(450) NOT NULL,
         `useremail` varchar(80) DEFAULT NULL,
         `username` varchar(80) DEFAULT NULL,
         `userpswd` varchar(128) DEFAULT NULL,
@@ -31,7 +31,7 @@ CREATE TABLE
 
 CREATE TABLE
     `roles_usuarios` (
-        `usercod` bigint(10) NOT NULL,
+        `usercod` varchar(450) NOT NULL,
         `rolescod` varchar(128) NOT NULL,
         `roleuserest` char(3) DEFAULT NULL,
         `roleuserfch` datetime DEFAULT NULL,

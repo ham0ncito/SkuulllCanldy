@@ -1,22 +1,22 @@
-<section class="bg-gray-700 text-white min-h-screen md:flex flex-col md:flex-row-reverse items-center">
+<section class="bg-white bg-opacity-20 backdrop-filter rounded-lg backdrop-blur-lg text-white min-h-screen md:flex flex-col md:flex-row-reverse items-center">
 
   <div class="w-full md:w-1/2 p-8 flex flex-col items-center justify-center md:justify-start">
     <div class="w-48 h-48 md:w-64 md:h-64 rounded-full bg-white p-4 flex flex-col items-center">
       <img src="/{{BASE_DIR}}/public/imgs/logo/logoSkuul.png" alt="Logo" class="w-full h-full object-cover rounded-full border-4 border-gray-300">
     </div>
 
-    <form class="max-w-md mx-auto rounded px-8 pt-6 pb-8 mb-4">
-      <h1 class="text-2xl text-blue-500 text-center md:text-left mb-4 p-4">Create your account</h1>
+    <form class="max-w-md mx-auto rounded px-8 pt-6 pb-8 mb-4" action="index.php?page=Sec_Register" method="POST">
+      <h1 class="text-4xl text-blue-500 text-center md:text-left mb-4 p-4">Create your account</h1>
       <div class="mb-4">
         <label class="block text-white text-sm font-bold mb-2" for="txtEmail">Email</label>
-        <input class="w-full rounded border px-3 py-2 focus:outline-none focus:border-blue-500" type="email" id="txtEmail" name="txtEmail" value="{{txtEmail}}" />
+        <input class="w-full text-black rounded border px-3 py-2 focus:outline-none focus:border-blue-500" type="email" id="txtEmail" name="txtEmail" value="{{txtEmail}}" />
         {{if errorEmail}}
           <div class="text-red-500">{{errorEmail}}</div>
         {{endif errorEmail}}
       </div>
       <div class="mb-6">
         <label class="block text-white text-sm font-bold mb-2" for="txtPswd">Password</label>
-        <input class="w-full rounded border px-3 py-2 focus:outline-none focus:border-blue-500" type="password" id="txtPswd" name="txtPswd" value="{{txtPswd}}" />
+        <input class="w-full text-black rounded border px-3 py-2 focus:outline-none focus:border-blue-500" type="password" id="txtPswd" name="txtPswd" value="{{txtPswd}}" />
         {{if errorPswd}}
           <div class="text-red-500">{{errorPswd}}</div>
         {{endif errorPswd}}

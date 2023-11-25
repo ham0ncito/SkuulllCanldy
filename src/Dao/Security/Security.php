@@ -1,6 +1,6 @@
 <?php
 namespace Dao\Security;
-
+Use Utilities\User as User; 
 if (version_compare(phpversion(), '7.4.0', '<')) {
         define('PASSWORD_ALGORITHM', 1);  //BCRYPT
 } else {
@@ -57,27 +57,26 @@ class Security extends \Dao\Table
         }
 
         $newUser = self::_usuarioStruct();
-        //Tratamiento de la Contraseña
         $hashedPassword = self::_hashPassword($password);
 
-        unset($newUser["usercod"]);
         unset($newUser["userfching"]);
         unset($newUser["userpswdchg"]);
 
         $newUser["useremail"] = $email;
-        $newUser["username"] = "John Doe";
+        $newUser["usercod"] = User::generateUserid();
+        $newUser["username"] = User::generateUsername();
         $newUser["userpswd"] = $hashedPassword;
         $newUser["userpswdest"] = Estados::ACTIVO;
         $newUser["userpswdexp"] = date('Y-m-d', time() + 7776000);  //(3*30*24*60*60) (m d h mi s)
         $newUser["userest"] = Estados::ACTIVO;
         $newUser["useractcod"] = hash("sha256", $email.time());
-        $newUser["usertipo"] = UsuarioTipo::PUBLICO;
+        $newUser["usertipo"] = UsuarioTipo::CLIENTE;
 
-        $sqlIns = "INSERT INTO `usuario` (`useremail`, `username`, `userpswd`,
+        $sqlIns = "INSERT INTO `usuario` (`usercod`,`useremail`, `username`, `userpswd`,
             `userfching`, `userpswdest`, `userpswdexp`, `userest`, `useractcod`,
             `userpswdchg`, `usertipo`)
             VALUES
-            ( :useremail, :username, :userpswd,
+            ( :usercod, :useremail, :username, :userpswd,
             now(), :userpswdest, :userpswdexp, :userest, :useractcod,
             now(), :usertipo);";
 

@@ -4,6 +4,11 @@
       "id": "Menu_SignIn",
       "nav_url": "index.php?page=Sec_Login",
       "nav_label":"<i class=\"fas fa-sign-in-alt\"></i>&nbsp;Log in"
+    },
+    {
+      "id": "Menu_SignUp",
+      "nav_url": "index.php?page=Sec_Register",
+      "nav_label":"<i class=\"fas fa-sign-in-alt\"></i>&nbsp;Create your Account"
     }
   ],
   "private": [
@@ -11,11 +16,6 @@
       "id":"Menu_PaymentCheckout",
       "nav_url": "index.php?page=Checkout_Checkout",
       "nav_label": "Shopping Cart"
-    },
-    {
-      "id": "Menu_SignUp",
-      "nav_url": "index.php?page=Sec_Register",
-      "nav_label":"<i class=\"fas fa-sign-in-alt\"></i>&nbsp;Log Out"
     }
   ]
 }

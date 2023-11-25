@@ -1,4 +1,4 @@
-<section class="bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg  text-white min-h-screen flex flex-col md:flex-row md:p-4 md:items-center">
+<section class="bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg  text-blue-900 min-h-screen flex flex-col md:flex-row md:p-4 md:items-center">
   
   <div class="hidden md:block overflow-hidden relative w-full md:w-1/2 h-1/2 pt-5 pl-5">
     <img src="/{{BASE_DIR}}/public/imgs/security/login.jpeg" alt="Login" id="login_image" class="object-cover w-full h-full rounded-full p-2" />
@@ -18,14 +18,14 @@
       <form class="grid grid-cols-1 gap-y-6 p-8" method="post" action="index.php?page=sec_login{{if redirto}}&redirto={{redirto}}{{endif redirto}}">
         <div>
           <label for="txtEmail" class="block mb-1">Email</label>
-          <input class="w-full px-3 py-2 rounded border focus:outline-none focus:border-blue-500" type="email" id="txtEmail" name="txtEmail" value="{{txtEmail}}" />
+          <input class="w-full text-black px-3 py-2 rounded border focus:outline-none focus:border-blue-500" type="email" id="txtEmail" name="txtEmail" value="{{txtEmail}}" />
           {{if errorEmail}}
             <div class="text-red-500">{{errorEmail}}</div>
           {{endif errorEmail}}
         </div>
         <div>
           <label for="txtPswd" class="block mb-1">Password</label>
-          <input class="w-full px-3 py-2 rounded border focus:outline-none focus:border-blue-500" type="password" id="txtPswd" name="txtPswd" value="{{txtPswd}}" />
+          <input class="w-full text-black px-3 py-2 rounded border focus:outline-none focus:border-blue-500" type="password" id="txtPswd" name="txtPswd" value="{{txtPswd}}" />
           {{if errorPswd}}
             <div class="text-red-500">{{errorPswd}}</div>
           {{endif errorPswd}}

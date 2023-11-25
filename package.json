@@ -3,6 +3,7 @@
     "@dogstudio/highway": "^2.2.1",
     "@splidejs/splide": "^4.1.4",
     "animejs": "^3.2.1",
+    "firebase": "^10.6.0",
     "normalize.css": "^8.0.1"
   }
 }
