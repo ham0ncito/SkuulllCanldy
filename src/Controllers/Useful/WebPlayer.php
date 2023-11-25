@@ -12,7 +12,7 @@ class WebPlayer extends PublicController {
     {
         $viewData['name'] = 'WebPlayer';
         $viewData['BASE_DIR'] = "SkuulllCanldy";
-        Renderer::render("links\aboutus", $viewData);
+        Renderer::render("components\webplayer", $viewData);
     }
 }
 
