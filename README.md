@@ -5,7 +5,7 @@
 SkullCandy es una aplicación web de negocio electrónico diseñada para ofrecer una experiencia de compra eficiente y atractiva para los usuarios. Esta aplicación utiliza Tailwind CSS para estilos rápidos y personalizables, JavaScript para funcionalidades interactivas y PHP para el manejo del lado del servidor.
 
 
-<image src="[https://routenote.com/blog/wp-content/uploads/2021/05/Stores.png](https://firebasestorage.googleapis.com/v0/b/skulllcandl.appspot.com/o/Src%2FlogoSkuul.png?alt=media&token=608e37b0-c8c2-4f2d-a524-46555e9dbfa7)" alt="Descripción de la imagen">
+<image src="https://firebasestorage.googleapis.com/v0/b/skulllcandl.appspot.com/o/Src%2FlogoSkuul.png?alt=media&token=608e37b0-c8c2-4f2d-a524-46555e9dbfa7" alt="Descripción de la imagen">
 
 ## Características Principales
 
