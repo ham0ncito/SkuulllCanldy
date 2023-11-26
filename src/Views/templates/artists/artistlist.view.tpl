@@ -29,7 +29,7 @@
 
 			<div class="flex flex-col mx-auto pb-10">
 				<p class="text-gray-300 mb-2 h-auto w-10">
-					<span class="font-bold">ID: </span>{{id_artist}}
+					<span class="font-bold overflow-hidden overflow-ellipsis">ID: </span>{{id_artist}}
 				</p>
 				
 				<p class="text-gray-300 mb-2"><span class="font-bold">Date of Birth:</span> {{date_of_birth_artist}}</p>

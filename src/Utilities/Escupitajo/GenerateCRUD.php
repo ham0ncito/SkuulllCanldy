@@ -39,14 +39,19 @@ class GenerateCRUD extends Table
     public static function ShowRoutes($tableName)
     {
         $urls = self::getRoutes($tableName);
-        echo '<script>alert("Revisa las rutas creadas más abajo");</script>';
-        echo '<div class="bg-gray-100 p-4 rounded-md shadow-md">';
-        echo '<h2 class="text-xl font-bold mb-2">Rutas creadas:</h2>';
+        $string = '';
+        $count = 1;
+    
         foreach ($urls as $url) {
-            echo '<p class="mb-2">' . $url . '</p>';
+            $string .= "#" . $count . ': ' . $url . " ";
+            $count++;
         }
-        echo '</div>';
+    
+        $escapedString = htmlspecialchars($string);
+    
+        echo '<script>alert("Review each created new: ' . $escapedString . '");</script>';
     }
+    
     public static function tableExists($tableName)
     {
         $tableName = self::GetName($tableName);
@@ -641,7 +646,25 @@ class GenerateCRUD extends Table
 
     private static function generateListHeader($fields)
     {
-        $string = '<section><h2 class="text-2xl font-bold mb-4"> LISTADO DE ' . strtoupper($fields) . '</h2>' . "\n" . '<div class="overflow-x-auto">' . "\n" . '<table class="min-w-full bg-white border border-gray-300">' . "\n" . '<thead>' . "\n" . '<tr>';
+        $string ='<div class="flex items-center justify-between mb-4 mx-4">
+        <div class="relative w-full flex items-center">
+            <input type="text" id="searchbar" name="searchbar" placeholder="Name or ID" class="w-2/3 px-4 py-2 pl-10 pr-8 border border-gray-300 rounded-md">
+            <div class="absolute inset-y-0 left-0 flex items-center pl-3">
+                <svg class="h-6 w-5 text-gray-400 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-5.2-5.2m2.8 5.2a9 9 0 11-12.727-12.727 9 9 0 1112.727 12.727z" />
+                </svg>
+            </div>
+            <div class="absolute inset-y-0 right-0 flex items-center pr-3">
+                <button id="searchbutton" name="searchbutton" class="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700 mr-2">
+                    Search
+                </button>
+                <a href="index.php?page='.ucfirst($fields).'s_'.ucfirst($fields).'s&mode=INS" class="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700">
+                    Insert
+                </a>
+            </div>
+        </div>
+    </div>';
+        $string .= '<section><h2 class="text-2xl font-bold mb-4 mx-4"> ' . strtoupper($fields) . '</h2>' . "\n" . '<div class="overflow-x-auto">' . "\n" . '<table class="min-w-full bg-white border border-gray-300">' . "\n" . '<thead>' . "\n" . '<tr>';
         return $string;
     }
     public static function GenerateDAO($fields)

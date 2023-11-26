@@ -8,7 +8,8 @@
         </button>
     </div>
     <div class=" md:text-left mx-4 my-4">
-        <h2 class="text-white text-4xl">Explore</h2>
+        <h2 class="text-white text-6xl py-10">Explore</h2>
+        <h3 class="text-white text-4xl">Genre</h3>
         <div class="pt-10 pb-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {{foreach genre}}
         <div class="max-w-sm rounded-full overflow-hidden shadow-lg relative">
@@ -22,5 +23,20 @@
           
         {{endfor genre}}
         </div>
+        <h3 class="text-white text-4xl">Artist</h3>
+        <div class="pt-10 pb-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {{foreach artist}}
+        <div class="max-w-sm rounded-full overflow-hidden shadow-lg relative">
+            <a href=""></a>
+            <img class="w-full h-40 object-cover" src="{{image_artist}}" alt="Descripción de la imagen">
+            <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300 bg-black bg-opacity-50">
+              <p class="text-white text-center text-lg">{{name_artist}}</p>
+            </div>
+          </div>
+          
+          
+        {{endfor artist}}
+        </div>
     </div>
+
 </div>
