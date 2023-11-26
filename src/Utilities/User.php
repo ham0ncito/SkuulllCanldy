@@ -17,13 +17,22 @@ class User{
             'Koala', 'Leopard', 'Owl', 'Panther', 'Rabbit',
             'Shark', 'Turtle', 'Wolf', 'Zebra', 'Giraffe'
         );
-        
-        $currentHour = date('Hi');
+        $colors = array(
+            'Red', 'Green', 'Blue', 'Yellow', 'Magenta',
+            'Cyan', 'Maroon', 'Olive', 'Navy', 'Teal',
+            'Purple', 'Aqua', 'Brown', 'Orange', 'Gray',
+            'Silver', 'Gold', 'Pink', 'Lime', 'Indigo'
+        );
+        $signs = array('Vs', '@', '#', '$', 'Z', 'M', 'zP', 'Op');
         $randomAdjective = $adjectives[array_rand($adjectives)];
         $randomName = $names[array_rand($names)];
-        
-        $username = $randomAdjective . $randomName . $currentHour;
-
+        $randomColor = $colors[array_rand($colors)];
+        $currentHour = date('His');
+        $randomSign = $signs[array_rand($signs)];
+        $randomNumber = rand(1, 6);
+        $hashed = hash('sha256', $randomAdjective.$randomName.$randomNumber);
+        $truncatedHash = substr($hashed, rand(1,10), $randomNumber);
+        $username = $randomColor. $randomAdjective. $randomName.$currentHour.$randomSign.$truncatedHash;
         return $username;
      
 

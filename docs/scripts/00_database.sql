@@ -1,1 +1,2 @@
+-- Active: 1698162320673@@127.0.0.1@3306@test
 CREATE SCHEMA `skull2canldydb` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
