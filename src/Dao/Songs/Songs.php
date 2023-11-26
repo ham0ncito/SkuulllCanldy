@@ -2,7 +2,8 @@
 namespace Dao\Songs; 
 use Dao\Table; 
 class Songs extends Table{
-      private $id_song;
+    
+  private $id_song;
   private $title_song;
   private $duration;
   private $id_genre;
@@ -13,7 +14,11 @@ class Songs extends Table{
 
  
   public static function getSong(){
-	 $sqlstr= "SELECT * FROM song";
+     
+	$sqlstr = "SELECT song.*, album.*, artist.* 
+           FROM song 
+           INNER JOIN album ON song.album_id = album.id_album 
+           INNER JOIN artist ON album.id_artist = artist.id_artist";
         $params = [];
         $registros = self::obtenerRegistros($sqlstr, $params);
         return $registros;

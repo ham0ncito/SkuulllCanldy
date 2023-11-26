@@ -1,11 +1,31 @@
+<div class="flex items-center justify-between mb-4 mx-4">
+    <div class="relative w-full flex items-center">
+        <input type="text" id="searchbar" name="searchbar" placeholder="Name or ID" class="w-2/3 px-4 py-2 pl-10 pr-8 border border-gray-300 rounded-md">
+        <div class="absolute inset-y-0 left-0 flex items-center pl-3">
+            <svg class="h-6 w-5 text-gray-400 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-5.2-5.2m2.8 5.2a9 9 0 11-12.727-12.727 9 9 0 1112.727 12.727z" />
+            </svg>
+        </div>
+        <div class="absolute inset-y-0 right-0 flex items-center pr-3">
+            <button id="searchbutton" name="searchbutton" class="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700 mr-2">
+                Search
+            </button>
+			<a href="index.php?page=Albums_Albums&mode=INS" class="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700">
+                Insert
+            </a>
+        </div>
+    </div>
+</div>
+
 <section class="container mx-auto px-4">
     <h2 class="text-2xl font-bold mb-4">ALBUM</h2>
-    <div class="grid grid-cols-3 gap-6">
-        <!-- Loop para mostrar cada tarjeta de álbum -->
+    <div class="grid grid-cols-4 gap-6">
         {{foreach album}}
-        <div class="bg-white rounded-lg overflow-hidden shadow-md relative">
+        <div class="bg-white rounded-lg w-100 overflow-hidden shadow-md relative">
             <img src="{{image_album}}" alt="{{title_album}}" class="w-full h-48 object-cover">
             <div class="p-4">
+                
+                <a href="index.php?page=Artists_Artists&mode=DSP&id_album={{id_artist}}" class="text-3xl font-semibold mb-2">{{name_artist}}</a>
                 <h3 class="text-lg font-semibold mb-2">{{title_album}}</h3>
                 <p class="text-gray-600 mb-2">{{release_date_album}}</p>
                 <p class="text-gray-700 font-bold">{{number_of_songs_album}} songs</p>

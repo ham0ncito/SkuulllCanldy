@@ -2,7 +2,8 @@
 namespace Dao\Albums; 
 use Dao\Table; 
 class Albums extends Table{
-      private $id_album;
+    
+  private $id_album;
   private $title_album;
   private $image_album;
   private $release_date_album;
@@ -13,11 +14,18 @@ class Albums extends Table{
 
  
   public static function getAlbum(){
-	 $sqlstr= "SELECT * FROM album";
+        $sqlstr = "SELECT 
+        album.*, 
+        artist.*    
+   FROM album 
+   INNER JOIN artist ON album.id_artist = artist.id_artist ";
+
+
         $params = [];
         $registros = self::obtenerRegistros($sqlstr, $params);
         return $registros;
-	}
+    }
+    
 
   public static function insertAlbum($id_album, $title_album, $image_album, $release_date_album, $number_of_songs_album, $id_artist, $status_album, $id_genre){
 	
