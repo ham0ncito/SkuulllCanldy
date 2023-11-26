@@ -1,40 +1,43 @@
-<div class="flex items-center justify-between mb-4 mx-4">
-        <div class="relative w-full flex items-center">
-            <input type="text" id="searchbar" name="searchbar" placeholder="Name or ID" class="w-2/3 px-4 py-2 pl-10 pr-8 border border-gray-300 rounded-md">
-            <div class="absolute inset-y-0 left-0 flex items-center pl-3">
-                <svg class="h-6 w-5 text-gray-400 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-5.2-5.2m2.8 5.2a9 9 0 11-12.727-12.727 9 9 0 1112.727 12.727z" />
-                </svg>
+<section class="flex flex-wrap justify-start">
+    {{foreach song}}
+    <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4">
+        <div class="bg-white rounded-md shadow-md">
+            <h3 class="text-lg font-semibold p-4">{{title_song}}</h3>
+            <div class="relative">
+                <img src="{{song_cover}}" alt="{{title_song}}" class="w-full h-48 object-cover">
+                <div x-data="{ isPlaying: false, audio: null }" class="absolute inset-0 flex items-center justify-center">
+                    <audio x-ref="audio" x-bind:src="link_song" preload="metadata"></audio>
+                    <button @click="isPlaying = !isPlaying; var audio = $refs.audio; if (isPlaying) { audio.play(); } else { audio.pause(); }" class="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none">
+                        {{isPlaying ? 'Pause' : 'Play'}}
+                    </button>
+                </div>
             </div>
-            <div class="absolute inset-y-0 right-0 flex items-center pr-3">
-                <button id="searchbutton" name="searchbutton" class="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700 mr-2">
-                    Search
-                </button>
-                <a href="index.php?page=Songs_Songs&mode=INS" class="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700">
-                    Insert
-                </a>
+            <div class="p-4">
+                <p class="text-gray-600 mb-2">Duration: {{duration}}</p>
+                <p>ID Song: {{id_song}}</p>
+                <p>ID Genre: {{id_genre}}</p>
+                <p>Album ID: {{album_id}}</p>
+                <p>Status: {{status_song}}</p>
+                <div class="mt-2">
+                    
+                    <a href="{{link_song}}" @click="var audio = $refs.audio; audio.paused ? audio.play() : audio.pause();" class="text-blue-500 hover:text-blue-700 mr-2">Play/Pause</a>
+                    <a href="index.php?page=Songs_Songs&mode=DSP&id_song={{id_song}}" class="text-blue-500 hover:text-blue-700 mr-2">Details</a>
+                    <a href="index.php?page=Songs_Songs&mode=UPD&id_song={{id_song}}" class="text-green-500 hover:text-green-700 mr-2">Edit</a>
+                    <a href="index.php?page=Songs_Songs&mode=DEL&id_song={{id_song}}" class="text-red-500 hover:text-red-700">Delete</a>
+                </div>
             </div>
         </div>
-    </div><section><h2 class="text-2xl font-bold mb-4 mx-4"> SONG</h2>
-<div class="overflow-x-auto">
-<table class="min-w-full bg-white border border-gray-300">
-<thead>
-<tr>
-	<th class="py-2 px-4 border-b">ID_SONG</th>
-	<th class="py-2 px-4 border-b">TITLE_SONG</th>
-	<th class="py-2 px-4 border-b">DURATION</th>
-	<th class="py-2 px-4 border-b">ID_GENRE</th>
-	<th class="py-2 px-4 border-b">SONG_COVER</th>
-	<th class="py-2 px-4 border-b">ALBUM_ID</th>
-	<th class="py-2 px-4 border-b">STATUS_SONG</th>
-	<th class="py-2 px-4 border-b">LINK_SONG</th><th><a href="index.php?page=Songs_Songs&mode=INS">Nuevo</a></th>
-	</tr>
-</thead><tbody>{{foreach song}}<tr><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Songs_Songs&mode=DSP&id_song={{id_song}} ">{{id_song}}</a></td><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Songs_Songs&mode=DSP&id_song={{id_song}} ">{{title_song}}</a></td><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Songs_Songs&mode=DSP&id_song={{id_song}} ">{{duration}}</a></td><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Songs_Songs&mode=DSP&id_song={{id_song}} ">{{id_genre}}</a></td><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Songs_Songs&mode=DSP&id_song={{id_song}} ">{{song_cover}}</a></td><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Songs_Songs&mode=DSP&id_song={{id_song}} ">{{album_id}}</a></td><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Songs_Songs&mode=DSP&id_song={{id_song}} ">{{status_song}}</a></td><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Songs_Songs&mode=DSP&id_song={{id_song}} ">{{link_song}}</a></td>
-            <td class"p-2 text-center">
-                <a class="text-green-500 hover:text-green-700" href="index.php?page=Songs_Songs&mode=UPD&id_song={{id_song}}" >Edit</a> 
-                <a class="text-red-500 hover:text-red-700" href="index.php?page=Songs_Songs&mode=DEL&id_song={{id_song}}" >Delete</a>
-            </td>
-	</tr>
- {{endfor song}}</tbody>
-</table>
-</div> </section>
+    </div>
+    {{endfor song}}
+</section>
+<script>
+    function playPauseAudio(playerId) {
+        var audio = document.getElementById(playerId);
+
+        if (audio.paused) {
+            audio.play(); // Reproduce la canción si está pausada
+        } else {
+            audio.pause(); // Pausa la canción si está reproduciéndose
+        }
+    }
+</script>
