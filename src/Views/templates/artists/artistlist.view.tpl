@@ -1,4 +1,4 @@
-<div class="flex items-center justify-between mb-4">
+<div class="flex items-center justify-between mb-4 mx-4">
     <div class="relative w-full flex items-center">
         <input type="text" id="searchbar" name="searchbar" placeholder="Name or ID" class="w-2/3 px-4 py-2 pl-10 pr-8 border border-gray-300 rounded-md">
         <div class="absolute inset-y-0 left-0 flex items-center pl-3">
@@ -20,7 +20,7 @@
 
 
 
-<section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 pb-10">
+<section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 pb-10 mx-4">
     {{foreach artist}}
     <div class="relative bg-gray-900 border border-gray-300 rounded p-4 overflow-hidden">
         <a href="index.php?page=Artists_Artists&mode=DSP&id_artist={{id_artist}}" class="flex flex-col items-center h-full">
