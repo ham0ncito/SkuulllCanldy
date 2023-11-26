@@ -1,4 +1,4 @@
-<div class="flex items-center justify-between mb-4">
+<div class="flex items-center justify-between mb-4 mx-4">
         <div class="relative w-full flex items-center">
             <input type="text" id="searchbar" name="searchbar" placeholder="Name or ID" class="w-2/3 px-4 py-2 pl-10 pr-8 border border-gray-300 rounded-md">
             <div class="absolute inset-y-0 left-0 flex items-center pl-3">
@@ -10,12 +10,12 @@
                 <button id="searchbutton" name="searchbutton" class="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700 mr-2">
                     Search
                 </button>
-                <a href="index.php?page=roles_usuarioss_roles_usuarioss&mode=INS" class="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700">
+                <a href="index.php?page=Roles_usuarioss_Roles_usuarioss&mode=INS" class="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700">
                     Insert
                 </a>
             </div>
         </div>
-    </div><section><h2 class="text-2xl font-bold mb-4"> LISTADO DE ROLES_USUARIOS</h2>
+    </div><section><h2 class="text-2xl font-bold mb-4 mx-4"> ROLES_USUARIOS</h2>
 <div class="overflow-x-auto">
 <table class="min-w-full bg-white border border-gray-300">
 <thead>

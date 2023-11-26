@@ -38,65 +38,106 @@ class Dashboard extends PublicController{
                 'url'=> 'index.php?page=Favoritess_Favorites',
             ],
             [
-                'title' => 'Albums',
-                'imgUrl' => 'https://th.bing.com/th/id/R.4788de54844027461b94c17be654c1c3?rik=A%2bMXixtecmLdtA&riu=http%3a%2f%2fhiphop-n-more.com%2fwp-content%2fuploads%2f2013%2f06%2fyeezus-new-cover.jpg&ehk=8wXzlaWGoVLeCzFh3Be6bzZ%2fE4Sjxo5EB3VmtxrzRhU%3d&risl=&pid=ImgRaw&r=0',
-                'url'=> 'index.php?page=Albums_Album',
+                'title' => 'Funciones',
+                'imgUrl' => 'https://th.bing.com/th/id/R.6444126c4ebe6fda70d9a95fffde9a98?rik=rRV001xtzYoMOw&pid=ImgRaw&r=0',
+                'url'=> 'index.php?page=Funcioness_Funciones',
             ],
             [
-                'title' => 'Artist',
+                'title' => 'Funciones_Roles',
                 'imgUrl' => 'https://th.bing.com/th/id/R.c132e12cb53f255033a7849da694259d?rik=4hkkFDi3ljpnFg&pid=ImgRaw&r=0',
-                'url'=> 'index.php?page=Artist_Artist',
+                'url'=> 'index.php?page=Funcionesroless_Funcionesroles',
             ],
             [
-                'title' => 'Albums',
-                'imgUrl' => 'https://th.bing.com/th/id/R.4788de54844027461b94c17be654c1c3?rik=A%2bMXixtecmLdtA&riu=http%3a%2f%2fhiphop-n-more.com%2fwp-content%2fuploads%2f2013%2f06%2fyeezus-new-cover.jpg&ehk=8wXzlaWGoVLeCzFh3Be6bzZ%2fE4Sjxo5EB3VmtxrzRhU%3d&risl=&pid=ImgRaw&r=0',
-                'url'=> 'index.php?page=Albums_Album',
+                'title' => 'Genre',
+                'imgUrl' => 'https://th.bing.com/th/id/R.eb2c966775fbe1031ae640e3db2ded16?rik=fAT%2b9zqufbO4gQ&pid=ImgRaw&r=0',
+                'url'=> 'index.php?page=Genres_Genre',
             ],
             [
-                'title' => 'Artist',
+                'title' => 'Highlights',
                 'imgUrl' => 'https://th.bing.com/th/id/R.c132e12cb53f255033a7849da694259d?rik=4hkkFDi3ljpnFg&pid=ImgRaw&r=0',
-                'url'=> 'index.php?page=Artist_Artist',
+                'url'=> 'index.php?page=Highligthss_Highligths',
             ],
             [
-                'title' => 'Albums',
+                'title' => 'Highlights Playlist ',
                 'imgUrl' => 'https://th.bing.com/th/id/R.4788de54844027461b94c17be654c1c3?rik=A%2bMXixtecmLdtA&riu=http%3a%2f%2fhiphop-n-more.com%2fwp-content%2fuploads%2f2013%2f06%2fyeezus-new-cover.jpg&ehk=8wXzlaWGoVLeCzFh3Be6bzZ%2fE4Sjxo5EB3VmtxrzRhU%3d&risl=&pid=ImgRaw&r=0',
-                'url'=> 'index.php?page=Albums_Album',
+                'url'=> 'index.php?page=Highligthsplaylists_Highligthsplaylist',
             ],
             [
-                'title' => 'Artist',
+                'title' => 'Log',
                 'imgUrl' => 'https://th.bing.com/th/id/R.c132e12cb53f255033a7849da694259d?rik=4hkkFDi3ljpnFg&pid=ImgRaw&r=0',
-                'url'=> 'index.php?page=Artist_Artist',
+                'url'=> 'index.php?page=Logs_Log',
             ],
             [
-                'title' => 'Albums',
+                'title' => 'Logs Non Users',
                 'imgUrl' => 'https://th.bing.com/th/id/R.4788de54844027461b94c17be654c1c3?rik=A%2bMXixtecmLdtA&riu=http%3a%2f%2fhiphop-n-more.com%2fwp-content%2fuploads%2f2013%2f06%2fyeezus-new-cover.jpg&ehk=8wXzlaWGoVLeCzFh3Be6bzZ%2fE4Sjxo5EB3VmtxrzRhU%3d&risl=&pid=ImgRaw&r=0',
-                'url'=> 'index.php?page=Albums_Album',
+                'url'=> 'index.php?page=Lognonusers_Lognonuser',
             ],
             [
-                'title' => 'Artist',
+                'title' => 'Oferts',
                 'imgUrl' => 'https://th.bing.com/th/id/R.c132e12cb53f255033a7849da694259d?rik=4hkkFDi3ljpnFg&pid=ImgRaw&r=0',
-                'url'=> 'index.php?page=Artist_Artist',
+                'url'=> 'index.php?page=Offers_Offer',
             ],
             [
-                'title' => 'Albums',
+                'title' => 'Oferts Subscription',
                 'imgUrl' => 'https://th.bing.com/th/id/R.4788de54844027461b94c17be654c1c3?rik=A%2bMXixtecmLdtA&riu=http%3a%2f%2fhiphop-n-more.com%2fwp-content%2fuploads%2f2013%2f06%2fyeezus-new-cover.jpg&ehk=8wXzlaWGoVLeCzFh3Be6bzZ%2fE4Sjxo5EB3VmtxrzRhU%3d&risl=&pid=ImgRaw&r=0',
-                'url'=> 'index.php?page=Albums_Album',
+                'url'=> 'index.php?page=Offersubscriptions_Offersubscription',
             ],
             [
-                'title' => 'Artist',
+                'title' => 'Playlists',
                 'imgUrl' => 'https://th.bing.com/th/id/R.c132e12cb53f255033a7849da694259d?rik=4hkkFDi3ljpnFg&pid=ImgRaw&r=0',
-                'url'=> 'index.php?page=Artist_Artist',
+                'url'=> 'index.php?page=Playlists_Playlist',
             ],
             [
-                'title' => 'Albums',
+                'title' => 'Playlists Songs',
                 'imgUrl' => 'https://th.bing.com/th/id/R.4788de54844027461b94c17be654c1c3?rik=A%2bMXixtecmLdtA&riu=http%3a%2f%2fhiphop-n-more.com%2fwp-content%2fuploads%2f2013%2f06%2fyeezus-new-cover.jpg&ehk=8wXzlaWGoVLeCzFh3Be6bzZ%2fE4Sjxo5EB3VmtxrzRhU%3d&risl=&pid=ImgRaw&r=0',
-                'url'=> 'index.php?page=Albums_Album',
+                'url'=> 'index.php?page=Playlistsongss_Playlistsongss',
             ],
             [
-                'title' => 'Artist',
+                'title' => 'Popularity',
                 'imgUrl' => 'https://th.bing.com/th/id/R.c132e12cb53f255033a7849da694259d?rik=4hkkFDi3ljpnFg&pid=ImgRaw&r=0',
-                'url'=> 'index.php?page=Artist_Artist',
-            ],];
+                'url'=> 'index.php?page=Popularitys_Popularity',
+            ],
+            [
+                'title' => 'Products',
+                'imgUrl' => 'https://th.bing.com/th/id/R.c132e12cb53f255033a7849da694259d?rik=4hkkFDi3ljpnFg&pid=ImgRaw&r=0',
+                'url'=> 'index.php?page=Productss_Products',
+            ],
+            [
+                'title' => 'Roles',
+                'imgUrl' => 'https://th.bing.com/th/id/R.4788de54844027461b94c17be654c1c3?rik=A%2bMXixtecmLdtA&riu=http%3a%2f%2fhiphop-n-more.com%2fwp-content%2fuploads%2f2013%2f06%2fyeezus-new-cover.jpg&ehk=8wXzlaWGoVLeCzFh3Be6bzZ%2fE4Sjxo5EB3VmtxrzRhU%3d&risl=&pid=ImgRaw&r=0',
+                'url'=> 'index.php?page=Roless_Roles',
+            ],
+            [
+                'title' => 'Songs',
+                'imgUrl' => 'https://th.bing.com/th/id/R.c132e12cb53f255033a7849da694259d?rik=4hkkFDi3ljpnFg&pid=ImgRaw&r=0',
+                'url'=> 'index.php?page=Songs_Song',
+            ],
+            [
+                'title' => 'Song Authors',
+                'imgUrl' => 'https://th.bing.com/th/id/R.c132e12cb53f255033a7849da694259d?rik=4hkkFDi3ljpnFg&pid=ImgRaw&r=0',
+                'url'=> 'index.php?page=Songauthorss_Songauthors',
+            ],
+            [
+                'title' => 'Subscriptionuser',
+                'imgUrl' => 'https://th.bing.com/th/id/R.4788de54844027461b94c17be654c1c3?rik=A%2bMXixtecmLdtA&riu=http%3a%2f%2fhiphop-n-more.com%2fwp-content%2fuploads%2f2013%2f06%2fyeezus-new-cover.jpg&ehk=8wXzlaWGoVLeCzFh3Be6bzZ%2fE4Sjxo5EB3VmtxrzRhU%3d&risl=&pid=ImgRaw&r=0',
+                'url'=> 'index.php?page=Subscriptionusers_Subscriptionuser',
+            ],
+            [
+                'title' => 'Usuario',
+                'imgUrl' => 'https://th.bing.com/th/id/R.c132e12cb53f255033a7849da694259d?rik=4hkkFDi3ljpnFg&pid=ImgRaw&r=0',
+                'url'=> 'index.php?page=Usuarios_Usuario',
+            ],
+            [
+                'title' => 'Video',
+                'imgUrl' => 'https://th.bing.com/th/id/R.c132e12cb53f255033a7849da694259d?rik=4hkkFDi3ljpnFg&pid=ImgRaw&r=0',
+                'url'=> 'index.php?page=Videos_Video',
+            ],
+            [
+                'title' => 'Roles_usuarios',
+                'imgUrl' => 'https://th.bing.com/th/id/R.4788de54844027461b94c17be654c1c3?rik=A%2bMXixtecmLdtA&riu=http%3a%2f%2fhiphop-n-more.com%2fwp-content%2fuploads%2f2013%2f06%2fyeezus-new-cover.jpg&ehk=8wXzlaWGoVLeCzFh3Be6bzZ%2fE4Sjxo5EB3VmtxrzRhU%3d&risl=&pid=ImgRaw&r=0',
+                'url'=> 'index.php?page=Rolesusuarioss_Rolesusuarios',
+            ],
+           ];
         \Views\Renderer::render("admin/dashboard", $viewData);
     }
 }
