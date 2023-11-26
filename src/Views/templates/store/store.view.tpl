@@ -29,11 +29,19 @@
                         <div class="h-20">
                         </div>
                     </div>
+                    
                     <div class="absolute bottom-0 left-0 right-0 bg-white p-4">
                         <div class="mt-4 flex justify-between items-center">
-                            <button class="px-4 py-2 bg-gray-800 hover:bg-pink-700 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700">
-                                Add to Carrito
-                            </button>
+                            <form method="post" action="agregar_a_carrito.php">
+                                <input type="hidden" name="productId" value="{{productId}}">
+                                <input type="hidden" name="productName" value="{{productName}}">
+                                <input type="hidden" name="productDescription" value="{{productDescription}}">
+                                <input type="hidden" name="productPrice" value="{{productPrice}}">
+                                <input type="hidden" name="productQuantity" value=1>
+                                <button type="submit" name="addToCart" class="px-4 py-2 bg-gray-800 hover:bg-pink-700 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700">
+                                    Add to Carrito
+                                </button>
+                            </form>
                             <a href="#" class="text-green-500 hover:text-green-700">See more</a>
                         </div>
                     </div>
@@ -56,9 +64,16 @@
                             <p class="text-gray-700 font-bold">${{subscription_price}}</p>
                         </div>
                         <div class="mt-4 flex justify-between items-center">
-                            <button class="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700">
-                                Add to Carrito
-                            </button>
+                            <form method="post" action="agregar_a_carrito.php">
+                                <input type="hidden" name="productId" value="{{id_subscription}}">
+                                <input type="hidden" name="productName" value="{{subscription_description}}">
+                                <input type="hidden" name="productDescription" value="{{subscription_duration}}">
+                                <input type="hidden" name="productPrice" value="{{subscription_price}}">
+                                <input type="hidden" name="productQuantity" value=1>
+                                <button type="submit" name="addToCart" class="px-4 py-2 bg-gray-800 hover:bg-pink-700 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700">
+                                    Add to Carrito
+                                </button>
+                            </form>
                             <a href="#" class="text-green-500 hover:text-green-700 flex items-center">
                                 See more
                                 <svg class="h-5 w-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
