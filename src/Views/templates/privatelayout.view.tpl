@@ -65,44 +65,74 @@
       </div>
         {{endwith login}}
       </header>
-      <div class="container mx-0">
-        <div class="mt-16 mb-16">
+      <div class="container">
+        <div class="mt-16 mb-16 mx-4">
           {{{page_content}}}
            
         </div>
-    <div class="h-32"><div>
-        <div class="fixed bottom-0 w-full bg-gray-900 shadow-lg">
-            <div class="flex items-center justify-around p-4 md:p-6">
-                <!-- Left Image -->
-                <div class="flex-shrink-0">
-                    <img src="https://th.bing.com/th/id/R.77f33c84914c89354cdaeae9f39c1a53?rik=cG8w25JQbovzWg&riu=http%3a%2f%2fwww.tat.mn%2fresource%2fimage%2f2017%2f01%2f02%2foqx966ay7xeoj1rz%2fthe-weeknd-starboy.jpg&ehk=zf7iX5wMszA9rEX%2bMyzDvUc%2fM6jL81z2dKwR%2feXbem8%3d&risl=&pid=ImgRaw&r=0" alt="Image" class="w-16 md:w-20 h-full m-1 my-2 object-cover">
-                </div>
-    
-                <!-- Title and Subtitle in Center -->
-                <div class="flex-1 pl-4 lg:pl-10">
-                    <h2 class="text-lg md:text-3xl text-pink-500 font-semibold">The Weeknd</h2>
-                    <p class="text-md md:text-2xl text-blue-600 mb-1 md:mb-2">Starboy</p>
-                </div>
-    
-                <!-- Buttons in Center -->
-                <div class="hidden md:flex space-x-4 justify-around items-center">
-                    <button class="bg-blue-500 hover:bg-blue-600 text-white px-3 md:px-4 py-1 md:py-2 rounded-lg">Play</button>
-                    <button class="bg-green-500 hover:bg-green-600 text-white px-3 md:px-4 py-1 md:py-2 rounded-lg">Pause</button>
-                    <button class="bg-yellow-500 hover:bg-yellow-600 text-white px-3 md:px-4 py-1 md:py-2 rounded-lg">Pause</button>
-                    <button class="bg-red-500 hover:bg-red-600 text-white px-3 md:px-4 py-1 md:py-2 rounded-lg">Button 4</button>
-                    <button class="bg-purple-500 hover:bg-purple-600 text-white px-3 md:px-4 py-1 md:py-2 rounded-lg">Button 5</button>
-                </div>
-    
-                <!-- Volume and Heart Icons on the Right -->
-                <div class="flex-shrink-0 ml-4 hidden md:flex justify-around md:mr-20 items-center">
-                    <svg class="w-6 h-6 text-gray-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Heart Icon -->
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
-                    </svg>
-                </div>
+    <div class="w-full mx-8"> 
+      <footer class=" text-white py-14 w-full">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div>
+            <div class="flex mb-8 items-center justify-center">
+              <div class="w-12 h-12 md:w-16 md:h-16 bg-gray-200 rounded-full">
+                <img src="/{{BASE_DIR}}/public/imgs/logo/logoSkuul.png" alt="Logo" class="w-full h-full object-cover" />
+              </div>
+              <a href="index.php?page=Index" class="font-semibold align-center justify-center text-4xl hover:text-pink-500 pl-4 hover:text-6xl">Skul2Canldy</a>
             </div>
-            <!-- Add Music Player Controls here -->
+            <div class="space-around center flex space-around items-center">
+              <span class="font-semibold text-lg text-2xl p-4 hover:text-blue-500">Social</span>
+                  <div class="flex items-center space-x-4 mt-2 ">
+                    <div class="w-8 h-8 md:w-12 md:h-12 bg-gray-200 hover:bg-blue-500 rounded-full flex items-center justify-center">
+                    <a href="https://www.facebook.com/" class="w-6 h-6">
+                        <img src="/{{BASE_DIR}}/public/imgs/social/facebook.png" alt="Facebook" class="w-4 h-4 md:w-6 md:h-6 object-cover"/>
+                    </a>
+                  </div>
+                  <div class=" w-8 h-8 md:w-12 md:h-12 bg-gray-200 hover:bg-blue-500 rounded-full flex items-center justify-center">
+                    <a href="https://www.twitter.com/" class="w-6 h-6">
+                        <img src="/{{BASE_DIR}}/public/imgs/social/twitter.png" alt="X" class="w-4 h-4 md:w-6 md:h-6 object-cover" />
+                    </a>
+                  </div>
+                  <div class="w-8 h-8 md:w-12 md:h-12 bg-gray-200 hover:bg-blue-500 rounded-full flex items-center justify-center">
+                    <a href="https://www.instagram.com/" class="w-6 h-6">
+                        <img src="/{{BASE_DIR}}/public/imgs/social/instagram.png" alt="Instagram" class="w-4 h-4 md:w-6 md:h-6 object-cover"/>
+                    </a>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-3 grid grid-cols-1 md:grid-cols-3 gap-8">
+         
+            <div class="p-4">
+              <a href="index.php?page=Company_Company"  class="font-semibold text-3xl hover:text-pink-500 ">Company</a>
+              <ul class="space-y-2 p-4">
+                <li class="hover:text-blue-500"><a href="index.php?page=Company_AboutUs">About Us</a></li>
+                <li class="hover:text-blue-500"><a href="index.php?page=Company_Jobs">Jobs</a></li>
+                <li class="hover:text-blue-500"><a href="index.php?page=Company_ForTheRecord">For the Record</a></li>
+              </ul>
+            </div>
+            <div class="p-4">
+              <a href="index.php?page=Communities_Communities" class="font-semibold text-3xl hover:text-pink-500">Communities</a>
+              <ul class="space-y-2 p-4">
+                <li class="hover:text-blue-500"><a href="index.php?page=Communities_Artists" >For Artists</a></li>
+                <li class="hover:text-blue-500"><a href="index.php?page=Communities_Developers">Developers</a></li>
+                <li class="hover:text-blue-500"><a href="index.php?page=Communities_Investors">Investors</a></li>
+                <li class="hover:text-blue-500"><a href="index.php?page=Communities_Vendors">Vendors</a></li>
+              </ul>
+            </div>
+            <div class="p-4">
+              <a href="index.php?page=Useful_Useful" class="font-semibold text-3xl hover:text-pink-500">Useful Links</a>
+              <ul class="space-y-2 p-4">
+                <li class="hover:text-blue-500"><a href="index.php?page=Useful_Support">Support</a></li>
+                <li class="hover:text-blue-500"><a href="index.php?page=Useful_WebPlayer">Web Player</a></li>
+                <li class="hover:text-blue-500"><a href="index.php?page=Useful_App">App</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </footer>
+    <div>
+
     </div>
     
     

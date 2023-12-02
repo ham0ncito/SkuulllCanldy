@@ -60,6 +60,7 @@
     </div>
   </main>  
 
+ 
   <footer class="bg-gray-900 text-white py-14">
     <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       <div>
@@ -121,7 +122,6 @@
     </div>
   </footer>
   
-  </footer>
   
 
   
