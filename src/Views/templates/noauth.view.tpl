@@ -2,7 +2,7 @@
     <div class="flex items-center">
       <div class="flex flex-col items-center px-4 w-full">
         <h2 class="text-white text-center text-3xl mb-4">So sorry. You are not able to access this</h2>
-        <p class="text-pink-300 text-center text-2xl mb-4">It is going to be all right</p>
+        <p class="text-pink-300 text-center text-2xl mb-4">It is going to be alright</p>
       </div>
       <div class="w-full text-right">
         <img src="https://gifdb.com/images/high/freaked-out-sad-cat-sobbing-x81xcmvrn4yyk9j9.gif" alt="GIF" class="max-w-full h-auto">
