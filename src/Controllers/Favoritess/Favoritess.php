@@ -1,11 +1,11 @@
 <?php
 namespace Controllers\Favoritess;
-use Controllers\PublicController;
+use Controllers\PrivateController;
 use Views\Renderer;
 use Dao\Favoritess\Favoritess as DAOFavorites;
 use Utilities\Site;
 use Utilities\Validators;
-class Favoritess extends PublicController {
+class Favoritess extends PrivateController {
   private $id_favorite;
   private $usercod;
   private $id_reference;

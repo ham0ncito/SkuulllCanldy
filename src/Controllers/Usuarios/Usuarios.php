@@ -1,11 +1,11 @@
 <?php
 namespace Controllers\Usuarios;
-use Controllers\PublicController;
+use Controllers\PrivateController;
 use Views\Renderer;
 use Dao\Usuarios\Usuarios as DAOUsuario;
 use Utilities\Site;
 use Utilities\Validators;
-class Usuarios extends PublicController {
+class Usuarios extends PrivateController {
   private $usercod;
   private $useremail;
   private $username;

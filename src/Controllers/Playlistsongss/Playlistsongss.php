@@ -1,11 +1,11 @@
 <?php
 namespace Controllers\Playlistsongss;
-use Controllers\PublicController;
+use Controllers\PrivateController;
 use Views\Renderer;
 use Dao\Playlistsongss\Playlistsongss as DAOPlaylistsongs;
 use Utilities\Site;
 use Utilities\Validators;
-class Playlistsongss extends PublicController {
+class Playlistsongss extends PrivateController {
   private $playlist_id;
   private $song_id;
   private $playlistSong_added_at;

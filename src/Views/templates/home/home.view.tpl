@@ -1,5 +1,4 @@
 <section class="container mx-auto px-4 py-8">
-    <!---Discover-->
     <section>
         <h2 class="text-4xl text-pink-500 font-bold mb-4">Discover</h2>
         <a class="text-white text-xl">Show More</a>

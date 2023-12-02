@@ -1,11 +1,11 @@
 <?php
 namespace Controllers\Productss;
-use Controllers\PublicController;
+use Controllers\PrivateController;
 use Views\Renderer;
 use Dao\Productss\Productss as DAOProducts;
 use Utilities\Site;
 use Utilities\Validators;
-class Productss extends PublicController {
+class Productss extends PrivateController {
   private $productId;
   private $productName;
   private $productDescription;

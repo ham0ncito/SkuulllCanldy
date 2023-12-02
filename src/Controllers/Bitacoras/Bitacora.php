@@ -1,13 +1,13 @@
 <?php
 namespace Controllers\Bitacoras;
-use Controllers\PublicController;
+use Controllers\PrivateController;
 use Views\Renderer;
 use Dao\Bitacoras\Bitacoras as DAOBitacora;
 use Utilities\Site;
 use Utilities\Validators;
 use Utilities\Context;
 use Utilities\Paging;
-class Bitacora extends PublicController {
+class Bitacora extends PrivateController {
   private $bitacoracod;
   private $bitacorafch;
   private $bitprograma;

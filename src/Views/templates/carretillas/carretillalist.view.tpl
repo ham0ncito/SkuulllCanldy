@@ -24,7 +24,7 @@
 <section>
     <h2 class="text-2xl font-bold mb-4 mx-4"> CARRETILLA</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-4">
-        <!-- Inicio del loop con los datos de carretilla -->
+     
         {{foreach carretilla}}
         <div class="bg-white border border-gray-300 rounded p-4 overflow-hidden">
             <h3 class="text-lg font-bold overflow-hidden overflow-ellipsis mb-2">User Code: <a class="overflow-hidden overflow-ellipsis"href="index.php?page=Carretillas_Carretillas&mode=DSP&usercod={{usercod}}">{{usercod}}</a></h3>
@@ -38,6 +38,7 @@
             </div>
         </div>
         {{endfor carretilla}}
-        <!-- Fin del loop -->
+      
+     
     </div>
 </section>

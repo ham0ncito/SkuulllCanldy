@@ -1,11 +1,11 @@
 <?php
 namespace Controllers\Highligthss;
-use Controllers\PublicController;
+use Controllers\PrivateController;
 use Views\Renderer;
 use Dao\Highligthss\Highligthss as DAOHighligths;
 use Utilities\Site;
 use Utilities\Validators;
-class Highligthss extends PublicController {
+class Highligthss extends PrivateController {
   private $highligths_id;
   private $highligths_starts_at;
   private $highligths_ends_at;

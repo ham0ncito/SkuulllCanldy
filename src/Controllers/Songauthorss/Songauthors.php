@@ -1,13 +1,13 @@
 <?php
 namespace Controllers\Songauthorss;
-use Controllers\PublicController;
+use Controllers\PrivateController;
 use Views\Renderer;
 use Dao\Songauthorss\Songauthorss as DAOSongauthors;
 use Utilities\Site;
 use Utilities\Validators;
 use Utilities\Context;
 use Utilities\Paging;
-class Songauthors extends PublicController {
+class Songauthors extends PrivateController {
   private $artist_id;
   private $song_id;
   private $song_author_created_at;

@@ -1,11 +1,11 @@
 <?php
 namespace Controllers\Songs;
-use Controllers\PublicController;
+use Controllers\PrivateController;
 use Views\Renderer;
 use Dao\Songs\Songs as DAOSong;
 use Utilities\Site;
 use Utilities\Validators;
-class Songs extends PublicController {
+class Songs extends PrivateController {
   private $id_song;
   private $title_song;
   private $duration;

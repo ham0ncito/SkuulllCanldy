@@ -2,8 +2,8 @@
 
 namespace Controllers\Admin;
 
-use Controllers\PublicController;
-class Dashboard extends PublicController{
+use Controllers\PrivateController;
+class Dashboard extends PrivateController{
     public function run():void
     {
         

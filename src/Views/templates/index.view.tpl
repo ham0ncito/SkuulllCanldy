@@ -1,5 +1,5 @@
 
-<div class="bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg ">
+<div class="bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg mx-auto">
   <div class="bg-cover bg-center min-h-screen object-cover" style="background-image: url('/{{BASE_DIR}}/public/imgs/hero/hero.jpg')">
     <div class="flex items-center justify-center h-full text-center text-white">
       <div class="pt-60">

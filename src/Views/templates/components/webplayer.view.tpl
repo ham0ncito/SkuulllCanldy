@@ -72,13 +72,13 @@
 <style>
     @keyframes discoBackground {
         0% {
-          background-color: #3498db; /* Azul */
+          background-color: #3498db; 
         }
         50% {
-          background-color: #9b59b6; /* Morado */
+          background-color: #9b59b6; 
         }
         100% {
-          background-color: #3498db; /* Azul */
+          background-color: #3498db;
         }
       }
 </style>

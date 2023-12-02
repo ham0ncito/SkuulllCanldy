@@ -1,11 +1,11 @@
 <?php
 namespace Controllers\Highligthsplaylists;
-use Controllers\PublicController;
+use Controllers\PrivateController;
 use Views\Renderer;
 use Dao\Highligthsplaylists\Highligthsplaylists as DAOHighligthsplaylist;
 use Utilities\Site;
 use Utilities\Validators;
-class Highligthsplaylists extends PublicController {
+class Highligthsplaylists extends PrivateController {
   private $highligths_id;
   private $playlist_id;
   private $highligths_description;

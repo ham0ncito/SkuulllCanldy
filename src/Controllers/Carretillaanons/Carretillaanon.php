@@ -1,13 +1,13 @@
 <?php
 namespace Controllers\Carretillaanons;
-use Controllers\PublicController;
+use Controllers\PrivateController;
 use Views\Renderer;
 use Dao\Carretillaanons\Carretillaanons as DAOCarretillaanon;
 use Utilities\Site;
 use Utilities\Validators;
 use Utilities\Context;
 use Utilities\Paging;
-class Carretillaanon extends PublicController {
+class Carretillaanon extends PrivateController {
   private $anoncod;
   private $productId;
   private $crrctd;

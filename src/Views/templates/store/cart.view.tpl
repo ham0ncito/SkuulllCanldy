@@ -1,10 +1,7 @@
 <div class="container mx-auto p-6">
     <h1 class="text-3xl font-semibold mb-6">Carrito</h1>
-
-    <!-- Lista de productos -->
     <ul class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        <!-- Elemento de la lista por cada producto -->
-        <!-- Producto 1 -->
+      
         <li class="bg-white rounded-lg overflow-hidden shadow-md">
             <div class="p-4">
                 <img src="URL_DE_LA_IMAGEN" alt="Nombre del Producto" class="w-full h-48 object-cover mb-4">
@@ -23,6 +20,11 @@
                 </div>
             </div>
         </li>
-        <!-- Repite este bloque para cada producto -->
+        
     </ul>
+
+    <div id="paypal-button-container"></div>
+    <p id="result-message"></p>
+    <script src="https://www.paypal.com/sdk/js?client-id=Acj_gVlStbcPSVckLdSVIZdJyxUAAjMMWR_NJQzbwU4TSqsm5rNdRlBv4vmie_4Z64W6dEnQCJD-ebXS&components=buttons&enable-funding=paylater,venmo,card" data-sdk-integration-source="integrationbuilder_sc"></script>
+    <script src="app.js"></script>
 </div>

@@ -1,11 +1,11 @@
 <?php
 namespace Controllers\Artists;
-use Controllers\PublicController;
+use Controllers\PrivateController;
 use Views\Renderer;
 use Dao\Artists\Artists as DAOArtist;
 use Utilities\Site;
 use Utilities\Validators;
-class Artists extends PublicController {
+class Artists extends PrivateController {
   private $id_artist;
   private $name_artist;
   private $image_artist;

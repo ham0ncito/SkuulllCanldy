@@ -1,12 +1,12 @@
 <?php
 namespace Controllers\Store;
 
-use Controllers\PublicController;
+use Controllers\PrivateController;
 use Utilities\Site; 
 use Views\Renderer;
 use DAO\Carretillas\Carretillas as Carretilla; 
 
-class ShoppingCart extends PublicController{
+class ShoppingCart extends PrivateController{
     public function run(): void
     {
         $viewData = array(); 

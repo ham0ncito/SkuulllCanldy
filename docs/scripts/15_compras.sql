@@ -13,3 +13,6 @@ CREATE TABLE purchaseDetail (
     FOREIGN KEY (id_purchase) REFERENCES purchase(id_purchase),
     PRIMARY KEY (id_purchase, id_item_reference)
 );
+
+
+alter table purchase add column payments mediumtext; 

@@ -2,9 +2,9 @@
 namespace Controllers\Search;
 use DAO\Genres\Genres as DAOGenre; 
 use DAO\Artists\Artists as DAOArtist; 
-use Controllers\PublicController;
+use Controllers\PrivateController;
 
-class Search extends PublicController{
+class Search extends PrivateController{
     public function run():void
     {
         $dataview = array();

@@ -1,11 +1,11 @@
 <?php
 namespace Controllers\Rolesusuarioss;
-use Controllers\PublicController;
+use Controllers\PrivateController;
 use Views\Renderer;
 use Dao\Rolesusuarioss\Rolesusuarioss as DAORoles_usuarios;
 use Utilities\Site;
 use Utilities\Validators;
-class Rolesusuarioss extends PublicController {
+class Rolesusuarioss extends PrivateController {
   private $usercod;
   private $rolescod;
   private $roleuserest;

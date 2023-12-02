@@ -44,7 +44,7 @@
         </ul>
       </div>
       <div class="p-6 w-full bg-{{color3}} jello-horizontal ">
-        <a href="index.php?page=Sec_Login&buy={{id}}"
+        <a href="index.php?page=Store_Store&buy={{id}}"
           class="w-full jello-horizontal bg-{{color2}} text-white rounded-full px-4 py-2 hover:bg-{{color3}} focus:outline-none focus:shadow-outline-blue active:bg-{{color4}}">
           Select Plan
         </a>

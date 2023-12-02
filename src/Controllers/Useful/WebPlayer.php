@@ -1,12 +1,12 @@
 <?php
 namespace Controllers\Useful;
-use Controllers\PublicController;
+use Controllers\PrivateController;
 use Views\Renderer;
 use Utilities\Site;
 use Utilities\Validators;
 use Utilities\Context;
 use Utilities\Paging;
-class WebPlayer extends PublicController {
+class WebPlayer extends PrivateController {
  
     public function run(): void
     {

@@ -1,13 +1,13 @@
 <?php
 namespace Controllers\Genres;
-use Controllers\PublicController;
+use Controllers\PrivateController;
 use Views\Renderer;
 use Dao\Genres\Genres as DAOGenre;
 use Utilities\Site;
 use Utilities\Validators;
 use Utilities\Context;
 use Utilities\Paging;
-class Genre extends PublicController {
+class Genre extends PrivateController {
   private $id_genre;
   private $name_genre;
   private $description_genre;

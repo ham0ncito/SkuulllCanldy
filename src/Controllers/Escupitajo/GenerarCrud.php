@@ -2,13 +2,13 @@
 
 namespace Controllers\Escupitajo;
 
-use Controllers\PublicController;
+use Controllers\PrivateController;
 use Views\Renderer;
 use Utilities\Site;
 use Utilities\Validators;
 use Utilities\Escupitajo\GenerateCRUD;
 
-class GenerarCrud extends PublicController
+class GenerarCrud extends PrivateController
 {
   public function run(): void
   {

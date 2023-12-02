@@ -1,11 +1,11 @@
 <?php
 namespace Controllers\Funcionesroless;
-use Controllers\PublicController;
+use Controllers\PrivateController;
 use Views\Renderer;
 use Dao\Funcionesroless\Funcionesroless as DAOFuncionesroles;
 use Utilities\Site;
 use Utilities\Validators;
-class Funciones_roless extends PublicController {
+class Funciones_roless extends PrivateController {
   private $rolescod;
   private $fncod;
   private $fnrolest;

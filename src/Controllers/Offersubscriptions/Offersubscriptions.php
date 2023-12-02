@@ -1,11 +1,11 @@
 <?php
 namespace Controllers\Offersubscriptions;
-use Controllers\PublicController;
+use Controllers\PrivateController;
 use Views\Renderer;
 use Dao\Offersubscriptions\Offersubscriptions as DAOOffersubscription;
 use Utilities\Site;
 use Utilities\Validators;
-class Offersubscriptions extends PublicController {
+class Offersubscriptions extends PrivateController {
   private $id_offer;
   private $id_subscription;
   private $price_offer;

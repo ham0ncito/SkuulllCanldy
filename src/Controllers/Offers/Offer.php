@@ -1,13 +1,13 @@
 <?php
 namespace Controllers\Offers;
-use Controllers\PublicController;
+use Controllers\PrivateController;
 use Views\Renderer;
 use Dao\Offers\Offers as DAOOffer;
 use Utilities\Site;
 use Utilities\Validators;
 use Utilities\Context;
 use Utilities\Paging;
-class Offer extends PublicController {
+class Offer extends PrivateController {
   private $id_offer;
   private $offer_description;
   private $offer_starts_at;

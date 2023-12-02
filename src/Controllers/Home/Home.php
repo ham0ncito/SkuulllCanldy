@@ -2,9 +2,9 @@
 
 namespace Controllers\Home;
 
-use Controllers\PublicController as PublicController;
+use Controllers\PrivateController as PrivateController;
 
-class Home extends PublicController
+class Home extends PrivateController
 {
     public function run(): void
     {

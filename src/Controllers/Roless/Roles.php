@@ -1,13 +1,13 @@
 <?php
 namespace Controllers\Roless;
-use Controllers\PublicController;
+use Controllers\PrivateController;
 use Views\Renderer;
 use Dao\Roless\Roless as DAORoles;
 use Utilities\Site;
 use Utilities\Validators;
 use Utilities\Context;
 use Utilities\Paging;
-class Roles extends PublicController {
+class Roles extends PrivateController {
   private $rolescod;
   private $rolesdsc;
   private $rolesest;

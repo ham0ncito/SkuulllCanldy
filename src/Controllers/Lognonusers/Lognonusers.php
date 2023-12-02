@@ -1,11 +1,11 @@
 <?php
 namespace Controllers\Lognonusers;
-use Controllers\PublicController;
+use Controllers\PrivateController;
 use Views\Renderer;
 use Dao\Lognonusers\Lognonusers as DAOLognonuser;
 use Utilities\Site;
 use Utilities\Validators;
-class Lognonusers extends PublicController {
+class Lognonusers extends PrivateController {
   private $id_logNonUser;
   private $log_date;
   private $id_cookie;

@@ -1,13 +1,13 @@
 <?php
 namespace Controllers\Carretillas;
-use Controllers\PublicController;
+use Controllers\PrivateController;
 use Views\Renderer;
 use Dao\Carretillas\Carretillas as DAOCarretilla;
 use Utilities\Site;
 use Utilities\Validators;
 use Utilities\Context;
 use Utilities\Paging;
-class Carretilla extends PublicController {
+class Carretilla extends PrivateController {
   private $usercod;
   private $productId;
   private $crrctd;

@@ -1,11 +1,11 @@
 <?php
 namespace Controllers\Popularitys;
-use Controllers\PublicController;
+use Controllers\PrivateController;
 use Views\Renderer;
 use Dao\Popularitys\Popularitys as DAOPopularity;
 use Utilities\Site;
 use Utilities\Validators;
-class Popularitys extends PublicController {
+class Popularitys extends PrivateController {
   private $id_popularity;
   private $id_object;
   private $dislike_count;

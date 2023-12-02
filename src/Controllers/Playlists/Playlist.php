@@ -1,13 +1,13 @@
 <?php
 namespace Controllers\Playlists;
-use Controllers\PublicController;
+use Controllers\PrivateController;
 use Views\Renderer;
 use Dao\Playlists\Playlists as DAOPlaylist;
 use Utilities\Site;
 use Utilities\Validators;
 use Utilities\Context;
 use Utilities\Paging;
-class Playlist extends PublicController {
+class Playlist extends PrivateController {
   private $id_playlist;
   private $playlist_name;
   private $playlist_description;

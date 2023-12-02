@@ -1,11 +1,11 @@
 <?php
 namespace Controllers\Subscriptionusers;
-use Controllers\PublicController;
+use Controllers\PrivateController;
 use Views\Renderer;
 use Dao\Subscriptionusers\Subscriptionusers as DAOSubscriptionuser;
 use Utilities\Site;
 use Utilities\Validators;
-class Subscriptionusers extends PublicController {
+class Subscriptionusers extends PrivateController {
   private $usercod;
   private $id_subscription;
   private $purchase_date_subscription;

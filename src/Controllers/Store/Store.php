@@ -1,7 +1,7 @@
 <?php
 namespace Controllers\Store;
 
-use Controllers\PublicController;
+use Controllers\PrivateController;
 use Utilities\Site; 
 use Views\Renderer;
 use DAO\Productss\Productss as Products;
@@ -9,7 +9,7 @@ use DAO\Carretillas\Carretillas as Carretilla;
 use DAO\Subscriptions\Subscriptions as Subscription;
 use Utilities\Validators;
 
-class Store extends PublicController{
+class Store extends PrivateController{
     private $id_subscription;
     private $subscription_description;
     private $subscription_duration;

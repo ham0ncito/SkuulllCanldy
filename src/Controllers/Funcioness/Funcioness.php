@@ -1,11 +1,11 @@
 <?php
 namespace Controllers\Funcioness;
-use Controllers\PublicController;
+use Controllers\PrivateController;
 use Views\Renderer;
 use Dao\Funcioness\Funcioness as DAOFunciones;
 use Utilities\Site;
 use Utilities\Validators;
-class Funcioness extends PublicController {
+class Funcioness extends PrivateController {
   private $fncod;
   private $fndsc;
   private $fnest;

@@ -1,13 +1,13 @@
 <?php
 namespace Controllers\Albums;
-use Controllers\PublicController;
+use Controllers\PrivateController;
 use Views\Renderer;
 use Dao\Albums\Albums as DAOAlbum;
 use Utilities\Site;
 use Utilities\Validators;
 use Utilities\Context;
 use Utilities\Paging;
-class Album extends PublicController {
+class Album extends PrivateController {
   private $id_album;
   private $title_album;
   private $image_album;
