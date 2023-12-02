@@ -189,7 +189,7 @@
   <div class="mx-auto grid max-w-6xl  grid-cols-1 gap-6 p-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
     {{foreach products}}
     <article class="rounded-xl bg-white p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300 ">
-      <a href="#">
+      <a href="index.php?page=Store_Store&productName={{product}}">
         <div class="relative flex items-end overflow-hidden rounded-xl">
           <img src="{{imageUrl}}" alt="Merch" />
           <div class="flex items-center space-x-1.5 rounded-lg bg-blue-500 px-4 py-1.5 text-white duration-100 hover:bg-blue-600">
