@@ -65,8 +65,8 @@
       </div>
         {{endwith login}}
       </header>
-      <div class="container">
-        <div class="mt-16 mb-16 mx-4">
+      <div class="container align-center justify-center">
+        <div class="mt-16 mb-16">
           {{{page_content}}}
            
         </div>
