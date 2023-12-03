@@ -12,7 +12,6 @@
       
         <li class="bg-white rounded-lg overflow-hidden shadow-md">
             <div class="p-4">
-                <img src="URL_DE_LA_IMAGEN" alt="Nombre del Producto" class="w-full h-48 object-cover mb-4">
                 <h3 class="text-lg font-semibold mb-2">Nombre del Producto</h3>
                 <p class="text-gray-600 mb-2">Descripción del Producto</p>
                 <p class="text-gray-700 font-bold">Precio: $XX.XX</p>
