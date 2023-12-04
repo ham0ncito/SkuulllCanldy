@@ -33,7 +33,7 @@
             document.getElementById("btnCancel").addEventListener("click", (e)=>{
                 e.preventDefault();
                 e.stopPropagation();
-                document.location.assign("index.php?page=Funciones_roless_Funciones_roles");
+                document.location.assign("index.php?page=Funcionesroless_Funcionesroles");
             });
         });
     </script>
