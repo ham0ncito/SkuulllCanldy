@@ -6,7 +6,7 @@ use Views\Renderer;
 use Dao\Funcionesroless\Funcionesroless as DAOFuncionesroles;
 use Utilities\Site;
 use Utilities\Validators;
-class Funcionesroless extends PublicController {
+class Funcionesroless extends PrivateController {
   private $rolescod;
   private $fncod;
   private $fnrolest;

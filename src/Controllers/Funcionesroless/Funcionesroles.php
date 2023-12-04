@@ -8,7 +8,7 @@ use Utilities\Site;
 use Utilities\Validators;
 use Utilities\Context;
 use Utilities\Paging;
-class Funcionesroles extends PublicController {
+class Funcionesroles extends PrivateController {
   private $rolescod;
   private $fncod;
   private $fnrolest;
