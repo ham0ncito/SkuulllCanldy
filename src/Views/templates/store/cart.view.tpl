@@ -16,8 +16,6 @@
                 <p class="text-gray-600 mb-2">Descripción del Producto</p>
                 <p class="text-gray-700 font-bold">Precio: $XX.XX</p>
                 <div class="mt-4 flex justify-between items-center">
-                    
-                   
                     <a href="#" class="text-green-500 hover:text-green-700">Add</a>
                     <p class="text-gray-700 font-bold">2</p>
                     <a href="#" class="text-green-500 hover:text-green-700">Remove</a>
