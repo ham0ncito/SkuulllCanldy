@@ -10,7 +10,7 @@
                 <button id="searchbutton" name="searchbutton" class="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700 mr-2">
                     Search
                 </button>
-                <a href="index.php?page=Funciones_roless_Funciones_roless&mode=INS" class="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700">
+                <a href="index.php?page=Funcionesroless_Funcionesroless&mode=INS" class="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700">
                     Insert
                 </a>
             </div>
@@ -23,12 +23,12 @@
 	<th class="py-2 px-4 border-b">ROLESCOD</th>
 	<th class="py-2 px-4 border-b">FNCOD</th>
 	<th class="py-2 px-4 border-b">FNROLEST</th>
-	<th class="py-2 px-4 border-b">FNEXP</th><th><a href="index.php?page=Funciones_roless_Funciones_roless&mode=INS">Nuevo</a></th>
+	<th class="py-2 px-4 border-b">FNEXP</th><th><a href="index.php?page=Funcionesroless_Funcionesroless&mode=INS">Nuevo</a></th>
 	</tr>
-</thead><tbody>{{foreach funciones_roles}}<tr><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Funciones_roless_Funciones_roless&mode=DSP&rolescod={{rolescod}} ">{{rolescod}}</a></td><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Funciones_roless_Funciones_roless&mode=DSP&rolescod={{rolescod}} ">{{fncod}}</a></td><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Funciones_roless_Funciones_roless&mode=DSP&rolescod={{rolescod}} ">{{fnrolest}}</a></td><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Funciones_roless_Funciones_roless&mode=DSP&rolescod={{rolescod}} ">{{fnexp}}</a></td>
+</thead><tbody>{{foreach funciones_roles}}<tr><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Funcionesroless_Funcionesroless&mode=DSP&rolescod={{rolescod}} ">{{rolescod}}</a></td><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Funcionesroles_Funcionesroless&mode=DSP&rolescod={{rolescod}} ">{{fncod}}</a></td><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Funcionesroless_Funcionesroless&mode=DSP&rolescod={{rolescod}} ">{{fnrolest}}</a></td><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Funcionesroless_Funcionesroless&mode=DSP&rolescod={{rolescod}} ">{{fnexp}}</a></td>
             <td class"p-2 text-center">
-                <a class="text-green-500 hover:text-green-700" href="index.php?page=Funciones_roless_Funciones_roless&mode=UPD&rolescod={{rolescod}}" >Edit</a> 
-                <a class="text-red-500 hover:text-red-700" href="index.php?page=Funciones_roless_Funciones_roless&mode=DEL&rolescod={{rolescod}}" >Delete</a>
+                <a class="text-green-500 hover:text-green-700" href="index.php?page=Funcionesroless_Funcionesroless&mode=UPD&rolescod={{rolescod}}" >Edit</a> 
+                <a class="text-red-500 hover:text-red-700" href="index.php?page=Funcionesroless_Funcionesroless&mode=DEL&rolescod={{rolescod}}" >Delete</a>
             </td>
 	</tr>
  {{endfor funciones_roles}}</tbody>
