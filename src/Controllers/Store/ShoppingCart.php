@@ -7,7 +7,7 @@ use Utilities\Site;
 use Views\Renderer;
 use DAO\Carretillas\Carretillas as Carretilla; 
 
-class ShoppingCart extends PrivateController{
+class ShoppingCart extends PublicController{
     public function run(): void
     {
         $viewData = array(); 
