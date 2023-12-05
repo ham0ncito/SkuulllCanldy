@@ -25,7 +25,19 @@ class Albums extends Table{
         $registros = self::obtenerRegistros($sqlstr, $params);
         return $registros;
     }
-    
+
+    public static function gettop(){
+      $sqlstr = "SELECT 
+      album.*, 
+      artist.*    
+ FROM album 
+ INNER JOIN artist ON album.id_artist = artist.id_artist LIMIT 5 ";
+
+      $params = [];
+      $registros = self::obtenerRegistros($sqlstr, $params);
+      return $registros;
+  }
+  
 
   public static function insertAlbum($id_album, $title_album, $image_album, $release_date_album, $number_of_songs_album, $id_artist, $status_album, $id_genre){
 	

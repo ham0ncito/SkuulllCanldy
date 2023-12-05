@@ -1,30 +1,107 @@
-<section class="container mx-auto px-4 py-8">
-    <section>
-        <h2 class="text-4xl text-pink-500 font-bold mb-4">Discover</h2>
-        <a class="text-white text-xl">Show More</a>
-        <div class="pt-10 pb-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            <div class="max-w-xs rounded-lg overflow-hidden shadow-md bg-white">
-                <div class="flex flex-col h-52 relative">
-                    <a href="#" class="p-4 bg-gray-800 hover:bg-blue-600 text-white rounded-t-lg text-xs font-semibold">
-                        <img src="https://th.bing.com/th/id/OIP.WyX7G3MwQqghaoX8Kz9GxAHaHa?w=155&h=300&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Imagen de la tarjeta" class="w-full rounded-lg h-40 object-cover">
-                    </a>
-                    <div class="absolute bottom-0 w-full bg-gray-900 text-white py-2 px-4 flex items-center">
-                        <div class="flex items-center justify-center w-1/3">
-                            <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M21.4086 9.35258C23.5305 10.5065 23.5305 13.4935 21.4086 14.6474L8.59662 21.6145C6.53435 22.736 4 21.2763 4 18.9671L4 5.0329C4 2.72368 6.53435 1.26402 8.59661 2.38548L21.4086 9.35258Z" fill="#ffffff"></path> </g></svg>
-                        </div>
-                        <div class="flex-1 text-center">
-                            <h3 class="text-sm font-semibold">Title</h3>
-                            <p class="text-xs">This is only a description</p>
-                        </div>
-                        <div class="flex items-center justify-center w-1/3">
-                            <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M2 9.1371C2 14 6.01943 16.5914 8.96173 18.9109C10 19.7294 11 20.5 12 20.5C13 20.5 14 19.7294 15.0383 18.9109C17.9806 16.5914 22 14 22 9.1371C22 4.27416 16.4998 0.825464 12 5.50063C7.50016 0.825464 2 4.27416 2 9.1371Z" fill="#ffffff"></path> </g></svg>
-                        </div>
-                    </div>
+<section class="container mx-4">
+
+    <div class="mx-6 mt-0 mb-4">
+        <div class="container mx-auto flex justify-between items-center align-center">
+           
+            <a href="#" class="text-white text-2xl font-bold"><span class="text-3xl mr-4 text-animation">Explore</span> your genre</a>
+            <div x-data="{ open: false }" class="md:hidden">
+                <button @click="open = !open" class="text-white focus:outline-none">
+                    <svg class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                        <path x-show="!open" fill-rule="evenodd" clip-rule="evenodd" d="M3 4h14a1 1 0 0 1 0 2H3a1 1 0 0 1 0-2zm0 5h14a1 1 0 0 1 0 2H3a1 1 0 0 1 0-2zm0 5h14a1 1 0 0 1 0 2H3a1 1 0 0 1 0-2z"/>
+                        <path x-show="open" fill-rule="evenodd" clip-rule="evenodd" d="M14.293 5.293a1 1 0 0 1 1.414 1.414L11 12.414l-4.707-4.707a1 1 0 1 1 1.414-1.414L11 9.586l3.293-3.293a1 1 0 0 1 1.414 0z"/>
+                    </svg>
+                </button>
+                
+                <div x-show="open" @click.away="open = false" class="absolute top-16 right-0 z-10 bg-gray-800 rounded-lg shadow-lg mt-2 py-2 w-48">
+                  {{foreach genre}}
+                    <a href="#" class="block px-4 py-2 text-white hover:bg-pink-500">{{name_genre}}</a>
+                {{endfor genre}}
+                </div>
+            </div>
+            
+       
+            <div class="hidden md:flex space-x-4">
+                {{foreach genre}}
+                <a href="#" class="block px-4 py-2 text-white hover:bg-blue-500">{{name_genre}}</a>
+            {{endfor genre}}
+            </div>
+        </div>
+    </div>
+    <h2 class="mx-6 text-3xl font-bold mb-4"><span class="text-green-500 text-5xl mr-2">Artists</span> Vibing Like You</h2>
+
+    <div class="py-4 mx-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+        {{foreach artist}}
+        <div class=" relative max-w-md mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+            <div>
+                <img class="h-60 w-full object-cover md:h-64 md:w-full" src="{{image_artist}}" alt="Imagen">
+            </div>
+            <div class="p-6 md:p-8">
+                <h2 class="uppercase tracking-wide text-2xl text-indigo-500 font-semibold">{{name_artist}}</h2>
+                <p class="block pb-6 mt-1 text-sm leading-tight font-medium text-black">{{artist_bio}}</p>
+               
+                <div class="absolute pt-4 pb-2 bottom-0 left-0 right-0 text-center">
+                    <a href="#" class="text-indigo-600 hover:text-indigo-900 font-semibold">See more</a>
+                </div>
+            </div>
+        </div>
+        {{endfor artist}}
+    </div>
+
+    <h2 class="text-3xl font-bold mx-6 my-4"><span class="text-5xl text-blue-500 mr-2">Videos</span> You Are Going To Love</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {{foreach videos}}
+        <div class="relative max-w-md mx-6 bg-white rounded-xl shadow-lg overflow-hidden">
+            <div>
+                <video class="h-48 w-full object-fit md:h-80 md:w-full" controls>
+                    <source src="{{link_video}}" type="video/mp4">
+                    You aren't allowed to watch this video
+                </video>
+            </div>
+            <div class="p-6 md:p-8">
+                <h2 class="uppercase tracking-wide text-2xl text-indigo-500 font-semibold">{{name_artist}}</h2>
+                <h3 class="block pb-2 mt-1 text-lg leading-tight font-medium text-black">{{title_video}}</h3>
+                <p class="text-gray-600">{{description_video}}</p>
+                <div class="absolute pt-4 pb-2 bottom-0 left-0 right-0 text-center">
+                    <a href="#" class="text-indigo-600 hover:text-indigo-900 font-semibold">See more</a>
                 </div>
             </div>
         </div>
         
-        
-    </section>
-
+        {{endfor videos}}
+    </div>
+    <h2 class="text-3xl font-bold mx-6 my-4"><span class="text-5xl text-blue-500 mr-2">Check out</span> some albums</h2>
+    <div class=" mx-6 grid grid-cols-1 md:grid-cols-4 gap-6">
+        {{foreach albums}}
+        <div class="max-w-xs rounded overflow-hidden shadow-2xl">
+            <div class="relative">
+              <img class="w-80 h-80" src="{{image_album}}" alt="{{title_album}}">
+              <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50 text-white text-center">
+                <span class="font-bold text-lg">{{title_album}}</span>
+              </div>
+            </div>
+          </div>          
+          {{endfor albums}}      
+    </div>
+   
 </section>
+<style>
+    .text-animation {
+        color: #ffffff;
+        animation: colorChange 3s infinite alternate;
+      }
+      
+      @keyframes colorChange {
+        0% {
+          color: #ff99cc; 
+        }
+        33% {
+          color: #cc66cc; 
+        }
+        66% {
+          color: #6699cc;
+        }
+        100% {
+          color: #ff99cc;
+        }
+      }
+</style>

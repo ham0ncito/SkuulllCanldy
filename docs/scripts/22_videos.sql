@@ -39,3 +39,6 @@ VALUES ('d14SDd1cb551064b87959ce062DSSDSDFXXe49xDFb8d4SDSaSDASxSDSdfDsxcsNNSDDc'
 
 INSERT INTO video (id_video, title_video, description_video, duration, video_cover, artist_id, status_video, link_song)
 VALUES ('d14SDd1cb551064b87959ce062DSSDSDFXXe49xDFbCVBB8d4SDSaSDASxSDSdfDsxcX35bnsNNSDDc', 'VOGUE  CONCERT DOCUMENTARY', 'TIMES GOES BY SO SLOWLY', 500 ,'https://th.bing.com/th/id/R.f33cadc676c4e558baf75058e90de44f?rik=pdF9223Ae2UGPA&pid=ImgRaw&r=0', 'e5aaccbe1ebafbca5e9fd2794431862f', 'ACT', 'https://firebasestorage.googleapis.com/v0/b/skulllcandl.appspot.com/o/Videos%2Fy2mate.com%20-%20Madonna%20%20Vogue%20Official%20Video_480p.mp4?alt=media&token=3d276720-4187-4124-93df-05ab4e0679e7');
+
+
+ALTER TABLE `video` CHANGE `link_song` `link_video` VARCHAR(500) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL;

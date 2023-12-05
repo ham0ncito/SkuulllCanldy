@@ -2,7 +2,8 @@
 namespace Dao\Videos; 
 use Dao\Table; 
 class Videos extends Table{
-      private $id_video;
+    
+  private $id_video;
   private $title_video;
   private $description_video;
   private $duration;
@@ -18,6 +19,18 @@ class Videos extends Table{
         $registros = self::obtenerRegistros($sqlstr, $params);
         return $registros;
 	}
+
+        public static function gettop(){
+                $sqlstr= "SELECT *
+                FROM video
+                INNER JOIN artist ON video.artist_id = artist.id_artist
+                LIMIT 6;
+                ";
+               $params = [];
+               $registros = self::obtenerRegistros($sqlstr, $params);
+               return $registros;
+               }
+       
 
   public static function insertVideo($id_video, $title_video, $description_video, $duration, $video_cover, $artist_id, $status_video, $link_song){
 	

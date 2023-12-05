@@ -2,7 +2,8 @@
 namespace Dao\Artists; 
 use Dao\Table; 
 class Artists extends Table{
-      private $id_artist;
+    
+  private $id_artist;
   private $name_artist;
   private $image_artist;
   private $date_of_birth_artist;
@@ -18,6 +19,12 @@ class Artists extends Table{
         return $registros;
 	}
 
+        public static function gettop(){
+                $sqlstr= "SELECT * FROM artist Limit 4";
+               $params = [];
+               $registros = self::obtenerRegistros($sqlstr, $params);
+               return $registros;
+               }
   public static function insertArtist($id_artist, $name_artist, $image_artist, $date_of_birth_artist, $country_artist, $status_artist, $artist_bio){
 	
     $sqlstr = "INSERT INTO artist (id_artist, name_artist, image_artist, date_of_birth_artist, country_artist, status_artist, artist_bio) VALUES (:id_artist , :name_artist , :image_artist , :date_of_birth_artist , :country_artist , :status_artist , :artist_bio)";

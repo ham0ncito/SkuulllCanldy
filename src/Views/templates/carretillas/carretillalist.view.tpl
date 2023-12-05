@@ -18,7 +18,7 @@
 </div>
 
 <div class="flex items-center justify-between mb-4 mx-4">
-    <!-- ... (código del buscador e insertar) ... -->
+    
 </div>
 
 <section>
