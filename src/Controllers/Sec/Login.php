@@ -1,5 +1,6 @@
 <?php
 namespace Controllers\Sec;
+use Utilities\Secur\Crypt as sec;
 class Login extends \Controllers\PublicController
 {
     private $txtEmail = "";
@@ -60,6 +61,7 @@ class Login extends \Controllers\PublicController
                                 \Utilities\Context::getContextByKey("redirto")
                             );
                         } else {
+                            $_SESSION['sxnsjfnuVn'] = sec::encryptDatum($dbUser["usercod"]);
                             \Utilities\Site::redirectTo("index.php?page=Home_Home");
                         }
                     }

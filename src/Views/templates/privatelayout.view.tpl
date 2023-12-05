@@ -68,70 +68,9 @@
       <div class="container align-center justify-center">
         <div class="mt-16 mb-16">
           {{{page_content}}}
-           
+          
         </div>
-    <div class="w-full mx-8"> 
-      <footer class=" text-white py-14 w-full">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div>
-            <div class="flex mb-8 items-center justify-center">
-              <div class="w-12 h-12 md:w-16 md:h-16 bg-gray-200 rounded-full">
-                <img src="/{{BASE_DIR}}/public/imgs/logo/logoSkuul.png" alt="Logo" class="w-full h-full object-cover" />
-              </div>
-              <a href="index.php?page=Index" class="font-semibold align-center justify-center text-4xl hover:text-pink-500 pl-4 hover:text-6xl">Skul2Canldy</a>
-            </div>
-            <div class="space-around center flex space-around items-center">
-              <span class="font-semibold text-lg text-2xl p-4 hover:text-blue-500">Social</span>
-                  <div class="flex items-center space-x-4 mt-2 ">
-                    <div class="w-8 h-8 md:w-12 md:h-12 bg-gray-200 hover:bg-blue-500 rounded-full flex items-center justify-center">
-                    <a href="https://www.facebook.com/" class="w-6 h-6">
-                        <img src="/{{BASE_DIR}}/public/imgs/social/facebook.png" alt="Facebook" class="w-4 h-4 md:w-6 md:h-6 object-cover"/>
-                    </a>
-                  </div>
-                  <div class=" w-8 h-8 md:w-12 md:h-12 bg-gray-200 hover:bg-blue-500 rounded-full flex items-center justify-center">
-                    <a href="https://www.twitter.com/" class="w-6 h-6">
-                        <img src="/{{BASE_DIR}}/public/imgs/social/twitter.png" alt="X" class="w-4 h-4 md:w-6 md:h-6 object-cover" />
-                    </a>
-                  </div>
-                  <div class="w-8 h-8 md:w-12 md:h-12 bg-gray-200 hover:bg-blue-500 rounded-full flex items-center justify-center">
-                    <a href="https://www.instagram.com/" class="w-6 h-6">
-                        <img src="/{{BASE_DIR}}/public/imgs/social/instagram.png" alt="Instagram" class="w-4 h-4 md:w-6 md:h-6 object-cover"/>
-                    </a>
-                  </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-span-3 grid grid-cols-1 md:grid-cols-3 gap-8">
-         
-            <div class="p-4">
-              <a href="index.php?page=Company_Company"  class="font-semibold text-3xl hover:text-pink-500 ">Company</a>
-              <ul class="space-y-2 p-4">
-                <li class="hover:text-blue-500"><a href="index.php?page=Company_AboutUs">About Us</a></li>
-                <li class="hover:text-blue-500"><a href="index.php?page=Company_Jobs">Jobs</a></li>
-                <li class="hover:text-blue-500"><a href="index.php?page=Company_ForTheRecord">For the Record</a></li>
-              </ul>
-            </div>
-            <div class="p-4">
-              <a href="index.php?page=Communities_Communities" class="font-semibold text-3xl hover:text-pink-500">Communities</a>
-              <ul class="space-y-2 p-4">
-                <li class="hover:text-blue-500"><a href="index.php?page=Communities_Artists" >For Artists</a></li>
-                <li class="hover:text-blue-500"><a href="index.php?page=Communities_Developers">Developers</a></li>
-                <li class="hover:text-blue-500"><a href="index.php?page=Communities_Investors">Investors</a></li>
-                <li class="hover:text-blue-500"><a href="index.php?page=Communities_Vendors">Vendors</a></li>
-              </ul>
-            </div>
-            <div class="p-4">
-              <a href="index.php?page=Useful_Useful" class="font-semibold text-3xl hover:text-pink-500">Useful Links</a>
-              <ul class="space-y-2 p-4">
-                <li class="hover:text-blue-500"><a href="index.php?page=Useful_Support">Support</a></li>
-                <li class="hover:text-blue-500"><a href="index.php?page=Useful_WebPlayer">Web Player</a></li>
-                <li class="hover:text-blue-500"><a href="index.php?page=Useful_App">App</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </footer>
-    <div>
+    
 
     </div>
     
