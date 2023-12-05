@@ -1,11 +1,13 @@
 <?php
 namespace Controllers\Logusers;
+
+use Controllers\PrivateController;
 use Controllers\PublicController;
 use Views\Renderer;
 use Dao\Logusers\Logusers as DAOLoguser;
 use Utilities\Site;
 use Utilities\Validators;
-class Logusers extends PublicController {
+class Logusers extends PrivateController {
   private $user_cod;
   private $log_cod;
   private $date;
