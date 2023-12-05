@@ -73,7 +73,12 @@ class Login extends \Controllers\PublicController
                             );
                         } else {
                             $sesionId = sec::encryptDatum($dbUser["usercod"]);
-                            $_SESSION[$sesionId] = $sesionId;
+                            if (!isset($_SESSION[$sesionId])) {
+                                $_SESSION['sesionId'] = $sesionId;
+                            }
+                            else{
+                                $_SESSION['sesionId'][count($_SESSION['sesionId'])+1] = $sesionId;
+                            }
                             \DAO\Logusers\Logusers::insertLoguser($dbUser["usercod"],"INI", date("Y-m-d H:i:s"));
                             \Utilities\Site::redirectTo("index.php?page=Home_Home");
                         }

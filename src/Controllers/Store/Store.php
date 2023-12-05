@@ -71,9 +71,9 @@ class Store extends PrivateController
     static private function cart()
     {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            if ($_SESSION["token"] == $_POST["xsx"]) {
+            if ($_SESSION["token"] == $_POST["xsxtoken"]) {
                 if (isset($_POST['addToCart'])) {
-                    $xls = sec::decryptDatum($_SESSION[]);
+                    $xls = sec::decryptDatum($_SESSION['sesionId'][count($_SESSION['sesionId'])-1]);
                     if(!isset($_SESSION['cart'.$xls])){
                         $product = [
                             "usercod" => $xls,

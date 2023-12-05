@@ -22,7 +22,6 @@
                 {{foreach Products}}
                 <div x-data="{ showModal: false, quantities: {} }" class="bg-white hover:bg-indigo-300 rounded-lg overflow-hidden shadow-md relative h-100">
                     <img src="{{productImgUrl}}" alt="Product" class="w-full h-60 object-cover">
-                    <input type="hidden" name="token" value="{{~token}}"/>
                     <div class="p-4">
                         <h3 class="text-lg font-semibold mb-2">{{productName}}</h3>
                         <p class="text-gray-600 mb-2">{{productDescription}}</p>
@@ -33,7 +32,7 @@
                     <div class="absolute bottom-0 left-0 right-0 bg-white p-4">
                         <div class="mt-4 flex justify-between items-center">
                             <form method="POST" action="index.php?page=Store_Store">
-                                <input type="hidden" name="token" value="{{~token}}"/>
+                                <input type="hidden" name="xsxtoken" value="{{~token}}"/>
                                 <input type="hidden" name="productId" value="{{productId}}">
                                 <input type="hidden" name="productName" value="{{productName}}">
                                 <input type="hidden" name="productDescription" value="{{productDescription}}">
@@ -89,7 +88,6 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {{foreach Subscription}}
                 <div x-data="{ showModal: false }" class="bg-white rounded-lg overflow-hidden shadow-md relative">
-                    <input type="hidden" name="token" value="{{~tokenSub}}">
                     <div class="p-6 flex flex-col justify-between">
                         <div>
                             <h3 class="text-4xl font-semibold mb-2">{{subscription_description}}</h3>
@@ -98,7 +96,7 @@
                         </div>
                         <div class="mt-4 flex justify-between items-center">
                             <form method="post" action="index.php?page=Store_Store">
-                                <input type="hidden" name="token" value="{{~token}}"/>
+                                <input type="hidden" name="xsxtoken" value="{{~token}}"/>
                                 <input type="hidden" name="productId" value="{{id_subscription}}">
                                 <input type="hidden" name="productName" value="{{subscription_description}}">
                                 <input type="hidden" name="productDescription" value="{{subscription_duration}}">

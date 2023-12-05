@@ -20,7 +20,7 @@ class ShoppingCart extends PublicController
         $early = "";
         self::carrito();
         $fecha_mas_reciente_timestamp = 0;
-        $viewData['products'] = $_SESSION['cart'];
+        $viewData['products'] = Carretilla::obtenerPorId(sec::decryptDatum($_SESSION['sesionId'][count($_SESSION['sesionId'])]));
         foreach ($viewData['products'] as $product) {
             if (isset($product['crrprc'])) {
                 $totalCrrprc += $product['crrprc'];
@@ -78,6 +78,7 @@ class ShoppingCart extends PublicController
                             $crrfching = $product['crrfching'];
             
                             $PayPalOrder->addItem($productName,$productName.' purchased in Skull2canldy',$product,$productPrice,$productPrice *0.15, $productQuantity, "DIGITAL GOODS" );
+                            $viewData['products'] = Carretilla::deleteCarretilla(sec::decryptDatum($_SESSION['sesionId'][count($_SESSION['sesionId'])]));
                         }
                         $response = $PayPalOrder->createOrder();
                         unset($_SESSION['cart']);
