@@ -8,5 +8,8 @@ INSERT INTO `log`(`log_cod`, `log_description`) VALUES ('CI','CREDENCIAS INCORRE
 INSERT INTO `log`(`log_cod`, `log_description`) VALUES ('DES','CUENTA NO ACTIVA');
 
 INSERT INTO `log`(`log_cod`, `log_description`) VALUES ('COR','INTENTO INGRESAR CORREO');
+
+
+INSERT INTO `log`(`log_cod`, `log_description`) VALUES ('LGO','CERRÓ SESION');
 ALTER TABLE `loguser` DROP PRIMARY KEY, ADD PRIMARY KEY(`user_cod`, `date`);
 ALTER TABLE `lognonuser` DROP PRIMARY KEY, ADD PRIMARY KEY(`id_logNonUser`, `log_date`);

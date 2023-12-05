@@ -23,6 +23,16 @@ class Songs extends Table{
         $registros = self::obtenerRegistros($sqlstr, $params);
         return $registros;
 	}
+  public static function getTop(){
+     
+    $sqlstr = "SELECT song.*, album.*, artist.* 
+             FROM song 
+             INNER JOIN album ON song.album_id = album.id_album 
+             INNER JOIN artist ON album.id_artist = artist.id_artist LIMIT 5";
+          $params = [];
+          $registros = self::obtenerRegistros($sqlstr, $params);
+          return $registros;
+    }
 
   public static function insertSong($id_song, $title_song, $duration, $id_genre, $song_cover, $album_id, $status_song, $link_song){
 	
