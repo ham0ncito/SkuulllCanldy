@@ -3,6 +3,7 @@
 namespace Controllers\Escupitajo;
 
 use Controllers\PrivateController;
+use Controllers\PublicController;
 use Views\Renderer;
 use Utilities\Site;
 use Utilities\Validators;

@@ -41,4 +41,8 @@ class User{
     {
         return $secureUniqueID = bin2hex(random_bytes(32));
     }
+    public static function generateid()
+    {
+        return $secureUniqueID = bin2hex(random_bytes(64)).date("Y-m-d H:i:s");
+    }
 }

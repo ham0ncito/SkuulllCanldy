@@ -71,10 +71,10 @@ class Store extends PrivateController
     static private function cart()
     {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            if ($_SESSION["token"] == $_POST["token"]) {
+            if ($_SESSION["token"] == $_POST["xsx"]) {
                 if (isset($_POST['addToCart'])) {
-                    $xls = sec::decryptDatum($_SESSION['sxnsjfnuVn']);
-                    if(!isset($_SESSION['cart'])){
+                    $xls = sec::decryptDatum($_SESSION[]);
+                    if(!isset($_SESSION['cart'.''])){
                         $product = [
                             "usercod" => $xls,
                             "productid" => $_POST['productId'],
@@ -84,7 +84,7 @@ class Store extends PrivateController
                             "crrfching" => date("Y-m-d H:i:s")
                         ]; 
                         $_SESSION['cart'][0] = $product;
-                        echo '<script>alert("'.$_SESSION['productID'].'");</script>' ;
+                        echo '<script>alert("Producto Agregado");</script>';
                     }else{
                         $carrito = count($_SESSION['cart'])+1; 
                         $product = [
@@ -95,7 +95,8 @@ class Store extends PrivateController
                             "crrprc" =>$_POST['productPrice'],
                             "crrfching" => date("Y-m-d H:i:s")
                         ]; 
-                        $_SESSION['cart'][$carrito] = $product; 
+                        $_SESSION['cart'][$carrito] =$product;
+                        echo '<script>alert("Producto Agregado");</script>';
                     }
                 
                 }

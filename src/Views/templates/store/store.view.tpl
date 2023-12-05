@@ -51,21 +51,7 @@
                             </a>
                         </div>
                     </div>
-                    <div x-data="{showConfirm: false}">
-                       
-                        <div x-show="showConfirm" x-cloak @click.away="showConfirm = false" class="fixed inset-0 z-50 overflow-auto bg-black bg-opacity-50 flex justify-center items-center">
-                            <div class="bg-white w-1/2 rounded p-6">
-                                <h2 class="text-xl font-semibold mb-4">Product was added to carrito</h2>
-                                <p>Check out Carrito Below</p>
-                                <a class="text-green-500 hover:text-green-700" href="index.php?index?page=Store_Cart">
-                                    Go to carrito
-                                </a>
-                                <button @click="showConfirm = false" class="mt-4 bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
-                                    Close 
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+            
                 
 
 
