@@ -6,7 +6,7 @@ use Views\Renderer;
 use Dao\Genres\Genres as DAOGenre;
 use Utilities\Site;
 use Utilities\Validators;
-class Genres extends PublicController {
+class Genres extends PrivateController {
   private $id_genre;
   private $name_genre;
   private $description_genre;
