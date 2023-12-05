@@ -1,11 +1,12 @@
 <?php
 namespace Controllers\Genres;
 use Controllers\PrivateController;
+use Controllers\PublicController;
 use Views\Renderer;
 use Dao\Genres\Genres as DAOGenre;
 use Utilities\Site;
 use Utilities\Validators;
-class Genres extends PrivateController {
+class Genres extends PublicController {
   private $id_genre;
   private $name_genre;
   private $description_genre;
@@ -54,9 +55,7 @@ private $modes = [
                     if($this->mode !== "INS") {
                         if (isset($_GET["id_genre"])){
                             $this->genre = DAOGenre::obtenerPorId(strval($_GET["id_genre"]));
-                            if (!$this->genre) {
-                                $this->handleError("Oops, no sé encontro");
-                              }
+                           
                         }
                     }
                 } else {

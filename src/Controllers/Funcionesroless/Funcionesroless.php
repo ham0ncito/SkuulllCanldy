@@ -52,9 +52,7 @@ private $modes = [
                     if($this->mode !== "INS") {
                         if (isset($_GET["rolescod"])){
                             $this->funciones_roles = DAOFuncionesroles::obtenerPorId(strval($_GET["rolescod"]));
-                            if (!$this->funciones_roles) {
-                                $this->handleError("Oops, no sé encontro");
-                              }
+                           
                         }
                     }
                 } else {

@@ -51,9 +51,7 @@ private $modes = [
                     if($this->mode !== "INS") {
                         if (isset($_GET["highligths_id"])){
                             $this->highligths = DAOHighligths::obtenerPorId(strval($_GET["highligths_id"]));
-                            if (!$this->highligths) {
-                                $this->handleError("Oops, no sé encontro");
-                              }
+                           
                         }
                     }
                 } else {

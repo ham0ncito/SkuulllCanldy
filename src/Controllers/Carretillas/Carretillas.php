@@ -54,9 +54,7 @@ private $modes = [
                     if($this->mode !== "INS") {
                         if (isset($_GET["usercod"])){
                             $this->carretilla = DAOCarretilla::obtenerPorId(strval($_GET["usercod"]));
-                            if (!$this->carretilla) {
-                                $this->handleError("Oops, no sé encontro");
-                              }
+                           
                         }
                     }
                 } else {

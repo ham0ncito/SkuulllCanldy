@@ -48,9 +48,7 @@ private $modes = [
                     if($this->mode !== "INS") {
                         if (isset($_GET["id_offer"])){
                             $this->offersubscription = DAOOffersubscription::obtenerPorId(strval($_GET["id_offer"]));
-                            if (!$this->offersubscription) {
-                                $this->handleError("Oops, no sé encontro");
-                              }
+                           
                         }
                     }
                 } else {

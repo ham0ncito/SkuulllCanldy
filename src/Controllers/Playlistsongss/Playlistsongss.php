@@ -51,9 +51,7 @@ private $modes = [
                     if($this->mode !== "INS") {
                         if (isset($_GET["playlist_id"])){
                             $this->playlistsongs = DAOPlaylistsongs::obtenerPorId(strval($_GET["playlist_id"]));
-                            if (!$this->playlistsongs) {
-                                $this->handleError("Oops, no sé encontro");
-                              }
+                          
                         }
                     }
                 } else {

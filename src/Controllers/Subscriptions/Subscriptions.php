@@ -55,9 +55,7 @@ class Subscriptions extends PrivateController
                 if ($this->mode !== "INS") {
                     if (isset($_GET["id_subscription"])) {
                         $this->subscription = DAOSubscription::obtenerPorId(strval($_GET["id_subscription"]));
-                        if (!$this->subscription) {
-                            $this->handleError("Oops, no sé encontro");
-                        }
+                      
                     }
                 }
             } else {

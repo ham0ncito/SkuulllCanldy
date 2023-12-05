@@ -51,9 +51,7 @@ private $modes = [
                     if($this->mode !== "INS") {
                         if (isset($_GET["id_favorite"])){
                             $this->favorites = DAOFavorites::obtenerPorId(strval($_GET["id_favorite"]));
-                            if (!$this->favorites) {
-                                $this->handleError("Oops, no sé encontro");
-                              }
+                          
                         }
                     }
                 } else {

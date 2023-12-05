@@ -60,9 +60,7 @@ private $modes = [
                     if($this->mode !== "INS") {
                         if (isset($_GET["id_artist"])){
                             $this->artist = DAOArtist::obtenerPorId(strval($_GET["id_artist"]));
-                            if (!$this->artist) {
-                                $this->handleError("Oops, no sé encontro");
-                              }
+                          
                         }
                     }
                 } else {

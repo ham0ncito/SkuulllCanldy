@@ -323,9 +323,7 @@ class GenerateCRUD extends Table
                     if(\$this->mode !== " . '"INS"' . ") {
                         if (isset(\$_GET[" . '"' . self::getPrimaryKey($tableName) . '"' . "])){
                             \$this->" . strtolower($tableName) . " = DAO" . ucfirst($tableName) . "::obtenerPorId(strval(\$_GET[" . '"' . self::getPrimaryKey($tableName) . '"' . "]));
-                            if (!\$this->". strtolower($tableName) .") {
-                                \$this->handleError(" . '"Oops, no sé encontro"' . ");
-                              }
+                            
                         }
                     }
                 } else {
@@ -518,7 +516,7 @@ class GenerateCRUD extends Table
             foreach ($fields as $campo) {
                 $fieldsString .= '<section class="mb-4">
                 <label for="' . strtolower($campo) . '" class="block text-gray-700 text-sm font-bold mb-2">' . strtolower($campo) . '</label>
-                <input type="text" id="' . strtolower($campo) . '" name="' . strtolower($campo) . '" placeholder="' . strtolower($campo) . ' de ' . $tableName . ' " value="{{' . strtolower($campo) . '}}" {{if ~readonly}} disabled readonly {{endif ~readonly}} class="w-full py-2 px-3 border border-gray-300 rounded focus:outline-none focus:border-blue-400"/>
+                <input type="text" id="' . strtolower($campo) . '" name="' . strtolower($campo) . '" placeholder="' . strtolower($campo) . ' de ' . $tableName . ' " value="{{' . strtolower($campo) . '}}" {{if ~readonly}} readonly {{endif ~readonly}} class="w-full py-2 px-3 border border-gray-300 rounded focus:outline-none focus:border-blue-400"/>
                 {{if ' . strtolower($campo) . '_error}}<div class="text-red-500 text-sm">{{' . strtolower($campo) . '_error}}</div>{{endif ' . strtolower($campo) . '_error}}
             </section>';
                 $position++;

@@ -60,9 +60,7 @@ private $modes = [
                     if($this->mode !== "INS") {
                         if (isset($_GET["productId"])){
                             $this->products = DAOProducts::obtenerPorId(strval($_GET["productId"]));
-                            if (!$this->products) {
-                                $this->handleError("Oops, no sé encontro");
-                              }
+                          
                         }
                     }
                 } else {

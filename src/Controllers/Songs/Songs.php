@@ -63,9 +63,7 @@ private $modes = [
                     if($this->mode !== "INS") {
                         if (isset($_GET["id_song"])){
                             $this->song = DAOSong::obtenerPorId(strval($_GET["id_song"]));
-                            if (!$this->song) {
-                                $this->handleError("Oops, no sé encontro");
-                              }
+                        
                         }
                     }
                 } else {

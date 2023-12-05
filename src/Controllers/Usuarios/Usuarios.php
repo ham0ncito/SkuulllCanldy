@@ -72,9 +72,7 @@ private $modes = [
                     if($this->mode !== "INS") {
                         if (isset($_GET["usercod"])){
                             $this->usuario = DAOUsuario::obtenerPorId(strval($_GET["usercod"]));
-                            if (!$this->usuario) {
-                                $this->handleError("Oops, no sé encontro");
-                              }
+                          
                         }
                     }
                 } else {

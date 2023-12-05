@@ -54,9 +54,7 @@ private $modes = [
                     if($this->mode !== "INS") {
                         if (isset($_GET["usercod"])){
                             $this->roles_usuarios = DAORoles_usuarios::obtenerPorId(strval($_GET["usercod"]));
-                            if (!$this->roles_usuarios) {
-                                $this->handleError("Oops, no sé encontro");
-                              }
+                         
                         }
                     }
                 } else {

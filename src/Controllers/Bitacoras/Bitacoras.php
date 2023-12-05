@@ -60,9 +60,7 @@ private $modes = [
                     if($this->mode !== "INS") {
                         if (isset($_GET["bitacoracod"])){
                             $this->bitacora = DAOBitacora::obtenerPorId(strval($_GET["bitacoracod"]));
-                            if (!$this->bitacora) {
-                                $this->handleError("Oops, no sé encontro");
-                              }
+                            
                         }
                     }
                 } else {

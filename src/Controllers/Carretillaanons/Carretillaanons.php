@@ -54,9 +54,7 @@ private $modes = [
                     if($this->mode !== "INS") {
                         if (isset($_GET["anoncod"])){
                             $this->carretillaanon = DAOCarretillaanon::obtenerPorId(strval($_GET["anoncod"]));
-                            if (!$this->carretillaanon) {
-                                $this->handleError("Oops, no sé encontro");
-                              }
+                           
                         }
                     }
                 } else {

@@ -50,9 +50,7 @@ private $modes = [
                     if($this->mode !== "INS") {
                         if (isset($_GET["user_cod"])){
                             $this->loguser = DAOLoguser::obtenerPorId(strval($_GET["user_cod"]));
-                            if (!$this->loguser) {
-                                $this->handleError("Oops, no sé encontro");
-                              }
+                          
                         }
                     }
                 } else {

@@ -51,9 +51,7 @@ private $modes = [
                     if($this->mode !== "INS") {
                         if (isset($_GET[""])){
                             $this->songauthors = DAOSongauthors::obtenerPorId(strval($_GET[""]));
-                            if (!$this->songauthors) {
-                                $this->handleError("Oops, no sé encontro");
-                              }
+                          
                         }
                     }
                 } else {

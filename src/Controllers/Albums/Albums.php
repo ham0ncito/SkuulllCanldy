@@ -63,9 +63,7 @@ private $modes = [
                     if($this->mode !== "INS") {
                         if (isset($_GET["id_album"])){
                             $this->album = DAOAlbum::obtenerPorId(strval($_GET["id_album"]));
-                            if (!$this->album) {
-                                $this->handleError("Oops, no sé encontro");
-                              }
+                           
                         }
                     }
                 } else {

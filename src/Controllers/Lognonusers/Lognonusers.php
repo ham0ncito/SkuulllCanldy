@@ -51,9 +51,7 @@ private $modes = [
                     if($this->mode !== "INS") {
                         if (isset($_GET["id_logNonUser"])){
                             $this->lognonuser = DAOLognonuser::obtenerPorId(strval($_GET["id_logNonUser"]));
-                            if (!$this->lognonuser) {
-                                $this->handleError("Oops, no sé encontro");
-                              }
+                           
                         }
                     }
                 } else {

@@ -2,7 +2,8 @@
 namespace Dao\Genres; 
 use Dao\Table; 
 class Genres extends Table{
-      private $id_genre;
+    
+  private $id_genre;
   private $name_genre;
   private $description_genre;
   private $status_genre;
@@ -41,9 +42,9 @@ class Genres extends Table{
         return $registros;
 	}
 
- public static function deleteGenre($id){
-	$sqlstr= "DELETE  FROM genre WHERE id_genre = :id";
-        $params = ['id'=>$id];
+ public static function deleteGenre($id_genre){
+	$sqlstr= "DELETE FROM genre WHERE id_genre = :id_genre";
+        $params = ['id_genre'=>$id_genre];
         $registros = self::executeNonQuery($sqlstr, $params);
         return $registros;
 	}

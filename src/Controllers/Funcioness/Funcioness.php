@@ -51,9 +51,7 @@ private $modes = [
                     if($this->mode !== "INS") {
                         if (isset($_GET["fncod"])){
                             $this->funciones = DAOFunciones::obtenerPorId(strval($_GET["fncod"]));
-                            if (!$this->funciones) {
-                                $this->handleError("Oops, no sé encontro");
-                              }
+                           
                         }
                     }
                 } else {

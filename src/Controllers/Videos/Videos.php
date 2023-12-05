@@ -63,9 +63,7 @@ private $modes = [
                     if($this->mode !== "INS") {
                         if (isset($_GET["id_video"])){
                             $this->video = DAOVideo::obtenerPorId(strval($_GET["id_video"]));
-                            if (!$this->video) {
-                                $this->handleError("Oops, no sé encontro");
-                              }
+                         
                         }
                     }
                 } else {

@@ -54,9 +54,7 @@ private $modes = [
                     if($this->mode !== "INS") {
                         if (isset($_GET["id_offer"])){
                             $this->offer = DAOOffer::obtenerPorId(strval($_GET["id_offer"]));
-                            if (!$this->offer) {
-                                $this->handleError("Oops, no sé encontro");
-                              }
+                          
                         }
                     }
                 } else {
