@@ -76,8 +76,7 @@ class ShoppingCart extends PublicController
                             $productQuantity = $product['crrctd'];
                             $productPrice = $product['crrprc'];
                             $crrfching = $product['crrfching'];
-                            Carretilla::insertCarretilla(sec::decryptDatum($_SESSION['sxnsjfnuVn']), $productId, $productQuantity, $productPrice, date("Y-m-d H:i:s"));
-
+            
                             $PayPalOrder->addItem($productName,$productName.' purchased in Skull2canldy',$product,$productPrice,$productPrice *0.15, $productQuantity, "DIGITAL GOODS" );
                         }
                         $response = $PayPalOrder->createOrder();
