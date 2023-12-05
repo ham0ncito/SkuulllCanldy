@@ -53,7 +53,7 @@
             {{foreach NAVIGATION}}
               <li><a href="{{nav_url}}" class="hover:text-gray-300">{{nav_label}}</a></li>
             {{endfor NAVIGATION}}
-            <li><a href="index.php?page=sec_logout" class="hover:text-gray-300">Logout</a></li>
+         
           </ul>
         </nav>
         {{with login}}
@@ -79,15 +79,15 @@
                 <div class="sm:flex sm:items-start">
                   <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                     <h3 class="text-lg font-medium leading-6 text-gray-900" id="modal-title">
-                      Datos de Usuario
+                     Personal Details
                     </h3>
   
                     <div class="mt-2">
-                   
-                      <p class="text-sm text-gray-500">Nombre: Usuario Ejemplo</p>
-                      <p class="text-sm text-gray-500">Email: usuario@example.com</p>
-                      <p class="text-sm text-gray-500">Edad: 30</p>
-          
+                      <p class="text-sm text-gray-500">Name {{userName}}</p>
+                      <p class="text-sm text-gray-500">Email {{userEmail}}</p>
+                      <p class="text-sm text-gray-500">Registered since {{userFching}}</p>
+                      <p class="text-sm text-gray-500">Account type: {{userTipo}}</p>
+                      <a href="index.php?page=sec_logout" class="text-2xl my-8 mx-auto text-red-500 hover:text-gray-300">Logout</a>
                     </div>
                   </div>
                 </div>
