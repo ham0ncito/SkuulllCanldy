@@ -65,5 +65,67 @@ class Songs extends Table{
         $registros = self::executeNonQuery($sqlstr, $params);
         return $registros;
 	}
+  public static function getSongs(
+      string $partialName = "",
+      string $orderBy = "",
+      bool $orderDescending = false,
+      int $page = 0,
+      int $itemsPerPage = 10
+  ){
+    $sqlstr = "SELECT DISTINCT s.*, ar.name_artist,a.title_album,a.release_date_album,ROW_NUMBER() OVER (ORDER BY s.id_song) AS row_number
+    FROM song s
+    JOIN album a ON s.album_id = a.id_album
+    JOIN artist ar ON a.id_artist = ar.id_artist";
+
+$sqlstrCount = "SELECT COUNT(DISTINCT s.id_song) as count
+    FROM song s
+    JOIN album a ON s.album_id = a.id_album
+    JOIN artist ar ON a.id_artist = ar.id_artist";
+
+$conditions = [];
+$params = [];
+
+if ($partialName != "") {
+    $conditions[] = "(s.title_song LIKE :partialName OR ar.name_artist LIKE :partialName)";
+    $params["partialName"] = "%" . $partialName . "%";
+}
+
+if (count($conditions) > 0) {
+    $sqlstr .= " WHERE " . implode(" AND ", $conditions);
+    $sqlstrCount .= " WHERE " . implode(" AND ", $conditions);
+}
+
+if (!in_array($orderBy, ["s.id_song", "s.title_song", "s.duration", ""])) {
+    throw new \Exception("Error Processing Request OrderBy has an invalid value");
+}
+
+if ($orderBy != "") {
+    $sqlstr .= " ORDER BY " . $orderBy;
+    if ($orderDescending) {
+        $sqlstr .= " DESC";
+    }
+}
+    $sqlstr .= " LIMIT " . $page * $itemsPerPage . ", " . $itemsPerPage;
+
+    $numeroDeRegistros = self::obtenerUnRegistro($sqlstrCount, $params)["count"];
+    $pagesCount = ceil($numeroDeRegistros / $itemsPerPage);
+
+    if ($page > $pagesCount - 1) {
+      $page = $pagesCount - 1;
+    }
+
+    
+    $registros = null;
+
+    try {
+      $registros = self::obtenerRegistros($sqlstr, $params);
+    } catch (\Exception $e) {
+      $registros = self::getSongs("", "", false, 0, 10)["songs"];
+    }
+    if(empty($registros)){
+      $registros = self::getSongs("", "", false, 0, 10)["songs"];
+    }
+    return ["songs" => $registros, "total" => $numeroDeRegistros, "page" => $page, "itemsPerPage" => $itemsPerPage];
+  }
     
 }

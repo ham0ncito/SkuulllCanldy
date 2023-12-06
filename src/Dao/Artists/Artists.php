@@ -57,4 +57,46 @@ class Artists extends Table{
         return $registros;
 	}
     
-}
+        public static function getArtists(string $partialName = "",
+        string $orderBy = "",
+        bool $orderDescending = false,
+        int $page = 0,
+        int $itemsPerPage = 10){
+                $sqlstr = "SELECT * FROM artist a";
+              
+              
+              $sqlstrCount = "SELECT COUNT(*) as count FROM artist a";
+              $conditions = [];
+              $params = [];
+              if ($partialName != "") {
+                $conditions[] = "a.name_artist LIKE :partialName";
+                $params["partialName"] = "%" . $partialName . "%";
+              }
+              if (count($conditions) > 0) {
+                $sqlstr .= " WHERE " . implode(" AND ", $conditions);
+                $sqlstrCount .= " WHERE " . implode(" AND ", $conditions);
+              }
+              if (!in_array($orderBy, ["a.id_artist", "a.name_artist", "a.image_artist", ""])) {
+                throw new \Exception("Error Processing Request OrderBy has invalid value");
+              }
+              if ($orderBy != "") {
+                $sqlstr .= " ORDER BY " . $orderBy;
+                if ($orderDescending) {
+                  $sqlstr .= " DESC";
+                }
+              }
+              $numeroDeRegistros = self::obtenerUnRegistro($sqlstrCount, $params)["count"];
+              $pagesCount = ceil($numeroDeRegistros / $itemsPerPage);
+              if ($page > $pagesCount - 1) {
+                $page = $pagesCount - 1;
+              }
+              $sqlstr .= " LIMIT " . $page * $itemsPerPage . ", " . $itemsPerPage;
+              $registros = null;
+              try{
+                $registros = self::obtenerRegistros($sqlstr, $params);
+              }catch(\Exception $e){
+                $registros = self::getArtists("", "", false, 0, 10)["artists"];
+              }
+              return ["artists" => $registros, "total" => $numeroDeRegistros, "page" => $page, "itemsPerPage" => $itemsPerPage];
+          }
+        }
