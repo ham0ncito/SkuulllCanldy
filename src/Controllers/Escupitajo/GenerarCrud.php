@@ -9,14 +9,17 @@ use Utilities\Site;
 use Utilities\Validators;
 use Utilities\Escupitajo\GenerateCRUD;
 
-class GenerarCrud extends PrivateController
+class GenerarCrud extends PublicController
 {
   public function run(): void
   {
-    $viewData = [];
+    $dataview = [];
     $dataview['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLN'); 
     $dataview['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLS'); 
-    $dataview['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'ADMIN'); 
+    $dataview['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'ADMIN');
+    $dataview['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLN'); 
+    $dataview['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLS'); 
+    $dataview['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'ADMIN');  
     Renderer::render("escupitajo/escupitajo", $dataview);
     self::handlePost(); 
   }
