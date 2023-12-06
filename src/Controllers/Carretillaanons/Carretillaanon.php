@@ -23,6 +23,9 @@ class Carretillaanon extends PrivateController {
 		$viewData['crrprc'] = 'crrprc';
 		$viewData['crrfching'] = 'crrfching';
 		$viewData['carretillaanon']= DAOCarretillaanon::getCarretillaanon();
+        $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLN'); 
+        $viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLS'); 
+        $viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'ADMIN'); 
         Renderer::render("carretillaanons/carretillaanonlist", $viewData);
     }
 }

@@ -21,6 +21,9 @@ class Subscription extends PrivateController {
 		$viewData['subscription_duration'] = 'subscription_duration';
 		$viewData['subscription_price'] = 'subscription_price';
 		$viewData['subscription']= DAOSubscription::getSubscription();
+        $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLN'); 
+        $viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLS'); 
+        $viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'ADMIN'); 
         Renderer::render("subscriptions/subscriptionlist", $viewData);
     }
 }

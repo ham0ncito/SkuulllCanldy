@@ -1,6 +1,6 @@
 <section class="bg-gray-100 p-4 mx-4">
     <h1 class="text-2xl font-bold mb-4"> Descripcion favorites {{modedsc}}</h1>
-    
+    {{ifnot isCLN}}
 {{with favorites}}
 
     <form class="my-4 bg-white p-8 rounded shadow-lg mx-auto max-w-md" action="index.php?page=Favoritess_Favoritess&mode={{~mode}}&id_favorite={{id}}" method="POST"><input type="hidden" name="xss_token_favorites" value="{{~xss_token_favorites}}"/><section class="mb-4">
@@ -27,7 +27,7 @@
         </section>
         </section></form></section>
 {{endwith favorites}}
-
+{{endifnot isCLN}}
 <script>
         document.addEventListener("DOMContentLoaded", ()=>{
             document.getElementById("btnCancel").addEventListener("click", (e)=>{

@@ -10,9 +10,11 @@
                 <button id="searchbutton" name="searchbutton" class="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700 mr-2">
                     Search
                 </button>
+                {{if isADMIN}}
                 <a href="index.php?page=Highligthsplaylists_Highligthsplaylists&mode=INS" class="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700">
                     Insert
                 </a>
+                {{endif isADMIN}}
             </div>
         </div>
     </div><section><h2 class="text-2xl font-bold mb-4 mx-4"> HIGHLIGTHSPLAYLIST</h2>
@@ -22,13 +24,16 @@
 <tr>
 	<th class="py-2 px-4 border-b">HIGHLIGTHS_ID</th>
 	<th class="py-2 px-4 border-b">PLAYLIST_ID</th>
-	<th class="py-2 px-4 border-b">HIGHLIGTHS_DESCRIPTION</th><th><a href="index.php?page=Highligthsplaylists_Highligthsplaylists&mode=INS">Nuevo</a></th>
+	<th class="py-2 px-4 border-b">HIGHLIGTHS_DESCRIPTION</th>
+    {{if isADMIN}}<th><a href="index.php?page=Highligthsplaylists_Highligthsplaylists&mode=INS">Nuevo</a></th>{{endif isADMIN}}
 	</tr>
 </thead><tbody>{{foreach highligthsplaylist}}<tr><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Highligthsplaylists_Highligthsplaylists&mode=DSP&highligths_id={{highligths_id}} ">{{highligths_id}}</a></td><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Highligthsplaylists_Highligthsplaylists&mode=DSP&highligths_id={{highligths_id}} ">{{playlist_id}}</a></td><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Highligthsplaylists_Highligthsplaylists&mode=DSP&highligths_id={{highligths_id}} ">{{highligths_description}}</a></td>
+    {{if isADMIN}}
             <td class"p-2 text-center">
                 <a class="text-green-500 hover:text-green-700" href="index.php?page=Highligthsplaylists_Highligthsplaylists&mode=UPD&highligths_id={{highligths_id}}" >Edit</a> 
                 <a class="text-red-500 hover:text-red-700" href="index.php?page=Highligthsplaylists_Highligthsplaylists&mode=DEL&highligths_id={{highligths_id}}" >Delete</a>
             </td>
+            {{endif isADMIN}}
 	</tr>
  {{endfor highligthsplaylist}}</tbody>
 </table>

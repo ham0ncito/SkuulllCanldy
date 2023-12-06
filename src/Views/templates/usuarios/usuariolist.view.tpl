@@ -1,3 +1,4 @@
+{{if isADMIN}}
 <section><h2 class="text-2xl font-bold mb-4"> LISTADO DE USUARIO</h2>
 <div class="overflow-x-auto">
 <table class="min-w-full bg-white border border-gray-300">
@@ -23,4 +24,4 @@
 	</tr>
  {{endfor usuario}}</tbody>
 </table>
-</div> </section>
+</div> </section>{{endif isADMIN}}

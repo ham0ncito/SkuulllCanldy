@@ -10,9 +10,11 @@
                 <button id="searchbutton" name="searchbutton" class="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700 mr-2">
                     Search
                 </button>
+                {{if isADMIN}}
                 <a href="index.php?page=funcioness_funcioness&mode=INS" class="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700">
                     Insert
                 </a>
+                {{endif isADMIN}}
             </div>
         </div>
     </div><section><h2 class="text-2xl font-bold mb-4"> LISTADO DE FUNCIONES</h2>
@@ -23,7 +25,9 @@
 	<th class="py-2 px-4 border-b">FNCOD</th>
 	<th class="py-2 px-4 border-b">FNDSC</th>
 	<th class="py-2 px-4 border-b">FNEST</th>
+    {{if isADMIN}}
 	<th class="py-2 px-4 border-b">FNTYP</th><th><a href="index.php?page=Funcioness_Funcioness&mode=INS">Nuevo</a></th>
+    {{endif isADMIN}}
 	</tr>
 </thead><tbody>{{foreach funciones}}<tr><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Funcioness_Funcioness&mode=DSP&fncod={{fncod}} ">{{fncod}}</a></td><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Funcioness_Funcioness&mode=DSP&fncod={{fncod}} ">{{fndsc}}</a></td><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Funcioness_Funcioness&mode=DSP&fncod={{fncod}} ">{{fnest}}</a></td><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Funcioness_Funcioness&mode=DSP&fncod={{fncod}} ">{{fntyp}}</a></td>
             <td class"p-2 text-center">

@@ -21,6 +21,9 @@ class Lognonuser extends PrivateController {
 		$viewData['id_cookie'] = 'id_cookie';
 		$viewData['log_cod'] = 'log_cod';
 		$viewData['lognonuser']= DAOLognonuser::getLognonuser();
+        $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLN'); 
+        $viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLS'); 
+        $viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'ADMIN'); 
         Renderer::render("lognonusers/lognonuserlist", $viewData);
     }
 }

@@ -15,6 +15,7 @@ class Security {
     public static function logout()
     {
         unset($_SESSION["login"]);
+        unset($_SESSION['useremail']);
     }
     public static function login($userId, $userName, $userEmail)
     {
@@ -36,6 +37,7 @@ class Security {
         }
         return false;
     }
+    
     public static function getUserId()
     {
         if (isset($_SESSION["login"])) {

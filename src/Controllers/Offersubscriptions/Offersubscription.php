@@ -19,6 +19,9 @@ class Offersubscription extends PrivateController {
 		$viewData['id_subscription'] = 'id_subscription';
 		$viewData['price_offer'] = 'price_offer';
 		$viewData['offersubscription']= DAOOffersubscription::getOffersubscription();
+        $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLN'); 
+        $viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLS'); 
+        $viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'ADMIN'); 
         Renderer::render("offersubscriptions/offersubscriptionlist", $viewData);
     }
 }

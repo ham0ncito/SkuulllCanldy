@@ -27,6 +27,9 @@ class Artist extends PrivateController {
 		$viewData['status_artist'] = 'status_artist';
 		$viewData['artist_bio'] = 'artist_bio';
 		$viewData['artist']= DAOArtist::getArtist();
+        $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLN'); 
+        $viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLS'); 
+        $viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'ADMIN'); 
         Renderer::render("artists/artistlist", $viewData);
     }
 }

@@ -35,6 +35,9 @@ class Usuario extends PrivateController {
 		$viewData['userpswdchg'] = 'userpswdchg';
 		$viewData['usertipo'] = 'usertipo';
 		$viewData['usuario']= DAOUsuario::getUsuario();
+        $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLN'); 
+        $viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLS'); 
+        $viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'ADMIN'); 
         Renderer::render("usuarios/usuariolist", $viewData);
     }
 }

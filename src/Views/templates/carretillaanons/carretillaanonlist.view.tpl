@@ -10,9 +10,11 @@
                 <button id="searchbutton" name="searchbutton" class="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700 mr-2">
                     Search
                 </button>
+                {{if isADMIN}}
                 <a href="index.php?page=Carretillaanons_Carretillaanons&mode=INS" class="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700">
                     Insert
                 </a>
+                {{endif isADMIN}}
             </div>
         </div>
     </div><section><h2 class="text-2xl font-bold mb-4 mx-4"> CARRETILLAANON</h2>
@@ -24,12 +26,16 @@
 	<th class="py-2 px-4 border-b">PRODUCTID</th>
 	<th class="py-2 px-4 border-b">CRRCTD</th>
 	<th class="py-2 px-4 border-b">CRRPRC</th>
+    {{if isADMIN}}
 	<th class="py-2 px-4 border-b">CRRFCHING</th><th><a href="index.php?page=Carretillaanons_Carretillaanons&mode=INS">Nuevo</a></th>
+    {{endif isADMIN}}
 	</tr>
 </thead><tbody>{{foreach carretillaanon}}<tr><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Carretillaanons_Carretillaanons&mode=DSP&anoncod={{anoncod}} ">{{anoncod}}</a></td><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Carretillaanons_Carretillaanons&mode=DSP&anoncod={{anoncod}} ">{{productid}}</a></td><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Carretillaanons_Carretillaanons&mode=DSP&anoncod={{anoncod}} ">{{crrctd}}</a></td><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Carretillaanons_Carretillaanons&mode=DSP&anoncod={{anoncod}} ">{{crrprc}}</a></td><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Carretillaanons_Carretillaanons&mode=DSP&anoncod={{anoncod}} ">{{crrfching}}</a></td>
             <td class"p-2 text-center">
+                {{if isADMIN}}
                 <a class="text-green-500 hover:text-green-700" href="index.php?page=Carretillaanons_Carretillaanons&mode=UPD&anoncod={{anoncod}}" >Edit</a> 
                 <a class="text-red-500 hover:text-red-700" href="index.php?page=Carretillaanons_Carretillaanons&mode=DEL&anoncod={{anoncod}}" >Delete</a>
+                {{endif isADMIN}}
             </td>
 	</tr>
  {{endfor carretillaanon}}</tbody>

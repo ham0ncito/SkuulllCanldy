@@ -29,6 +29,10 @@ class Video extends PublicController {
 		$viewData['status_video'] = 'status_video';
 		$viewData['link_song'] = 'link_song';
 		$viewData['video']= DAOVideo::getVideo();
+        $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLN'); 
+        $viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLS'); 
+        $viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'ADMIN'); 
         Renderer::render("videos/videolist", $viewData);
+        
     }
 }

@@ -10,9 +10,11 @@
                 <button id="searchbutton" name="searchbutton" class="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700 mr-2">
                     Search
                 </button>
+                {{if isADMIN}}
                 <a href="index.php?page=Offersubscriptions_Offersubscriptions&mode=INS" class="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700">
                     Insert
                 </a>
+                {{endif isADMIN}}
             </div>
         </div>
     </div><section><h2 class="text-2xl font-bold mb-4 mx-4"> OFFERSUBSCRIPTION</h2>
@@ -22,13 +24,15 @@
 <tr>
 	<th class="py-2 px-4 border-b">ID_OFFER</th>
 	<th class="py-2 px-4 border-b">ID_SUBSCRIPTION</th>
-	<th class="py-2 px-4 border-b">PRICE_OFFER</th><th><a href="index.php?page=Offersubscriptions_Offersubscriptions&mode=INS">Nuevo</a></th>
+	<th class="py-2 px-4 border-b">PRICE_OFFER</th>{{if isADMIN}}<th><a href="index.php?page=Offersubscriptions_Offersubscriptions&mode=INS">Nuevo</a></th>{{endif isADMIN}}
 	</tr>
 </thead><tbody>{{foreach offersubscription}}<tr><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Offersubscriptions_Offersubscriptions&mode=DSP&id_offer={{id_offer}} ">{{id_offer}}</a></td><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Offersubscriptions_Offersubscriptions&mode=DSP&id_offer={{id_offer}} ">{{id_subscription}}</a></td><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Offersubscriptions_Offersubscriptions&mode=DSP&id_offer={{id_offer}} ">{{price_offer}}</a></td>
+    {{if isADMIN}}
             <td class"p-2 text-center">
                 <a class="text-green-500 hover:text-green-700" href="index.php?page=Offersubscriptions_Offersubscriptions&mode=UPD&id_offer={{id_offer}}" >Edit</a> 
                 <a class="text-red-500 hover:text-red-700" href="index.php?page=Offersubscriptions_Offersubscriptions&mode=DEL&id_offer={{id_offer}}" >Delete</a>
             </td>
+            {{endif isADMIN}}
 	</tr>
  {{endfor offersubscription}}</tbody>
 </table>

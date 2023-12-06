@@ -14,7 +14,10 @@ class GenerarCrud extends PrivateController
   public function run(): void
   {
     $viewData = [];
-    Renderer::render("escupitajo/escupitajo", $viewData);
+    $dataview['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLN'); 
+    $dataview['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLS'); 
+    $dataview['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'ADMIN'); 
+    Renderer::render("escupitajo/escupitajo", $dataview);
     self::handlePost(); 
   }
   public function handlePost()

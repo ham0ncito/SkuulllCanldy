@@ -7,12 +7,15 @@
             </svg>
         </div>
         <div class="absolute inset-y-0 right-0 flex items-center pr-3">
+            
             <button id="searchbutton" name="searchbutton" class="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700 mr-2">
                 Search
             </button>
+            {{if isADMIN}}
             <a href="index.php?page=Bitacoras_Bitacoras&mode=INS" class="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700">
                 Insert
             </a>
+            {{endif isADMIN}}
         </div>
     </div>
 </div>

@@ -1,3 +1,4 @@
+{{if isADMIN}}
 <div class="container grid grid-cols-5 gap-6 mx-2">
   {{foreach control}}
     <div class="bg-white rounded-lg overflow-hidden shadow-md">
@@ -9,3 +10,4 @@
     </div>
     {{endfor control}}
 </div>
+{{endif isADMIN}}

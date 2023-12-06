@@ -10,6 +10,9 @@ class Search extends PrivateController{
         $dataview = array();
         $dataview["genre"] = DAOGenre::getGenre();
         $dataview["artist"] = DAOArtist::getArtist();
+        $dataview['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLN'); 
+        $dataview['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLS'); 
+        $dataview['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'ADMIN'); 
         \Views\Renderer::render("search/search", $dataview);
     }
 }

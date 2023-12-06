@@ -21,6 +21,9 @@ class Playlistsongs extends PrivateController {
 		$viewData['playlistSong_added_at'] = 'playlistSong_added_at';
 		$viewData['playlistSong_status'] = 'playlistSong_status';
 		$viewData['playlistsongs']= DAOPlaylistsongs::getPlaylistsongs();
+        $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLN'); 
+        $viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLS'); 
+        $viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'ADMIN'); 
         Renderer::render("playlistsongss/playlistsongslist", $viewData);
     }
 }

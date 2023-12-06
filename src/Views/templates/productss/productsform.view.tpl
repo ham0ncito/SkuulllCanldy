@@ -18,7 +18,7 @@
                 <label for="productprice" class="block text-gray-700 text-sm font-bold mb-2">productprice</label>
                 <input type="text" id="productprice" name="productprice" placeholder="productprice de products " value="{{productPrice}}" {{if ~readonly}}   readonly {{endif ~readonly}} class="w-full py-2 px-3 border border-gray-300 rounded focus:outline-none focus:border-blue-400"/>
                 {{if productPrice_error}}<div class="text-red-500 text-sm">{{productPrice_error}}</div>{{endif productPrice_error}}
-            </section><section class="mb-4">
+            </section>{{if isADMIN}}<section class="mb-4">
                 <label for="productimgurl" class="block text-gray-700 text-sm font-bold mb-2">productimgurl</label>
                 <input type="text" id="productimgurl" name="productimgurl" placeholder="productimgurl de products " value="{{productImgUrl}}" {{if ~readonly}}   readonly {{endif ~readonly}} class="w-full py-2 px-3 border border-gray-300 rounded focus:outline-none focus:border-blue-400"/>
                 {{if productImgUrl_error}}<div class="text-red-500 text-sm">{{productImgUrl_error}}</div>{{endif productImgurl_error}}
@@ -30,7 +30,7 @@
                 <label for="productstatus" class="block text-gray-700 text-sm font-bold mb-2">productstatus</label>
                 <input type="text" id="productstatus" name="productstatus" placeholder="productstatus de products" value="{{productStatus}}" {{if ~readonly}}   readonly {{endif ~readonly}} class="w-full py-2 px-3 border border-gray-300 rounded focus:outline-none focus:border-blue-400"/>
                 {{if productStatus_error}}<div class="text-red-500 text-sm">{{productStatus_error}}</div>{{endif productStatus_error}}
-            </section>
+            </section>{{endif isADMIN}}
            <section class="col-12 right">
             {{if ~showConfirm}}
                 <button type="submit" name="btnConfirm">Confirmar</button>&nbsp;

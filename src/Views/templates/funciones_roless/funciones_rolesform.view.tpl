@@ -1,3 +1,4 @@
+{{if isADMIN}}
 <section class="bg-gray-100 p-4 mx-4">
     <h1 class="text-2xl font-bold mb-4"> Descripcion funciones_roles {{modedsc}}</h1>
     
@@ -27,7 +28,7 @@
         </section>
         </section></form></section>
 {{endwith funciones_roles}}
-
+{{endif isADMIN}}
 <script>
         document.addEventListener("DOMContentLoaded", ()=>{
             document.getElementById("btnCancel").addEventListener("click", (e)=>{

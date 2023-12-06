@@ -29,6 +29,9 @@ class Song extends PrivateController {
 		$viewData['status_song'] = 'status_song';
 		$viewData['link_song'] = 'link_song';
 		$viewData['song']= DAOSong::getSong();
+        $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLN'); 
+        $viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLS'); 
+        $viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'ADMIN'); 
         Renderer::render("songs/songlist", $viewData);
     }
 }

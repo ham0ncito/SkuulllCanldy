@@ -91,6 +91,29 @@ class Security extends \Dao\Table
 
         return self::obtenerUnRegistro($sqlstr, $params);
     }
+    
+    static public function userIs($codUser, $cod = "CLN"){
+        $data = self::getRolUser($codUser); 
+        $data = implode("", $data);
+        if ($data == $cod)
+        {
+            return true;
+        }
+        return false; 
+    }
+    
+    static public function getRolUser($email){
+        $sqlstr = "SELECT `usertipo` from `usuario` where `useremail` = :useremail ;";
+        $params = array("useremail"=>$email);
+        return self::obtenerUnRegistro($sqlstr, $params);
+    }
+    
+    static public function getUsuarioById($cod)
+    {
+        $sqlstr = "SELECT * from `usuario` where `usercod` = :usercod ;";
+        $params = array("usercod"=>$cod);
+        return self::obtenerUnRegistro($sqlstr, $params);
+    }
 
     static private function _saltPassword($password)
     {
@@ -241,6 +264,7 @@ class Security extends \Dao\Table
             array("fncod" => $fncod, "rolescod" => $rolescod)
         );
     }
+    
     static public function getUnAssignedFeatures($rolescod)
     {
         

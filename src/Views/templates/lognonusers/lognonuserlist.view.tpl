@@ -1,3 +1,4 @@
+{{if isADMIN}}
 <div class="flex items-center justify-between mb-4 mx-4">
         <div class="relative w-full flex items-center">
             <input type="text" id="searchbar" name="searchbar" placeholder="Name or ID" class="w-2/3 px-4 py-2 pl-10 pr-8 border border-gray-300 rounded-md">
@@ -10,9 +11,7 @@
                 <button id="searchbutton" name="searchbutton" class="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700 mr-2">
                     Search
                 </button>
-                <a href="index.php?page=Lognonusers_Lognonusers&mode=INS" class="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700">
-                    Insert
-                </a>
+                
             </div>
         </div>
     </div><section><h2 class="text-2xl font-bold mb-4 mx-4"> LOGNONUSER</h2>
@@ -34,3 +33,4 @@
  {{endfor lognonuser}}</tbody>
 </table>
 </div> </section>
+{{endif isADMIN}}

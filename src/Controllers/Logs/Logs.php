@@ -45,9 +45,7 @@ private $modes = [
                     if($this->mode !== "INS") {
                         if (isset($_GET[""])){
                             $this->log = DAOLog::obtenerPorId(strval($_GET[""]));
-                            if (!$this->log) {
-                                $this->handleError("Oops, no sé encontro");
-                              }
+                          
                         }
                     }
                 } else {
@@ -151,6 +149,9 @@ $this -> log["log_description"]
         
 
 	private function render(){
+        $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLN'); 
+        $viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLS'); 
+        $viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'ADMIN'); 
             Renderer::render("logs/logform", $this->viewData);
         }
 }

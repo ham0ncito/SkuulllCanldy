@@ -10,9 +10,11 @@
             <button id="searchbutton" name="searchbutton" class="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700 mr-2">
                 Search
             </button>
+            {{if isADMIN}}
             <a href="index.php?page=Genres_Genres&mode=INS" class="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700">
                 Insert
             </a>
+            {{endif isADMIN}}
         </div>
     </div>
 </div>
@@ -32,11 +34,12 @@
                 <p class="text-gray-300 mb-2"><span class="font-bold">Description:</span> {{description_genre}}</p>
                 <p class="text-gray-300 mb-2 "><span class="font-bold">Status:</span> {{status_genre}}</p>
             </div>
-
+            {{if isADMIN}}
             <div class="absolute bottom-0 left-0 right-0 flex justify-center p-10">
                 <a href="index.php?page=Genres_Genres&mode=UPD&id_genre={{id_genre}}" class="text-green-500 hover:text-green-700 mr-2">Edit</a>
                 <a href="index.php?page=Genres_Genres&mode=DEL&id_genre={{id_genre}}" class="text-red-500 hover:text-red-700">Delete</a>
             </div>
+            {{endif isADMIN}}
         </a>
     </div>
     {{endfor genre}}

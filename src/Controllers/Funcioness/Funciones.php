@@ -21,6 +21,9 @@ class Funciones extends PrivateController {
 		$viewData['fnest'] = 'fnest';
 		$viewData['fntyp'] = 'fntyp';
 		$viewData['funciones']= DAOFunciones::getFunciones();
+        $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLN'); 
+        $viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLS'); 
+        $viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'ADMIN'); 
         Renderer::render("funcioness/funcioneslist", $viewData);
     }
 }

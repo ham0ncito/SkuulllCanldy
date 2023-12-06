@@ -10,9 +10,11 @@
             <button id="searchbutton" name="searchbutton" class="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700 mr-2">
                 Search
             </button>
+            {{ifnot isCLN}}
             <a href="index.php?page=Favoritess_Favoritess&mode=INS" class="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700">
                 Insert
             </a>
+            {{endifnot isCLN}}
         </div>
     </div>
 </div>
@@ -45,10 +47,12 @@
                     <td class="p-2 text-center">
                         <a class="text-blue-500 hover:text-blue-700" href="index.php?page=Favoritess_Favoritess&mode=DSP&id_favorite={{id_favorite}}">{{type_favorite}}</a>
                     </td>
+                    {{ifnot isCLN}}
                     <td class="p-2 text-center">
                         <a class="text-green-500 hover:text-green-700" href="index.php?page=Favoritess_Favoritess&mode=UPD&id_favorite={{id_favorite}}">Edit</a>
                         <a class="text-red-500 hover:text-red-700" href="index.php?page=Favoritess_Favoritess&mode=DEL&id_favorite={{id_favorite}}">Delete</a>
                     </td>
+                    {{endifnot isCLN}}
                 </tr>
                 {{endfor favorites}}
             </tbody>

@@ -10,31 +10,40 @@
                 <button id="searchbutton" name="searchbutton" class="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700 mr-2">
                     Search
                 </button>
+                {{if isADMIN}}
                 <a href="index.php?page=Videos_Videos&mode=INS" class="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700">
                     Insert
                 </a>
+                {{if isADMIN}}
             </div>
         </div>
-    </div><section><h2 class="text-2xl font-bold mb-4 mx-4"> VIDEO</h2>
-<div class="overflow-x-auto">
-<table class="min-w-full bg-white border border-gray-300">
-<thead>
-<tr>
-	<th class="py-2 px-4 border-b">ID_VIDEO</th>
-	<th class="py-2 px-4 border-b">TITLE_VIDEO</th>
-	<th class="py-2 px-4 border-b">DESCRIPTION_VIDEO</th>
-	<th class="py-2 px-4 border-b">DURATION</th>
-	<th class="py-2 px-4 border-b">VIDEO_COVER</th>
-	<th class="py-2 px-4 border-b">ARTIST_ID</th>
-	<th class="py-2 px-4 border-b">STATUS_VIDEO</th>
-	<th class="py-2 px-4 border-b">LINK_SONG</th><th><a href="index.php?page=Videos_Videos&mode=INS">Nuevo</a></th>
-	</tr>
-</thead><tbody>{{foreach video}}<tr><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Videos_Videos&mode=DSP&id_video={{id_video}} ">{{id_video}}</a></td><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Videos_Videos&mode=DSP&id_video={{id_video}} ">{{title_video}}</a></td><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Videos_Videos&mode=DSP&id_video={{id_video}} ">{{description_video}}</a></td><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Videos_Videos&mode=DSP&id_video={{id_video}} ">{{duration}}</a></td><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Videos_Videos&mode=DSP&id_video={{id_video}} ">{{video_cover}}</a></td><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Videos_Videos&mode=DSP&id_video={{id_video}} ">{{artist_id}}</a></td><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Videos_Videos&mode=DSP&id_video={{id_video}} ">{{status_video}}</a></td><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Videos_Videos&mode=DSP&id_video={{id_video}} ">{{link_song}}</a></td>
-            <td class"p-2 text-center">
-                <a class="text-green-500 hover:text-green-700" href="index.php?page=Videos_Videos&mode=UPD&id_video={{id_video}}" >Edit</a> 
-                <a class="text-red-500 hover:text-red-700" href="index.php?page=Videos_Videos&mode=DEL&id_video={{id_video}}" >Delete</a>
-            </td>
-	</tr>
- {{endfor video}}</tbody>
-</table>
-</div> </section>
+    </div>
+        <section>
+            <h2 class="text-2xl font-bold mb-4 mx-4"> VIDEOS </h2>
+        
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-4">
+                {{foreach video}}
+                <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="{{video_cover}}" alt="{{title_video}}" class="w-full h-48 object-cover">
+        
+                    <div class="p-4">
+                        <h3 class="font-bold text-xl mb-2">{{title_video}}</h3>
+                     
+                        <p class="text-gray-600 mt-2">Duration: {{duration}}</p>
+                        <p class="text-gray-600 mt-2 truncate">Artist ID: {{artist_id}}</p>
+                        <p class="text-gray-600 mt-2">Status: {{status_video}}</p>
+                        <p class="text-gray-700 mt-2 truncate">Description: {{description_video}}</p>
+                        <p class="text-gray-600 mt-2 truncate">Link: {{link_video}}</p>
+                        <a href="index.php?page=Videos_Videos&mode=DSP&id_video={{id_video}}" class="text-blue-500 hover:text-blue-700 mt-4 block">See more</a>
+                        {{if isADMIN}}
+                        <div class="mt-4">
+                            <a href="index.php?page=Videos_Videos&mode=UPD&id_video={{id_video}}" class="text-green-500 hover:text-green-700 mr-2">Update</a>
+                            <a href="index.php?page=Videos_Videos&mode=DEL&id_video={{id_video}}" class="text-red-500 hover:text-red-700">Delete</a>
+                        </div>
+                        {{if isADMIN}}
+                    </div>
+                </div>
+                {{endfor video}}
+            </div>
+        
+        </section>

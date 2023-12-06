@@ -19,6 +19,9 @@ class Highligthsplaylist extends PrivateController {
 		$viewData['playlist_id'] = 'playlist_id';
 		$viewData['highligths_description'] = 'highligths_description';
 		$viewData['highligthsplaylist']= DAOHighligthsplaylist::getHighligthsplaylist();
+        $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLN'); 
+        $viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLS'); 
+        $viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'ADMIN'); 
         Renderer::render("highligthsplaylists/highligthsplaylistlist", $viewData);
     }
 }

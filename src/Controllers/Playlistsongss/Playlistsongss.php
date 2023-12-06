@@ -163,6 +163,9 @@ $this -> playlistsongs["playlistsong_status"]
         
 
 	private function render(){
+        $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLN'); 
+        $viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLS'); 
+        $viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'ADMIN'); 
             Renderer::render("playlistsongss/playlistsongsform", $this->viewData);
         }
 }

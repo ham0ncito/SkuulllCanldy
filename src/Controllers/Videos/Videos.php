@@ -4,6 +4,7 @@ use Controllers\PublicController;
 use Views\Renderer;
 use Dao\Videos\Videos as DAOVideo;
 use Utilities\Site;
+
 use Utilities\Validators;
 class Videos extends PublicController {
   private $id_video;
@@ -191,6 +192,9 @@ $this -> video["link_song"]
         
 
 	private function render(){
+        $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLN'); 
+        $viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLS'); 
+        $viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'ADMIN'); 
             Renderer::render("videos/videoform", $this->viewData);
         }
 }

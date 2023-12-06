@@ -1,4 +1,5 @@
 <div class="flex flex-col items-center w-full">
+  {{ifnot isCLN}}
   <div class="md:text-left mx-8 my-2">
     <h2 class="text-white text-6xl pb-4">Explore</h2>
     <div class="relative w-full md:w-auto mx-4 mb-4">
@@ -35,4 +36,5 @@
       {{endfor artist}}
     </div>
   </div>
+  {{endifnot isCLN}}
 </div>

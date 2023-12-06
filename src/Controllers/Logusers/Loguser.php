@@ -21,6 +21,9 @@ class Loguser extends PrivateController {
 		$viewData['log_cod'] = 'log_cod';
 		$viewData['date'] = 'date';
 		$viewData['loguser']= DAOLoguser::getLoguser();
+        $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLN'); 
+        $viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLS'); 
+        $viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'ADMIN'); 
         Renderer::render("logusers/loguserlist", $viewData);
     }
 }

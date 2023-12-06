@@ -29,6 +29,9 @@ class Album extends PrivateController {
 		$viewData['status_album'] = 'status_album';
 		$viewData['id_genre'] = 'id_genre';
 		$viewData['album']= DAOAlbum::getAlbum();
+        $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLN'); 
+        $viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLS'); 
+        $viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'ADMIN'); 
         Renderer::render("albums/albumlist", $viewData);
     }
 }

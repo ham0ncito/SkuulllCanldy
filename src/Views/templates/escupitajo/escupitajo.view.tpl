@@ -1,3 +1,4 @@
+{{if isADMIN}}
 <div class="flex justify-center items-center text-black py-20 mx-4">
     <div class="max-w-md bg-gray-600 p-6 rounded-md items-center shadow-md">
         <h1 class="text-2xl text-green-400 font-bold mb-4">Enter the name of the SQL table</h1>
@@ -17,3 +18,4 @@
         </form>
     </div>
 </div>
+{{if isADMIN}}

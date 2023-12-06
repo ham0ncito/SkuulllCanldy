@@ -163,6 +163,9 @@ $this -> highligths["highligths_time"]
         
 
 	private function render(){
+        $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLN'); 
+        $viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLS'); 
+        $viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'ADMIN'); 
             Renderer::render("highligthss/highligthsform", $this->viewData);
         }
 }

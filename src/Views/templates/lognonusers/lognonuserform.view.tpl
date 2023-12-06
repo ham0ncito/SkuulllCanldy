@@ -1,3 +1,4 @@
+{{if isADMIN}}
 <section class="bg-gray-100 p-4 mx-4">
     <h1 class="text-2xl font-bold mb-4"> Descripcion lognonuser {{modedsc}}</h1>
     
@@ -37,3 +38,4 @@
             });
         });
     </script>
+    {{endif isADMIN}}

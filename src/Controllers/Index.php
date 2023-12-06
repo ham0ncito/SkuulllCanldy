@@ -23,10 +23,11 @@ namespace Controllers;
 class Index extends PublicController
 {
     /**
-     * Index run method
+    
      *
      * @return void
      */
+    private $isSubscribed = ""; 
     public function run() :void
     {
         $viewData = array();
@@ -167,7 +168,7 @@ class Index extends PublicController
             
         
         ];
-        
+     
         \Views\Renderer::render("index", $viewData);
     }
 }

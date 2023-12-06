@@ -10,9 +10,11 @@
             <button id="searchbutton" name="searchbutton" class="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700 mr-2">
                 Search
             </button>
+            {{if isADMIN}}
 			<a href="index.php?page=Artists_Artists&mode=INS" class="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700">
                 Insert
             </a>
+            {{endif isADMIN}}
         </div>
     </div>
 </div>
@@ -34,8 +36,10 @@
               
             <div class="mx-auto my-4">
                 <a href="index.php?page=Songs_Songs&mode=DSP&id_song={{id_song}}" class="text-blue-500 hover:text-blue-700 mr-2">Details</a>
+                {{if isADMIN}}
                 <a href="index.php?page=Songs_Songs&mode=UPD&id_song={{id_song}}" class="text-green-500 hover:text-green-700 mr-2">Edit</a>
                 <a href="index.php?page=Songs_Songs&mode=DEL&id_song={{id_song}}" class="text-red-500 hover:text-red-700">Delete</a>
+                {{endif isADMIN}}
             </div>
         </div>
     </div>

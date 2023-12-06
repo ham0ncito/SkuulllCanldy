@@ -10,9 +10,11 @@
                 <button id="searchbutton" name="searchbutton" class="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700 mr-2">
                     Search
                 </button>
+                {{if isADMIN}}
                 <a href="index.php?page=Popularitys_Popularitys&mode=INS" class="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700">
                     Insert
                 </a>
+                {{endif isADMIN}}
             </div>
         </div>
     </div><section><h2 class="text-2xl font-bold mb-4 mx-4"> POPULARITY</h2>
@@ -26,7 +28,7 @@
 	<th class="py-2 px-4 border-b">LIKE_COUNT</th>
 	<th class="py-2 px-4 border-b">PERCENT_DISLIKE</th>
 	<th class="py-2 px-4 border-b">PERCENT_LIKE</th>
-	<th class="py-2 px-4 border-b">TYPE_OBJECT</th><th><a href="index.php?page=Popularitys_Popularitys&mode=INS">Nuevo</a></th>
+	<th class="py-2 px-4 border-b">TYPE_OBJECT</th><th>{{if isADMIN}}<a href="index.php?page=Popularitys_Popularitys&mode=INS">Nuevo</a></th>{{endif isADMIN}}
 	</tr>
 </thead><tbody>{{foreach popularity}}<tr><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Popularitys_Popularitys&mode=DSP&id_popularity={{id_popularity}} ">{{id_popularity}}</a></td><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Popularitys_Popularitys&mode=DSP&id_popularity={{id_popularity}} ">{{id_object}}</a></td><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Popularitys_Popularitys&mode=DSP&id_popularity={{id_popularity}} ">{{dislike_count}}</a></td><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Popularitys_Popularitys&mode=DSP&id_popularity={{id_popularity}} ">{{like_count}}</a></td><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Popularitys_Popularitys&mode=DSP&id_popularity={{id_popularity}} ">{{percent_dislike}}</a></td><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Popularitys_Popularitys&mode=DSP&id_popularity={{id_popularity}} ">{{percent_like}}</a></td><td class="p-2 text-center"><a class="text-blue-500 hover:text-blue-700" href="index.php?page=Popularitys_Popularitys&mode=DSP&id_popularity={{id_popularity}} ">{{type_object}}</a></td>
             <td class"p-2 text-center">

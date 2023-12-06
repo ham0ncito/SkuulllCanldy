@@ -10,9 +10,11 @@
             <button id="searchbutton" name="searchbutton" class="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700 mr-2">
                 Search
             </button>
+            {{if isADMIN}}
             <a href="index.php?page=Carretillas_Carretillas&mode=INS" class="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700">
                 Insert
             </a>
+            {{endif isADMIN}}
         </div>
     </div>
 </div>
@@ -32,10 +34,12 @@
             <p class="mb-2 overflow-hidden overflow-ellipsis">Quantity: <a class="overflow-hidden overflow-ellipsis" href="index.php?page=Carretillas_Carretillas&mode=DSP&usercod={{usercod}}">{{crrctd}}</a></p>
             <p class="mb-2">Price: <a href="index.php?page=Carretillas_Carretillas&mode=DSP&usercod={{usercod}}">{{crrprc}}</a></p>
             <p class="mb-2">Date Added: <a href="index.php?page=Carretillas_Carretillas&mode=DSP&usercod={{usercod}}">{{crrfching}}</a></p>
+            {{if isADMIN}}
             <div class="flex justify-center">
                 <a href="index.php?page=Carretillas_Carretillas&mode=UPD&usercod={{usercod}}" class="text-green-500 hover:text-green-700 mr-2">Edit</a>
                 <a href="index.php?page=Carretillas_Carretillas&mode=DEL&usercod={{usercod}}" class="text-red-500 hover:text-red-700">Delete</a>
             </div>
+            {{endif isADMIN}}
         </div>
         {{endfor carretilla}}
       
