@@ -1,11 +1,13 @@
 <?php
 namespace Controllers\Purchases;
+
+use Controllers\PrivateController;
 use Controllers\PublicController;
 use Views\Renderer;
 use Dao\Purchases\Purchases as DAOPurchase;
 use Utilities\Site;
 use Utilities\Validators;
-class Purchases extends PublicController {
+class Purchases extends PrivateController {
   private $id_purchase;
   private $purchase_date;
   private $total;

@@ -1,0 +1,2 @@
+/*INSERT INTO funciones (fncod, fndsc, fnest, fntyp) VALUES ('Controllers\\Admin\\Dashboard', 'Dashboard para Administradores', 'ACT', 'CTR');*/
+INSERT INTO funciones_roles (rolescod, fncod, fnrolest, fnexp) VALUES ('ADMIN', 'Controllers\\Admin\\Dashboard', 'ACT', DATE_ADD(NOW(), INTERVAL 1 YEAR));

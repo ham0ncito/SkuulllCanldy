@@ -17,7 +17,6 @@ class NoAuth extends PublicController
                 \Views\Renderer::render("noauth", array());
             }
         } else {
-            
             \Views\Renderer::render("noauth", array());
         }
     }
