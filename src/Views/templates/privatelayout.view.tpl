@@ -84,19 +84,19 @@
                     </h3>
   
                     <div class="mt-2">
-                      <p class="text-sm text-gray-500">Name {{userName}}</p>
-                      <p class="text-sm text-gray-500">Email {{userEmail}}</p>
-                      <p class="text-sm text-gray-500">Registered since {{userFching}}</p>
-                      <p class="text-sm text-gray-500">Account type: {{userTipo}}</p>
-                      <a href="index.php?page=sec_logout" class="text-2xl my-8 mx-auto text-red-500 hover:text-gray-300">Logout</a>
+
+                      <p class="text-sm text-gray-500 pt-2">Name {{userName}}</p>
+                      <p class="text-sm text-gray-500 pb-2">Email {{userEmail}}</p>
+                      
                     </div>
                   </div>
                 </div>
               </div>
               <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
-                <button @click="showModal = false" type="button" class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-500 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:ml-3 sm:w-auto sm:text-sm">
-                  Cerrar
+                <button @click="showModal = false" type="button" class="text-xl text-blue-500 mx-2 hover:text-gray-300">
+                  Close
                 </button>
+                <a href="index.php?page=sec_logout" class="text-xl mx-2 text-red-500 hover:text-gray-300">Logout</a>
               </div>
             </div>
           </div>
