@@ -21,6 +21,9 @@ class Checkout extends PublicController{
             \Utilities\Site::redirectTo($response[0]->href);
             die();
         }
+        $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLN'); 
+        $viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLS'); 
+        $viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'ADMIN'); 
 
         \Views\Renderer::render("paypal/checkout", $viewData);
     }

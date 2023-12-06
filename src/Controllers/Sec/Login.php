@@ -72,7 +72,7 @@ class Login extends \Controllers\PublicController
                                 \Utilities\Context::getContextByKey("redirto")
                             );
                         } else {
-                            $_SESSION['useremail']=  $dbUser["useremail"];
+                            $_SESSION['userEmail']=  $dbUser["useremail"];
                             \DAO\Logusers\Logusers::insertLoguser($dbUser["usercod"],"INI", date("Y-m-d H:i:s"));
                             \Utilities\Site::redirectTo("index.php?page=Home_Home");
                         }
