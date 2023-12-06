@@ -103,7 +103,7 @@ class Security extends \Dao\Table
     }
     
     static public function getRolUser($email){
-        $sqlstr = "SELECT `usertipo` from `usuario` where `useremail` = :useremail ;";
+        $sqlstr = "SELECT roles.rolescod from `usuario` as usuario INNER JOIN roles_usuarios as roles on roles.usercod = usuario.usercod where `useremail` = :useremail ;";
         $params = array("useremail"=>$email);
         return self::obtenerUnRegistro($sqlstr, $params);
     }

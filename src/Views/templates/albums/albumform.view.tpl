@@ -11,11 +11,13 @@
                 <label for="title_album" class="block text-gray-700 text-sm font-bold mb-2">title_album</label>
                 <input type="text" id="title_album" name="title_album" placeholder="title_album de album " value="{{title_album}}" {{if ~readonly}}   readonly {{endif ~readonly}} class="w-full py-2 px-3 border border-gray-300 rounded focus:outline-none focus:border-blue-400"/>
                 {{if title_album_error}}<div class="text-red-500 text-sm">{{title_album_error}}</div>{{endif title_album_error}}
-            </section>{{if isADMIN}}<section class="mb-4">
+            </section>
+            {{if ~isADMIN}}<section class="mb-4">
                 <label for="image_album" class="block text-gray-700 text-sm font-bold mb-2">image_album</label>
                 <input type="text" id="image_album" name="image_album" placeholder="image_album de album " value="{{image_album}}" {{if ~readonly}}   readonly {{endif ~readonly}} class="w-full py-2 px-3 border border-gray-300 rounded focus:outline-none focus:border-blue-400"/>
                 {{if image_album_error}}<div class="text-red-500 text-sm">{{image_album_error}}</div>{{endif image_album_error}}
-            </section>{{endif isADMIN}}<section class="mb-4">
+            </section>{{endif ~isADMIN}}
+            <section class="mb-4">
                 <label for="release_date_album" class="block text-gray-700 text-sm font-bold mb-2">release_date_album</label>
                 <input type="text" id="release_date_album" name="release_date_album" placeholder="release_date_album de album " value="{{release_date_album}}" {{if ~readonly}}   readonly {{endif ~readonly}} class="w-full py-2 px-3 border border-gray-300 rounded focus:outline-none focus:border-blue-400"/>
                 {{if release_date_album_error}}<div class="text-red-500 text-sm">{{release_date_album_error}}</div>{{endif release_date_album_error}}
