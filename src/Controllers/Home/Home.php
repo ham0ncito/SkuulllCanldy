@@ -16,9 +16,9 @@ class Home extends PrivateController
         $dataview['albums'] = albums::gettop();
         $dataview['videos'] = videos::gettop();
         $dataview['genre'] = genre::getGenre();
-        $dataview['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLN'); 
-        $dataview['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLS'); 
-        $dataview['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'ADMIN'); 
+        $dataview['isCLN'] = \Dao\Security\Security::userIs( $_SESSION['useremail'],'CLN'); 
+        $dataview['isCLS'] = \Dao\Security\Security::userIs( $_SESSION['useremail'],'CLS'); 
+        $dataview['isADMIN'] = \Dao\Security\Security::userIs( $_SESSION['useremail'],'ADMIN'); 
         \Views\Renderer::render("home/home", $dataview);
     }
 }
