@@ -17,3 +17,4 @@ INSERT INTO roles (rolescod, rolesdsc, rolesest) VALUES ('DEV', 'Developer', 'AC
 INSERT INTO roles (rolescod, rolesdsc, rolesest) VALUES ('VEN', 'Vendor', 'ACT');
 INSERT INTO roles (rolescod, rolesdsc, rolesest) VALUES ('INV', 'INVESTOR', 'ACT');
 INSERT INTO roles (rolescod, rolesdsc, rolesest) VALUES ('SOP', 'Soporte', 'ACT');
+
