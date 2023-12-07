@@ -93,15 +93,51 @@ class Checkout extends PublicController
         if (isset($_SESSION['cart' . $xls])) {
             foreach ($_SESSION['cart' . $xls] as $product) {
                 $usercod = $product['usercod'];
+                $type = $product['type'];
                 $productId = $product['productid'];
                 $productName = $product['productName'];
                 $productQuantity = $product['crrctd'];
                 $productPrice = $product['crrprc'];
                 $crrfching = $product['crrfching'];
-                detail::insertPurchasedetail($idFor, $productId,$productQuantity, $productPrice); 
-            }
+                if (strval($type) == "subscription") {
+                    $data = \Dao\Subscriptionusers\Subscriptionusers::getSubscriptionuserExist(\Dao\Security\Security::getCodigoByEmail($_SESSION['useremail']));
+                    if (!$data) {
+                        $duration = \Dao\Subscriptions\Subscriptions::getDuration($productId);
+                        $timestampActual = time();
+                        $timestampResultado = $timestampActual + (intval($duration) * 24 * 60 * 60);                   
+                        $dateend = date('Y-m-d', $timestampResultado); 
+                        \Dao\Subscriptionusers\Subscriptionusers::insertSubscriptionuser(
+                            \Dao\Security\Security::getCodigoByEmail($_SESSION['useremail']),
+                            $productId,
+                            $timestampActual,
+                            $dateend,
+                            'ACT'
+                        );
+                    }else{
+                        $duration = \Dao\Subscriptions\Subscriptions::getDuration($productId);
+                        $timestampActual = time();
+                        $timestampGuardado = \Dao\Subscriptionusers\Subscriptionusers::getSubscriptionuserEnds(\Dao\Security\Security::getCodigoByEmail($_SESSION['useremail']));
+        
+                        $duracionEnSegundos = intval($duration) * 24 * 60 * 60; 
+                        $nuevoTimestamp = intval($timestampGuardado) + $duracionEnSegundos;
+        
+                        $fechaResultado = date('Y-m-d H:i:s', $nuevoTimestamp);
+                        
+                        
+                        \Dao\Subscriptionusers\Subscriptionusers::updateSubscriptionuser(
+                            \Dao\Security\Security::getCodigoByEmail($_SESSION['useremail']),
+                            $productId,
+                            $timestampActual,
+                            $fechaResultado,
+                            'ACT'                 
+                        );
+                    }
+                } else {
+                    detail::insertPurchasedetail($idFor, $productId, $productQuantity, $productPrice); 
+                }
+                
             
-        }
+            }}
        
     }
     
