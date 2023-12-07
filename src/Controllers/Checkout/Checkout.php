@@ -89,7 +89,7 @@ class Checkout extends PublicController
     public static function addPurchase($payment){
         $xls = $_SESSION['xls'];
         $idFor = \Utilities\Functions::generateId("purchase");
-        purchase::insertPurchase($idFor,Date('Y-m-d H:mm:ss'),self::addToDb(),"Purchase on skuull2canldy", $payment);
+        purchase::insertPurchase($idFor,Date('Y-m-d H:mm:ss'),self::addToDb(),"Purchase on skuull2canldy", $payment,\Dao\Security\Security::getCodigoByEmail($_SESSION['useremail']));
         if (isset($_SESSION['cart' . $xls])) {
             foreach ($_SESSION['cart' . $xls] as $product) {
                 $usercod = $product['usercod'];

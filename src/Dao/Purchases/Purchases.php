@@ -29,11 +29,11 @@ class Purchases extends Table
                 return $registros;
         }
 
-        public static function insertPurchase($id_purchase, $purchase_date, $total, $details, $payments)
+        public static function insertPurchase($id_purchase, $purchase_date, $total, $details, $payments, $usercod)
         {
 
-                $sqlstr = "INSERT INTO purchase (id_purchase, purchase_date, total, details, payments) VALUES (:id_purchase , :purchase_date , :total , :details , :payments)";
-                $params = ['id_purchase' => $id_purchase, 'purchase_date' => $purchase_date, 'total' => $total, 'details' => $details, 'payments' => $payments];
+                $sqlstr = "INSERT INTO purchase (id_purchase, purchase_date, total, details, payments, usercod) VALUES (:id_purchase , :purchase_date , :total , :details , :payments, :usercod)";
+                $params = ['id_purchase' => $id_purchase, 'purchase_date' => $purchase_date, 'total' => $total, 'details' => $details, 'payments' => $payments, 'usercod' =>$usercod];
                 $registros = self::executeNonQuery($sqlstr, $params);
                 return $registros;
         }

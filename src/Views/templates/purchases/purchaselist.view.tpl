@@ -41,9 +41,9 @@
             </div>
         </div>
 
-        <div x-show="showModal" class="w-full fixed inset-0 z-50 overflow-auto bg-black bg-opacity-50 flex justify-center items-center">
-            <div class="bg-white w-1/2 h-2/3 md:max-w-md mx-auto rounded shadow-lg p-6">
-                <div class="flex justify-between items-center mb-4">
+        <div x-show="showModal" class="w-full fixed inset-0 z-50 overflow-auto bg-black bg-opacity-50 flex justify-center items-center overflow-hidden overflow-ellipsis overflow-y-scroll">
+            <div class="bg-white w-1/2 h-2/3 md:max-w-md mx-auto rounded shadow-lg p-6 overflow-hidden overflow-y-scroll">
+                <div class="flex justify-between items-center mb-4 overflow-hidden overflow-ellipsis">
                     <h2 class="text-xl font-semibold">Purchase Details</h2>
                     <button @click="showModal = false" class="text-gray-600 hover:text-gray-800 focus:outline-none">
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -52,11 +52,11 @@
                     </button>
                 </div>
                 <p class="text-xl text-bold">Purchase ID:</p>
-                <p class="text-blue-500 py-2 ">{{id_purchase}}</p>
+                <p class="text-blue-500 py-2 overflow-hidden overflow-ellipsis">{{id_purchase}}</p>
                 <p class="text-xl text-bold">Details: </p>
-                <p class="text-blue-500 py-2 ">{{details}}</p>
+                <p class="text-blue-500 py-2 overflow-hidden overflow-ellipsis ">{{details}}</p>
                 <p class="text-xl text-bold">Payment Description:</p>
-                <p class="text-blue-500 py-2 ">{{payments}}</p>
+                <p class="text-blue-500 py-2 overflow-hidden overflow-ellipsis">{{payments}}</p>
             </div>
         </div>
     </div>
