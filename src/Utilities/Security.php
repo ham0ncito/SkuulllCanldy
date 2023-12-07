@@ -14,8 +14,8 @@ class Security {
     }
     public static function logout()
     {
-        unset($_SESSION["login"]);
         unset($_SESSION['useremail']);
+        unset($_SESSION['login']);
     }
     public static function login($userId, $userName, $userEmail)
     {

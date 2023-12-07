@@ -104,40 +104,37 @@ class Store extends PrivateController
         if (isset($_POST['addToCart'])) {
           $xls =  \Dao\Security\Security::getCodigoByEmail($_SESSION['useremail']);
           $_SESSION['xls'] = $xls;
-          if (isset($_SESSION['cart' . $xls][0])) {
+          if (isset($_SESSION['cart' . $xls])) {
             $product = [
-              "usercod" => $xls,
-              "productid" => $_POST['productId'],
-              "productName" => $_POST['productName'],
-              "crrctd" => $_POST['productQuantity'],
-              "crrprc" => $_POST['productPrice'],
-              "crrfching" => date("Y-m-d H:i:s")
-            ];
-            $_SESSION['cart' . $xls][0] = $product;
-            echo '<script>alert("' . $_POST['productName'] . ' added checkout carrito");</script>';
-          } else {
-            if(isset($_SESSION['cart' . $xls][0])){
-              $carrito = count($_SESSION['cart' . $xls])+1 ;
-              $product = [
                 "usercod" => $xls,
                 "productid" => $_POST['productId'],
                 "productName" => $_POST['productName'],
                 "crrctd" => $_POST['productQuantity'],
                 "crrprc" => $_POST['productPrice'],
                 "crrfching" => date("Y-m-d H:i:s")
-              ];
-              $_SESSION['cart' . $xls][$carrito] = $product;
-              echo '<script>alert("' . $_POST['productName'] . ' added checkout carrito");</script>';
-            }
-            else{
-              echo '<script>alert(" Something went wrong");</script>';
-            }
+            ];
            
-          }
+            $_SESSION['cart' . $xls] = $product;
+            echo '<script>alert("' . $_POST['productName'] . ' added checkout carrito");</script>';
+        } else {
+            $carrito = count($_SESSION['cart' . $xls]) + 1;
+            $product = [
+                "usercod" => $xls,
+                "productid" => $_POST['productId'],
+                "productName" => $_POST['productName'],
+                "crrctd" => $_POST['productQuantity'],
+                "crrprc" => $_POST['productPrice'],
+                "crrfching" => date("Y-m-d H:i:s")
+            ];
+            
+            $_SESSION['cart' . $xls][$carrito] = $product;
+            echo '<script>alert("' . $_POST['productName'] . ' added checkout carrito");</script>';
+        }
+        
+
         }
         if (isset($_POST['removeFromCart'])) {
         }
-      } else {
       }
     }
   }
