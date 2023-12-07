@@ -23,7 +23,7 @@ class Subscriptionusers extends Table
         }
         public static function getSubscriptionuserExist($usercod)
         {
-                $sqlstr = "SELECT count(*) FROM subscriptionuser WHERE usercod = :usercod";
+                $sqlstr = "SELECT * FROM subscriptionuser WHERE usercod = :usercod";
                 $params = ["usercod" => $usercod];
                 $registros = self::obtenerUnRegistro($sqlstr, $params);
                 return $registros;
