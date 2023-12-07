@@ -1,4 +1,5 @@
 <?php
+
 namespace Controllers\Logusers;
 
 use Controllers\PrivateController;
@@ -9,21 +10,23 @@ use Utilities\Site;
 use Utilities\Validators;
 use Utilities\Context;
 use Utilities\Paging;
-class Loguser extends PrivateController {
-  private $user_cod;
-  private $log_cod;
-  private $date;
+
+class Loguser extends PrivateController
+{
+    private $user_cod;
+    private $log_cod;
+    private $date;
 
     public function run(): void
     {
         Site::addLink('loguser_style');
         $viewData['user_cod'] = 'user_cod';
-		$viewData['log_cod'] = 'log_cod';
-		$viewData['date'] = 'date';
-		$viewData['loguser']= DAOLoguser::getLoguser();
-        $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLN'); 
-        $viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLS'); 
-        $viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'ADMIN'); 
+        $viewData['log_cod'] = 'log_cod';
+        $viewData['date'] = 'date';
+        $viewData['loguser'] = DAOLoguser::getLoguser();
+        $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLN');
+        $viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLS');
+        $viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'ADMIN');
         Renderer::render("logusers/loguserlist", $viewData);
     }
 }
