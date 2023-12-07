@@ -23,35 +23,44 @@ class ShoppingCart extends PublicController
         $early = "";
         self::carrito();
         $fecha_mas_reciente_timestamp = 0;
-        $xls = $_SESSION['xls'];
-        if(isset($_SESSION["cart" . $xls]))
-        {
+       
+            $xls = \DAO\Security\Security::getCodigoByEmail($_SESSION['useremail']); 
+        
+        if (isset($_SESSION["cart" . $xls])) {
             $cart = $_SESSION["cart" . $xls];
-      
             $viewData['products'] = $cart;
-            foreach ($viewData['products'] as $product) {
-                if (isset($product['crrprc'])) {
-                    $totalCrrprc += $product['crrprc'];
+            if (self::deleteCarrito($xls)) {
+                $cart = "";
+                if (isset($viewData['products'])) {
+                    unset($viewData['products']);
                 }
-                if (isset($product['crrctd'])) {
-                    $totalcrrctd += $product['crrctd'];
-                }
-                if (isset($product['crrctd'])) {
+                $viewData['isEmpty'] = true;
+            }
+            if(isset($viewData['products'])){
+                foreach ($viewData['products'] as $product) {
+                    if (isset($product['crrprc'])) {
+                        $totalCrrprc += $product['crrprc'];
+                    }
+                    if (isset($product['crrctd'])) {
+                        $totalcrrctd += $product['crrctd'];
+                    }
+                    if (isset($product['crrctd'])) {
     
-                    $timestamp = strtotime($product['crrfching']);
-                    if ($timestamp > $fecha_mas_reciente_timestamp) {
-                        $fecha_mas_reciente_timestamp = $timestamp;
+                        $timestamp = strtotime($product['crrfching']);
+                        if ($timestamp > $fecha_mas_reciente_timestamp) {
+                            $fecha_mas_reciente_timestamp = $timestamp;
+                        }
                     }
                 }
+                $viewData['total_products'] = $totalCrrprc;
+                $viewData['quantity'] = $totalcrrctd;
+                $viewData['crrfching'] =  date('Y-m-d', $fecha_mas_reciente_timestamp);
+                $nuevaFecha = strtotime($viewData['crrfching'] . ' +30 days');
+                $viewData['crrfchingRemove'] = date('Y-m-d', $nuevaFecha);
+                $viewData['isEmpty'] = false;
             }
-            $viewData['total_products'] = $totalCrrprc;
-            $viewData['quantity'] = $totalcrrctd;
-            $viewData['crrfching'] =  date('Y-m-d', $fecha_mas_reciente_timestamp);
-            $nuevaFecha = strtotime($viewData['crrfching'] . ' +30 days');
-            $viewData['crrfchingRemove'] = date('Y-m-d', $nuevaFecha);
-            $viewData['isEmpty'] = false;
-
-        } else{
+           
+        } else {
             $viewData['isEmpty'] = true;
         }
 
@@ -63,12 +72,31 @@ class ShoppingCart extends PublicController
 
         $viewData['token'] = md5($phrase . '' . date('Ymdhisu') . '');
         $_SESSION['tokenShopping'] = $viewData['token'];
+       
         Renderer::render("store\cart", $viewData);
+    }
+    private static function deleteCarrito($xls)
+    {
+        $data = 'cart' . strval($xls);
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            if ($_SESSION["tokenShopping"] == $_POST["xsx"]) {
+                if (isset($_POST['deleteButton'])) {
+                    if (isset($_SESSION[$data])) {
+                        unset($_SESSION[$data]);
+                        echo '<script>alert("Carrito was removed");</script>';
+                        return true;
+                    } else {
+                        echo '<script>alert("Couldnt find carrito");</script>';
+                        return false;
+                    }
+                }
+            }
+        }
     }
 
     private function Carrito()
     {
-    
+
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($_SESSION["tokenShopping"] == $_POST["xsx"]) {
                 if (isset($_POST['deleteButton'])) {
@@ -77,7 +105,6 @@ class ShoppingCart extends PublicController
                         echo '<script>alert("Carrito was removed");</script>';
                     }
                 }
-               
             }
         }
     }

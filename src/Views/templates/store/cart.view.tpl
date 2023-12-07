@@ -8,17 +8,22 @@
           <h2 class="text-xl text-pink-500 font-semibold">{{quantity}} Products in carrito</h2>
           <h2 class="text-xl text-pink-500 font-semibold"> Products've been here since {{crrfching}} </h2>
           <h2 class="text-xl text-pink-500 font-semibold"> Your Carrito will be remove on   {{crrfchingRemove}} </h2>
-          <form action="index.php?page=Checkout_Checkout" method="POST">
-            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-              Place Order
-            </button>
-          </form>
-          <form id="carritoForm" method="POST" class="w-full mx-auto my-4">
+          <div class="flex gap-4 justify-center w-full mx-auto">
+            <form action="index.php?page=Checkout_Checkout" method="POST" class="w-full mx-auto my-4">
+              <button type="submit" class="hover:bg-blue-500 text-gray-900 py-2 px-4 rounded">
+                Order
+              </button>
+            </form>
+          
+            <form id="carritoForm" method="POST" class="w-full mx-auto my-4">
               <input type="hidden" name="xsx" value="{{token}}">
-              <div class="flex gap-4">
-                  <button type="button" name="deleteButton" class="text-red-500 font-bold py-2 px-4 rounded">Delete my Carrito</button>
-              </div>
-          </form>
+                <form action="index.php?page=Store_ShoppingCart" method="POST">
+                  <button type="submit" name="deleteButton" class="hover:bg-red-500 text-gray-900 py-2 px-4 rounded">Delete my Carrito</button>
+                </form>
+              
+            </form>
+          </div>
+          
       </div>
       <div class="relative">
           <div class="bg-gray-900 relative overflow-hidden rounded-lg shadow-md">
@@ -36,15 +41,19 @@
           <div class="pb-14 px-4">
               <div class="py-4">
                   <h3 class="text-3xl text-pink-500 font-semibold mb-2">{{productName}}</h3>
-                  <p class="text-gray-600">Added on <span class="text-gray-500">Added on <span class="text-xl font-bold text-blue-500">{{crrfching}}</span></p>
-                  <p class="text-gray-600 mb-2">Reference code <span class="text-gray-500">{{productid}}</span></p>
+                  <p class="text-gray-600">Added on <span class="text-gray-500"><span class="text-xl font-bold text-blue-500">{{crrfching}}</span></p>
+                  <p class="text-gray-600 mb-2">Reference code <span class="text-gray-500"></span></p>
                   <p class="text-gray-700 font-semibold mb-4">Quantity on carrito: {{crrctd}}</p>
                   <p class="text-gray-700 font-semibold mr-4"> Price {{crrprc}}</p>
               </div>
               <div class="flex flex-row absolute bottom-0 left-0 right-0 space-around my-2">
+                    <form method="post" action="index.php?page=Store_ShoppingCart&">
+                        <input name="productName" value ="{{productName}}" hidden></input>
+                        <input name ="productId" value ="{{productid}}" hidden></input>
                   <button class="px-4 py-2 mx-auto text-red-500 rounded-md hover:bg-pink-200 transition focus:outline-none">
                       Delete from carrito
                   </button>
+                </form>
                   <button class="px-4 py-2 mx-auto text-green-500 rounded-md mr-4 hover:bg-green-200 transition">Add More</button>
               </div>
           </div>

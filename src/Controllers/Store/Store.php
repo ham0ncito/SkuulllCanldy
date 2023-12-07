@@ -108,6 +108,7 @@ class Store extends PrivateController
           if (!isset($_SESSION['cart' . $xls])) {
             $product = [
                 "usercod" => $xls,
+                "type" => $_POST['type'],
                 "productid" => $_POST['productId'],
                 "productName" => $_POST['productName'],
                 "crrctd" => $_POST['productQuantity'],
@@ -121,6 +122,7 @@ class Store extends PrivateController
             $carrito = intval(count($_SESSION['cart' . $xls]));
             $product = [
                 "usercod" => $xls,
+                "type" => $_POST['type'],
                 "productid" => $_POST['productId'],
                 "productName" => $_POST['productName'],
                 "crrctd" => $_POST['productQuantity'],

@@ -37,6 +37,7 @@
                         <div class="mt-4 flex justify-between items-center">
                             <form method="POST" action="index.php?page=Store_Store">
                                 <input type="hidden" name="xsxtoken" value="{{~token}}"/>
+                                <input type="hidden" name="type" value="product">
                                 <input type="hidden" name="productId" value="{{productId}}">
                                 <input type="hidden" name="productName" value="{{productName}}">
                                 <input type="hidden" name="productDescription" value="{{productDescription}}">
@@ -101,6 +102,7 @@
                         <div class="mt-4 flex justify-between items-center">
                             <form method="post" action="index.php?page=Store_Store">
                                 <input type="hidden" name="xsxtoken" value="{{~token}}"/>
+                                <input type="hidden" name="type" value="subscription">
                                 <input type="hidden" name="productId" value="{{id_subscription}}">
                                 <input type="hidden" name="productName" value="{{subscription_description}}">
                                 <input type="hidden" name="productDescription" value="{{subscription_duration}}">
