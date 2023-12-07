@@ -68,7 +68,7 @@ class Checkout extends PublicController
                 $total += $productPrice * $productQuantity; 
                 $detail .= " {{$productName}} || {{$productQuantity}} || {{$productPrice}} || "; 
                 self::addToDetail($detail); 
-                Carrito::insertCarretilla($usercod, $productId, $productQuantity, $productPrice, Date('Y-M-D-H-i-s'));     
+               // Carrito::insertCarretilla($usercod, $productId, $productQuantity, $productPrice, Date('Y-M-D-H-i-s'));     
             }
         }
         $_SESSION['detailofPurchase'] = $detail;

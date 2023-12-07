@@ -9,10 +9,10 @@
             <p class="text-2xl py-4 text-gray-700 mt-4">We are preparing something <a href="https://www.youtube.com/watch?v=FM7MFYoylVs" class="text-2xl text-blue-500" >special just for you &#155;<a></p>
            
             {{if ~isADMIN}}
-            <a href="index.php?page=Admin_Dashboard" class="text-blue-500 my-4">Go back to Dashboard </a>
+            <a href="index.php?page=Admin_Dashboard" class="text-blue-500 my-4">Go back to Dashboard &#155;</a>
             {{endif ~isADMIN}}
             {{ifnot ~isADMIN}}
-            <a href="index.php?page=Home_Home" class="text-blue-500 my-4">Go back to Home </a>
+            <a href="index.php?page=Home_Home" class="text-blue-500 my-4">Go back Home &#155; </a>
             {{endifnot ~isADMIN}}
         </div>
     </div>

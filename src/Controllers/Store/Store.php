@@ -116,11 +116,13 @@ class Store extends PrivateController
                 "crrfching" => date("Y-m-d H:i:s")
             ];
            
-            $_SESSION['cart' . $xls] = $product;
-            echo '<script>alert("' . $_POST['productName'] . ' added checkout carrito");</script>';
+            $_SESSION['cart' . $xls][0] = $product;
+            echo '<script>alert("' . $_POST['productName'] . ' added to checkout carrito");</script>';
         } else {     
             $carrito = intval(count($_SESSION['cart' . $xls]));
-            $product = [
+            if ($carrito >0)
+            {
+               $product = [
                 "usercod" => $xls,
                 "type" => $_POST['type'],
                 "productid" => $_POST['productId'],
@@ -132,6 +134,8 @@ class Store extends PrivateController
             
             $_SESSION['cart' . $xls][$carrito] = $product;
             echo '<script>alert("' . $_POST['productName'] . ' added checkout carrito");</script>';
+            }
+           
         }
         
 
