@@ -48,11 +48,10 @@
               </div>
               <div class="flex flex-row absolute bottom-0 left-0 right-0 space-around my-2">
                     <form method="post" action="index.php?page=Store_ShoppingCart&">
+                      <input type="hidden" name="xsx" value="{{~token}}">
                         <input name="productName" value ="{{productName}}" hidden></input>
                         <input name ="productId" value ="{{productid}}" hidden></input>
-                  <button class="px-4 py-2 mx-auto text-red-500 rounded-md hover:bg-pink-200 transition focus:outline-none">
-                      Delete from carrito
-                  </button>
+                  <button type="submit" name="deleteItem" class=" px-4 py-2 mx-auto text-red-500 rounded-md hover:bg-pink-200 transition focus:outline-none" value="{{crrfching}}">Delete from Carrito</button>
                 </form>
                   <button class="px-4 py-2 mx-auto text-green-500 rounded-md mr-4 hover:bg-green-200 transition">Add More</button>
               </div>

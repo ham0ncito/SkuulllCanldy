@@ -24,7 +24,7 @@ class ShoppingCart extends PublicController
         self::carrito();
         $fecha_mas_reciente_timestamp = 0;
        
-            $xls = \DAO\Security\Security::getCodigoByEmail($_SESSION['useremail']); 
+            $xls = \DAO\Security\Security::getCodigoByEmail($_SESSION["login"]['userEmail']); 
         
         if (isset($_SESSION["cart" . $xls])) {
             $cart = $_SESSION["cart" . $xls];
@@ -96,13 +96,22 @@ class ShoppingCart extends PublicController
 
     private function Carrito()
     {
-
+        $xls = \DAO\Security\Security::getCodigoByEmail($_SESSION["login"]['userEmail']);
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($_SESSION["tokenShopping"] == $_POST["xsx"]) {
                 if (isset($_POST['deleteButton'])) {
-                    if (!isset($_SESSION['cart'])) {
-                        unset($_SESSION['cart']);
+                    if (!isset($_SESSION['cart'.$xls])) {
+                        unset($_SESSION['cart'.$xls]);
                         echo '<script>alert("Carrito was removed");</script>';
+                    }
+                }
+                if(isset($_POST['deleteItem'])){
+                    $crrfching = $_POST['deleteItem'];
+                    foreach ($_SESSION['cart'. $xls] as $key =>$product) {
+                        if ($product['crrfching'] === $crrfching) {
+                            unset($_SESSION['cart'.$xls][$key]);
+                            break; 
+                        }
                     }
                 }
             }
