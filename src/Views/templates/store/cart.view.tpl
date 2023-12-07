@@ -1,4 +1,5 @@
-{{ifnot isEmpty}}<div class="container mx-auto p-6">
+{{ifnot ~isEmpty}}
+<div class="container mx-auto p-6">
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <div class="bg-white rounded-lg shadow-md p-6">
           <h2 class="text-4xl text-black font-semibold mb-6">Carrito</h2>
@@ -51,6 +52,7 @@
       {{endfor products}}
   </div>
 </div>
-{{endifnot isEmpty}}{{if isEmpty}}
+{{endifnot ~isEmpty}}
+{{if isEmpty}}
 {{include components/tarjeta}}{{endif isEmpty}}
 

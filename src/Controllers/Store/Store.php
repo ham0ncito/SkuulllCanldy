@@ -104,7 +104,8 @@ class Store extends PrivateController
         if (isset($_POST['addToCart'])) {
           $xls =  \Dao\Security\Security::getCodigoByEmail($_SESSION['useremail']);
           $_SESSION['xls'] = $xls;
-          if (isset($_SESSION['cart' . $xls])) {
+          
+          if (!isset($_SESSION['cart' . $xls])) {
             $product = [
                 "usercod" => $xls,
                 "productid" => $_POST['productId'],
@@ -116,8 +117,8 @@ class Store extends PrivateController
            
             $_SESSION['cart' . $xls] = $product;
             echo '<script>alert("' . $_POST['productName'] . ' added checkout carrito");</script>';
-        } else {
-            $carrito = count($_SESSION['cart' . $xls]) + 1;
+        } else {     
+            $carrito = intval(count($_SESSION['cart' . $xls]));
             $product = [
                 "usercod" => $xls,
                 "productid" => $_POST['productId'],

@@ -23,7 +23,7 @@ class ShoppingCart extends PublicController
         $early = "";
         self::carrito();
         $fecha_mas_reciente_timestamp = 0;
-        $xls = sec::decryptDatum($_SESSION['sesionId']);
+        $xls = $_SESSION['xls'];
         if(isset($_SESSION["cart" . $xls]))
         {
             $cart = $_SESSION["cart" . $xls];
@@ -49,6 +49,8 @@ class ShoppingCart extends PublicController
             $viewData['crrfching'] =  date('Y-m-d', $fecha_mas_reciente_timestamp);
             $nuevaFecha = strtotime($viewData['crrfching'] . ' +30 days');
             $viewData['crrfchingRemove'] = date('Y-m-d', $nuevaFecha);
+            $viewData['isEmpty'] = false;
+
         } else{
             $viewData['isEmpty'] = true;
         }
@@ -66,7 +68,7 @@ class ShoppingCart extends PublicController
 
     private function Carrito()
     {
-        $xls = sec::decryptDatum($_SESSION['sesionId']);
+    
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($_SESSION["tokenShopping"] == $_POST["xsx"]) {
                 if (isset($_POST['deleteButton'])) {
