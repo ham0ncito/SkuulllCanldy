@@ -18,7 +18,7 @@ class Accept extends PublicController{
             unset($_SESSION[$datum]);
             unset($_SESSION['xls']);
         } else {
-            $dataview["orderjson"] = "No Order Available!!!";
+            $dataview["purchasedetails"] = "No Order Available!!!";
         }
         $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLN'); 
         $viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLS'); 
