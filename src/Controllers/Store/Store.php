@@ -118,31 +118,41 @@ class Store extends PrivateController
            
             $_SESSION['cart' . $xls][0] = $product;
             echo '<script>alert("' . $_POST['productName'] . ' added to checkout carrito");</script>';
-        } else {     
+        } else {   
+            $found = false;  
             $carrito = intval(count($_SESSION['cart' . $xls]));
-            if ($carrito >0)
-            {
-               $product = [
-                "usercod" => $xls,
-                "type" => $_POST['type'],
-                "productid" => $_POST['productId'],
-                "productName" => $_POST['productName'],
-                "crrctd" => $_POST['productQuantity'],
-                "crrprc" => $_POST['productPrice'],
-                "crrfching" => date("Y-m-d H:i:s")
-            ];
-            
-            $_SESSION['cart' . $xls][$carrito] = $product;
-            echo '<script>alert("' . $_POST['productName'] . ' added checkout carrito");</script>';
+            foreach ($_SESSION['cart'. $xls] as $key =>$product) {
+                if ($product['productid'] === $_POST['productId']) {
+                    $_SESSION['cart'.$xls][$key] ['crrctd'] = strval(intval($product['crrctd']) + 1);
+                    $found= true;
+                    break; 
+                }
+                else{
+                    $found = false;
+                }
             }
-           
-        }
+            if($found=== false && $carrito > 0 ){ 
+                $product = [
+                    "usercod" => $xls,
+                    "type" => $_POST['type'],
+                    "productid" => $_POST['productId'],
+                    "productName" => $_POST['productName'],
+                    "crrctd" => $_POST['productQuantity'],
+                    "crrprc" => $_POST['productPrice'],
+                    "crrfching" => date("Y-m-d H:i:s")
+                ];
+                
+                $_SESSION['cart' . $xls][$carrito] = $product;
+                echo '<script>alert("' . $_POST['productName'] . ' added checkout carrito");</script>';
+            }
+            
+            
         
 
         }
         if (isset($_POST['removeFromCart'])) {
         }
-      }
+      }}
     }
   }
 
