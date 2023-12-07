@@ -22,7 +22,16 @@ class Roles extends PrivateController
         $viewData['rolescod'] = 'rolescod';
         $viewData['rolesdsc'] = 'rolesdsc';
         $viewData['rolesest'] = 'rolesest';
-        $viewData['roles'] = DAORoles::getRoles();
+        if (\Dao\Security\Security::userIs($_SESSION['useremail'], 'ADMIN')) {
+            if (\Utilities\Functions::isAnEmptyArray($viewData['roles'] = DAORoles::getRoles())) {
+                $viewData['isEmpty'] = true;
+            } else {
+                $viewData['isEmpty'] = false;
+            }
+        } else {
+        }
+
+
         $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLN');
         $viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLS');
         $viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'ADMIN');

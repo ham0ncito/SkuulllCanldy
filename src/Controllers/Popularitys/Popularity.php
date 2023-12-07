@@ -30,7 +30,14 @@ class Popularity extends PrivateController
         $viewData['percent_dislike'] = 'percent_dislike';
         $viewData['percent_like'] = 'percent_like';
         $viewData['type_object'] = 'type_object';
-        $viewData['popularity'] = DAOPopularity::getPopularity();
+        if (\Dao\Security\Security::userIs($_SESSION['useremail'], 'ADMIN')) {
+            if (\Utilities\Functions::isAnEmptyArray($viewData['popularity'] = DAOPopularity::getPopularity())) {
+                $viewData['isEmpty'] = true;
+            } else {
+                $viewData['isEmpty'] = false;
+            }
+        } else {
+        }
         $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLN');
         $viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLS');
         $viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'ADMIN');

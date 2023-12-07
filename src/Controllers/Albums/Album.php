@@ -32,12 +32,14 @@ class Album extends PrivateController
         $viewData['id_artist'] = 'id_artist';
         $viewData['status_album'] = 'status_album';
         $viewData['id_genre'] = 'id_genre';
-        if (\Dao\Security\Security::userIs($_SESSION['useremail'], 'ADMIN')) {
-            if (\Utilities\Functions::isAnEmptyArray($viewData['playlist'] = DAOAlbum::getAlbum()))   {
-                $viewData['isEmpty'] = true; 
-            }
-        } else {
+
+
+        if (\Utilities\Functions::isAnEmptyArray($viewData['Album'] = DAOAlbum::getAlbum())) {
+            $viewData['isEmpty'] = True;
+        } {
+            $viewData['isEmpty'] = false;
         }
+
         $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLN');
         $viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLS');
         $viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'ADMIN');

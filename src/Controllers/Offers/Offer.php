@@ -26,7 +26,16 @@ class Offer extends PrivateController
         $viewData['offer_starts_at'] = 'offer_starts_at';
         $viewData['offer_ends_at'] = 'offer_ends_at';
         $viewData['offer_status'] = 'offer_status';
-        $viewData['offer'] = DAOOffer::getOffer();
+        if (\Dao\Security\Security::userIs($_SESSION['useremail'], 'ADMIN')) {
+            if (\Utilities\Functions::isAnEmptyArray($viewData['offer'] = DAOOffer::getOffer())) {
+                $viewData['isEmpty'] = true;
+            } else {
+                $viewData['isEmpty'] = false;
+            }
+        } else {
+        }
+
+
         $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLN');
         $viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLS');
         $viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'ADMIN');

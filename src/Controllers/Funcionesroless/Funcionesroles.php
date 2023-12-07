@@ -25,7 +25,14 @@ class Funcionesroles extends PrivateController
         $viewData['fncod'] = 'fncod';
         $viewData['fnrolest'] = 'fnrolest';
         $viewData['fnexp'] = 'fnexp';
-        $viewData['funciones_roles'] = DAOFuncionesroles::getFunciones_roles();
+        if (\Dao\Security\Security::userIs($_SESSION['useremail'], 'ADMIN')) {
+            if (\Utilities\Functions::isAnEmptyArray($viewData['funciones_roles'] = DAOFuncionesroles::getFunciones_roles())) {
+                $viewData['isEmpty'] = true;
+            } else {
+                $viewData['isEmpty'] = false;
+            }
+        } else {
+        }
         $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLN');
         $viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLS');
         $viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'ADMIN');

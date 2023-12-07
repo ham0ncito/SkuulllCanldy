@@ -24,7 +24,15 @@ class Lognonuser extends PrivateController
         $viewData['log_date'] = 'log_date';
         $viewData['id_cookie'] = 'id_cookie';
         $viewData['log_cod'] = 'log_cod';
-        $viewData['lognonuser'] = DAOLognonuser::getLognonuser();
+        if (\Dao\Security\Security::userIs($_SESSION['useremail'], 'ADMIN')) {
+            if (\Utilities\Functions::isAnEmptyArray($viewData['lognonuser'] = DAOLognonuser::getLognonuser())) {
+                $viewData['isEmpty'] = true;
+            } else {
+                $viewData['isEmpty'] = false;
+            }
+        } else {
+        }
+
         $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLN');
         $viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLS');
         $viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'ADMIN');

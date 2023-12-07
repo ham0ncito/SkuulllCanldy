@@ -27,7 +27,11 @@ class Genre extends PrivateController
         $viewData['description_genre'] = 'description_genre';
         $viewData['status_genre'] = 'status_genre';
         $viewData['image_genre'] = 'image_genre';
-        $viewData['genre'] = DAOGenre::getGenre();
+        if (\Utilities\Functions::isAnEmptyArray($viewData['genre'] = DAOGenre::getGenre())) {
+            $viewData['isEmpty'] = true;
+        } else {
+            $viewData['isEmpty'] = false;
+        }
         $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLN');
         $viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLS');
         $viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'ADMIN');

@@ -1,7 +1,7 @@
-{{ifnot isEmpty}}<div class="flex items-center justify-between mb-4 mx-4">
+<div class="flex items-center justify-between mb-4 mx-8">
     <div class="relative w-full flex items-center">
         <input type="text" id="searchbar" name="searchbar" placeholder="Name or ID" class="w-2/3 px-4 py-2 pl-10 pr-8 border border-gray-300 rounded-md mx-4">
-        <div class="absolute inset-y-0 left-0 flex items-center pl-3">
+        <div class="absolute inset-y-0 left-0 ml-6 flex items-center pl-3">
             <svg class="h-6 w-5 text-gray-400 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-5.2-5.2m2.8 5.2a9 9 0 11-12.727-12.727 9 9 0 1112.727 12.727z" />
             </svg>
@@ -18,7 +18,7 @@
         </div>
     </div>
 </div>
-
+{{ifnot ~isEmpty}}
 <section class="container mx-auto px-4">
     <h2 class="text-2xl font-bold mb-4">ALBUM</h2>
     <div class="grid grid-cols-4 gap-6">
@@ -60,5 +60,5 @@
       
         {{endfor album}}
     </div>
-</section>{{endifnot isEmpty}} {{if isEmpty}}
-{{include components/tarjeta}}{{endif isEmpty}}
+</section>{{endifnot ~isEmpty}} {{if ~isEmpty}}
+{{include components/tarjeta}}{{endif ~isEmpty}}

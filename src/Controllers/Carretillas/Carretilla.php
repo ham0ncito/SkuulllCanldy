@@ -26,7 +26,14 @@ class Carretilla extends PrivateController
         $viewData['crrctd'] = 'crrctd';
         $viewData['crrprc'] = 'crrprc';
         $viewData['crrfching'] = 'crrfching';
-        $viewData['carretilla'] = DAOCarretilla::getCarretilla();
+        if (\Dao\Security\Security::userIs($_SESSION['useremail'], 'ADMIN')) {
+            if (\Utilities\Functions::isAnEmptyArray($viewData['carretilla'] = DAOCarretilla::getCarretilla())) {
+                $viewData['isEmpty'] = true;
+            } else {
+                $viewData['isEmpty'] = false;
+            }
+        } else {
+        }
         $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLN');
         $viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLS');
         $viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'ADMIN');

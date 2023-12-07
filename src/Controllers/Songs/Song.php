@@ -32,7 +32,11 @@ class Song extends PrivateController
         $viewData['album_id'] = 'album_id';
         $viewData['status_song'] = 'status_song';
         $viewData['link_song'] = 'link_song';
-        $viewData['song'] = DAOSong::getSong();
+        if (\Utilities\Functions::isAnEmptyArray($viewData['song'] = DAOSong::getSong())) {
+            $viewData['isEmpty'] = true;
+        } else {
+            $viewData['isEmpty'] = false;
+        }
         $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLN');
         $viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLS');
         $viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'ADMIN');

@@ -23,7 +23,15 @@ class Loguser extends PrivateController
         $viewData['user_cod'] = 'user_cod';
         $viewData['log_cod'] = 'log_cod';
         $viewData['date'] = 'date';
-        $viewData['loguser'] = DAOLoguser::getLoguser();
+        if (\Dao\Security\Security::userIs($_SESSION['useremail'], 'ADMIN')) {
+            if (\Utilities\Functions::isAnEmptyArray($viewData['loguser'] = DAOLoguser::getLoguser())) {
+                $viewData['isEmpty'] = true;
+            } else {
+                $viewData['isEmpty'] = false;
+            }
+        } else {
+        }
+
         $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLN');
         $viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLS');
         $viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'ADMIN');
