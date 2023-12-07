@@ -32,7 +32,7 @@
           <a href="index.php?page=Index"> <img src="/{{BASE_DIR}}/public/imgs/logo/logoSkuul.png" alt="Logo" class="w-full h-full object-cover" /></a>
          
         </div>
-        <h2 class="text-xl font-bold mr-4 pl-4">Skul2Canldy</h2>
+        <h2 class="text-xl font-bold mr-4 pl-4"><a href="https://firebasestorage.googleapis.com/v0/b/skulllcandl.appspot.com/o/Videos%2Fy2mate.com%20-%20Rick%20Astley%20%20Never%20Gonna%20Give%20You%20Up%20Official%20Music%20Video_1080p.mp4?alt=media&token=7e5931ce-f7bf-4f90-83aa-be0f3581909b">Skul2Canldy</a></h2>
       </div>
       <nav class="flex items-center space-x-4">
         <button class="md:hidden focus:outline-none" onclick="toggleMenu()">
