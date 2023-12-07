@@ -72,7 +72,9 @@ class PayPalOrder
         $this->_request->prefer("return=representation");
         $this->_request->body = $this->_body;
         $paypalClient = \Utilities\Paypal\PayPalClient::client();
+        //var_dump($paypalClient);
         $response = $paypalClient->execute($this->_request);
+        //var_dump($response->result->links[1]);
         return array($response->result->links[1], $response);
     }
     public function addItem($name, $description, $sku, $price, $tax, $quantity, $category)

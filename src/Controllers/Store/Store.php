@@ -100,8 +100,10 @@ class Store extends PrivateController
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($_SESSION["token"] == $_POST["xsxtoken"]) {
                 if (isset($_POST['addToCart'])) {
-                    $xls = sec::decryptDatum($_SESSION['sesionId'][count($_SESSION['sesionId'])-1]);
-                    if(!isset($_SESSION['cart'.$xls])){
+                    $xls = sec::decryptDatum($_SESSION['sesionId']);
+                    
+                    if(empty($_SESSION['cart'.$xls][0])){
+                        var_dump($_SESSION['cart'][0]);
                         $product = [
                             "usercod" => $xls,
                             "productid" => $_POST['productId'],
@@ -110,8 +112,8 @@ class Store extends PrivateController
                             "crrprc" =>$_POST['productPrice'],
                             "crrfching" => date("Y-m-d H:i:s")
                         ]; 
-                        $_SESSION['cart'][0] = $product;
-                        echo '<script>alert("Producto Agregado");</script>';
+                        $_SESSION['cart'.$xls][0] = $product;
+                        echo '<script>alert("Producto Agregado1");</script>';
                     }else{
                         $carrito = count($_SESSION['cart'.$xls])+1; 
                         $product = [
@@ -122,8 +124,8 @@ class Store extends PrivateController
                             "crrprc" =>$_POST['productPrice'],
                             "crrfching" => date("Y-m-d H:i:s")
                         ]; 
-                        $_SESSION['cart'][$carrito] =$product;
-                        Carretilla::insertCarretilla(sec::decryptDatum($_SESSION['sxnsjfnuVn']), $_POST['productId'],$_POST['productQuantity'],$_POST['productPrice'], date("Y-m-d H:i:s"));
+                        $_SESSION['cart'.$xls][$carrito] =$product;
+                        //Carretilla::insertCarretilla(sec::decryptDatum($_SESSION['sxnsjfnuVn']), $_POST['productId'],$_POST['productQuantity'],$_POST['productPrice'], date("Y-m-d H:i:s"));
                         echo '<script>alert("Producto Agregado");</script>';
                     }
                 

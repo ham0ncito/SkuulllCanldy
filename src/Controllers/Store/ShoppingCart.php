@@ -14,16 +14,21 @@ class ShoppingCart extends PublicController
     public function run(): void
     {
         $viewData = array();
-        $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLN'); 
-        $viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLS'); 
-        $viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'ADMIN'); 
+        $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION["login"]['userEmail'],'CLN'); 
+        $viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION["login"]['userEmail'],'CLS'); 
+        $viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION["login"]['userEmail'],'ADMIN'); 
         $productData = array();
         $totalCrrprc = 0;
         $totalcrrctd = 0;
         $early = "";
         self::carrito();
         $fecha_mas_reciente_timestamp = 0;
-        $viewData['products'] = Carretilla::obtenerPorId(sec::decryptDatum($_SESSION['sesionId'][count($_SESSION['sesionId'])]));
+        $xls = sec::decryptDatum($_SESSION['sesionId']);
+        $cart = $_SESSION["cart".$xls];
+        // foreach($cart as $product){
+        //     var_dump($product);
+        // }
+        $viewData['products'] = $cart;
         foreach ($viewData['products'] as $product) {
             if (isset($product['crrprc'])) {
                 $totalCrrprc += $product['crrprc'];
@@ -57,8 +62,9 @@ class ShoppingCart extends PublicController
 
     private function Carrito()
     {
+        $xls = sec::decryptDatum($_SESSION['sesionId']);
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            if ($_SESSION["tokenShopping"] == $_POST["token"]) {
+            if ($_SESSION["tokenShopping"] == $_POST["xsx"]) {
                 if (isset($_POST['deleteButton'])) {
                     if (!isset($_SESSION['cart'])) {
                         unset($_SESSION['cart']);
@@ -66,27 +72,30 @@ class ShoppingCart extends PublicController
                     } 
                 }
                 if (isset($_POST['buyButton'])) {
-                    if (!isset($_SESSION['cart'])) {
+                    if (isset($_SESSION['cart' . $xls])) {
                         $PayPalOrder = new \Utilities\Paypal\PayPalOrder(
                             "test" . (time() - 10000000),
                             "http://localhost:8080/SkuulllCanldy/index.php?page=checkout_error",
                             "http://localhost:8080/SkuulllCanldy/index.php?page=checkout_accept"
                         );
-                        foreach ($_SESSION['cart'] as $product) {
+                        //var_dump($_SESSION['cart'. $xls]);
+                        foreach ($_SESSION['cart'. $xls] as $product) {
                             $usercod = $product['usercod'];
                             $productId = $product['productid'];
                             $productName = $product['productName'];
                             $productQuantity = $product['crrctd'];
                             $productPrice = $product['crrprc'];
                             $crrfching = $product['crrfching'];
-            
+                            
+                            
                             $PayPalOrder->addItem($productName,$productName.' purchased in Skull2canldy',$product,$productPrice,$productPrice *0.15, $productQuantity, "DIGITAL GOODS" );
-                            $viewData['products'] = Carretilla::deleteCarretilla(sec::decryptDatum($_SESSION['sesionId'][count($_SESSION['sesionId'])]));
+                            //$viewData['products'] = Carretilla::deleteCarretilla(sec::decryptDatum($_SESSION['sesionId']));
                         }
                         $response = $PayPalOrder->createOrder();
+                        var_dump($response);
                         unset($_SESSION['cart']);
                         $_SESSION["orderid"] = $response[1]->result->id;
-                        \Utilities\Site::redirectTo($response[0]->href);
+                        Site::redirectTo($response[0]->href);
                         die();
                       
                     }

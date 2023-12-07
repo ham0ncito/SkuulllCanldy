@@ -4,6 +4,9 @@
     "@splidejs/splide": "^4.1.4",
     "animejs": "^3.2.1",
     "firebase": "^10.6.0",
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "node-fetch": "^3.1.0"
   }
 }
