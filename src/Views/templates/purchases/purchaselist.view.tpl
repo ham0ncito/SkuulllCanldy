@@ -23,29 +23,49 @@
 <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-8">
     <h2 class="text-2xl font-bold mb-4 mx-4 col-span-full">PURCHASES</h2>
     {{foreach purchase}}
-    <div class="bg-white rounded-lg overflow-hidden shadow-md">
-        <div class="p-4">
-            <h3 class="font-bold text-xl mb-2">{{id_purchase}}</h3>
-            <p class="text-gray-600 mt-2">Purchase Date: {{purchase_date}}</p>
-            <p class="text-gray-600 mt-2">Total: {{total}}</p>
-            <p class="text-gray-700 mt-2 truncate">Details: {{details}}</p>
-            <p class="text-gray-600 mt-2">Payments: {{payments}}</p>
-            
+    <div x-data="{ showModal: false, purchaseDetails: '' }" class="bg-white rounded-lg overflow-hidden shadow-md relative">
+        <div class="p-16 mx-2">
+            <h3 class="text-xl mb-0 overflow-hidden overflow-ellipsis">Reference id: <span class="font-bold overflow-hidden overflow-ellipsis">{{id_purchase}}</span></h3>
+            <p class="text-gray-600 mt-2">Date: <span class="text-xl text-blue-500">{{purchase_date}}</span></p>
+            <p class="text-gray-600 mt-2">Total: <span class="text-xl text-blue-500">${{total}}</span></p>
             {{if ~isADMIN}}
             <div class="mt-4">
                 <a href="index.php?page=Purchases_Purchases&mode=UPD&id_purchase={{id_purchase}}" class="text-green-500 hover:text-green-700 mr-2">Edit</a>
                 <a href="index.php?page=Purchases_Purchases&mode=DEL&id_purchase={{id_purchase}}" class="text-red-500 hover:text-red-700">Delete</a>
             </div>
             {{endif ~isADMIN}}
-            
-            <div class="absolute inset-y-0 right-0 flex items-center pr-3">
-                <a href="index.php?page=Purchases_Purchases&mode=DSP&id_purchase={{id_purchase}}" class="text-blue-500 hover:text-blue-700 mt-4 block">See more</a>
+            <div class="absolute bottom-0 pb-4 flex items-center pr-3">
+                <a @click="
+                    showModal = true;
+                " class="text-blue-500 hover:text-blue-700 bottom-0 right-0 block cursor-pointer">See more &#62;</a>
+            </div>
+        </div>
+
+        <div x-show="showModal" class="w-full fixed inset-0 z-50 overflow-auto bg-black bg-opacity-50 flex justify-center items-center">
+            <div class="bg-white w-1/2 h-2/3 md:max-w-md mx-auto rounded shadow-lg p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-semibold">Purchase Details</h2>
+                    <button @click="showModal = false" class="text-gray-600 hover:text-gray-800 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <p class="text-xl text-bold">Purchase ID:</p>
+                <p class="text-blue-500 py-2 ">{{id_purchase}}</p>
+                <p class="text-xl text-bold">Details: </p>
+                <p class="text-blue-500 py-2 ">{{details}}</p>
+                <p class="text-xl text-bold">Payment Description:</p>
+                <p class="text-blue-500 py-2 ">{{payments}}</p>
             </div>
         </div>
     </div>
     {{endfor purchase}}
 </section>
 {{endifnot isEmpty}}
+
+
+
 
 {{if isEmpty}}
 {{include components/tarjeta}}

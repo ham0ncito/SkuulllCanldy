@@ -5,6 +5,7 @@ namespace Controllers\Purchases;
 use Controllers\PrivateController;
 use Controllers\PublicController;
 use Views\Renderer;
+use Dao\Purchasedetails\Purchasedetails as detail; 
 use Dao\Purchases\Purchases as DAOPurchase;
 use Utilities\Site;
 use Utilities\Validators;
@@ -37,6 +38,7 @@ class Purchase extends PrivateController
             if (\Utilities\Functions::isAnEmptyArray( $viewData['purchase'] = DAOPurchase::getPurchaseByUser(\Dao\Security\Security::getCodigoByEmail($_SESSION['useremail'])))) {
                 $viewData['isEmpty'] = true;
             } else {
+             
                 $viewData['isEmpty'] = false;
             }
            

@@ -23,7 +23,7 @@ class Purchases extends Table
         }
         public static function getPurchaseByUser($usercod)
         {
-                $sqlstr = "SELECT purchase.* , purchasedetail.* FROM purchase as purchase INNER JOIN purchasedetail as purchasedetail on purchase.id_purchase = purchasedetail.id_purchase INNER JOIN usuario as usuario ON usuario.usercod = purchase.usercod where usuario.usercod = :usercod";
+                $sqlstr = "SELECT purchase.*  FROM purchase as purchase INNER JOIN usuario as usuario ON usuario.usercod = purchase.usercod  where usuario.usercod = :usercod";
                 $params = ['usercod' => $usercod];
                 $registros = self::obtenerRegistros($sqlstr, $params);
                 return $registros;
