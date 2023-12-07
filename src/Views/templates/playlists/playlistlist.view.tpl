@@ -1,4 +1,4 @@
-<div class="flex items-center justify-between mb-4 mx-4">
+{{ifnot isEmpty}}<div class="flex items-center justify-between mb-4 mx-4">
         <div class="relative w-full flex items-center">
             <input type="text" id="searchbar" name="searchbar" placeholder="Name or ID" class="w-2/3 px-4 py-2 pl-10 pr-8 border border-gray-300 rounded-md mx-4">
             <div class="absolute inset-y-0 left-0 flex items-center ml-2 pl-3">
@@ -36,4 +36,16 @@
 	</tr>
  {{endfor playlist}}</tbody>
 </table>
-</div> </section>
+</div> </section>{{endifnot isEmpty}} {{if isEmpty}}
+<div class="bg-gray-100 mx-8 rounded-lg flex items-center justify-center h-screen">
+    <div class="max-w-md mx-auto bg-white shadow-md rounded-md overflow-hidden">
+        <div class="p-4">
+            <h2 class="text-xl font-semibold mb-2">We have nothing to show here</h2>
+            
+            <div class="flex justify-center">
+                <img src="https://1.bp.blogspot.com/-brvdZaWa-Ig/XtrhJSG8EOI/AAAAAAAAAhU/gBorfyDX5ccOk1oP0Gl7WIpzTFtysCGYACLcBGAsYHQ/s640/wbb%2Bsad%2Btvlaint.gif" alt="GIF animado" class=" h-50 w-full">
+            </div>
+            <p class="text-gray-700 mt-4">We are preparing something special just for you</p>
+        </div>
+    </div>
+</div>{{endif isEmpty}}

@@ -30,11 +30,13 @@ class Playlist extends PrivateController
         $viewData['playlist_create_at'] = 'playlist_create_at';
         $viewData['playlist_status'] = 'playlist_status';
         $viewData['usercod'] = 'usercod';
-       
-        if (\Dao\Security\Security::userIs($_SESSION['useremail'], 'ADMIN')){
-            $viewData['playlist'] = DAOPlaylist::getPlaylist();
-        }else{
-           
+
+        if (\Dao\Security\Security::userIs($_SESSION['useremail'], 'ADMIN')) {
+            if (\Utilities\Functions::isAnEmptyArray($viewData['playlist'] = DAOPlaylist::getPlaylist()))   {
+                $viewData['isEmpty'] = true; 
+            }
+        } else {
+            $viewData['playlist'] = DAOPlaylist::getPlaylistByUser(\Dao\Security\Security::getCodigoByEmail($_SESSION['useremail']));
         }
         $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLN');
         $viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLS');

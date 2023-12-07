@@ -7,4 +7,13 @@ class Functions{
     {
         return $secureUniqueID = bin2hex(random_bytes(64)).date('Hi').$sufix;
     }
+    public static function isAnEmptyArray(array $array){
+        if (empty($miArreglo)) { 
+            return true; 
+        } else {
+            return false; 
+        }
+    }
+    
+
 }

@@ -91,7 +91,13 @@ class Security extends \Dao\Table
 
         return self::obtenerUnRegistro($sqlstr, $params);
     }
-    
+    static public function getCodigoByEmail($email)
+    {
+        $sqlstr = "SELECT usercod from `usuario` where `useremail` = :useremail ;";
+        $params = array("useremail"=>$email);
+
+        return self::obtenerUnRegistro($sqlstr, $params);
+    }
     static public function userIs($codUser, $cod = "CLN"){
         $data = self::getRolUser($codUser); 
         $data = implode("", $data);
