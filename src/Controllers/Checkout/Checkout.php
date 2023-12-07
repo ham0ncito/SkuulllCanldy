@@ -19,7 +19,6 @@ class Checkout extends PublicController
                 "http://localhost:8080/SkuulllCanldy/index.php?page=checkout_error",
                 "http://localhost:8080/SkuulllCanldy/index.php?page=checkout_accept"
             );
-            $PayPalOrder->addItem("Test", "TestItem1", "PRD1", 100, 15, 1, "DIGITAL_GOODS");
             self::getSession($PayPalOrder);
             $response = $PayPalOrder->createOrder();
             $_SESSION["orderid"] = $response[1]->result->id;
@@ -49,12 +48,12 @@ class Checkout extends PublicController
                 $productQuantity = $product['crrctd'];
                 $productPrice = $product['crrprc'];
                 $crrfching = $product['crrfching'];
-                $PayPalOrder->addItem(strval($productName), strval($productName) , strval($productId), floatval($productPrice),round(floatval($productPrice*0.15),2) , intval($productQuantity), "DIGITAL GOODS");                
+                $PayPalOrder->addItem(strval($productName), strval($productName." purchased on  ".Date('HH-mm-ss')) , strval($productId), floatval($productPrice),round(floatval($productPrice*0.15),2) , intval($productQuantity), "DIGITAL_GOODS");                
             }
         }
        
     }
-    public function addToDB(){
+    public static function addToDB(){
         $xls = $_SESSION['xls'];
         $total = 0.00; 
         $detail= "Purchased: ";  
@@ -68,14 +67,26 @@ class Checkout extends PublicController
                 $crrfching = $product['crrfching'];
                 $total += $productPrice * $productQuantity; 
                 $detail .= " {{$productName}} || {{$productQuantity}} || {{$productPrice}} || "; 
+                self::addToDetail($detail); 
                 Carrito::insertCarretilla($usercod, $productId, $productQuantity, $productPrice, Date('Y-M-D-H-i-s'));     
             }
         }
+        $_SESSION['detailofPurchase'] = $detail;
         return $total; 
         
     }
+    public static function getDetail()
+    {
+        $data = $_SESSION['detailofPurchase']; 
+        unset($_SESSION['detailofPurchase']);
+        return $data ;
+    }
+    public static function addToDetail($detail){
+        return $detail.= $detail ."\n";  
+    }
 
-    public function addPurchase($payment){
+
+    public static function addPurchase($payment){
         $xls = $_SESSION['xls'];
         $idFor = \Utilities\Functions::generateId("purchase");
         purchase::insertPurchase($idFor,Date('Y-m-d H:mm:ss'),self::addToDb(),"Purchase on skuull2canldy", $payment);
@@ -88,7 +99,6 @@ class Checkout extends PublicController
                 $productPrice = $product['crrprc'];
                 $crrfching = $product['crrfching'];
                 detail::insertPurchasedetail($idFor, $productId,$productQuantity, $productPrice); 
-                 
             }
             
         }

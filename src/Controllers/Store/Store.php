@@ -103,7 +103,6 @@ class Store extends PrivateController
           $xls = sec::decryptDatum($_SESSION['sesionId']);
           $_SESSION['xls'] = $xls;
           if (isset($_SESSION['cart' . $xls][0])) {
-            var_dump($_SESSION['cart'][0]);
             $product = [
               "usercod" => $xls,
               "productid" => $_POST['productId'],
@@ -115,7 +114,7 @@ class Store extends PrivateController
             $_SESSION['cart' . $xls][0] = $product;
             echo '<script>alert("' . $_POST['productName'] . ' added checkout carrito");</script>';
           } else {
-            $carrito = count($_SESSION['cart' . $xls]) + 1;
+            $carrito = count($_SESSION['cart' . $xls])+1 ;
             $product = [
               "usercod" => $xls,
               "productid" => $_POST['productId'],
@@ -125,7 +124,6 @@ class Store extends PrivateController
               "crrfching" => date("Y-m-d H:i:s")
             ];
             $_SESSION['cart' . $xls][$carrito] = $product;
-            //Carretilla::insertCarretilla(sec::decryptDatum($_SESSION['sxnsjfnuVn']), $_POST['productId'],$_POST['productQuantity'],$_POST['productPrice'], date("Y-m-d H:i:s"));
             echo '<script>alert("' . $_POST['productName'] . ' added checkout carrito");</script>';
           }
         }
