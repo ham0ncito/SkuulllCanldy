@@ -94,11 +94,7 @@ class Subscriptions extends PrivateController
         if (Validators::IsEmpty($_POST["subscription_price"])) {
             $this->error["subscription_price_error"] = "Campo es requerido";
         }
-        //if (!in_array($_POST["status"], ["INA", "ACT"])) {
-        // $this->error["status_error"] = "Estado es inválido.";
-        // } else {
-        //  $this->error["status_error"] = ""; 
-        //}
+       
 
         return count($this->error) == 0;
     }
@@ -150,9 +146,7 @@ class Subscriptions extends PrivateController
         if ($this->mode == "INS") {
             $this->viewData["modedsc"] = $this->modes[$this->mode];
         } else {
-            //$this->viewData["modedsc"] = sprintf(
-            // $this->modes[$this->mode], 
-            //);
+           
         }
         //$this->viewData["subscription"][$this->subscription["status"]."_selected"] = 'selected';
         foreach ($this->error as $key => $error) {

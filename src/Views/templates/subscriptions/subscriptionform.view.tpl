@@ -1,5 +1,5 @@
-<section class="bg-gray-100 p-4 mx-4">
-    <h1 class="text-2xl font-bold mb-4"> Descripcion subscription {{modedsc}}</h1>
+<section class="bg-gray-100  rounded-lg shadow-lg p-4 mx-8">
+    <h2 class="text-2xl font-bold text-white text-center mb-6"> Descripcion subscription {{modedsc}}</h2>
     
 {{with subscription}}
 
@@ -15,11 +15,11 @@
                 <label for="subscription_duration" class="block text-gray-700 text-sm font-bold mb-2">subscription_duration</label>
                 <input type="text" id="subscription_duration" name="subscription_duration" placeholder="subscription_duration de subscription " value="{{subscription_duration}}" {{if ~readonly}}   readonly {{endif ~readonly}} class="w-full py-2 px-3 border border-gray-300 rounded focus:outline-none focus:border-blue-400"/>
                 {{if subscription_duration_error}}<div class="text-red-500 text-sm">{{subscription_duration_error}}</div>{{endif subscription_duration_error}}
-            </section>{{if isADMIN}}<section class="mb-4">
+            </section>{{if ~isADMIN}}<section class="mb-4">
                 <label for="subscription_price" class="block text-gray-700 text-sm font-bold mb-2">subscription_price</label>
                 <input type="text" id="subscription_price" name="subscription_price" placeholder="subscription_price de subscription " value="{{subscription_price}}" {{if ~readonly}}   readonly {{endif ~readonly}} class="w-full py-2 px-3 border border-gray-300 rounded focus:outline-none focus:border-blue-400"/>
                 {{if subscription_price_error}}<div class="text-red-500 text-sm">{{subscription_price_error}}</div>{{endif subscription_price_error}}
-            </section>{{endif isADMIN}}<section class="col-12 right">
+            </section>{{endif ~isADMIN}}<section class="col-12 right">
         {{if ~showConfirm}}
             <button type="submit" name="btnConfirm">Confirm</button>&nbsp;
         {{endif ~showConfirm}}

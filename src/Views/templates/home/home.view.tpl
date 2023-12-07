@@ -2,7 +2,7 @@
     {{if ~isCLN}}
         <section class="flex flex-column w-full h-full justify-center items-center bg-cover bg-center">
             <div class="bg-white shadow-lg rounded-lg p-6 max-w-md w-full text-center">
-                <h1 class="text-2xl font-bold mb-4">We miss you</h1>
+                <h2 class="text-2xl font-bold text-white text-center mb-6">We miss you</h1>
                 <p class="text-gray-700">Explore boundless fun with us purchasing a subscription.</p>
                 <p class="text-gray-700">Our prices are lower than the green evil company's.</p>
             </div>
@@ -51,11 +51,11 @@
             <div class="p-6 md:p-8">
                 <h2 class="uppercase tracking-wide text-2xl text-indigo-500 font-semibold">{{name_artist}}</h2>
                 <p class="block pb-6 mt-1 text-sm leading-tight font-medium text-black">{{artist_bio}}</p>
-               {{if isADMIN}}
+               {{if ~isADMIN}}
                 <div class="absolute pt-4 pb-2 bottom-0 left-0 right-0 text-center">
                     <a href="index.php?page=Artists_Artists&mode=DSP&id_artist={{id_artist}}" class="text-indigo-600 hover:text-indigo-900 font-semibold">See more</a>
                 </div>
-                {{endif isADMIN}}
+                {{endif ~isADMIN}}
             </div>
         </div>
         {{endfor artist}}
@@ -75,11 +75,11 @@
                 <h2 class="uppercase tracking-wide text-2xl text-indigo-500 font-semibold">{{name_artist}}</h2>
                 <h3 class="block pb-2 mt-1 text-lg leading-tight font-medium text-black">{{title_video}}</h3>
                 <p class="text-gray-600">{{description_video}}</p>
-                {{if isADMIN}}
+                {{if ~isADMIN}}
                 <div class="absolute pt-4 pb-2 bottom-0 left-0 right-0 text-center">
                     <a href="index.php?page=Videos_Videos&mode=DSP&id_video={{id_video}}"" class="text-indigo-600 hover:text-indigo-900 font-semibold">See more</a>
                 </div>
-                {{endif isADMIN}}
+                {{endif ~isADMIN}}
             </div>
         </div>
         

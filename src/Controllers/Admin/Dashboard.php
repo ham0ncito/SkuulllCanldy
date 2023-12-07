@@ -4,6 +4,7 @@ namespace Controllers\Admin;
 
 use Controllers\PrivateController;
 class Dashboard extends PrivateController{
+    private $viewData;
     public function run():void
     {
         
@@ -138,9 +139,9 @@ class Dashboard extends PrivateController{
                 'url'=> 'index.php?page=Rolesusuarioss_Rolesusuarios',
             ],
            ];
-           $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLN'); 
            $viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLS'); 
            $viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'ADMIN'); 
+           $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLN'); 
         \Views\Renderer::render("admin/dashboard", $viewData);
     }
 }

@@ -1,5 +1,5 @@
-<section class="bg-gray-100 p-4 mx-4">
-    <h1 class="text-6xl font-bold mb-4 text-center"> Descripcion genre {{modedsc}}</h1>
+<section class="bg-gray-100  rounded-lg shadow-lg p-4 mx-8">
+    <h1 class="text-6xl font-bold mb-4 text-center"> Descripcion genre {{modedsc}}</h2>
     
 {{with genre}}
 
@@ -15,7 +15,7 @@
                 <label for="description_genre" class="block text-gray-700 text-sm font-bold mb-2">description_genre</label>
                 <input type="text" id="description_genre" name="description_genre" placeholder="description_genre de genre " value="{{description_genre}}" {{if ~readonly}}   readonly {{endif ~readonly}} class="w-full py-2 px-3 border border-gray-300 rounded focus:outline-none focus:border-blue-400"/>
                 {{if description_genre_error}}<div class="text-red-500 text-sm">{{description_genre_error}}</div>{{endif description_genre_error}}
-            </section>{{if isADMIN}}<section class="mb-4">
+            </section>{{if ~isADMIN}}<section class="mb-4">
                 <label for="status_genre" class="block text-gray-700 text-sm font-bold mb-2">status_genre</label>
                 <input type="text" id="status_genre" name="status_genre" placeholder="status_genre de genre " value="{{status_genre}}" {{if ~readonly}}   readonly {{endif ~readonly}} class="w-full py-2 px-3 border border-gray-300 rounded focus:outline-none focus:border-blue-400"/>
                 {{if status_genre_error}}<div class="text-red-500 text-sm">{{status_genre_error}}</div>{{endif status_genre_error}}
@@ -23,7 +23,7 @@
                 <label for="image_genre" class="block text-gray-700 text-sm font-bold mb-2">image_genre</label>
                 <input type="text" id="image_genre" name="image_genre" placeholder="image_genre de genre " value="{{image_genre}}" {{if ~readonly}}   readonly {{endif ~readonly}} class="w-full py-2 px-3 border border-gray-300 rounded focus:outline-none focus:border-blue-400"/>
                 {{if image_genre_error}}<div class="text-red-500 text-sm">{{image_genre_error}}</div>{{endif image_genre_error}}
-            </section>{{endif isADMIN}}<section class="col-12 right">
+            </section>{{endif ~isADMIN}}<section class="col-12 right">
         {{if ~showConfirm}}
             <button type="submit" name="btnConfirm">Confirmar</button>&nbsp;
         {{endif ~showConfirm}}

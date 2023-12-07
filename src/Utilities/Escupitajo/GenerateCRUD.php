@@ -533,8 +533,8 @@ class GenerateCRUD extends Table
     }
     private static function generateFormHeader($fields)
     {
-        $string = '<section class="bg-gray-100 p-4 mx-4">
-    <h1 class="text-2xl font-bold mb-4"> Descripcion ' . $fields . ' {{modedsc}}</h1>
+        $string = '<section class="bg-gray-100  rounded-lg shadow-lg p-4 mx-8">
+    <h2 class="text-2xl font-bold text-white text-center mb-6"> Descripcion ' . $fields . ' {{modedsc}}</h2>
     '."\n".'{{with '. strtolower($fields).'}}'."\n".'
     <form class="my-4 bg-white p-8 rounded shadow-lg mx-auto max-w-md" action="index.php?page=' . self::getRoute($fields, "0") . 's&mode={{~mode}}&' . self::getPrimaryKey($fields) . '={{id}}" method="POST">';
         $string .= '<input type="hidden" name="xss_token_' . strtolower($fields) . '" value="{{~xss_token_'.strtolower($fields).'}}"/>';
@@ -615,10 +615,10 @@ class GenerateCRUD extends Table
             $position = 0;
 
             foreach ($fields as $campo) {
-                $fieldsString .= "\n\t" . '<th class="py-2 px-4 border-b">' . strtoupper($campo) . '</th>';
+                $fieldsString .= "\n\t" . '<th class="py-2 px-2 text-center justify-center text-white bg-blue-500 border-b">' . strtoupper($campo) . '</th>';
                 $position++;
             }
-            $fieldsString .= '<th><a href="index.php?page=' . self::getRoute($tableName, "0") . 's&mode=INS">Nuevo</a></th>';
+            $fieldsString .= '<th class="py-2 px-2 text-center justify-center text-white bg-blue-500 border-b"><a href="index.php?page=' . self::getRoute($tableName, "0") . 's&mode=INS">ADD</a></th>';
             $fieldsString .= "\n\t</tr>\n</thead>";
         }
         return $fieldsString;
@@ -646,8 +646,8 @@ class GenerateCRUD extends Table
     {
         $string ='<div class="flex items-center justify-between mb-4 mx-4">
         <div class="relative w-full flex items-center">
-            <input type="text" id="searchbar" name="searchbar" placeholder="Name or ID" class="w-2/3 px-4 py-2 pl-10 pr-8 border border-gray-300 rounded-md">
-            <div class="absolute inset-y-0 left-0 flex items-center pl-3">
+            <input type="text" id="searchbar" name="searchbar" placeholder="Name or ID" class="w-2/3 px-4 py-2 pl-10 pr-8 border border-gray-300 rounded-md mx-4">
+            <div class="absolute inset-y-0 left-0 flex items-center ml-2 pl-3">
                 <svg class="h-6 w-5 text-gray-400 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-5.2-5.2m2.8 5.2a9 9 0 11-12.727-12.727 9 9 0 1112.727 12.727z" />
                 </svg>
@@ -662,7 +662,7 @@ class GenerateCRUD extends Table
             </div>
         </div>
     </div>';
-        $string .= '<section><h2 class="text-2xl font-bold mb-4 mx-4"> ' . strtoupper($fields) . '</h2>' . "\n" . '<div class="overflow-x-auto">' . "\n" . '<table class="min-w-full bg-white border border-gray-300">' . "\n" . '<thead>' . "\n" . '<tr>';
+        $string .= '<section><h2 class="text-2xl font-bold mb-4 mx-4"> ' . strtoupper($fields) . '</h2>' . "\n" . '<div class="overflow-x-auto">' . "\n" . '<table class="min-w-full bg-white border border-gray-300 mx-6">' . "\n" . '<thead class="text-center justify-center mx-2">' . "\n" . '<tr>';
         return $string;
     }
     public static function GenerateDAO($fields)

@@ -1,6 +1,6 @@
-{{if isADMIN}}
-<section class="bg-gray-100 p-4 mx-4">
-    <h1 class="text-2xl font-bold mb-4"> Descripcion roles {{modedsc}}</h1>
+{{if ~isADMIN}}
+<section class="bg-gray-100  rounded-lg shadow-lg p-4 mx-8">
+    <h2 class="text-2xl font-bold text-white text-center mb-6"> Descripcion roles {{modedsc}}</h2>
     
 {{with roles}}
 
@@ -33,4 +33,4 @@
                 document.location.assign("index.php?page=Roless_Roles");
             });
         });
-    </script>  {{endif isADMIN}}
+    </script>  {{endif ~isADMIN}}

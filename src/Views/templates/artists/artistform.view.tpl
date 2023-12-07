@@ -1,5 +1,5 @@
 <section class="bg-gray-100 p-4 mx-8 rounded-lg mb-10">
-    <h1 class="text-4xl font-bold mb-4 text-center p-4"> Descripcion artist {{modedsc}}</h1>
+    <h1 class="text-4xl font-bold mb-4 text-center p-4"> Descripcion artist {{modedsc}}</h2>
     
 {{with artist}}
 

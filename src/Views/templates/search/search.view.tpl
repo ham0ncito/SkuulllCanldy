@@ -57,7 +57,7 @@
       }
   </style>
     <table>
-      <thead>
+      <thead class="text-center justify-center mx-2">
         <tr>
           <td>#</td>
           <td>Title</td>

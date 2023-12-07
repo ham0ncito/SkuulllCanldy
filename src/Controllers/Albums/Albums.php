@@ -117,11 +117,7 @@ class Albums extends PrivateController
         if (Validators::IsEmpty($_POST["id_genre"])) {
             $this->error["id_genre_error"] = "Campo es requerido";
         }
-        //if (!in_array($_POST["status"], ["INA", "ACT"])) {
-        // $this->error["status_error"] = "Estado es inválido.";
-        // } else {
-        //  $this->error["status_error"] = ""; 
-        //}
+       
 
         return count($this->error) == 0;
     }
@@ -179,14 +175,14 @@ class Albums extends PrivateController
         $this->viewData["mode"] = $this->mode;
         $this->viewData["album"] = $this->album;
         if ($this->mode == "INS") {
+            $this->viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLN');
+            $this->viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLS');
+            $this->viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'ADMIN');
             $this->viewData["modedsc"] = $this->modes[$this->mode];
         } else {
-            //$this->viewData["modedsc"] = sprintf(
-            // $this->modes[$this->mode], 
-            //);
+           
         }
-        //$this->viewData["album"][$this->album["status"]."_selected"] = 'selected';
-        foreach ($this->error as $key => $error) {
+       foreach ($this->error as $key => $error) {
             if ($error !== null) {
                 $this->viewData["album"][$key] = $error;
             }
@@ -201,9 +197,9 @@ class Albums extends PrivateController
 
     private function render()
     {
-        $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLN');
-        $viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLS');
-        $viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'ADMIN');
+        $this->viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLN');
+        $this->viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLS');
+        $this->viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'ADMIN');
         Renderer::render("albums/albumform", $this->viewData);
     }
 }

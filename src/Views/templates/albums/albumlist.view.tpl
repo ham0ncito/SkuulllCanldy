@@ -1,6 +1,6 @@
 <div class="flex items-center justify-between mb-4 mx-4">
     <div class="relative w-full flex items-center">
-        <input type="text" id="searchbar" name="searchbar" placeholder="Name or ID" class="w-2/3 px-4 py-2 pl-10 pr-8 border border-gray-300 rounded-md">
+        <input type="text" id="searchbar" name="searchbar" placeholder="Name or ID" class="w-2/3 px-4 py-2 pl-10 pr-8 border border-gray-300 rounded-md mx-4">
         <div class="absolute inset-y-0 left-0 flex items-center pl-3">
             <svg class="h-6 w-5 text-gray-400 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-5.2-5.2m2.8 5.2a9 9 0 11-12.727-12.727 9 9 0 1112.727 12.727z" />
@@ -10,11 +10,11 @@
             <button id="searchbutton" name="searchbutton" class="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700 mr-2">
                 Search
             </button>
-            {{if isADMIN}}
+            {{if ~isADMIN}}
 			<a href="index.php?page=Albums_Albums&mode=INS" class="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700">
                 Insert
             </a>
-            {{endif isADMIN}}
+            {{endif ~isADMIN}}
         </div>
     </div>
 </div>
@@ -44,13 +44,13 @@
                             </button>
                         </div>
                      
-                        <div x-show="isOpen" @click.away="isOpen = false" id="dropdownMenu{{id_album}}" class="origin-top-right absolute right-0 mt-10 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">{{if isADMIN}}
+                        <div x-show="isOpen" @click.away="isOpen = false" id="dropdownMenu{{id_album}}" class="origin-top-right absolute right-0 mt-10 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">{{if ~isADMIN}}
                             <div class="py-1" role="none">
                              
                                 <a href="index.php?page=Albums_Albums&mode=UPD&id_album={{id_album}}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Edit</a>
                                 <a href="index.php?page=Albums_Albums&mode=DEL&id_album={{id_album}}" class="block px-4 py-2 text-sm text-red-700 hover:bg-gray-100" role="menuitem">Delete</a>
                             </div>
-                            {{endif isADMIN}}
+                            {{endif ~isADMIN}}
                         </div>
                     </div>
                                         
