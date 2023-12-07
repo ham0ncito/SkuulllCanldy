@@ -34,6 +34,12 @@ class Purchase extends PrivateController
                 $viewData['isEmpty'] = false;
             }
         } else {
+            if (\Utilities\Functions::isAnEmptyArray( $viewData['purchase'] = DAOPurchase::getPurchaseByUser(\Dao\Security\Security::getCodigoByEmail($_SESSION['useremail'])))) {
+                $viewData['isEmpty'] = true;
+            } else {
+                $viewData['isEmpty'] = false;
+            }
+           
         }
         $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLN');
         $viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLS');

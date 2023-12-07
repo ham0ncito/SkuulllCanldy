@@ -25,8 +25,8 @@ class Playlists extends Table
         }
         public static function getPlaylistByUser($usercod)
         {
-                $sqlstr = "SELECT * FROM playlist where usecod =:usecod";
-                $params = ['usecod' => $usercod];
+                $sqlstr = "SELECT * FROM playlist where usercod =:usercod";
+                $params = ['usercod' => $usercod];
                 $registros = self::obtenerRegistros($sqlstr, $params);
                 return $registros;
         }

@@ -24,6 +24,7 @@ class Favorites extends PrivateController
         $viewData['usercod'] = 'usercod';
         $viewData['id_reference'] = 'id_reference';
         $viewData['type_favorite'] = 'type_favorite';
+        
         if (\Dao\Security\Security::userIs($_SESSION['useremail'], 'ADMIN')) {
             if (\Utilities\Functions::isAnEmptyArray($viewData['favorites'] = DAOFavorites::getFavorites())) {
                 $viewData['isEmpty'] = true;
@@ -31,6 +32,12 @@ class Favorites extends PrivateController
                 $viewData['isEmpty'] = false;
             }
         } else {
+            if (\Utilities\Functions::isAnEmptyArray($viewData['purchase'] = DAOFavorites::getFavoritesByUser(\Dao\Security\Security::getCodigoByEmail($_SESSION['useremail'])))) {
+                $viewData['isEmpty'] = true;
+            } else {
+                $viewData['isEmpty'] = false;
+            }
+        
             
         }
         $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLN');
