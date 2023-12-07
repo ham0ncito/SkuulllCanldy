@@ -1,4 +1,5 @@
 {{if ~isADMIN}}
+{{ifnot isEmpty}}
 <section><h2 class="text-2xl font-bold mb-4"> LISTADO DE USUARIO</h2>
 <div class="overflow-x-auto">
 <table class="min-w-full bg-white border border-gray-300 mx-6">
@@ -24,4 +25,5 @@
 	</tr>
  {{endfor usuario}}</tbody>
 </table>
-</div> </section>{{endif ~isADMIN}}
+</div> </section>{{endifnot isEmpty}}{{if isEmpty}}
+{{include components/tarjeta}}{{endif isEmpty}}{{endif ~isADMIN}}

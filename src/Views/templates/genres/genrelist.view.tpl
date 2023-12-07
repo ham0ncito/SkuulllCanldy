@@ -1,4 +1,4 @@
-<div class="flex items-center justify-between mb-4">
+{{ifnot isEmpty}}<div class="flex items-center justify-between mb-4">
     <div class="relative w-full flex items-center mx-4">
         <input type="text" id="searchbar" name="searchbar" placeholder="Name or ID" class="w-2/3 px-4 py-2 pl-10 pr-8 border border-gray-300 rounded-md mx-4">
         <div class="absolute inset-y-0 left-0 flex items-center pl-3">
@@ -32,7 +32,9 @@
                 </p>
 
                 <p class="text-gray-300 mb-2"><span class="font-bold">Description:</span> {{description_genre}}</p>
+                {{if ~isADMIN}}
                 <p class="text-gray-300 mb-2 "><span class="font-bold">Status:</span> {{status_genre}}</p>
+                {{endif ~isADMIN}}
             </div>
             {{if ~isADMIN}}
             <div class="absolute bottom-0 left-0 right-0 flex justify-center p-10">
@@ -55,4 +57,5 @@ searchButton.addEventListener('click', function() {
     const searchTerm = searchInput.value; 
     alert(searchTerm);
 });
-</script>
+</script>{{endifnot isEmpty}} {{if isEmpty}}
+{{include components/tarjeta}}{{endif isEmpty}}

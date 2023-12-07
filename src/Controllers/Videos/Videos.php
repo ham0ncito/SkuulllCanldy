@@ -2,7 +2,7 @@
 
 namespace Controllers\Videos;
 
-use Controllers\PublicController;
+use Controllers\PrivateController;
 use Views\Renderer;
 use Dao\Videos\Videos as DAOVideo;
 use Utilities\Site;

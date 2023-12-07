@@ -1,5 +1,4 @@
- 
-<section class="bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg rounded-md p-6 h-screen flex items-center justify-center">
+ <section class="bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg rounded-md p-6 h-screen flex items-center justify-center">
     <h2 class="text-white text-6xl text-center">{{name}}</h2>
     <div x-data="{ openTab: 1 }" class="p-8">
         <div class="max-w-md mx-auto">

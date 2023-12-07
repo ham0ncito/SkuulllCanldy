@@ -1,4 +1,5 @@
 {{if ~isADMIN}}
+{{ifnot isEmpty}}
 <div class="flex items-center justify-between mb-4 mx-4">
         <div class="relative w-full flex items-center">
             <input type="text" id="searchbar" name="searchbar" placeholder="Name or ID" class="w-2/3 px-4 py-2 pl-10 pr-8 border border-gray-300 rounded-md mx-4">
@@ -33,5 +34,7 @@
 	</tr>
  {{endfor loguser}}</tbody>
 </table>
-</div> </section>
+</div> </section>{{endifnot isEmpty}} 
 {{endif ~isADMIN}}
+{{if isEmpty}}
+{{include components/tarjeta}}{{endif isEmpty}}
