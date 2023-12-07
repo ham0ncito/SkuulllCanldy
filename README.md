@@ -4,6 +4,8 @@
 
 SkullCandy es una aplicación web de negocio electrónico diseñada para ofrecer una experiencia de compra eficiente y atractiva para los usuarios. Esta aplicación utiliza Tailwind CSS para estilos rápidos y personalizables, JavaScript para funcionalidades interactivas y PHP para el manejo del lado del servidor.
 
+#PARA LA CLASE DE NEGOCIOS WEB 2023 3 PERIODO
+##INTEGRANTES
 
 <image src="https://firebasestorage.googleapis.com/v0/b/skulllcandl.appspot.com/o/Src%2FWhatsApp%20Image%202023-11-15%20at%2021.12.49.jpeg?alt=media&token=0186a233-c481-4df7-8cf2-f3414f32bed4" alt="Descripción de la imagen">
 
