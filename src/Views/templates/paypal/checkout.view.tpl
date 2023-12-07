@@ -1,3 +1,6 @@
 <form action="index.php?page=checkout_checkout" method="post">
-  <button type="submit">Place Order</button>
+  <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+    Place Order
+  </button>
 </form>
+

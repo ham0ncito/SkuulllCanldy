@@ -14,9 +14,9 @@ class ShoppingCart extends PublicController
     public function run(): void
     {
         $viewData = array();
-        $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION["login"]['userEmail'],'CLN'); 
-        $viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION["login"]['userEmail'],'CLS'); 
-        $viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION["login"]['userEmail'],'ADMIN'); 
+        $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION["login"]['userEmail'], 'CLN');
+        $viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION["login"]['userEmail'], 'CLS');
+        $viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION["login"]['userEmail'], 'ADMIN');
         $productData = array();
         $totalCrrprc = 0;
         $totalcrrctd = 0;
@@ -24,7 +24,7 @@ class ShoppingCart extends PublicController
         self::carrito();
         $fecha_mas_reciente_timestamp = 0;
         $xls = sec::decryptDatum($_SESSION['sesionId']);
-        $cart = $_SESSION["cart".$xls];
+        $cart = $_SESSION["cart" . $xls];
         // foreach($cart as $product){
         //     var_dump($product);
         // }
@@ -69,38 +69,10 @@ class ShoppingCart extends PublicController
                     if (!isset($_SESSION['cart'])) {
                         unset($_SESSION['cart']);
                         echo '<script>alert("Carrito was removed");</script>';
-                    } 
-                }
-                if (isset($_POST['buyButton'])) {
-                    if (isset($_SESSION['cart' . $xls])) {
-                        $PayPalOrder = new \Utilities\Paypal\PayPalOrder(
-                            "test" . (time() - 10000000),
-                            "http://localhost:8080/SkuulllCanldy/index.php?page=checkout_error",
-                            "http://localhost:8080/SkuulllCanldy/index.php?page=checkout_accept"
-                        );
-                        //var_dump($_SESSION['cart'. $xls]);
-                        foreach ($_SESSION['cart'. $xls] as $product) {
-                            $usercod = $product['usercod'];
-                            $productId = $product['productid'];
-                            $productName = $product['productName'];
-                            $productQuantity = $product['crrctd'];
-                            $productPrice = $product['crrprc'];
-                            $crrfching = $product['crrfching'];
-                            
-                            
-                            $PayPalOrder->addItem($productName,$productName.' purchased in Skull2canldy',$product,$productPrice,$productPrice *0.15, $productQuantity, "DIGITAL GOODS" );
-                            //$viewData['products'] = Carretilla::deleteCarretilla(sec::decryptDatum($_SESSION['sesionId']));
-                        }
-                        $response = $PayPalOrder->createOrder();
-                        var_dump($response);
-                        unset($_SESSION['cart']);
-                        $_SESSION["orderid"] = $response[1]->result->id;
-                        Site::redirectTo($response[0]->href);
-                        die();
-                      
                     }
                 }
-            } 
+               
+            }
         }
     }
     private function createCarrito()

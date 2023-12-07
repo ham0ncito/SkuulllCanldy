@@ -1,7 +1,7 @@
 <?php
 
 namespace Controllers\Checkout;
-
+Use Controllers\Checkout\Checkout as check; 
 use Controllers\PublicController;
 class Accept extends PublicController{
     public function run():void
@@ -12,6 +12,8 @@ class Accept extends PublicController{
         if ($token !== "" && $token == $session_token) {
             $result = \Utilities\Paypal\PayPalCapture::captureOrder($session_token);
             $dataview["orderjson"] = json_encode($result, JSON_PRETTY_PRINT);
+            check::addPurchase(json_encode($result, JSON_PRETTY_PRINT));
+            unset($_SESSION['cart'.$_SESSION['xls']]);
         } else {
             $dataview["orderjson"] = "No Order Available!!!";
         }
