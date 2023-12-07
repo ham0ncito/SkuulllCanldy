@@ -147,9 +147,11 @@ class Playlistsongss extends PrivateController
         $this->viewData["mode"] = $this->mode;
         $this->viewData["playlistsongs"] = $this->playlistsongs;
         if ($this->mode == "INS") {
+            $this->viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLN');
+            $this->viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'ADMIN');
+            $this->viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLS');
             $this->viewData["modedsc"] = $this->modes[$this->mode];
         } else {
-           
         }
         foreach ($this->error as $key => $error) {
             if ($error !== null) {
@@ -166,9 +168,9 @@ class Playlistsongss extends PrivateController
 
     private function render()
     {
-        $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLN');
-        $viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLS');
-        $viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'ADMIN');
+        $this->viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLN');
+        $this->viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'ADMIN');
+        $this->viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLS');
         Renderer::render("playlistsongss/playlistsongsform", $this->viewData);
     }
 }

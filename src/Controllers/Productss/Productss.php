@@ -111,7 +111,7 @@ class Productss extends PrivateController
         if (Validators::IsEmpty($_POST["productstatus"])) {
             $this->error["productstatus_error"] = "Campo es requerido";
         }
-       
+
 
         return count($this->error) == 0;
     }
@@ -167,11 +167,12 @@ class Productss extends PrivateController
         $this->viewData["mode"] = $this->mode;
         $this->viewData["products"] = $this->products;
         if ($this->mode == "INS") {
+            $this->viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLN');
+            $this->viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'ADMIN');
+            $this->viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLS');
             $this->viewData["modedsc"] = $this->modes[$this->mode];
         } else {
-           
         }
-        //$this->viewData["products"][$this->products["status"]."_selected"] = 'selected';
         foreach ($this->error as $key => $error) {
             if ($error !== null) {
                 $this->viewData["products"][$key] = $error;
@@ -187,9 +188,9 @@ class Productss extends PrivateController
 
     private function render()
     {
-        $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLN');
-        $viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLS');
-        $viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'ADMIN');
+        $this->viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLN');
+        $this->viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'ADMIN');
+        $this->viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLS');
         Renderer::render("productss/productsform", $this->viewData);
     }
 }

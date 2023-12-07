@@ -55,7 +55,6 @@ class Subscriptions extends PrivateController
                 if ($this->mode !== "INS") {
                     if (isset($_GET["id_subscription"])) {
                         $this->subscription = DAOSubscription::obtenerPorId(strval($_GET["id_subscription"]));
-                      
                     }
                 }
             } else {
@@ -94,7 +93,7 @@ class Subscriptions extends PrivateController
         if (Validators::IsEmpty($_POST["subscription_price"])) {
             $this->error["subscription_price_error"] = "Campo es requerido";
         }
-       
+
 
         return count($this->error) == 0;
     }
@@ -144,11 +143,13 @@ class Subscriptions extends PrivateController
         $this->viewData["mode"] = $this->mode;
         $this->viewData["subscription"] = $this->subscription;
         if ($this->mode == "INS") {
+            $this->viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLN');
+            $this->viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'ADMIN');
+            $this->viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLS');
             $this->viewData["modedsc"] = $this->modes[$this->mode];
         } else {
-           
         }
-        //$this->viewData["subscription"][$this->subscription["status"]."_selected"] = 'selected';
+
         foreach ($this->error as $key => $error) {
             if ($error !== null) {
                 $this->viewData["subscription"][$key] = $error;
@@ -164,9 +165,9 @@ class Subscriptions extends PrivateController
 
     private function render()
     {
-        $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLN'); 
-        $viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'CLS'); 
-        $viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'],'ADMIN'); 
+        $this->viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLN');
+        $this->viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'ADMIN');
+        $this->viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLS');
         Renderer::render("subscriptions/subscriptionform", $this->viewData);
     }
 }

@@ -176,7 +176,6 @@ class Popularitys extends PrivateController
             $this->viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'ADMIN');
             $this->viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLS');
         } else {
-          
         }
         //$this->viewData["popularity"][$this->popularity["status"]."_selected"] = 'selected';
         foreach ($this->error as $key => $error) {

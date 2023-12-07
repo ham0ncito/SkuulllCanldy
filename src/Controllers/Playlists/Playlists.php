@@ -171,13 +171,14 @@ class Playlists extends PrivateController
         $this->viewData["mode"] = $this->mode;
         $this->viewData["playlist"] = $this->playlist;
         if ($this->mode == "INS") {
+            $this->viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLN');
+            $this->viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'ADMIN');
+            $this->viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLS');
             $this->viewData["modedsc"] = $this->modes[$this->mode];
         } else {
-            //$this->viewData["modedsc"] = sprintf(
-            // $this->modes[$this->mode], 
-            //);
+           
         }
-        //$this->viewData["playlist"][$this->playlist["status"]."_selected"] = 'selected';
+
         foreach ($this->error as $key => $error) {
             if ($error !== null) {
                 $this->viewData["playlist"][$key] = $error;

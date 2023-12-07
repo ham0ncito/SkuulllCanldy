@@ -1,13 +1,13 @@
 <?php
 namespace Controllers\Videos;
-use Controllers\PublicController;
+use Controllers\PrivateController;
 use Views\Renderer;
 use Dao\Videos\Videos as DAOVideo;
 use Utilities\Site;
 use Utilities\Validators;
 use Utilities\Context;
 use Utilities\Paging;
-class Video extends PublicController {
+class Video extends PrivateController {
   private $id_video;
   private $title_video;
   private $description_video;
