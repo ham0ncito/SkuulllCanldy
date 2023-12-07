@@ -24,31 +24,35 @@ class ShoppingCart extends PublicController
         self::carrito();
         $fecha_mas_reciente_timestamp = 0;
         $xls = sec::decryptDatum($_SESSION['sesionId']);
-        $cart = $_SESSION["cart" . $xls];
-        // foreach($cart as $product){
-        //     var_dump($product);
-        // }
-        $viewData['products'] = $cart;
-        foreach ($viewData['products'] as $product) {
-            if (isset($product['crrprc'])) {
-                $totalCrrprc += $product['crrprc'];
-            }
-            if (isset($product['crrctd'])) {
-                $totalcrrctd += $product['crrctd'];
-            }
-            if (isset($product['crrctd'])) {
-
-                $timestamp = strtotime($product['crrfching']);
-                if ($timestamp > $fecha_mas_reciente_timestamp) {
-                    $fecha_mas_reciente_timestamp = $timestamp;
+        if(isset($_SESSION["cart" . $xls]))
+        {
+            $cart = $_SESSION["cart" . $xls];
+      
+            $viewData['products'] = $cart;
+            foreach ($viewData['products'] as $product) {
+                if (isset($product['crrprc'])) {
+                    $totalCrrprc += $product['crrprc'];
+                }
+                if (isset($product['crrctd'])) {
+                    $totalcrrctd += $product['crrctd'];
+                }
+                if (isset($product['crrctd'])) {
+    
+                    $timestamp = strtotime($product['crrfching']);
+                    if ($timestamp > $fecha_mas_reciente_timestamp) {
+                        $fecha_mas_reciente_timestamp = $timestamp;
+                    }
                 }
             }
+            $viewData['total_products'] = $totalCrrprc;
+            $viewData['quantity'] = $totalcrrctd;
+            $viewData['crrfching'] =  date('Y-m-d', $fecha_mas_reciente_timestamp);
+            $nuevaFecha = strtotime($viewData['crrfching'] . ' +30 days');
+            $viewData['crrfchingRemove'] = date('Y-m-d', $nuevaFecha);
+        } else{
+            $viewData['isEmpty'] = true;
         }
-        $viewData['total_products'] = $totalCrrprc;
-        $viewData['quantity'] = $totalcrrctd;
-        $viewData['crrfching'] =  date('Y-m-d', $fecha_mas_reciente_timestamp);
-        $nuevaFecha = strtotime($viewData['crrfching'] . ' +30 days');
-        $viewData['crrfchingRemove'] = date('Y-m-d', $nuevaFecha);
+
         $phrase = "C";
         for ($x = 0; $x < 100; $x++) {
             $random_number = mt_rand(0, 25);
