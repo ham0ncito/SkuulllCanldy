@@ -7,9 +7,10 @@ class Logout extends \Controllers\PublicController
     public function run():void
     {
         \Utilities\Security::logout();  
-        $id =  $_SESSION['sesionId'];
-        $sesionId = sec::decryptDatum($id);
-        TheLog::insertLoguser( $sesionId ,"LGO", date("Y-m-d H:i:s"));
+        $id =  \Dao\Security\Security::getCodigoByEmail($_SESSION['useremail']);
+        unset($_SESSION['useremail']);
+        ;
+        TheLog::insertLoguser( $id ,"LGO", date("Y-m-d H:i:s"));
         \Utilities\Site::redirectTo("index.php");
     }
 }

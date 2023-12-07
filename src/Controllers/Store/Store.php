@@ -102,7 +102,7 @@ class Store extends PrivateController
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
       if ($_SESSION["token"] == $_POST["xsxtoken"]) {
         if (isset($_POST['addToCart'])) {
-          $xls = sec::decryptDatum($_SESSION['sesionId']);
+          $xls =  \Dao\Security\Security::getCodigoByEmail($_SESSION['useremail']);
           $_SESSION['xls'] = $xls;
           if (isset($_SESSION['cart' . $xls][0])) {
             $product = [
