@@ -92,7 +92,7 @@ class Checkout extends PublicController
             }
             
         }
-        unset($_SESSION['xls']);
+       
     }
     
     public static function generateAddItem($data)

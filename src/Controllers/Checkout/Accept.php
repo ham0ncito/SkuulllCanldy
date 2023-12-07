@@ -14,6 +14,7 @@ class Accept extends PublicController{
             $dataview["orderjson"] = json_encode($result, JSON_PRETTY_PRINT);
             check::addPurchase(json_encode($result, JSON_PRETTY_PRINT));
             unset($_SESSION['cart'.$_SESSION['xls']]);
+            unset($_SESSION['xls']);
         } else {
             $dataview["orderjson"] = "No Order Available!!!";
         }
