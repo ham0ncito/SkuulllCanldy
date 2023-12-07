@@ -34,7 +34,7 @@ class Album extends PrivateController
         $viewData['id_genre'] = 'id_genre';
 
 
-        if (\Utilities\Functions::isAnEmptyArray($viewData['Album'] = DAOAlbum::getAlbum())) {
+        if (\Utilities\Functions::isAnEmptyArray($viewData['album'] = DAOAlbum::getAlbum())) {
             $viewData['isEmpty'] = True;
         } {
             $viewData['isEmpty'] = false;

@@ -1,4 +1,4 @@
-{{ifnot isEmpty}}<div class="flex items-center justify-between mb-4 mx-8">
+<div class="flex items-center justify-between mb-4 mx-8">
     <div class="relative w-full flex items-center">
         <input type="text" id="searchbar" name="searchbar" placeholder="Name or ID" class="w-2/3 px-4 py-2 pl-10 pr-8 border border-gray-300 rounded-md mx-4">
         <div class="absolute inset-y-0 left-0 flex items-center pl-3">
@@ -18,7 +18,7 @@
         </div>
     </div>
 </div>
-
+{{ifnot isEmpty}}
 <section class="mx-6">
     <h2 class="text-2xl font-bold mb-4 mx-4">FAVORITES</h2>
     <div class="overflow-x-auto">

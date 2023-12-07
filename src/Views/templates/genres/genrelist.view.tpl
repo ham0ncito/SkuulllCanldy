@@ -1,4 +1,4 @@
-{{ifnot isEmpty}}<div class="flex items-center justify-between mb-4">
+<div class="flex items-center justify-between mb-4">
     <div class="relative w-full flex items-center mx-4">
         <input type="text" id="searchbar" name="searchbar" placeholder="Name or ID" class="w-2/3 px-4 py-2 pl-10 pr-8 border border-gray-300 rounded-md mx-4">
         <div class="absolute inset-y-0 left-0 flex items-center pl-3">
@@ -18,7 +18,7 @@
         </div>
     </div>
 </div>
-
+{{ifnot isEmpty}}
 <section class="mx-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 pb-10">
     {{foreach genre}}
     <div class="relative bg-gray-900 border border-gray-300 rounded p-4 overflow-hidden">
