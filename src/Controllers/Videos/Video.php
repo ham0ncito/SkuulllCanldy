@@ -32,15 +32,12 @@ class Video extends PrivateController
         $viewData['artist_id'] = 'artist_id';
         $viewData['status_video'] = 'status_video';
         $viewData['link_song'] = 'link_song';
-
-        if (\Dao\Security\Security::userIs($_SESSION['useremail'], 'ADMIN')) {
-            if (\Utilities\Functions::isAnEmptyArray($viewData['video'] = DAOVideo::getVideo())) {
-                $viewData['isEmpty'] = true;
-            } else {
-                $viewData['isEmpty'] = false;
-            }
+        if (\Utilities\Functions::isAnEmptyArray($viewData['video'] = DAOVideo::getVideo())) {
+            $viewData['isEmpty'] = true;
         } else {
+            $viewData['isEmpty'] = false;
         }
+
         $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLN');
         $viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'CLS');
         $viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION['useremail'], 'ADMIN');
