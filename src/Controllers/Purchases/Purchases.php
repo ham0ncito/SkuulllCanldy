@@ -113,7 +113,8 @@ class Purchases extends PrivateController
                     $this->purchase["purchase_date"],
                     $this->purchase["total"],
                     $this->purchase["details"],
-                    $this->purchase["payments"]
+                    $this->purchase["payments"], 
+                    \Dao\Security\Security::getCodigoByEmail($_SESSION['useremail'])
                 )) {
                     Site::redirectToWithMsg($this->listUrl, "Purchase creada exitosamente.");
                 } else {

@@ -47,7 +47,7 @@ class Login extends \Controllers\PublicController
                             )
                             
                         );
-                        nonuser::insertLognonuser("id".$uniqueId, date("Y-m-d H:i:s"),"COOKIE".$uniqueId,'DES');
+                        nonuser::insertLognonuser("id".$uniqueId, date("Y-m-d H:i:s"),"COOKIE".$uniqueId,'CI');
                     }
                     if (!\Dao\Security\Security::verifyPassword($this->txtPswd, $dbUser["userpswd"])) {
                         $this->generalError = "¡Credenciales son incorrectas!";
