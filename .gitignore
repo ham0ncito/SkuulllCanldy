@@ -9,3 +9,5 @@ composer.lock
 phpdoc.dist.xml
 node_modules/
 vendor/
+node_modules
+vendor
