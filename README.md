@@ -1,10 +1,10 @@
 SkullCandy - E-commerce Application
 SkullCandy is a web-based e-commerce application designed to provide an efficient and engaging shopping experience for users. This application utilizes Tailwind CSS for quick and customizable styles, JavaScript for interactive functionalities, and PHP for server-side handling.
 
-#FOR THE WEB BUSINESS CLASS 2023 3RD PERIOD
+# FOR THE WEB BUSINESS CLASS 2023 3RD PERIOD
 
 
-##INTEGRANTES
+## Team members are as follows:
 
 - ESTHER ALEJANDRA MEJÍA  
 - MARYORI ALEJANDRA MÉNDEZ ZELAYA 
