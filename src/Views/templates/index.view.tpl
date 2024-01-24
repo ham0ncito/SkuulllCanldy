@@ -186,7 +186,7 @@
 
 <section class="py-10 bg-gray-100" id="store">
   <h2 class="text-black text-3xl text-center">Your Beloved Artists' Merch</h2>
-  <div class="mx-auto grid max-w-6xl  grid-cols-1 gap-6 p-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+  <div class="mx-auto grid max-w-6xl  grid-cols-1 gap-6 p-6 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
     {{foreach products}}
     <article class="rounded-xl bg-white p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300 ">
       <a href="index.php?page=Store_Store&productName={{product}}">

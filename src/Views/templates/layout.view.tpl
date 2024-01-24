@@ -26,7 +26,7 @@
 <body class="bg-black-100 h-screen">
   <header class="bg-gray-900 text-white w-full">
     <div class="container mx-auto flex items-center justify-between py-4">
-      <div class="flex items-center">
+      <div class="flex items-center mx-12">
        
         <div class="w-12 h-12 md:w-16 md:h-16 bg-gray-200 rounded-full">
           <a href="index.php?page=Index"> <img src="/{{BASE_DIR}}/public/imgs/logo/logoSkuul.png" alt="Logo" class="w-full h-full object-cover" /></a>
@@ -34,13 +34,13 @@
         </div>
         <h2 class="text-xl font-bold mr-4 pl-4"><a href="https://firebasestorage.googleapis.com/v0/b/skulllcandl.appspot.com/o/Videos%2Fy2mate.com%20-%20Rick%20Astley%20%20Never%20Gonna%20Give%20You%20Up%20Official%20Music%20Video_1080p.mp4?alt=media&token=7e5931ce-f7bf-4f90-83aa-be0f3581909b">Skul2Canldy</a></h2>
       </div>
-      <nav class="flex items-center space-x-4">
+      <nav class="flex items-center space-x-4 mx-16">
         <button class="md:hidden focus:outline-none" onclick="toggleMenu()">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
           </svg>
         </button>
-        <ul id="mobileMenu" class="hidden md:flex items-center space-x-6">
+        <ul id="mobileMenu" class="hidden md:flex items-center space-x-6 ">
           <li><a href="index.php?page={{PUBLIC_DEFAULT_CONTROLLER}}" class="text-white hover:text-pink-500">Home</a></li>
           <li><a href="index.php?page={{PUBLIC_DEFAULT_CONTROLLER}}#store" class="text-white hover:text-pink-500">Store</a></li>
           {{foreach PUBLIC_NAVIGATION}}

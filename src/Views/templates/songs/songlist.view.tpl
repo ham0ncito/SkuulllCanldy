@@ -27,6 +27,7 @@
             <h3 class="text-3xl text-pink-500 font-semibold">{{name_artist}}</h3>
             <h3 class="text-2xl text-blue-500 font-semibold ">{{title_album}}</h3>
             <h3 class="text-xl font-bold text-center text-white">{{title_song}}</h3>
+             <h3 class="text-xl font-bold text-center text-white">{{title_song}}</h3>
         </div>
         <div class="flex flex-col mx-auto justify-around">
             <p class="text-gray-300 mb-2 py-4">Duration: {{duration}}</p>

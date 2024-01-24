@@ -7,3 +7,5 @@ vendor
 docs/manual_tecnico
 composer.lock
 phpdoc.dist.xml
+node_modules/
+vendor/
