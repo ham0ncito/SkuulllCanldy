@@ -1,99 +1,98 @@
+SkullCandy - E-commerce Application
+SkullCandy is a web-based e-commerce application designed to provide an efficient and engaging shopping experience for users. This application utilizes Tailwind CSS for quick and customizable styles, JavaScript for interactive functionalities, and PHP for server-side handling.
 
-
-## SkullCandy - Aplicación de Negocio Electrónico
-
-SkullCandy es una aplicación web de negocio electrónico diseñada para ofrecer una experiencia de compra eficiente y atractiva para los usuarios. Esta aplicación utiliza Tailwind CSS para estilos rápidos y personalizables, JavaScript para funcionalidades interactivas y PHP para el manejo del lado del servidor.
-
-#PARA LA CLASE DE NEGOCIOS WEB 2023 3 PERIODO
+#FOR THE WEB BUSINESS CLASS 2023 3RD PERIOD
 
 
 ##INTEGRANTES
 
--ESTHER ALEJANDRA MEJÍA  
--MARYORI ALEJANDRA MÉNDEZ ZELAYA 
--JULIO CESAR BARRALAGA GONZALES
--JOSE LUIS FLORES SANCHEZ
--ENOC GABRIEL ANDRADE
--ABNER JOSUÉ CASTRO HAM 
+- ESTHER ALEJANDRA MEJÍA  
+- MARYORI ALEJANDRA MÉNDEZ ZELAYA 
+- JULIO CESAR BARRALAGA GONZALES
+- JOSE LUIS FLORES SANCHEZ
+- ENOC GABRIEL ANDRADE
+- ABNER JOSUÉ CASTRO HAM 
 
 
 <image src="https://firebasestorage.googleapis.com/v0/b/skulllcandl.appspot.com/o/Src%2FWhatsApp%20Image%202023-11-15%20at%2021.12.49.jpeg?alt=media&token=0186a233-c481-4df7-8cf2-f3414f32bed4" alt="Descripción de la imagen">
 
-## Características Principales
+## Key Features
 
-- **Catálogo de Musica:** Visualiza una amplia gama de música y videos con detalles y opciones de filtrado.
-- **Carrito de Compras:** Agrega productos al carrito, modifica cantidades y finaliza la compra de manera segura.
-- **Procesamiento de Pedidos:** Gestiona y procesa pedidos de manera eficiente y sencilla.
-- **Autenticación de Usuarios:** Regístrate, inicia sesión y gestiona tu perfil de usuario.
-- **Panel Administrativo:** Acceso a un panel administrativo para la gestión de productos, pedidos y usuarios.
+- **Music Catalog:** Explore a wide range of music and videos with detailed information and filtering options.
+- **Shopping Cart:** Add products to the cart, modify quantities, and securely complete the purchase.
+- **Order Processing:** Efficiently manage and process orders in a straightforward manner.
+- **User Authentication:** Register, log in, and manage your user profile securely.
+- **Admin Panel:** Access an administrative panel for the management of products, orders, and users.
 
-## Requisitos Técnicos
+## Technical Requirements
 
-- **Tailwind CSS:** Utilizado para el diseño y estilos responsivos.
-- **JavaScript:** Para mejorar la experiencia del usuario con interacciones dinámicas.
-- **PHP:** Para la lógica del servidor y la manipulación de datos.
-- **Animista CSS** Para Animaciones
-- **Splide Js** Para Carrousel
-- **Alpine Js** Para Animaciones
-- **Node Js:** Para librerias
-
+- **Tailwind CSS:** Used for responsive design and styles.
+- **JavaScript:** Enhances the user experience with dynamic interactions.
+- **PHP:** Handles server-side logic and data manipulation.
+- **Animista CSS:** For animations.
+- **Splide Js:** For carousel functionality.
+- **Alpine Js:** For animations.
+- **Node Js:** For libraries.
+  
 <image src="https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/161211091/original/9452a5b3d1e3200e95e20b979a665e2636fa8298/do-any-work-using-html-css-javascript-php-mysql.jpg" alt="php">
-## Instalación y Uso
+## Installation and Usage
 
-1. **Clona el Repositorio:**
+1. **Clone the Repository:**
 
+   ```bash
    git clone git@github.com:ham0ncito/SkuulllCanldy.git
+   ```
 
+2. **Environment Setup:**
+   - Ensure that PHP and a web server are installed. You might use Xampp. 
+   - Configure the database using the provided script.
 
-2. **Configuración del Entorno:**
-   - Asegúrate de tener instalado PHP y un servidor web.
-   - Configura la base de datos con el script proporcionado.
-
-3. **Configuración de Tailwind CSS:**
-   - Instala las dependencias de Tailwind CSS.
+3. **Tailwind CSS Configuration:**
+   - Install Tailwind CSS dependencies.
    ```bash
    $ npm install tailwindcss
    ```
-   - Compila los estilos de Tailwind CSS.
+   - Compile Tailwind CSS styles.
    ```bash
    $ npx tailwindcss build styles.css -o output.css
    ```
-   -Instala Splide JS
-  ```bash
+   - Install Splide JS.
+   ```bash
    $ npm install @splidejs/splide
- ```
--Instala Normalize
-  ```bash
+   ```
+   - Install Normalize.
+   ```bash
    $ npm install normalize.css
- ```
--Instala AnimeJs
-  ```bash
-  $ npm install animejs --save
- ```
-Instala AlpineJs
-   
-5. **Ejecución de la Aplicación:**
-   - Inicia el servidor web y accede a la aplicación desde tu navegador.
+   ```
+   - Install AnimeJs.
+   ```bash
+   $ npm install animejs --save
+   ```
+   - Install AlpineJs.
 
-## Contribución
+5. **Running the Application:**
+   - Start the web server and access the application through your browser.
 
-¡Las contribuciones son bienvenidas! Si deseas mejorar SkullCandy, por favor:
+## Contribution
 
-- Haz un fork del repositorio.
-- Crea una rama con tu funcionalidad (`git checkout -b feature/AmazingFeature`).
-- Realiza tus cambios y documenta las actualizaciones.
-- Realiza un commit de tus cambios (`git commit -m 'Añade una nueva función'`).
-- Haz push a la rama (`git push origin feature/AmazingFeature`).
-- Abre un Pull Request.
+Contributions are welcome! If you want to improve SkullCandy, please follow these steps:
 
-## Licencia
+- Fork the repository.
+- Create a branch for your feature (`git checkout -b feature/AmazingFeature`).
+- Make your changes and document the updates.
+- Commit your changes (`git commit -m 'Add a new feature'`).
+- Push the branch (`git push origin feature/AmazingFeature`).
+- Open a Pull Request.
 
-Este proyecto está bajo la licencia MIT. Para más detalles, revisa el archivo `LICENSE`.
+## License
 
-
+This project is under the MIT license. For more details, check the `LICENSE` file.
 
 
-## Criterios y Requisitos del Proyecto Final
+
+
+
+> ## Criterios y Requisitos del Proyecto Final
 
 ### El proyecto final que el equipo deberá presentar tiene como requisito lo siguiente:
 
