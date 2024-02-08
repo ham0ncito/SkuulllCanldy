@@ -12,11 +12,7 @@ class Security {
     {
         
     }
-    public static function logout()
-    {
-        unset($_SESSION['useremail']);
-        unset($_SESSION['login']);
-    }
+   
     public static function login($userId, $userName, $userEmail)
     {
         $_SESSION["login"] = array(
@@ -30,6 +26,14 @@ class Security {
     {
         return isset($_SESSION["login"]) && $_SESSION["login"]["isLogged"];
     }
+
+    public static function logout()
+    {
+       
+        unset($_SESSION['login']);
+        unset($_SESSION['useremail']);
+    }
+
     public static function getUser()
     {
         if (isset($_SESSION["login"])) {
