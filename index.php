@@ -15,10 +15,28 @@ use Utilities\Context;
 use Utilities\Site;
 
 require __DIR__ . '/vendor/autoload.php';
+
+/* Check https://stackoverflow.com/questions/6360093/how-to-set-lifetime-of-session */
+session_set_cookie_params(1800, "/");
 session_start();
 
 try {
     Site::configure();
+    if (!isset($_SESSION['last_activity'])) {
+        $_SESSION['last_activity'] = time();
+        $current_time = time();
+        $last_activity_time = $_SESSION['last_activity'];
+        $time_difference = $current_time - $last_activity_time;
+        //Server default is 30 minutes
+        $session_lifetime = ini_get('session.gc_maxlifetime');
+        if ($time_difference > $session_lifetime) {
+            session_unset();
+            session_destroy();
+            Site::redirectTo("index.php?page=sec.login&redirto=" . $redirTo);
+        }
+    } else {
+        $_SESSION['last_activity'] = time();
+    }
     $pageRequest = Site::getPageRequest();
     $instance = new $pageRequest();
     $instance->run();

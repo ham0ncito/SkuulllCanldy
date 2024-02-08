@@ -2,6 +2,7 @@
   
   <div class="hidden md:block overflow-hidden relative w-full md:w-1/2 h-1/2 pt-5 pl-5">
     <img src="/{{BASE_DIR}}/public/imgs/security/login.jpeg" alt="Login" id="login_image" class="object-cover w-full h-full rounded-full p-2" />
+   
     <div class="p-2 absolute inset-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black rounded-full w-8 h-8"></div>
   </div>
 
@@ -11,6 +12,7 @@
       <div class="flex mb-8 items-center justify-center">
         <div class="w-48 h-48 md:w-64 md:h-64 rounded-full bg-white p-4 flex flex-col items-center">
           <img src="/{{BASE_DIR}}/public/imgs/logo/logoSkuul.png" alt="Logo" class="w-full h-full object-cover rounded-full border-4 border-gray-300">
+        
           <span class="font-semibold text-3xl md:text-4xl mt-2 hover:text-pink-500 pt-4">Log in</span>
         </div>
       </div>

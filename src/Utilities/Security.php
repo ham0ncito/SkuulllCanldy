@@ -29,9 +29,9 @@ class Security {
 
     public static function logout()
     {
-       
-        unset($_SESSION['login']);
-        unset($_SESSION['useremail']);
+       /* Check https://www.php.net/manual/es/function.session-destroy.php */
+       session_unset();
+       session_destroy(); 
     }
 
     public static function getUser()
