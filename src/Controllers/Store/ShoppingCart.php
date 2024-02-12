@@ -117,7 +117,5 @@ class ShoppingCart extends PublicController
             }
         }
     }
-    private function createCarrito()
-    {
-    }
+    
 }

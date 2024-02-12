@@ -10,6 +10,7 @@ class Login extends \Controllers\PublicController
     private $errorEmail = "";
     private $errorPswd = "";
     private $generalError = "";
+    private $xss_login ="";
     private $hasError = false;
   
 
@@ -61,6 +62,18 @@ class Login extends \Controllers\PublicController
                         );
                         nonuser::insertLognonuser("id".$uniqueId, date("Y-m-d H:i:s"),"COOKIE".$uniqueId,'CI');
                     }
+                    /*Checkout documentation*/
+                    if (isset($_POST["xss_login"])) {
+                        $this->xss_login = $_POST["xss_login"];
+                        if ($_SESSION["xss_login"] !== $this->xss_login) {
+                            $this->generalError = "¡Hubo un problema de autenticación!";
+                        $this->hasError = true;
+                        error_log(
+                            "Error de autenticación"
+                        );
+                        nonuser::insertLognonuser("id".$uniqueId, date("Y-m-d H:i:s"),"COOKIE".$uniqueId,'CI');
+                        }
+                    } 
                     if (! $this->hasError) {
                         \Utilities\Security::login(
                             $dbUser["usercod"],
@@ -91,6 +104,8 @@ class Login extends \Controllers\PublicController
                 }
             }
         }
+        $this->xss_login = md5("login" . date('Ymdhisu'));
+        $_SESSION["xss_login"] = $this->xss_login;
         $dataView = get_object_vars($this);
         \Views\Renderer::render("security/login", $dataView);
     }

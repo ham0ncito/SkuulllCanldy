@@ -27,7 +27,7 @@ try {
         $current_time = time();
         $last_activity_time = $_SESSION['last_activity'];
         $time_difference = $current_time - $last_activity_time;
-        //Server default is 30 minutes
+        //Our server default setting is 30 minutes
         $session_lifetime = ini_get('session.gc_maxlifetime');
         if ($time_difference > $session_lifetime) {
             session_unset();
