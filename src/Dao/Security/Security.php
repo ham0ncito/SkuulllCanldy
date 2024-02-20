@@ -1,6 +1,7 @@
 <?php
 namespace Dao\Security;
 Use Utilities\User as User; 
+Use Utilities\Secrets\Secrets as Secret; 
 if (version_compare(phpversion(), '7.4.0', '<')) {
         define('PASSWORD_ALGORITHM', 1);  //BCRYPT
 } else {
@@ -62,7 +63,7 @@ class Security extends \Dao\Table
         unset($newUser["userfching"]);
         unset($newUser["userpswdchg"]);
 
-        $newUser["useremail"] = $email;
+        $newUser["useremail"] = Secret::encrypt($email);
         $newUser["usercod"] = User::generateUserid();
         $newUser["username"] = User::generateUsername();
         $newUser["userpswd"] = $hashedPassword;
@@ -86,34 +87,40 @@ class Security extends \Dao\Table
 
     static public function getUsuarioByEmail($email)
     {
+       
         $sqlstr = "SELECT * from `usuario` where `useremail` = :useremail ;";
-        $params = array("useremail"=>$email);
+        $params = array("useremail"=> Secret::encrypt($email));
 
         return self::obtenerUnRegistro($sqlstr, $params);
     }
     static public function getCodigoByEmail($email)
     {
+        
         $sqlstr = "SELECT usercod from `usuario` where `useremail` = :useremail ;";
-        $params = array("useremail"=>$email); 
+        $params = array("useremail"=>$_SESSION["useremail"]); 
         $data= self::obtenerUnRegistro($sqlstr, $params);
         $data = implode("", $data);
         return $data; 
     }
     static public function userIs($codUser, $cod = "CLN"){
         $data = self::getRolUser($codUser); 
-        $data = implode("", $data);
-        if ($data == $cod)
-        {
-            return true;
+        if (is_array($data)) {
+            $data = implode("", $data);
+            if ($data == $cod) {
+                return true;
+            }
         }
         return false; 
     }
     
+    
     static public function getRolUser($email){
-        $sqlstr = "SELECT roles.rolescod from `usuario` as usuario INNER JOIN roles_usuarios as roles on roles.usercod = usuario.usercod where `useremail` = :useremail ;";
-        $params = array("useremail"=>$email);
+        $sqlstr = "SELECT roles.rolescod FROM `usuario` AS usuario INNER JOIN roles_usuarios AS roles ON roles.usercod = usuario.usercod WHERE `useremail` = :useremail ;";
+        
+        $params = array("useremail"=> $email);
         return self::obtenerUnRegistro($sqlstr, $params);
     }
+    
     
     static public function getUsuarioById($cod)
     {

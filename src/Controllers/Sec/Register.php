@@ -4,6 +4,7 @@ namespace Controllers\Sec;
 
 use Controllers\PublicController;
 use \Utilities\Validators;
+use \Utilities\Secrets\Secrets as secret; 
 use Exception;
 
 class Register extends PublicController

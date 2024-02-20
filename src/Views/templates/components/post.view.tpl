@@ -1,16 +1,19 @@
-<section class=" rounded-md p-10" id={{class}}>
-    <h2 class="flex flex-wrap justify-center text-white text-6xl text-center mb-4">{{name}}</h2>
-    <div class="items-center justify-center">
-      <div class="bg-gray-100 rounded-lg shadow-lg p-10 mx-auto lg:flex">
-        <div class="p-6">
-          <h3 class="text-3xl text-blue-500 font-semibold mb-4 p-4">{{title}}</h3>
-          {{foreach text}}
-          <p class="text-gray-700 mb-4 px-4">{{description}}</p>
-          {{endfor text}}
-          {{foreach div}}
-          {{code}}
-          {{endfor div}}
-        </div>
+<div class="max-w-xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+  <div class="bg-gradient-to-r from-purple-900 to-purple-600 p-4">
+    <h2 class="text-2xl lg:text-3xl font-bold text-white mb-2">{{name}}</h2>
+    <p class="text-gray-200 text-sm">{{date}}</p>
+  </div>
+  <div class="p-4">
+    <h3 class="text-xl lg:text-2xl font-semibold text-blue-600 mb-4">{{title}}</h3>
+    {{foreach text}}
+    <p class="text-gray-800 mb-4">{{description}}</p>
+    {{endfor text}}
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {{foreach div}}
+      <div>
+        {{code}}
       </div>
+      {{endfor div}}
     </div>
-  </section>
+  </div>
+</div>

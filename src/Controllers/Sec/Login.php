@@ -87,6 +87,7 @@ class Login extends \Controllers\PublicController
                         } else {
                             
                             $_SESSION['useremail'] =  $dbUser["useremail"];
+                            $_SESSION['username'] =  $dbUser["username"];
                             \DAO\Logusers\Logusers::insertLoguser($dbUser["usercod"],"INI", date("Y-m-d H:i:s"));
                             \Utilities\Site::redirectTo("index.php?page=Home_Home");
                         }

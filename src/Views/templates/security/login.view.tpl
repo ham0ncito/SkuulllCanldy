@@ -1,4 +1,4 @@
-<section class="text-blue-900 min-h-screen flex flex-col md:flex-row md:p-4 md:items-center">
+<section class="text-blue-900 min-h-screen flex flex-col md:flex-row md:p-4 md:items-center relative">
 
   <div class="hidden md:block w-full md:w-1/2 h-1/2 pt-5 pl-5 relative overflow-hidden">
     <img src="/{{BASE_DIR}}/public/imgs/security/login.jpeg" alt="Login" id="login_image" class="object-cover w-full h-full rounded-full p-2 rotating-image" />
@@ -33,7 +33,7 @@
 
         <div>
           <label for="txtEmail" class="block mb-1">Email</label>
-          <input class="w-full text-black px-3 py-2 rounded border focus:outline-none focus:border-blue-500" type="email" id="txtEmail" name="txtEmail" value="{{txtEmail}}" />
+          <input class="w-full text-black px-3 py-2 rounded border focus:outline-none focus:border-blue-500" type="email" placeholder="tucorreo@gmail.com" id="txtEmail" name="txtEmail" value="{{txtEmail}}" />
           {{if errorEmail}}
           <div class="text-red-500 mt-1">{{errorEmail}}</div>
           {{endif errorEmail}}
@@ -41,7 +41,7 @@
 
         <div>
           <label for="txtPswd" class="block mb-1">Password</label>
-          <input class="w-full text-black px-3 py-2 rounded border focus:outline-none focus:border-blue-500" type="password" id="txtPswd" name="txtPswd" value="{{txtPswd}}" />
+          <input class="w-full text-black px-3 py-2 rounded border focus:outline-none focus:border-blue-500" type="password" placeholder ="************"id="txtPswd" name="txtPswd" value="{{txtPswd}}" />
           {{if errorPswd}}
           <div class="text-red-500 mt-1">{{errorPswd}}</div>
           {{endif errorPswd}}
@@ -60,9 +60,6 @@
   </div>
 </section>
 
-
-
-
 <style>
   .rotating-image {
     animation: rotateImage 5s linear infinite;
@@ -76,4 +73,21 @@
       transform: rotate(360deg);
     }
   }
-  </style>
+
+  .background-blur {
+    backdrop-filter: blur(10px);
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+</style>

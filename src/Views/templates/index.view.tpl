@@ -1,6 +1,6 @@
 
-<div class="bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg mx-4">
-  <div class="bg-cover bg-center min-h-screen object-cover" style="background-image: url('/{{BASE_DIR}}/public/imgs/hero/hero.jpg')">
+<div class="bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg mx-4 ">
+  <div class="bg-cover bg-center min-h-screen object-cover " style="background-image: url('/{{BASE_DIR}}/public/imgs/hero/hero.jpg')">
     <div class="flex items-center justify-center h-full text-center text-white">
       <div class="pt-60">
         <h2 class="text-4xl sm:text-5xl md:text-7xl font-bold mb-5">Made for you</h2>
@@ -10,15 +10,16 @@
     
   </div>
   
-  <div class='grid grid-cols-1 sm:grid-cols-2 bg-gradient-to-t from-purple-100 to-purple-300 min-h-screen p-6 md:p-20'>
-    <div class="flex items-center justify-center text-center text-white">
+  <div class='grid grid-cols-1 bg-gradient-to-t from-purple-100 to-purple-300 min-h-screen p-6 md:p-20'>
+    <div class="flex items-center justify-center text-center text-white sm:col-span-2 animate-fade-in">
         <div class="p-6">
             <h2 class="text-4xl sm:text-5xl md:text-7xl font-bold mb-5">We Are</h2>
         </div>
     </div>
-    <div class="grid grid-cols-2 sm:grid-cols-2 gap-6">
-        <div class="bg-white rounded-lg overflow-hidden shadow-md p-4">
-            <img src="/{{BASE_DIR}}/public/imgs/post/aboutUs.jpeg" alt="About Us Image" class="w-full h-48 object-cover object-center">
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 justify-center items-center ">
+        <div class="bg-white w-auto rounded-lg overflow-hidden shadow-md p-4 animate-fade-in-up">
+            <img src="/{{BASE_DIR}}/public/imgs/post/aboutUs.jpeg" alt="About Us Image" class="w-full h-64 object-cover object-center sm:h-auto">
             <div class="p-4">
                 <h3 class="text-lg text-blue-500 font-semibold mb-2">About us</h3>
                 <p class="text-gray-700">Who we are?</p>
@@ -28,8 +29,8 @@
             </div>
         </div>
 
-        <div class="bg-white rounded-lg overflow-hidden shadow-md p-4">
-            <img src="/{{BASE_DIR}}/public/imgs/post/prices.jpeg" alt="Prices Image" class="w-full h-48 object-cover object-center">
+        <div class="bg-white w-auto rounded-lg overflow-hidden shadow-md p-4 animate-fade-in-up">
+            <img src="/{{BASE_DIR}}/public/imgs/post/prices.jpeg" alt="Prices Image" class="w-full h-64 object-cover object-center sm:h-auto">
             <div class="p-4">
                 <h3 class="text-lg text-blue-500 font-semibold mb-2">Pricing</h3>
                 <p class="text-gray-700">Dive dive into our plans</p>
@@ -39,8 +40,8 @@
             </div>
         </div>
 
-        <div class="bg-white rounded-lg overflow-hidden shadow-md p-4">
-            <img src="/{{BASE_DIR}}/public/imgs/post/services.jpeg" alt="Services Image" class="w-full h-48 object-cover object-center">
+        <div class="bg-white w-auto rounded-lg overflow-hidden shadow-md p-4 animate-fade-in-up">
+            <img src="/{{BASE_DIR}}/public/imgs/post/services.jpeg" alt="Services Image" class="w-full h-64 object-cover object-center sm:h-auto">
             <div class="p-4">
                 <h3 class="text-lg text-blue-500 font-semibold mb-2">Services</h3>
                 <p class="text-gray-700">What we offer?</p>
@@ -50,8 +51,8 @@
             </div>
         </div>
         
-        <div class="bg-white rounded-lg overflow-hidden shadow-md p-4">
-          <img src="/{{BASE_DIR}}/public/imgs/post/disco4.jpeg" alt="Services Image" class="w-full h-48 object-cover object-center">
+        <div class="bg-white w-auto rounded-lg overflow-hidden shadow-md p-4 animate-fade-in-up">
+          <img src="/{{BASE_DIR}}/public/imgs/post/disco4.jpeg" alt="Services Image" class="w-full h-64 object-cover object-center sm:h-auto">
           <div class="p-4">
               <h3 class="text-lg text-blue-500 font-semibold mb-2">Store</h3>
               <p class="text-gray-700">Coming Soon</p>
@@ -63,20 +64,24 @@
     </div>
 </div>
 
-    <div class="bg-cover bg-center min-h-screen object-cover" style="background-image: url('/{{BASE_DIR}}/public/imgs/hero/hero2.jpg')">
-      <div class="flex items-center justify-center h-full text-center text-white">
-        <div class="pt-60">
-          <h2 class="text-4xl sm:text-5xl md:text-7xl font-bold mb-5">More than music</h2>
-          <p class="text-lg sm:text-xl md:text-2xl">Explore an infinite world of countless posibilities</p>
-        </div>
+
+
+
+<div class="relative bg-cover bg-center min-h-screen object-cover overflow-hidden" style="background-image: url('/{{BASE_DIR}}/public/imgs/hero/hero2.jpg')">
+  <div class="absolute inset-0 bg-black opacity-30"></div>
+  <div class="flex items-center justify-center h-full mx-8 text-center text-white">
+      <div class="pt-60">
+          <h2 class="text-4xl sm:text-5xl md:text-7xl font-bold mb-5 animate-fade-in-down">More than music</h2>
+          <p class="text-lg sm:text-xl md:text-2xl animate-fade-in-up">Explore an infinite world of countless possibilities</p>
       </div>
-      
-    </div>
+  </div>
+</div>
+
     
     
     <section class="grid place-items-center min-h-screen p-20 mt-10 px-24">
       <div>
-        <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold text-gray-200 mb-5">Made for you</h1>
+        <h1 class="text-4xl sm:text-5xl md:text-7xl text-center font-bold text-gray-200 mb-5">Made for you</h1>
         <section class="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div class="bg-gray-900 shadow-lg rounded p-3">
             <div class="group relative">
@@ -174,55 +179,33 @@
 </div>
 
 
-<div class="bg-gray-900 min-h-screen object-cover">
-  <div class="flex items-center justify-center h-full text-center text-white">
-    <div class="pt-60">
-      <h2 class="text-4xl sm:text-5xl md:text-7xl font-bold mb-5">Coming</h2>
-      <p class="text-lg sm:text-xl md:text-2xl">Purchase your favorite artists' merch</p>
-    </div>
-  </div>
-  
-</div>
 
-<section class="py-10 bg-gray-100" id="store">
-  <h2 class="text-black text-3xl text-center">Your Beloved Artists' Merch</h2>
-  <div class="mx-auto grid max-w-6xl  grid-cols-1 gap-6 p-6 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
+<section class="py-10 bg-gradient-to-t from-purple-100 to-purple-300 mx-4" id="store">
+  <h2 class="text-white text-3xl py-4 text-center mb-8">Shop now your favorite Merch</h2>
+  <div class="mx-4 grid max-w-7xl grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
     {{foreach products}}
-    <article class="rounded-xl bg-white p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300 ">
+    <article class="rounded-xl bg-white p-3 shadow-lg hover:shadow-xl transform hover:scale-105 duration-300">
       <a href="index.php?page=Store_Store&productName={{product}}">
-        <div class="relative flex items-end overflow-hidden rounded-xl">
-          <img src="{{imageUrl}}" alt="Merch" />
-          <div class="flex items-center space-x-1.5 rounded-lg bg-blue-500 px-4 py-1.5 text-white duration-100 hover:bg-blue-600">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
-            </svg>
-            <button class="text-sm">Add to cart</button>
+        <div class="relative overflow-hidden rounded-xl">
+          <img src="{{imageUrl}}" alt="Merch" class="w-full h-48 object-cover object-center sm:h-64">
+          <div class="absolute inset-0 flex items-center justify-center opacity-0 bg-black bg-opacity-50 hover:opacity-100 transition-opacity duration-300">
+            <button class="text-white text-sm py-2 px-4 bg-blue-500 hover:bg-blue-600 rounded-full">Add to cart</button>
           </div>
         </div>
-
-        <div class="mt-1 p-2">
-          <h2 class="text-black text-3xl">{{artist}}</h2>
-          <p class="text-blue-500">{{product}}</p>
-
-          <div class="mt-3 flex items-end justify-between">
-              <p class="text-lg font-bold text-blue-500">{{price}}</p>
-
-            <div class="flex items-center space-x-1.5 rounded-lg bg-blue-500 px-4 py-1.5 text-white duration-100 hover:bg-blue-600">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
-              </svg>
-
-              <button class="text-sm" id="showShoppingCart{{id}}">Add to cart</button>
-            </div>
+        <div class="mt-4">
+          <h2 class="text-black text-xl font-semibold">{{artist}}</h2>
+          <p class="text-blue-500 text-lg">{{product}}</p>
+          <div class="flex justify-between items-center mt-2">
+            <p class="text-blue-500 text-lg font-bold">{{price}}</p>
+  
           </div>
         </div>
       </a>
     </article>
-
-    
-
     {{endfor products}}
   </div>
+</section>
+
 
   </section>
   <div class="bg-cover bg-center min-h-screen object-cover" style="background-image: url('/{{BASE_DIR}}/public/imgs/hero/hero4.jpg')">
@@ -272,3 +255,40 @@
     }
   });
   </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var lazyloadImages = document.querySelectorAll("img.lazy");
+        var lazyloadThrottleTimeout;
+
+        function lazyload() {
+            if (lazyloadThrottleTimeout) {
+                clearTimeout(lazyloadThrottleTimeout);
+            }
+
+            lazyloadThrottleTimeout = setTimeout(function() {
+                var scrollTop = window.pageYOffset;
+                lazyloadImages.forEach(function(img) {
+                    if (img.offsetTop < (window.innerHeight + scrollTop)) {
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy');
+                    }
+                });
+                if (lazyloadImages.length == 0) {
+                    document.removeEventListener("scroll", lazyload);
+                    window.removeEventListener("resize", lazyload);
+                    window.removeEventListener("orientationChange", lazyload);
+                }
+            }, 20);
+        }
+
+        document.addEventListener("scroll", lazyload);
+        window.addEventListener("resize", lazyload);
+        window.addEventListener("orientationChange", lazyload);
+    });
+</script>
+
+
+
+
+

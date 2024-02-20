@@ -26,30 +26,41 @@
 <body class="bg-black-100 h-screen">
   <header class="bg-gray-900 text-white w-full">
     <div class="container mx-auto flex items-center justify-between py-4">
-      <div class="flex items-center mx-12">
-       
-        <div class="w-12 h-12 md:w-16 md:h-16 bg-gray-200 rounded-full">
-          <a href="index.php?page=Index"> <img src="/{{BASE_DIR}}/public/imgs/logo/logoSkuul.png" alt="Logo" class="w-full h-full object-cover" /></a>
-         
+        <div class="flex items-center mx-4 md:mx-12"> 
+            <div class="w-10 h-10 md:w-16 md:h-16 bg-gray-200 rounded-full">
+                <a href="index.php?page=Index">
+                    <img src="/{{BASE_DIR}}/public/imgs/logo/logoSkuul.png" alt="Logo" class="w-full h-full object-cover" />
+                </a>
+            </div>
+            <h2 class="text-lg md:text-xl font-bold mr-2 md:mr-4 pl-2 md:pl-4">
+                <a href="https://firebasestorage.googleapis.com/v0/b/skulllcandl.appspot.com/o/Videos%2Fy2mate.com%20-%20Rick%20Astley%20%20Never%20Gonna%20Give%20You%20Up%20Official%20Music%20Video_1080p.mp4?alt=media&token=7e5931ce-f7bf-4f90-83aa-be0f3581909b">Skul2Canldy</a>
+            </h2>
         </div>
-        <h2 class="text-xl font-bold mr-4 pl-4"><a href="https://firebasestorage.googleapis.com/v0/b/skulllcandl.appspot.com/o/Videos%2Fy2mate.com%20-%20Rick%20Astley%20%20Never%20Gonna%20Give%20You%20Up%20Official%20Music%20Video_1080p.mp4?alt=media&token=7e5931ce-f7bf-4f90-83aa-be0f3581909b">Skul2Canldy</a></h2>
-      </div>
-      <nav class="flex items-center space-x-4 mx-16">
-        <button class="md:hidden focus:outline-none" onclick="toggleMenu()">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-          </svg>
-        </button>
-        <ul id="mobileMenu" class="hidden md:flex items-center space-x-6 ">
-          <li><a href="index.php?page={{PUBLIC_DEFAULT_CONTROLLER}}" class="text-white hover:text-pink-500">Home</a></li>
-          <li><a href="index.php?page={{PUBLIC_DEFAULT_CONTROLLER}}#store" class="text-white hover:text-pink-500">Store</a></li>
-          {{foreach PUBLIC_NAVIGATION}}
-            <li><a href="{{nav_url}}" class="text-white hover:text-pink-500">{{nav_label}}</a></li>
-          {{endfor PUBLIC_NAVIGATION}}
-        </ul>
+        <nav class="flex items-center justify-center space-x-2 md:space-x-4 mx-4 md:mx-16"> 
+          <button class="md:hidden focus:outline-none" onclick="toggleMenu()">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+              </svg>
+          </button>
+          <ul id="mobileMenu" class="hidden md:flex items-center space-x-2 md:space-x-6 text-center">
+              <li class="w-20 md:w-auto>
+                  <a href="index.php?page={{PUBLIC_DEFAULT_CONTROLLER}}" class="text-white hover:text-pink-500">Home</a>
+              </li>
+              <li class="w-20 md:w-auto"> 
+                  <a href="index.php?page={{PUBLIC_DEFAULT_CONTROLLER}}#store" class="text-white hover:text-pink-500">Store</a>
+              </li>
+              {{foreach PUBLIC_NAVIGATION}}
+              <li class="w-20 md:w-auto"> 
+                  <a href="{{nav_url}}" class="text-white hover:text-pink-500">{{nav_label}}</a>
+              </li>
+              {{endfor PUBLIC_NAVIGATION}}
+          </ul>
       </nav>
+      
+      
     </div>
-  </header>
+</header>
+
   <main class="bg-gradient-to-t from-blue-200 to-indigo-900 flex-grow">
     <div class="container mx-auto py-10">
       <div class="flex items-center justify-around">
@@ -63,63 +74,65 @@
  
   <footer class="bg-gray-900 text-white py-14">
     <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      
       <div>
         <div class="flex mb-8 items-center justify-center">
-          <div class="w-12 h-12 md:w-16 md:h-16 bg-gray-200 rounded-full">
-            <img src="/{{BASE_DIR}}/public/imgs/logo/logoSkuul.png" alt="Logo" class="w-full h-full object-cover" />
+          <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center">
+            <img src="/{{BASE_DIR}}/public/imgs/logo/logoSkuul.png" alt="Logo" class="w-10 h-10 md:w-12 md:h-12 object-cover" />
           </div>
-          <a href="index.php?page=Index" class="font-semibold align-center justify-center text-4xl hover:text-pink-500 pl-4 hover:text-6xl">Skul2Canldy</a>
+          <a href="index.php?page=Index" class="font-semibold text-4xl hover:text-pink-500 pl-4 hover:text-6xl transition duration-300">Skul2Canldy</a>
         </div>
         <div class="space-around center flex space-around items-center">
-          <span class="font-semibold text-lg text-2xl p-4 hover:text-blue-500">Social</span>
-              <div class="flex items-center space-x-4 mt-2 ">
-                <div class="w-8 h-8 md:w-12 md:h-12 bg-gray-200 hover:bg-blue-500 rounded-full flex items-center justify-center">
-                <a href="https://www.facebook.com/" class="w-6 h-6">
-                    <img src="/{{BASE_DIR}}/public/imgs/social/facebook.png" alt="Facebook" class="w-4 h-4 md:w-6 md:h-6 object-cover"/>
-                </a>
-              </div>
-              <div class=" w-8 h-8 md:w-12 md:h-12 bg-gray-200 hover:bg-blue-500 rounded-full flex items-center justify-center">
-                <a href="https://www.twitter.com/" class="w-6 h-6">
-                    <img src="/{{BASE_DIR}}/public/imgs/social/twitter.png" alt="X" class="w-4 h-4 md:w-6 md:h-6 object-cover" />
-                </a>
-              </div>
-              <div class="w-8 h-8 md:w-12 md:h-12 bg-gray-200 hover:bg-blue-500 rounded-full flex items-center justify-center">
-                <a href="https://www.instagram.com/" class="w-6 h-6">
-                    <img src="/{{BASE_DIR}}/public/imgs/social/instagram.png" alt="Instagram" class="w-4 h-4 md:w-6 md:h-6 object-cover"/>
-                </a>
-              </div>
+          <span class="font-semibold text-lg text-2xl p-4 hover:text-blue-500 transition duration-300">Social</span>
+          <div class="flex items-center space-x-4 mt-2">
+            <a href="https://www.facebook.com/" class="w-12 h-12 bg-gray-200 hover:bg-blue-500 rounded-full flex items-center justify-center transition duration-300">
+              <img src="/{{BASE_DIR}}/public/imgs/social/facebook.png" alt="Facebook" class="w-6 h-6 md:w-8 md:h-8 object-cover"/>
+            </a>
+            <a href="https://www.twitter.com/" class="w-12 h-12 bg-gray-200 hover:bg-blue-500 rounded-full flex items-center justify-center transition duration-300">
+              <img src="/{{BASE_DIR}}/public/imgs/social/twitter.png" alt="Twitter" class="w-6 h-6 md:w-8 md:h-8 object-cover"/>
+            </a>
+            <a href="https://www.instagram.com/" class="w-12 h-12 bg-gray-200 hover:bg-blue-500 rounded-full flex items-center justify-center transition duration-300">
+              <img src="/{{BASE_DIR}}/public/imgs/social/instagram.png" alt="Instagram" class="w-6 h-6 md:w-8 md:h-8 object-cover"/>
+            </a>
           </div>
         </div>
       </div>
-      <div class="col-span-3 grid grid-cols-1 md:grid-cols-3 gap-8">
      
+      <div class="col-span-3 grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="p-4">
-          <a href="index.php?page=Company_Company"  class="font-semibold text-3xl hover:text-pink-500 ">Company</a>
+          <a href="index.php?page=Company_Company" class="font-semibold text-3xl hover:text-pink-500 transition duration-300">Company</a>
           <ul class="space-y-2 p-4">
-            <li class="hover:text-blue-500"><a href="index.php?page=Company_AboutUs">About Us</a></li>
-            <li class="hover:text-blue-500"><a href="index.php?page=Company_Jobs">Jobs</a></li>
-            <li class="hover:text-blue-500"><a href="index.php?page=Company_ForTheRecord">For the Record</a></li>
+            <li class="hover:text-blue-500 transition duration-300"><a href="index.php?page=Company_AboutUs">About Us</a></li>
+            <li class="hover:text-blue-500 transition duration-300"><a href="index.php?page=Company_Jobs">Jobs</a></li>
+            <li class="hover:text-blue-500 transition duration-300"><a href="index.php?page=Company_ForTheRecord">For the Record</a></li>
           </ul>
         </div>
+      
         <div class="p-4">
-          <a href="index.php?page=Communities_Communities" class="font-semibold text-3xl hover:text-pink-500">Communities</a>
+          <a href="index.php?page=Communities_Communities" class="font-semibold text-3xl hover:text-pink-500 transition duration-300">Communities</a>
           <ul class="space-y-2 p-4">
-            <li class="hover:text-blue-500"><a href="index.php?page=Communities_Artists" >For Artists</a></li>
-            <li class="hover:text-blue-500"><a href="index.php?page=Communities_Developers">Developers</a></li>
-            <li class="hover:text-blue-500"><a href="index.php?page=Communities_Investors">Investors</a></li>
-            <li class="hover:text-blue-500"><a href="index.php?page=Communities_Vendors">Vendors</a></li>
+            <li class="hover:text-blue-500 transition duration-300"><a href="index.php?page=Communities_Artists">For Artists</a></li>
+            <li class="hover:text-blue-500 transition duration-300"><a href="index.php?page=Communities_Developers">Developers</a></li>
+            <li class="hover:text-blue-500 transition duration-300"><a href="index.php?page=Communities_Investors">Investors</a></li>
+            <li class="hover:text-blue-500 transition duration-300"><a href="index.php?page=Communities_Vendors">Vendors</a></li>
           </ul>
         </div>
+      
         <div class="p-4">
-          <a href="index.php?page=Useful_Useful" class="font-semibold text-3xl hover:text-pink-500">Useful Links</a>
+          <a href="index.php?page=Useful_Useful" class="font-semibold text-3xl hover:text-pink-500 transition duration-300">Useful Links</a>
           <ul class="space-y-2 p-4">
-            <li class="hover:text-blue-500"><a href="index.php?page=Useful_Support">Support</a></li>
-            <li class="hover:text-blue-500"><a href="index.php?page=Useful_WebPlayer">Web Player</a></li>
-            <li class="hover:text-blue-500"><a href="index.php?page=Useful_App">App</a></li>
+            <li class="hover:text-blue-500 transition duration-300"><a href="index.php?page=Useful_Support">Support</a></li>
+            <li class="hover:text-blue-500 transition duration-300"><a href="index.php?page=Useful_WebPlayer">Web Player</a></li>
+            <li class="hover:text-blue-500 transition duration-300"><a href="index.php?page=Useful_App">App</a></li>
           </ul>
         </div>
       </div>
     </div>
+
+  
+    <button onclick="scrollToTop()" class="fixed bottom-8 right-8 bg-blue-500 text-white px-4 py-2 rounded-md shadow-md hover:bg-blue-600 focus:outline-none">
+      Scroll to Top
+    </button>
   </footer>
   
   
@@ -139,30 +152,24 @@
     }
   </script>
   <script>
-    import Highway from '@dogstudio/highway/src/highway';
+    
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+
+    function scrollToSection(sectionId) {
+      var section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    }
   </script>
-  <script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-analytics.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-  
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    const firebaseConfig = {
-      apiKey: "AIzaSyATwKVjzXVNNNFdbgrBAzLVTM6eB-FWUkw",
-      authDomain: "skulllcandl.firebaseapp.com",
-      projectId: "skulllcandl",
-      storageBucket: "skulllcandl.appspot.com",
-      messagingSenderId: "814076910954",
-      appId: "1:814076910954:web:4716cabe516c677353d913",
-      measurementId: "G-NGMVYML38B"
-    };
-  
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-  </script>
+ 
+
 </body>
 </html>
