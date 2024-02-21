@@ -4,8 +4,8 @@
     .heartbeat{-webkit-animation:heartbeat 1.5s ease-in-out infinite both;animation:heartbeat 1.5s ease-in-out infinite both}
 </style>
  
-<section class="bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg  h-screen min-h-screen py-12 ">
-   <h2 class="text-pink-500 text-6xl m-4 mb-8 justify-center text-center">Check our {{page}}</h2>
+<section class="  h-screen min-h-screen py-12 ">
+   <h2 class="text-white text-6xl m-4 mb-8 justify-center text-center">Check our {{page}}</h2>
    <div class=" flex items-center justify-center ">
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
     {{foreach prices}}

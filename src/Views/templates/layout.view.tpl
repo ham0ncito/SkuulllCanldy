@@ -42,29 +42,35 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
               </svg>
           </button>
-          <ul id="mobileMenu" class="hidden md:flex items-center space-x-2 md:space-x-6 text-center">
-              <li class="w-20 md:w-auto>
-                  <a href="index.php?page={{PUBLIC_DEFAULT_CONTROLLER}}" class="text-white hover:text-pink-500">Home</a>
-              </li>
-              <li class="w-20 md:w-auto"> 
-                  <a href="index.php?page={{PUBLIC_DEFAULT_CONTROLLER}}#store" class="text-white hover:text-pink-500">Store</a>
-              </li>
-              {{foreach PUBLIC_NAVIGATION}}
-              <li class="w-20 md:w-auto"> 
-                  <a href="{{nav_url}}" class="text-white hover:text-pink-500">{{nav_label}}</a>
-              </li>
-              {{endfor PUBLIC_NAVIGATION}}
-          </ul>
+          
+          <ul id="mobileMenu" class="hidden md:flex items-center space-x-2 md:space-x-6 text-center" x-data="{ currentPage: window.location.pathname }">
+            <li id="homeLink" class="w-20 md:w-auto" :class="{ 'bg-pink-500 text-white': currentPage === '/index.php?page={{PUBLIC_DEFAULT_CONTROLLER}}' }">
+                <a href="index.php?page={{PUBLIC_DEFAULT_CONTROLLER}}" class="text-white hover:text-pink-500">Home</a>
+            </li>
+            <li id="homeLink" class="w-20 md:w-auto" :class="{ 'bg-pink-500 text-white': currentPage === '/index.php?page={{PUBLIC_DEFAULT_CONTROLLER}}' }">
+              <a href="index.php?page=Company_Services" class="text-white hover:text-pink-500">Services</a>
+          </li>
+            <li id="storeLink" class="w-20 md:w-auto" :class="{ 'bg-pink-500 text-white': currentPage === 'index.php?page={{PUBLIC_DEFAULT_CONTROLLER}}#store' }">
+              <a href="index.php?page=Company_Plans" class="text-white hover:text-pink-500">Pricing</a>
+          </li>
+            {{foreach PUBLIC_NAVIGATION}}
+            <li class="w-20 md:w-auto" :class="{ 'bg-pink-500 text-white': currentPage === '{{nav_url}}' }">
+                <a href="{{nav_url}}" class="text-white hover:text-pink-500">{{nav_label}}</a>
+            </li>
+            {{endfor PUBLIC_NAVIGATION}}
+        </ul>
+        
+        
       </nav>
       
       
     </div>
 </header>
 
-  <main class="bg-gradient-to-t from-blue-200 to-indigo-900 flex-grow">
-    <div class="container mx-auto py-10">
+  <main class="bg-gradient-to-r from-gray-900 to-indigo-900 flex-grow">
+    <div class="container mx-auto py-">
       <div class="flex items-center justify-around">
-        <div class="w-full rounded-lg p-8 text-white">
+        <div class="w-full rounded-lg text-white">
           {{{page_content}}}
         </div>
       </div>
@@ -169,7 +175,7 @@
       }
     }
   </script>
- 
+
 
 </body>
 </html>

@@ -95,8 +95,9 @@
                 <div x-data="{ showModal: false }" class="bg-white rounded-lg overflow-hidden shadow-md relative">
                     <div class="p-6 flex flex-col justify-between">
                         <div>
-                            <h3 class="text-4xl font-semibold mb-2">{{subscription_description}}</h3>
+                            <h3 class="text-4xl text-blue-500 font-semibold mb-2">{{subscription_description}}</h3>
                             <p class="text-gray-600 mb-2">Pay every {{subscription_duration}} days</p>
+                            <p class="text-gray-600 mb-2">${{subscription_price}} </p>
                           
                         </div>
                         <div class="mt-4 flex justify-between items-center">

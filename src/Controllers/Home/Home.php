@@ -19,6 +19,8 @@ class Home extends PrivateController
         $dataview['isCLN'] = \Dao\Security\Security::userIs( $_SESSION['useremail'],'CLN'); 
         $dataview['isCLS'] = \Dao\Security\Security::userIs( $_SESSION['useremail'],'CLS'); 
         $dataview['isADMIN'] = \Dao\Security\Security::userIs( $_SESSION['useremail'],'ADMIN'); 
+        $dataview['isAUDIT'] = \Dao\Security\Security::userIs( $_SESSION['useremail'],'AUDIT'); 
+
         \Views\Renderer::render("home/home", $dataview);
     }
 }

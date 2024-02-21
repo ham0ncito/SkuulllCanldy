@@ -1,4 +1,4 @@
-<section class="w-full h-full">
+<section class="">
     {{if ~isCLN}}
         <section class="flex flex-column w-full h-full justify-center items-center bg-cover bg-center">
             <div class="bg-white shadow-lg rounded-lg p-6 max-w-md w-full text-center">
