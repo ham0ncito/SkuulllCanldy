@@ -1,4 +1,13 @@
 <?php
+/**
+
+ * PHP version 8.2.4
+ *
+ * @Date 22/08/23
+ * @Last Update 20/2/24
+ * @author     SkullCanldy
+ * @link       https://www.php.net/docs.php
+ */
 namespace Controllers\Company;
 use Controllers\PublicController;
 use Views\Renderer;
@@ -6,6 +15,20 @@ use Utilities\Site;
 use Utilities\Validators;
 use Utilities\Context;
 use Utilities\Paging;
+
+/*
+Este controlador PHP maneja la página "Services" dentro de la sección de la empresa. Aquí está su funcionalidad:
+
+run(): En este método, se configuran los datos necesarios para mostrar la página "Services". Se define un array $viewData que contiene el nombre de la página, la lista de servicios ofrecidos y el directorio base. Los servicios están representados como un array asociativo con un ID, nombre y descripción. Luego, se utiliza el renderizador para mostrar la vista correspondiente */
+/**
+
+ * PHP version 8.2.4
+ *
+ * @Date 22/08/23
+ * @Last Update 20/2/24
+ * @author     SkullCanldy
+ * @link       https://www.php.net/docs.php
+ */
 class Services extends PublicController {
  
 

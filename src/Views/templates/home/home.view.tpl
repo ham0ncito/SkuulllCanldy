@@ -1,12 +1,23 @@
 <section class="">
     {{if ~isCLN}}
-        <section class="flex flex-column w-full h-full justify-center items-center bg-cover bg-center">
-            <div class="bg-white shadow-lg rounded-lg p-6 max-w-md w-full text-center">
-                <h2 class="text-2xl font-bold text-white text-center mb-6">We miss you</h1>
-                <p class="text-gray-700">Explore boundless fun with us purchasing a subscription.</p>
-                <p class="text-gray-700">Our prices are lower than the green evil company's.</p>
+    <section class="flex flex-column w-full h-full justify-center items-center bg-cover bg-center" style="background-image: url('public/videos/ad1.mp4')">
+        <div x-data="{ showVideo: false }" class="bg-white shadow-lg rounded-lg p-6 max-w-md w-full text-center bg-opacity-75">
+            <h2 class="text-2xl font-bold text-blue-500 text-center">We miss you</h2>
+            <p class="text-gray-700">Explore boundless fun with us purchasing a subscription.</p>
+            <p class="text-gray-700">Our prices are lower than the green evil company's.</p>
+            <button @click="showVideo = true" class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Watch Video
+            </button>
+            <div x-show="showVideo" class="mt-4" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform scale-90" x-transition:enter-end="opacity-100 transform scale-100">
+                <video autoplay loop muted class="w-full h-full object-cover">
+                    <source src="public/videos/ad1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
-        </section>
+        </div>
+    </section>
+    
+    
     {{endif ~isCLN}}
 </section>
 
@@ -100,6 +111,16 @@
     </div>
     {{endifnot ~isCLN}}
 </section>
+
+<div x-data="{ pulse: true }">
+    <a :href="pulse ? 'index.php?page=Store_ShoppingCart' : 'index.php?page=Store_Store'" x-on:mouseover="pulse = false" x-on:mouseleave="pulse = true" :class="{ 'animate-pulse': pulse }" class="relative inline-block bottom-4 left-4 bg-white p-2 rounded-full shadow-lg">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M16.293 5.293l-1.482-1.482A1 1 0 0 0 13.5 4H6.5a1 1 0 0 0-.809.418L4.207 5.293a1 1 0 0 0 0 1.414l.082.082 2 2a1 1 0 0 0 1.32.083l.094-.083L9.5 7.414V14a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2V7.414l.295.295a1 1 0 0 0 1.32.083l.094-.083 2-2a1 1 0 0 0 0-1.414zM7 16a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm6-2a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+        </svg>
+        <span class="absolute bottom-0 left-0 w-full h-1 bg-blue-500 rounded-b-full"></span>
+    </a>
+</div>
+
 <style>
     .text-animation {
         color: #ffffff;

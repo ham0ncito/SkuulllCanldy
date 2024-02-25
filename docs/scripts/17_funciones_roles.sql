@@ -1,3 +1,6 @@
+
+--Enlace de las funciones del sistema con sus respectivo roles
+
 INSERT INTO funciones_roles (rolescod, fncod, fnrolest, fnexp) VALUES ('ADMIN', 'album_DSP', 'ACT', DATE_ADD(NOW(), INTERVAL 1 YEAR));
 INSERT INTO funciones_roles (rolescod, fncod, fnrolest, fnexp) VALUES ('ADMIN', 'album_UPD', 'ACT', DATE_ADD(NOW(), INTERVAL 1 YEAR));
 INSERT INTO funciones_roles (rolescod, fncod, fnrolest, fnexp) VALUES ('ADMIN', 'album_DEL', 'ACT', DATE_ADD(NOW(), INTERVAL 1 YEAR));

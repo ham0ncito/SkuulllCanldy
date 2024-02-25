@@ -1,3 +1,7 @@
+
+
+--Agrega identificadores (llaves primarias) de relacion con las tablas de artistas y albumes
+
 ALTER TABLE album
 ADD CONSTRAINT fk_artist
 FOREIGN KEY (id_artist) 
@@ -8,6 +12,10 @@ ADD CONSTRAINT fk_genre
 FOREIGN KEY (id_genre) 
 REFERENCES genre(id_genre);
 
+-- Inserta filas en la tabla 'album' con los siguientes datos:
+-- Cada fila representa un álbum e incluye su identificador único, título, imagen, fecha de lanzamiento, número de canciones, identificador de artista, estado y género.
+-- Los identificadores únicos se generan utilizando la función SHA2() con el título del álbum.
+-- Se establecen restricciones de clave externa (FOREIGN KEY) en las columnas 'id_artist' e 'id_genre' para mantener la integridad referencial.
 INSERT INTO album (id_album, title_album, image_album, release_date_album, number_of_songs_album, id_artist, status_album, id_genre) 
 VALUES 
     (SHA2("Adele21", 256), '21', 'https://th.bing.com/th/id/R.4cf681fae9fc85f12650805a1ec86551?rik=tG3NFIwDk7y%2fbw&pid=ImgRaw&r=0', '2012-01-01', 15, '10c2d630409d5a4b8132f21478f40a030b8aefb29ab1a541da6d884a0286a6dc', 'ACT', '4d616d53988e27e97423a7564dff09b644e2814d839751bccd589e05f29237ad'),

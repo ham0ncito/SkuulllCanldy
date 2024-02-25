@@ -1,4 +1,13 @@
 <?php
+/**
+
+ * PHP version 8.2.4
+ *
+ * @Date 22/08/23
+ * @Last Update 20/2/24
+ * @author     SkullCanldy
+ * @link       https://www.php.net/docs.php
+ */
 
 namespace Utilities\Escupitajo;
 
@@ -276,7 +285,16 @@ class GenerateCRUD extends Table
         $process = self::processAction($fields);
         $viewData = self::generatePrepareViewData($fields);
         $render = self::generateRender($fields);
-        $file_content = '<?php' . PHP_EOL . "namespace Controllers\\{$fields}s;\n{$uses}\nclass {$fields}s extends PublicController {\n{$fieldsContent}{$variables}{$run}{$init}{$validator}{$process}{$viewData}{$render}\n}" . PHP_EOL;
+        $file_content = '<?php
+/**
+
+ * PHP version 8.2.4
+ *
+ * @Date 22/08/23
+ * @Last Update 20/2/24
+ * @author     SkullCanldy
+ * @link       https://www.php.net/docs.php
+ */' . PHP_EOL . "namespace Controllers\\{$fields}s;\n{$uses}\nclass {$fields}s extends PublicController {\n{$fieldsContent}{$variables}{$run}{$init}{$validator}{$process}{$viewData}{$render}\n}" . PHP_EOL;
         file_put_contents($file_path, $file_content);
     }
     private static function generateNamespace($fields)
@@ -561,7 +579,16 @@ class GenerateCRUD extends Table
         $fieldsContent = self::generateVariables($fields);
         $uses = self::generateNamespace($fields);
         $run = self::generateRun(strtolower($fields), "list");
-        $file_content = '<?php' . PHP_EOL . "namespace Controllers\\{$fields}s;\n{$uses}\nuse Utilities\Context;\nuse Utilities\Paging;\nclass {$fields} extends PublicController {\n{$fieldsContent}{$run}\n}" . PHP_EOL;
+        $file_content = '<?php
+/**
+
+ * PHP version 8.2.4
+ *
+ * @Date 22/08/23
+ * @Last Update 20/2/24
+ * @author     SkullCanldy
+ * @link       https://www.php.net/docs.php
+ */' . PHP_EOL . "namespace Controllers\\{$fields}s;\n{$uses}\nuse Utilities\Context;\nuse Utilities\Paging;\nclass {$fields} extends PublicController {\n{$fieldsContent}{$run}\n}" . PHP_EOL;
         file_put_contents($file_path, $file_content);
     }
     public static function GenerateListTemplate($fields)
@@ -688,6 +715,15 @@ class GenerateCRUD extends Table
         $fields = ucfirst($fields);
         $columns = self::generateVariables($fields);
         $string = "<?php
+/**
+
+ * PHP version 8.2.4
+ *
+ * @Date 22/08/23
+ * @Last Update 20/2/24
+ * @author     SkullCanldy
+ * @link       https://www.php.net/docs.php
+ */
 namespace Dao\\{$fields}s; 
 use Dao\Table; 
 class {$fields}s extends Table{

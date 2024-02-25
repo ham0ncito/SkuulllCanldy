@@ -1,3 +1,5 @@
+
+--MOdificaciones al diseño de carretilla
 ALTER TABLE carretilla
 DROP PRIMARY KEY produtId;
 

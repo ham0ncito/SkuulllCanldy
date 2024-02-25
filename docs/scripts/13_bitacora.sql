@@ -1,3 +1,6 @@
+
+--Este conjunto de instrucciones SQL realiza una serie de inserciones en la tabla "bitacora". Cada inserción agrega una nueva fila a la tabla con valores específicos para las columnas "bitacorafch" (fecha y hora del evento), "bitprograma" (nombre del programa relacionado), "bitdescripcion" (descripción detallada del evento), "bitobservacion" (observación adicional), "bitTipo" (tipo de evento) y "bitusuario" (identificación única del usuario asociado). Cada inserción utiliza la sintaxis del comando INSERT INTO, proporcionando los valores correspondientes para cada columna.
+
 INSERT INTO bitacora (bitacorafch, bitprograma, bitdescripcion, bitobservacion, bitTipo, bitusuario) 
 VALUES ('2023-11-26 10:30:00', 'Programa A', 'Descripción detallada del evento A', 'Observación del evento A', 'T-A', 123456789);
 

@@ -1,3 +1,5 @@
+--Ingreso de datos a la tabla de canciones
+
 INSERT INTO song (id_song, title_song, duration, id_genre, song_cover, album_id, status_song, link_song) VALUES 
 (SHA2("OneOfTheBoys1", 256), 'One of the Boys', 4.07, '4d616d53988e27e97423a7564dff09b644e2814d839751bccd589e05f29237ad', 'https://th.bing.com/th/id/OIP.I1GprgQbKLkCyq0zOecljAHaHa?rs=1&pid=ImgDetMain', '3975302118d61c4c7f6016783d502e1d16cbfc7b926a878608d7ebd23a298011', 'ACT', 'https://firebasestorage.googleapis.com/v0/b/skulllcandl.appspot.com/o/One%20Of%20The%20Boys%20Lana%20Del%20Rey%2F01%20One%20of%20the%20Boys.m4a?alt=media&token=09f5edba-1c92-4104-81b8-011c0b896831'),
 (SHA2("OneOfTheBoys2", 256), 'I Kissed a Girl', 3.00, '4d616d53988e27e97423a7564dff09b644e2814d839751bccd589e05f29237ad', 'https://th.bing.com/th/id/OIP.I1GprgQbKLkCyq0zOecljAHaHa?rs=1&pid=ImgDetMain', '3975302118d61c4c7f6016783d502e1d16cbfc7b926a878608d7ebd23a298011', 'ACT', 'https://firebasestorage.googleapis.com/v0/b/skulllcandl.appspot.com/o/One%20Of%20The%20Boys%20Lana%20Del%20Rey%2F02%20I%20Kissed%20a%20Girl.m4a?alt=media&token=7a739564-3fc2-4562-a10d-cece2824e07a'),

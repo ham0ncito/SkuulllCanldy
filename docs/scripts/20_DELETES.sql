@@ -1,3 +1,4 @@
+--Creacion de la funcion de auditor
 DELETE FROM funciones_roles WHERE fncod ='album_UPD' AND rolescod = 'AUDIT';
 DELETE FROM funciones_roles WHERE fncod ='album_INS' AND rolescod = 'AUDIT';
 DELETE FROM funciones_roles WHERE fncod ='album_DEL' AND rolescod = 'AUDIT';

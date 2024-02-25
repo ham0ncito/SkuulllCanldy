@@ -1,5 +1,14 @@
 -- Active: 1698162320673@@127.0.0.1@3306@skull2canldydb
 <?php
+/**
+
+ * PHP version 8.2.4
+ *
+ * @Date 22/08/23
+ * @Last Update 20/2/24
+ * @author     SkullCanldy
+ * @link       https://www.php.net/docs.php
+ */
 namespace Controllers\Useful;
 use Controllers\PublicController;
 use Views\Renderer;

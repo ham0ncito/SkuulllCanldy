@@ -1,3 +1,4 @@
+--Ingreso de valores aleatorios para testeo en la tabla carretilla
 INSERT INTO carretilla (usercod, productId, crrctd, crrprc, crrfching) 
 VALUES ('31ce7c8c735a4a519653c2d239bd8a834b5b577056f8c6c9f6a859eb79e7e649', 2, 100, 25.50, '2023-11-26 09:00:00');
 

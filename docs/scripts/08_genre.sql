@@ -1,5 +1,9 @@
 -- Ejemplo de inserciones con identificadores generados mediante UUID en MySQL
 USE skull2canldydb; 
+-- Inserta filas en la tabla 'genre' con los siguientes datos:
+-- Cada fila representa un género musical e incluye su identificador único, nombre, descripción, estado y enlace a una imagen representativa.
+-- La función SHA2() se utiliza para generar un identificador único a partir del nombre del género.
+
 INSERT INTO genre (id_genre, name_genre, description_genre, status_genre, image_genre)
 VALUES
 (SHA2("Rock", 256), 'Rock', 'Music genre focusing on guitars and drums', 'ACT', 'https://th.bing.com/th/id/R.e130a0cfac46c80d9b930a412aae4790?rik=5BlVN3w0%2bUrNtQ&pid=ImgRaw&r=0'),

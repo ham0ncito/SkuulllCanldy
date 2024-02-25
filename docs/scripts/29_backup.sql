@@ -1,3 +1,5 @@
+--Creacion del evento de backupautomatico
+
 DELIMITER //
 
 CREATE EVENT backup_daily
@@ -12,7 +14,6 @@ BEGIN
 END//
 
 DELIMITER ;
-
 
 
 DELIMITER //

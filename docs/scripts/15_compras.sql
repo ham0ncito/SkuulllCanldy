@@ -1,3 +1,6 @@
+
+--Creacion de la tabla de compras y su detalle
+
 CREATE TABLE purchase (
     id_purchase VARCHAR(450) NOT NULL PRIMARY KEY,
     purchase_date DATE,

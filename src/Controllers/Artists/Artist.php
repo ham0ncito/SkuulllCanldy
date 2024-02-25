@@ -1,4 +1,25 @@
 <?php
+/**
+
+ * PHP version 8.2.4
+ *
+ * @Date 22/08/23
+ * @Last Update 20/2/24
+ * @author     SkullCanldy
+ * @link       https://www.php.net/docs.php
+ */
+/**
+
+ * PHP version 8.2.4
+ *
+ * @Date 22/08/23
+ * @Last Update 20/2/24
+ * @author     SkullCanldy
+ * @link       https://www.php.net/docs.php
+ */
+/*
+Este código PHP define un controlador llamado `Artist` en el espacio de nombres `Controllers\Artists`, el cual se encarga de manejar la lógica relacionada con los artistas. En su método `run()`, se añade un enlace de estilo para la página de artistas, se preparan los datos necesarios para la vista, y se obtienen los artistas de la base de datos utilizando el DAO correspondiente. Si no se encuentra ningún artista, se establece una bandera para indicar que la lista de artistas está vacía. Finalmente, se preparan los datos de vista relacionados con los permisos de usuario y se renderiza la plantilla de la lista de artistas.
+*/
 
 namespace Controllers\Artists;
 

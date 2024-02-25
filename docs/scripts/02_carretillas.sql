@@ -1,3 +1,5 @@
+-- Este script crea tres tablas relacionadas con productos y carritos de compra. La tabla 'products' almacena información sobre los productos disponibles, como su nombre, descripción, precio, URL de imagen, stock y estado. La tabla 'carretilla' guarda los productos agregados al carrito de un usuario registrado, mientras que 'carretillaanon' realiza la misma función pero para usuarios no registrados.
+
 CREATE TABLE
     `products` (
         `productId` bigint(11) NOT NULL AUTO_INCREMENT,

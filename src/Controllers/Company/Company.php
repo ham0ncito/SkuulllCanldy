@@ -1,4 +1,13 @@
 <?php
+/**
+
+ * PHP version 8.2.4
+ *
+ * @Date 22/08/23
+ * @Last Update 20/2/24
+ * @author     SkullCanldy
+ * @link       https://www.php.net/docs.php
+ */
 namespace Controllers\Company;
 use Controllers\PublicController;
 use Views\Renderer;
@@ -6,6 +15,20 @@ use Utilities\Site;
 use Utilities\Validators;
 use Utilities\Context;
 use Utilities\Paging;
+/**
+
+ * PHP version 8.2.4
+ *
+ * @Date 22/08/23
+ * @Last Update 20/2/24
+ * @author     SkullCanldy
+ * @link       https://www.php.net/docs.php
+ */
+
+/*
+Este controlador PHP pertenece a la sección de la empresa y se encarga de mostrar información sobre la empresa misma. Aquí está lo que hace:
+
+run(): Este método configura los datos necesarios para mostrar la página de la empresa. Define un array $viewData que contiene información como la clase, el nombre y el título de la página, así como un array de textos que describen la empresa. Luego, utiliza el renderizador para mostrar la vista correspondiente*/
 class Company extends PublicController {
  
 

@@ -1,3 +1,6 @@
+
+--Creacion del dashboard de admin
+
 INSERT INTO funciones (fncod, fndsc, fnest, fntyp) VALUES ('Controllers\\Admin\\Dashboard\\', 'Dashboard para Administradores', 'ACT', 'CTR');
 
 

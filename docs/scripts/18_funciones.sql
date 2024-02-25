@@ -1,3 +1,4 @@
+--Ingreso de las funciones de los controladores del sistema
 INSERT INTO funciones (fncod, fndsc, fnest, fntyp) VALUES ('Controllers\\Albums\\Albums', 'Formulario de Album', 'ACT', 'CTR');
 INSERT INTO funciones (fncod, fndsc, fnest, fntyp) VALUES ('Controllers\\Albums\\Album', 'Lista de Album', 'ACT', 'CTR');
 INSERT INTO funciones (fncod, fndsc, fnest, fntyp) VALUES ('Menu_Album', 'Menu_Album', 'ACT', 'MNU');

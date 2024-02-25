@@ -1,3 +1,5 @@
+
+--Creacion de triger que modifica el rol del usuario una vez compra una subscripcion
 DELIMITER //
 
 CREATE TRIGGER newSubUserUpdate

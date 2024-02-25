@@ -1,3 +1,6 @@
+-- Inserta filas en la tabla 'subscription' con los siguientes datos:
+-- Cada fila representa un tipo de suscripción e incluye su identificador único, descripción, duración en días y precio.
+-- La función SHA2() se utiliza para generar un identificador único a partir del nombre de la suscripción.
 
 INSERT INTO subscription (id_subscription, subscription_description, subscription_duration, subscription_price)
 VALUES (SHA2('Premium', 256), 'Premium',30, 49.99);
@@ -5,11 +8,10 @@ VALUES (SHA2('Premium', 256), 'Premium',30, 49.99);
 INSERT INTO subscription (id_subscription, subscription_description, subscription_duration, subscription_price)
 VALUES (SHA2('Basic', 256), 'Basic', 30, 19.99);
 
--- INSERT 3
+
 INSERT INTO subscription (id_subscription, subscription_description, subscription_duration, subscription_price)
 VALUES (SHA2('Gold', 256), 'Gold',30, 89.99);
 
--- INSERT 4
 INSERT INTO subscription (id_subscription, subscription_description, subscription_duration, subscription_price)
 VALUES (SHA2('Silver', 256), 'Silver', 30, 69.99);
 

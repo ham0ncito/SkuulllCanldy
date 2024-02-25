@@ -1,4 +1,13 @@
 <?php
+/**
+
+ * PHP version 8.2.4
+ *
+ * @Date 22/08/23
+ * @Last Update 20/2/24
+ * @author     SkullCanldy
+ * @link       https://www.php.net/docs.php
+ */
 
 namespace Controllers\Store;
 
@@ -8,6 +17,7 @@ use Views\Renderer;
 use Utilities\Secur\Crypt as sec;
 use DAO\Productss\Productss as Products;
 use DAO\Carretillas\Carretillas as Carretilla;
+use Dao\Dao;
 use DAO\Subscriptions\Subscriptions as Subscription;
 use Utilities\Validators;
 use Utilities\Context;
@@ -81,7 +91,7 @@ class Store extends PrivateController
     $viewData['isCLN'] = \Dao\Security\Security::userIs($_SESSION["login"]['userEmail'], 'CLN');
     $viewData['isCLS'] = \Dao\Security\Security::userIs($_SESSION["login"]['userEmail'], 'CLS');
     $viewData['isADMIN'] = \Dao\Security\Security::userIs($_SESSION["login"]['userEmail'], 'ADMIN');
-    $viewData['Products'] = Products::getProducts();
+    
     $phrase = "Conscious shopping is more than just a transaction; it's a mindful choice. It's about making informed decisions that go beyond price tags and brands. It involves supporting ethical practices, sustainable production, and considering the social and environmental impact of our purchases. Every buying decision we make has the power to shape a better world. Let's embrace conscious shopping to create a positive difference, one thoughtful purchase at a time.";
     for ($x = 0; $x < 100; $x++) {
       $random_number = mt_rand(0, 25);
@@ -93,8 +103,24 @@ class Store extends PrivateController
 
     $_SESSION['token'] = $this->viewData['token'];
     $this->viewData['tokenSub'] = md5($phrase . 'subscription' . date('Ymdhisu') . 'subscription');
+
+    $_SESSION['items'] = Products::getProducts();
+   self::calculate();
+
     Renderer::render("store\store", $viewData);
   }
+private function calculate()
+{
+        $totalProducts = intval(Products::countProducts());
+        $itemsPerPage = 4;
+        $currentPage = isset($_GET['page']) ? intval($_GET['page']) : 1;
+        $pagination = Paging::getPagination($totalProducts, $itemsPerPage, $currentPage, "index.php?page=Store_Store", "Store_Store");
+        $offset = ($currentPage - 1) * $itemsPerPage;
+        $products = Products::getProductsPaginated($itemsPerPage, $offset);
+        $this->viewData['products'] = $products;
+        $this->viewData['pagination'] = $pagination;
+        Renderer::render("store\store", $this->viewData);
+    }
 
   static private function cart()
   {

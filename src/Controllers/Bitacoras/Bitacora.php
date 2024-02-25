@@ -1,5 +1,24 @@
 <?php
+/**
 
+ * PHP version 8.2.4
+ *
+ * @Date 22/08/23
+ * @Last Update 20/2/24
+ * @author     SkullCanldy
+ * @link       https://www.php.net/docs.php
+ */
+/**
+
+ * PHP version 8.2.4
+ *
+ * @Date 22/08/23
+ * @Last Update 20/2/24
+ * @author     SkullCanldy
+ * @link       https://www.php.net/docs.php
+ */
+
+/*Este script PHP define un controlador llamado `Bitacora` en el espacio de nombres `Controllers\Bitacoras`. Este controlador maneja la lógica relacionada con las bitácoras. El método `run()` se encarga de renderizar la lista de bitácoras. Primero, agrega un enlace al estilo de la bitácora. Luego, prepara los datos de vista asignando nombres a las variables de la bitácora. Si el usuario es un administrador, obtiene las bitácoras llamando al método `getBitacora()` del DAO correspondiente y verifica si el resultado está vacío para establecer la bandera `isEmpty`. Finalmente, prepara los datos de vista relacionados con los permisos del usuario y renderiza la plantilla `bitacoralist`. */
 namespace Controllers\Bitacoras;
 
 use Controllers\PrivateController;

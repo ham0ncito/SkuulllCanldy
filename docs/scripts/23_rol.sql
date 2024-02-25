@@ -1,4 +1,7 @@
-ALTER TABLE `usuario` CHANGE `usertipo` `usertipo` CHAR(5) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT 'Tipo de Usuario, Normal, Consultor o Cliente';
+AL
+--Testeo de roles
+
+TER TABLE `usuario` CHANGE `usertipo` `usertipo` CHAR(5) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT 'Tipo de Usuario, Normal, Consultor o Cliente';
 
 
 

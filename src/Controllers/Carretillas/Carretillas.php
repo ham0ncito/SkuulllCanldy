@@ -1,13 +1,30 @@
 <?php
+/**
+
+ * PHP version 8.2.4
+ *
+ * @Date 22/08/23
+ * @Last Update 20/2/24
+ * @author     SkullCanldy
+ * @link       https://www.php.net/docs.php
+ */
 
 namespace Controllers\Carretillas;
+/**
 
+ * PHP version 8.2.4
+ *
+ * @Date 22/08/23
+ * @Last Update 20/2/24
+ * @author     SkullCanldy
+ * @link       https://www.php.net/docs.php
+ */
 use Controllers\PrivateController;
 use Views\Renderer;
 use Dao\Carretillas\Carretillas as DAOCarretilla;
 use Utilities\Site;
 use Utilities\Validators;
-
+/*Este controlador PHP maneja las operaciones relacionadas con la gestión de carretillas de compras. Permite crear, editar, eliminar y ver detalles de las carretillas. Utiliza la clase `DAOCarretilla` para interactuar con la base de datos y obtener la información necesaria. La seguridad del acceso se gestiona mediante la clase `Security` del espacio de nombres `Dao\Security`. La vista asociada se renderiza utilizando el motor de plantillas `Renderer`. El controlador valida los datos del formulario antes de procesar cualquier acción, asegurando que los campos requeridos estén presentes y no estén vacíos. */
 class Carretillas extends PrivateController
 {
     private $usercod;

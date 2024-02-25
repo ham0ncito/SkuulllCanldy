@@ -1,7 +1,27 @@
 <?php
+/**
 
+ * PHP version 8.2.4
+ *
+ * @Date 22/08/23
+ * @Last Update 20/2/24
+ * @author     SkullCanldy
+ * @link       https://www.php.net/docs.php
+ */
+/**
+
+ * PHP version 8.2.4
+ *
+ * @Date 22/08/23
+ * @Last Update 20/2/24
+ * @author     SkullCanldy
+ * @link       https://www.php.net/docs.php
+ */
 namespace Controllers\Checkout;
+/*
+Este controlador PHP maneja la página de error durante el proceso de pago. Aquí está la función principal:
 
+run(): Este método se ejecuta al cargar la página de error durante el proceso de pago. Simplemente imprime "error" en la página y luego finaliza el script con die(). También inicializa los datos de la vista con información sobre el tipo de usuario que está accediendo a la página de error. */
 use Controllers\PublicController;
 class Error extends PublicController
 {

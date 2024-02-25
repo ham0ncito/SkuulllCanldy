@@ -1,3 +1,10 @@
+-- Este script crea varias tablas en la base de datos, incluyendo 'artist', 'favorites', 'video', 'playlist', 'highligths', 'highligthsPlaylist', 'playlistSongs', 'album', 'genre', 'song', 'songAuthors', 'log', 'logUser', 'subscription', 'offer', 'offerSubscription', 'subscriptionUser' y 'logNonUser'.
+-- Cada tabla tiene sus propias columnas que representan diferentes aspectos de la información almacenada, como identificadores, descripciones, fechas, estados y relaciones entre entidades.
+-- Las claves primarias y claves foráneas se definen para garantizar la integridad de los datos y las relaciones entre las tablas.
+-- Además, se utiliza la cláusula 'IF NOT EXISTS' para evitar errores si las tablas ya existen en la base de datos.
+
+
+
 CREATE TABLE IF NOT EXISTS `artist` (
   `id_artist` varchar(500) PRIMARY KEY NOT NULL,
   `name_artist` varchar(200),

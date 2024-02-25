@@ -1,3 +1,5 @@
+--Creacion de todas las funciones del sistema
+
 INSERT INTO funciones (fncod, fndsc, fnest, fntyp) VALUES ('album_DSP', 'Detalle de album', 'ACT', 'FNC');
 INSERT INTO funciones (fncod, fndsc, fnest, fntyp) VALUES ('album_UPD', 'Editar album', 'ACT', 'FNC');
 INSERT INTO funciones (fncod, fndsc, fnest, fntyp) VALUES ('album_DEL', 'Eliminar album', 'ACT', 'FNC');

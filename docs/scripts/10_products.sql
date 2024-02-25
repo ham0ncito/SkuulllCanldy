@@ -1,3 +1,6 @@
+--se realizan inserciones de datos en dos tablas de una base de datos utilizando el comando SQL `INSERT INTO`. Los datos insertados representan productos y sus detalles, como nombres, descripciones, precios, imágenes, stock y estado de producto. Cada inserción agrega un nuevo registro a las tablas "products", con valores específicos para cada columna. Las inserciones se realizan tanto con valores específicos como con valores generados aleatoriamente para algunos campos, como identificadores de productos únicos.
+
+
 INSERT INTO products (productId, productName, productDescription, productPrice, productImgUrl, productStock, productStatus)
 VALUES 
     (11, 'Ariana Grande Sweetener Deluxe Edition', 'Concert featuring Ariana Grande', 59.99, 'https://ae01.alicdn.com/kf/HTB1j4HHjbZnBKNjSZFhq6A.oXXae/TX065-Hot-New-Ariana-Grande-Sweetener-Album-2018-Cover-Music-Star-24x24-A3-A4-Poster-Art.jpg_640x640.jpg', 100, 'ACT'),

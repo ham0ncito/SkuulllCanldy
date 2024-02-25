@@ -25,8 +25,8 @@
 <body class="bg-gradient-to-r from-gray-900 to-indigo-900 bg-cover font-sans flex items-center justify-center h-screen">
   <main class="flex flex-wrap items-center justify-around">
     <section class="w-full h-screen md:w-2/3 mx-4 justify-around">
-      <header class="mb-4 text-white py-4 flex items-center justify-between">
-        <nav id="menu" class="flex mx-auto justify-around space-x-4">
+      <header class="mb-4 text-white py-4 my-4 flex items-center justify-between">
+        <nav id="menu" class="flex py-4 mx-auto justify-around space-x-4">
           {{with login}}
           <div x-data="{ showModal: false }" class="relative">
             <button @click="showModal = true" class="bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded-full">
@@ -41,15 +41,18 @@
                 <div x-show="showModal" class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
                   <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                     <div class="sm:flex sm:items-start">
+                      <img class="mx-auto h-24 w-24 rounded-full" src="https://th.bing.com/th/id/OIP.Gfp0lwE6h7139625a-r3aAHaHa?rs=1&pid=ImgDetMain" alt="Profile photo">
                       <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
-                        <h3 class="text-lg font-medium leading-6 text-gray-900" id="modal-title">Personal Details</h3>
+                        <h3 class="text-lg font-medium leading-6 text-gray-900" id="modal-title">Your profile</h3>
                         <div class="mt-2">
-                          <p class="text-sm text-gray-500 pt-2">Name {{userName}}</p>
-                          <p class="text-sm text-gray-500 pb-2">Email {{userEmail}}</p>
+                          <p class="text-sm text-gray-500 pt-2">Username: <span class="font-bold">{{userName}}</span></p>
+                         
+                          
                         </div>
                       </div>
                     </div>
                   </div>
+                  
                   <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
                     <button @click="showModal = false" type="button" class="text-xl text-blue-500 mx-2 hover:text-gray-300">Close</button>
                     <a href="index.php?page=sec_logout" class="text-xl mx-2 text-red-500 hover:text-gray-300">Logout</a>
@@ -94,13 +97,10 @@
       </div>
      
     </section>
-        <footer class="py-4">
-        <div class="container mx-auto text-center">
-            <p class="text-gray-400">&copy; 2024 My Music. All rights reserved.</p>
-        </div>
-    </footer>
+        
    
   </main>
+  
 </body>
 
 

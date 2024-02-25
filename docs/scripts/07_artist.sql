@@ -1,5 +1,9 @@
 USE SKULL2CANLDYDB; 
 
+-- Inserta filas en la tabla 'artist' con los siguientes datos:
+-- Cada fila representa un artista y contiene su identificador único, nombre, imagen, fecha de nacimiento, país de origen, estado, y biografía.
+-- La función SHA2() se utiliza para generar un identificador único a partir del nombre del artista.
+
 INSERT INTO artist (id_artist, name_artist, image_artist, date_of_birth_artist, country_artist, status_artist, artist_bio)
 VALUES
     (SHA2("Lady Gaga", 256), 'Lady Gaga', 'https://th.bing.com/th/id/R.b5599c473e77532c6896a112d4a09940?rik=Mer878SPKd1%2fYg&pid=ImgRaw&r=0', '1986-03-28', 'United States', 'ACT', 'Stefani Joanne Angelina Germanotta, known professionally as Lady Gaga, is an American singer, songwriter, and actress.'),

@@ -1,5 +1,9 @@
 -- Active: 1698162320673@@127.0.0.1@3306@skull2canldydb
 use skull2canldydb; 
+
+-- Este script crea varios usuarios y les otorga diferentes privilegios en la base de datos `skull2canldydb`. Además, se asignan privilegios específicos a cada usuario, como SELECT, INSERT, UPDATE y DELETE en la base de datos. Finalmente, se actualizan los privilegios para reflejar los cambios realizados.
+-- Usuarios creados: 'Strongbox9114', 'Igloo6665', 'Surging1071', 'Skeleton8345', 'Ergonomic0388', 'Mauve3553', 'Opossum3505', 'Reckless0069', 'Slogan9663', 'Slogan9664'.
+
 CREATE USER 'Strongbox9114'@'%' IDENTIFIED BY 'vJ&^%69!Ni7nUo5v#J&sYk^MdRF^U@7rdonm4ggqsfrMedhZaoNL34xBJR&GS';
 CREATE USER 'Igloo6665'@'%' IDENTIFIED BY 'PiGaG!mrRbhG@@R@%RU*@zkPs559!4rZrdUMvQku@eda$#dTeN!57oBq2@zr!S';
 CREATE USER 'Surging1071'@'%' IDENTIFIED BY 'Na75knt5fB$Ar8oR9Cszf3M2!t*MXD5NgsLVpNtM6FMuUHMWHw8#UeedQj9tV';

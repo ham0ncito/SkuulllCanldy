@@ -1,5 +1,21 @@
 <?php
+/**
 
+ * PHP version 8.2.4
+ *
+ * @Date 22/08/23
+ * @Last Update 20/2/24
+ * @author     SkullCanldy
+ * @link       https://www.php.net/docs.php
+ */
+
+ /*Este controlador PHP, llamado "Favorites", gestiona la funcionalidad relacionada con los favoritos en una aplicación web. Aquí está su funcionalidad:
+
+run(): Este método se ejecuta cuando se accede a la página de favoritos. Primero, agrega un enlace al archivo de estilo de favoritos. Luego, inicializa los datos de vista necesarios, como el ID del favorito, el código de usuario, el ID de referencia y el tipo de favorito.
+
+Después, verifica si el usuario es un administrador o no. Si lo es, obtiene todos los favoritos utilizando el método getFavorites() de la clase DAOFavorites. Si el usuario no es un administrador, obtiene los favoritos específicos del usuario actual utilizando el método getFavoritesByUser() de la misma clase.
+
+Luego, comprueba si la matriz de favoritos está vacía y establece la bandera isEmpty en consecuencia. Finalmente, agrega información sobre los roles del usuario a los datos de vista y renderiza la vista "favoritess/favoriteslist". */
 namespace Controllers\Favoritess;
 
 use Controllers\PrivateController;

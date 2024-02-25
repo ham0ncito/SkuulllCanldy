@@ -1,5 +1,24 @@
 <?php
+/**
 
+ * PHP version 8.2.4
+ *
+ * @Date 22/08/23
+ * @Last Update 20/2/24
+ * @author     SkullCanldy
+ * @link       https://www.php.net/docs.php
+ */
+/**
+
+ * PHP version 8.2.4
+ *
+ * @Date 22/08/23
+ * @Last Update 20/2/24
+ * @author     SkullCanldy
+ * @link       https://www.php.net/docs.php
+ */
+
+/*Este código PHP define un controlador llamado `Albums` en el espacio de nombres `Controllers\Albums`, que maneja la gestión de álbumes. El controlador se encarga de procesar las solicitudes de creación, edición y eliminación de álbumes, así como de mostrar los detalles de un álbum específico. Utiliza funciones para validar los datos del formulario y realizar las acciones correspondientes en la capa de datos. Además, prepara los datos necesarios para la vista y renderiza las plantillas correspondientes según el modo de operación. El controlador también gestiona la generación de tokens para prevenir ataques XSS. */
 namespace Controllers\Albums;
 
 use Controllers\PrivateController;

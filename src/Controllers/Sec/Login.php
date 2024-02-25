@@ -1,4 +1,13 @@
 <?php
+/**
+
+ * PHP version 8.2.4
+ *
+ * @Date 22/08/23
+ * @Last Update 20/2/24
+ * @author     SkullCanldy
+ * @link       https://www.php.net/docs.php
+ */
 namespace Controllers\Sec;
 use DAO\Lognonusers\Lognonusers as nonuser; 
 use Utilities\Functions as util; 
@@ -88,7 +97,7 @@ class Login extends \Controllers\PublicController
                             
                             $_SESSION['useremail'] =  $dbUser["useremail"];
                             $_SESSION['username'] =  $dbUser["username"];
-                            \DAO\Logusers\Logusers::insertLoguser($dbUser["usercod"],"INI", date("Y-m-d H:i:s"));
+                    $_SESSION['lastActive'] = date("Y-m-d H:i:s");\DAO\Logusers\Logusers::insertLoguser($dbUser["usercod"],"INI", date("Y-m-d H:i:s"));
                             \Utilities\Site::redirectTo("index.php?page=Home_Home");
                         }
                     }

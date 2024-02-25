@@ -1,8 +1,18 @@
 <?php
+/**
+
+ * PHP version 8.2.4
+ *
+ * @Date 22/08/23
+ * @Last Update 20/2/24
+ * @author     SkullCanldy
+ * @link       https://www.php.net/docs.php
+ */
 namespace Dao\Funcioness; 
 use Dao\Table; 
 class Funcioness extends Table{
-      private $fncod;
+    
+  private $fncod;
   private $fndsc;
   private $fnest;
   private $fntyp;

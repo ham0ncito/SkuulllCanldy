@@ -1,4 +1,23 @@
 <?php
+/**
+
+ * PHP version 8.2.4
+ *
+ * @Date 22/08/23
+ * @Last Update 20/2/24
+ * @author     SkullCanldy
+ * @link       https://www.php.net/docs.php
+ */
+/*Este controlador PHP gestiona las operaciones CRUD (Crear, Leer, Actualizar, Eliminar) de registros de bitácora, permitiendo la creación, edición y eliminación de entradas de bitácora. Utiliza un modelo de datos de bitácora proporcionado por la clase DAOBitacora y maneja la validación de datos de entrada antes de procesar las acciones solicitadas. Además, controla la generación de tokens XSS para prevenir ataques de tipo Cross-Site Scripting (XSS). */
+/**
+
+ * PHP version 8.2.4
+ *
+ * @Date 22/08/23
+ * @Last Update 20/2/24
+ * @author     SkullCanldy
+ * @link       https://www.php.net/docs.php
+ */
 
 namespace Controllers\Bitacoras;
 

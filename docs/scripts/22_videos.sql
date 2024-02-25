@@ -1,3 +1,5 @@
+--Ingreso de datos a la tabla Videos. Ingreso de datos para la tabla artista
+
 INSERT INTO artist (id_artist, name_artist, image_artist, date_of_birth_artist, country_artist, status_artist, artist_bio)
 VALUES
     ('e5aaccbe1ebafbca5e9fd2794431862f', 'Madonna', 'https://2.bp.blogspot.com/-R_G8feMd3Go/TbUb8IkIJdI/AAAAAAAAA9Y/dwv3FZIsGt0/s1600/madonna.jpg', '1958-08-16', 'United States', 'ACT', 'Madonna is a pop music singer and actress who went solo in 1981 and became a sensation in the then male-dominated 1980s music scene. She has achieved 21 Top 10 hits in the United States and sold more than 70 million albums internationally. In January 2008, she was named the worlds wealthiest female musician by Forbes magazine.');

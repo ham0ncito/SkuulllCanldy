@@ -1,3 +1,5 @@
+--Ingreso de datos a la tabla de canciones
+
 INSERT INTO song (id_song, title_song, duration, id_genre, song_cover, album_id, status_song, link_song)
 VALUES (
     SHA2('Bad Romance', 256),

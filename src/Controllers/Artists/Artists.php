@@ -1,7 +1,26 @@
 <?php
+/**
 
+ * PHP version 8.2.4
+ *
+ * @Date 22/08/23
+ * @Last Update 20/2/24
+ * @author     SkullCanldy
+ * @link       https://www.php.net/docs.php
+ */
+/**
+
+ * PHP version 8.2.4
+ *
+ * @Date 22/08/23
+ * @Last Update 20/2/24
+ * @author     SkullCanldy
+ * @link       https://www.php.net/docs.php
+ */
 namespace Controllers\Artists;
-
+/*
+Este código PHP define un controlador llamado `Artists` en el espacio de nombres `Controllers\Artists`, el cual se encarga de manejar la lógica relacionada con los artistas. El controlador administra la creación, edición, eliminación y visualización de artistas. Utiliza un array `$artist` para almacenar los datos del artista y un array `$error` para almacenar mensajes de error de validación. El método `run()` se encarga de inicializar el controlador, procesar los datos del formulario si se ha enviado, preparar los datos de vista y renderizar la plantilla correspondiente. Además, implementa métodos para manejar la inicialización, validación y procesamiento de acciones, así como la preparación de datos de vista y renderizado.
+ */
 use Controllers\PrivateController;
 use Views\Renderer;
 use Dao\Artists\Artists as DAOArtist;

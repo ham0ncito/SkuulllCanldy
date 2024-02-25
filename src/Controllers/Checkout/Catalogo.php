@@ -1,5 +1,14 @@
 <?php
 /**
+
+ * PHP version 8.2.4
+ *
+ * @Date 22/08/23
+ * @Last Update 20/2/24
+ * @author     SkullCanldy
+ * @link       https://www.php.net/docs.php
+ */
+/**
  * PHP Version 7.2
  * Checkout
  *
@@ -35,22 +44,8 @@ class Catalogo extends PrivateController
      */
     public function run():void
     {
-        // code
-        $producto = \Dao\Productos::getAll();
-        $carretilla = \Dao\Carretilla::getAll(\Utilities\Security::getUserId());
-
-        $carrAssoc = array();
-        foreach($carretilla as $carr) {
-            $carrAssoc[$carr["prdcod"]] = $carr;
-        }
-
-        foreach($producto as $prod) {
-            if (isset($carrAssoc[$prod["prdcod"]])) {
-                $prod["enCarretilla"] = true;
-            } else {
-                $prod["enCarretilla"] = false;
-            }
-        }
+       
+        $producto = [];
         \Views\Renderer::render("abc", array("productos" => $producto));
     }
 }

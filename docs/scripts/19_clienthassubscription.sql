@@ -1,3 +1,5 @@
+--Creacion del tigger para cambiar el rol del usuario una vez compra una subscription
+
 DELIMITER //
 
 CREATE TRIGGER newSubUser

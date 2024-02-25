@@ -1,3 +1,6 @@
+-- Este script crea múltiples tablas en la base de datos. La tabla 'usuario' almacena información de usuarios con campos como 'usercod', 'useremail', 'username', entre otros. La tabla 'roles' guarda roles de usuario, mientras que 'roles_usuarios' establece la relación entre usuarios y roles. 'funciones' almacena funciones del sistema y 'funciones_roles' relaciona roles con funciones. Finalmente, 'bitacora' registra eventos del sistema.
+
+
 CREATE TABLE
     `usuario` (
         `usercod` varchar(450) NOT NULL,

@@ -1,8 +1,18 @@
 <?php
+/**
+
+ * PHP version 8.2.4
+ *
+ * @Date 22/08/23
+ * @Last Update 20/2/24
+ * @author     SkullCanldy
+ * @link       https://www.php.net/docs.php
+ */
 namespace Dao\Playlistsongss; 
 use Dao\Table; 
 class Playlistsongss extends Table{
-      private $playlist_id;
+    
+  private $playlist_id;
   private $song_id;
   private $playlistSong_added_at;
   private $playlistSong_status;

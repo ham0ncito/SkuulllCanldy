@@ -1,7 +1,25 @@
 <?php
+/**
 
+ * PHP version 8.2.4
+ *
+ * @Date 22/08/23
+ * @Last Update 20/2/24
+ * @author     SkullCanldy
+ * @link       https://www.php.net/docs.php
+ */
+/**
+
+ * PHP version 8.2.4
+ *
+ * @Date 22/08/23
+ * @Last Update 20/2/24
+ * @author     SkullCanldy
+ * @link       https://www.php.net/docs.php
+ */
 namespace Controllers\Carretillaanons;
-
+/*Este controlador PHP gestiona las operaciones relacionadas con una carretilla de compras anónima. Permite crear, actualizar, eliminar y mostrar detalles de elementos en la carretilla. Utiliza un modelo de datos proporcionado por la clase `DAOCarretillaanon` para interactuar con la base de datos y obtener información sobre los elementos en la carretilla. La seguridad del formulario se asegura mediante la generación y validación de tokens XSS para prevenir ataques de falsificación de solicitudes entre sitios (CSRF). Además, la vista asociada se renderiza utilizando el motor de plantillas `Renderer`.
+ */
 use Controllers\PrivateController;
 use Views\Renderer;
 use Dao\Carretillaanons\Carretillaanons as DAOCarretillaanon;

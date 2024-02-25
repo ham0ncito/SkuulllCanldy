@@ -1,4 +1,13 @@
 <?php
+/**
+
+ * PHP version 8.2.4
+ *
+ * @Date 22/08/23
+ * @Last Update 20/2/24
+ * @author     SkullCanldy
+ * @link       https://www.php.net/docs.php
+ */
 
 namespace Dao\Productss;
 
@@ -57,14 +66,34 @@ class Productss extends Table
                 $registros = self::executeNonQuery($sqlstr, $params);
                 return $registros;
         }
+        public static function countProducts()
+        {
+                $sqlstr = "SELECT count(*) FROM products";
+                $params = [];
+                $registros = self::obtenerUnRegistro($sqlstr, $params);
+                return $registros;
+        }
 
+        public static function getProductsPaginated($itemsPerPage, $offset)
+        {
+            $sqlstr = "SELECT * FROM products LIMIT :itemsPerPage OFFSET :offset";
+            $params = [
+                'itemsPerPage' => $itemsPerPage,
+                'OFFSET' => $offset
+            ];
+        
+            $registros = self::obtenerRegistros($sqlstr, $params); 
+        
+            return $registros;
+        }
+        
         public static function getProductsBySearch(
                 string $partialName = "",
                 string $orderBy = "",
                 bool $orderDescending = false,
                 int $page = 0,
                 int $itemsPerPage = 10
-        ){
+        ) {
                 $sqlstr = "SELECT * from products p";
                 $sqlstrCount = "SELECT COUNT(*) as count FROM products p";
                 $conditions = [];
@@ -88,7 +117,8 @@ class Productss extends Table
                 }
                 $numeroDeRegistros = self::obtenerUnRegistro($sqlstrCount, $params)["count"];
                 $pagesCount = ceil($numeroDeRegistros / $itemsPerPage);
-                if ($page > $pagesCount - 1
+                if (
+                        $page > $pagesCount - 1
                 ) {
                         $page = $pagesCount - 1;
                 }
@@ -100,6 +130,5 @@ class Productss extends Table
                         $registros = self::getProductsBySearch("", "", false, 0, 10)["productsSearch"];
                 }
                 return ["productsSearch" => $registros, "total" => $numeroDeRegistros, "page" => $page, "itemsPerPage" => $itemsPerPage];
-
         }
 }

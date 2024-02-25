@@ -1,4 +1,13 @@
 <?php
+/**
+
+ * PHP version 8.2.4
+ *
+ * @Date 22/08/23
+ * @Last Update 20/2/24
+ * @author     SkullCanldy
+ * @link       https://www.php.net/docs.php
+ */
 namespace Controllers\Communities;
 use Controllers\PublicController;
 use Views\Renderer;
@@ -6,6 +15,21 @@ use Utilities\Site;
 use Utilities\Validators;
 use Utilities\Context;
 use Utilities\Paging;
+
+/**
+
+ * PHP version 8.2.4
+ *
+ * @Date 22/08/23
+ * @Last Update 20/2/24
+ * @author     SkullCanldy
+ * @link       https://www.php.net/docs.php
+ */
+
+/*
+Este controlador PHP maneja la página que muestra información sobre artistas y la comunidad artística. Aquí está la función principal:
+
+run(): Este método se encarga de configurar los datos que se mostrarán en la página. Define un conjunto de datos que incluye información sobre la clase de artistas, el título de la página y descripciones sobre la comunidad artística. También incluye un fragmento HTML que muestra una imagen relacionada con el arte y un enlace para ingresar a la plataforma. */
 class Artists extends PublicController {
  
 

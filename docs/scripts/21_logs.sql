@@ -1,3 +1,4 @@
+---Creacion de los tipos de logs para la tabla log
 INSERT INTO `log`(`log_cod`, `log_description`) VALUES ('INI','INICIO DE SESION');
 INSERT INTO `log`(`log_cod`, `log_description`) VALUES ('FAL','FALLO DE SESION');
 INSERT INTO `log`(`log_cod`, `log_description`) VALUES ('CON','CONTRASEÑA INCORRECTA');

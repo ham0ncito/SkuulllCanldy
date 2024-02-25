@@ -1,5 +1,27 @@
 <?php
+/**
 
+ * PHP version 8.2.4
+ *
+ * @Date 22/08/23
+ * @Last Update 20/2/24
+ * @author     SkullCanldy
+ * @link       https://www.php.net/docs.php
+ */
+/*Este controlador PHP, llamado "Favoritess", se encarga de gestionar la creación, edición y eliminación de favoritos en una aplicación web. Aquí está su funcionalidad:
+
+run(): Este método se ejecuta cuando se accede a la página de gestión de favoritos. Inicializa los datos necesarios, valida los datos del formulario si se ha enviado un POST y procesa la acción correspondiente.
+
+init(): Este método inicializa el modo de operación del controlador según los parámetros recibidos en la URL. Si el modo no está definido correctamente, muestra un mensaje de error y redirige al usuario.
+
+validateFormData(): Este método valida los datos del formulario enviado por POST. Comprueba si los campos requeridos están vacíos y, si es así, establece mensajes de error correspondientes.
+
+processAction(): Este método procesa la acción según el modo de operación del controlador. Inserta, actualiza o elimina un favorito en la base de datos utilizando los métodos proporcionados por la clase DAOFavorites.
+
+prepareViewData(): Este método prepara los datos necesarios para renderizar la vista. Incluye el modo de operación, los datos del favorito, mensajes de error, y el token de protección contra XSS.
+
+render(): Este método renderiza la vista correspondiente al formulario de gestión de favoritos, pasando los datos preparados anteriormente.
+ */
 namespace Controllers\Favoritess;
 
 use Controllers\PrivateController;
