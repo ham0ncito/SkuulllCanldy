@@ -7,7 +7,7 @@
  * @Last Update 20/2/24
  * Updated by Skuul2candly
  * Issue Number : 23
- * Ticker Number : 23
+ * Ticket Number : 23
  * Changes Approved on 20/2/24
  * Tested by Skullcanldy
  * Description: 
@@ -28,7 +28,17 @@ use Views\Renderer;
 use Dao\Lognonusers\Lognonusers as DAOLognonuser;
 use Utilities\Site;
 use Utilities\Validators;
+/*Este fragmento de código PHP define un controlador llamado Lognonusers dentro del espacio de nombres Controllers\Lognonusers. Aquí tienes un resumen de su funcionalidad:
 
+Espacio de nombres (namespace): El controlador está dentro del espacio de nombres Controllers\Lognonusers, lo que sugiere que se ocupa de la gestión de registros de usuarios no logueados.
+
+Uso de clases y funciones de otros archivos: El controlador utiliza la clase Lognonusers del espacio de nombres Dao\Lognonusers para acceder a los registros de usuarios no logueados. También utiliza la clase PrivateController del mismo espacio de nombres y la clase Renderer del espacio de nombres Views.
+
+Método run(): Este método se ejecuta cuando se solicita el controlador y se encarga de inicializar, procesar y preparar los datos para la vista, así como de renderizar la vista.
+
+Inicialización y validación de datos: El método init() se encarga de inicializar el estado del controlador, mientras que el método validateFormData() valida los datos enviados a través del formulario.
+
+Procesamiento de acciones: El método processAction() determina la acción a realizar */
 class Lognonusers extends PrivateController
 {
     private $id_logNonUser;

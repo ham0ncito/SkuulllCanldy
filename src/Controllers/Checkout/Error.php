@@ -7,7 +7,7 @@
  * @Last Update 20/2/24
  * Updated by Skuul2candly
  * Issue Number : 23
- * Ticker Number : 23
+ * Ticket Number : 23
  * Changes Approved on 20/2/24
  * Tested by Skullcanldy
  * Description: 
@@ -28,7 +28,7 @@
  * @Last Update 20/2/24
  * Updated by Skuul2candly
  * Issue Number : 23
- * Ticker Number : 23
+ * Ticket Number : 23
  * Changes Approved on 20/2/24
  * Tested by Skullcanldy
  * Description: 

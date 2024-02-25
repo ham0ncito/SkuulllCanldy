@@ -7,7 +7,7 @@
  * @Last Update 20/2/24
  * Updated by Skuul2candly
  * Issue Number : 23
- * Ticker Number : 23
+ * Ticket Number : 23
  * Changes Approved on 20/2/24
  * Tested by Skullcanldy
  * Description: 
@@ -20,7 +20,24 @@
  * @author     SkullCanldy
  * @link       https://www.php.net/docs.php
  */
+/*
+Este código PHP define un controlador llamado Highligthsplaylists en el espacio de nombres Controllers\Highligthsplaylists. Aquí está un resumen de su funcionalidad:
 
+Espacio de nombres (namespace): El controlador está dentro del espacio de nombres Controllers\Highligthsplaylists, lo que sugiere que se ocupa de la gestión de listas de reproducción destacadas.
+
+Uso de clases y funciones de otros archivos: El controlador utiliza la clase PrivateController del mismo espacio de nombres, la clase Renderer del espacio de nombres Views, y la clase Highligthsplaylists del espacio de nombres Dao\Highligthsplaylists. También utiliza las clases Site y Validators del espacio de nombres Utilities.
+
+Atributos privados: El controlador tiene atributos privados para almacenar información sobre las listas de reproducción destacadas, como highligths_id, playlist_id y highligths_description.
+
+Método run(): Este método se ejecuta cuando se solicita el controlador y se encarga de inicializarlo, procesar el formulario si se ha enviado y preparar los datos para la vista.
+
+Inicialización y validación de datos: El método init() inicializa el modo del controlador y obtiene los datos si es necesario. validateFormData() valida los datos del formulario.
+
+Procesamiento de acciones: El método processAction() realiza la acción correspondiente según el modo del controlador, como insertar, actualizar o eliminar una lista de reproducción destacada.
+
+Preparación de datos para la vista: El método prepareViewData() prepara los datos necesarios para renderizar la vista, como el modo, los datos de la lista de reproducción destacada y los mensajes de error.
+
+Renderización de la vista: Finalmente, el método render() renderiza la plantilla de formulario de lista de reproducción destacada, pasando los datos preparados. */
 namespace Controllers\Highligthsplaylists;
 
 use Controllers\PrivateController;

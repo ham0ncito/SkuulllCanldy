@@ -7,7 +7,7 @@
  * @Last Update 20/2/24
  * Updated by Skuul2candly
  * Issue Number : 23
- * Ticker Number : 23
+ * Ticket Number : 23
  * Changes Approved on 20/2/24
  * Tested by Skullcanldy
  * Description: 
@@ -20,7 +20,23 @@
  * @author     SkullCanldy
  * @link       https://www.php.net/docs.php
  */
+/*
+El código PHP que has proporcionado define un controlador llamado Highligthsplaylist dentro del espacio de nombres Controllers\Highligthsplaylists. Aquí tienes un resumen de su funcionalidad:
 
+
+Espacio de nombres (namespace): El controlador está dentro del espacio de nombres Controllers\Highligthsplaylists, lo que sugiere que se ocupa de la gestión de listas de reproducción destacadas.
+
+Uso de clases y funciones de otros archivos: El controlador utiliza la clase PrivateController del mismo espacio de nombres, la clase Renderer del espacio de nombres Views, así como la clase Highligthsplaylists del espacio de nombres Dao\Highligthsplaylists. Además, utiliza las clases Site y Validators del espacio de nombres Utilities.
+
+Atributos privados: El controlador tiene varios atributos privados, como $highligths_id, $playlist_id y $highligths_description, que almacenan datos relacionados con las listas de reproducción destacadas.
+
+Método run(): Este método se ejecuta cuando se solicita el controlador y se encarga de inicializar el controlador, recuperar los datos necesarios para la vista y renderizar la plantilla correspondiente.
+
+Inicialización y recuperación de datos: En el método run(), se inicializan los datos necesarios para la vista, como los nombres de los atributos de las listas de reproducción destacadas, y se recupera la información de las listas de reproducción destacadas utilizando el método getHighligthsplaylist() de la clase DAOHighligthsplaylist.
+
+Preparación de datos para la vista: Se preparan los datos necesarios para la vista, como la información de las listas de reproducción destacadas y los permisos de usuario.
+
+Renderización de la vista: Finalmente, se renderiza la plantilla de la lista de reproducción destacada utilizando el motor de renderización Renderer y se pasan los datos preparados en el array $viewData. */
 namespace Controllers\Highligthsplaylists;
 
 use Controllers\PrivateController;
