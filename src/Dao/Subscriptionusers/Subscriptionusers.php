@@ -22,6 +22,7 @@
  */
 
 namespace Dao\Subscriptionusers;
+/*El siguiente codigo se encarga de hacer las consultas CRUD para la clase del mismo nombre*/
 
 use Dao\Table;
 

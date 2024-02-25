@@ -22,6 +22,7 @@
  */
 namespace Dao\Offers; 
 use Dao\Table; 
+/*El siguiente codigo se encarga de hacer las consultas CRUD para la clase del mismo nombre*/
 class Offers extends Table{
     
   private $id_offer;

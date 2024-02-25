@@ -22,6 +22,7 @@
  */
 namespace Dao\Popularitys; 
 use Dao\Table; 
+/*El siguiente codigo se encarga de hacer las consultas CRUD para la clase del mismo nombre*/
 class Popularitys extends Table{
     
   private $id_popularity;

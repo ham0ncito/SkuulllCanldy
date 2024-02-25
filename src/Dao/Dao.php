@@ -21,7 +21,7 @@
  * @link       https://www.php.net/docs.php
  */
 namespace Dao;
-
+/*Hace la conexion a la base de datos tomando los parametros del documento params */
 class Dao {
     private static $_conn = null;
 

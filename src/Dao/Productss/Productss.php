@@ -24,6 +24,7 @@
 namespace Dao\Productss;
 
 use Dao\Table;
+/*El siguiente codigo se encarga de hacer las consultas CRUD para la clase del mismo nombre*/
 
 class Productss extends Table
 {

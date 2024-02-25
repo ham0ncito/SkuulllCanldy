@@ -20,7 +20,27 @@
  * @author     SkullCanldy
  * @link       https://www.php.net/docs.php
  */
+/*
+Este fragmento de código PHP define una clase llamada Playlists en el espacio de nombres Controllers\Playlists. Aquí hay un resumen de lo que hace esta clase:
+Espacio de nombres (namespace): La clase está dentro del espacio de nombres Controllers\Playlists, lo que sugiere que esta clase maneja la lógica relacionada con listas de reproducción.
 
+Uso de clases y namespaces: La clase utiliza clases y namespaces como Controllers\PrivateController, Views\Renderer, Dao\Playlists\Playlists, Utilities\Site y Utilities\Validators.
+
+Propiedades privadas: La clase tiene propiedades privadas que representan los datos relacionados con las listas de reproducción, como el ID de la lista de reproducción (id_playlist), el nombre de la lista de reproducción (playlist_name), la descripción de la lista de reproducción (playlist_description), etc.
+
+Método run(): Este método es el punto de entrada de la clase. Inicializa la clase, procesa el envío del formulario si lo hay, prepara los datos para la vista y finalmente renderiza la vista.
+
+Inicialización: El método init() inicializa la clase, determinando el modo de operación (INS, UPD, DEL, DSP) y obteniendo los datos de la lista de reproducción si es necesario.
+
+Manejo de errores: El método handleError() redirige al usuario a la lista de reproducción con un mensaje de error si ocurre algún problema.
+
+Validación de datos del formulario: El método validateFormData() valida los datos del formulario, como si los campos obligatorios están vacíos.
+
+Procesamiento de la acción: El método processAction() ejecuta la acción correspondiente (INS, UPD, DEL) según el modo de operación.
+
+Preparación de datos para la vista: El método prepareViewData() prepara los datos necesarios para la vista, como los datos de la lista de reproducción, el modo de operación, los mensajes de error, etc.
+
+Renderizado de la vista: El método render() renderiza la vista correspondiente utilizando el Renderer y pasa los datos preparados para la vista. */
 namespace Controllers\Playlists;
 
 use Controllers\PrivateController;

@@ -20,7 +20,30 @@
  * @author     SkullCanldy
  * @link       https://www.php.net/docs.php
  */
+/*
+Este fragmento de código PHP define una clase llamada Playlistsongss en el espacio de nombres Controllers\Playlistsongss. Aquí hay un resumen de lo que hace esta clase:
 
+Documentación: La clase está bien documentada con detalles sobre la versión de PHP, la fecha de creación y la última actualización, el autor, el número de problema y ticket, y los cambios aprobados.
+
+Espacio de nombres (namespace): La clase está dentro del espacio de nombres Controllers\Playlistsongss, lo que sugiere que esta clase maneja la lógica relacionada con las canciones de una lista de reproducción.
+
+Uso de clases y namespaces: La clase utiliza clases y namespaces como Controllers\PrivateController, Views\Renderer, Dao\Playlistsongss\Playlistsongss, Utilities\Site y Utilities\Validators.
+
+Propiedades privadas: La clase tiene propiedades privadas que representan los datos relacionados con las canciones de la lista de reproducción, como el ID de la lista de reproducción (playlist_id), el ID de la canción (song_id), la fecha en que se agregó la canción a la lista de reproducción (playlistSong_added_at) y el estado de la canción en la lista de reproducción (playlistSong_status). También hay propiedades para almacenar errores, el modo de operación, la URL de la lista de reproducción, etc.
+
+Método run(): Este método es el punto de entrada de la clase. Inicializa la clase, valida los datos del formulario (si es un envío de formulario) y procesa la acción correspondiente. Luego, prepara los datos para la vista y la renderiza.
+
+Inicialización (init()): Este método inicializa la clase, verificando el modo de operación y recuperando datos si el modo no es "INS" (insertar).
+
+Manejo de errores: La clase maneja errores redirigiendo a la URL de la lista de reproducción con un mensaje de error en caso de que ocurra un error.
+
+Validación de datos del formulario: La clase valida los datos del formulario para asegurarse de que los campos obligatorios estén presentes.
+
+Procesamiento de la acción: Dependiendo del modo de operación (insertar, actualizar, eliminar), la clase procesa la acción correspondiente utilizando métodos del DAO DAOPlaylistsongs.
+
+Preparación de datos para la vista: La clase prepara los datos necesarios para la vista, como el modo de operación, los datos de la canción de la lista de reproducción, los mensajes de error, etc.
+
+Renderizado de la vista: Finalmente, la clase renderiza la vista correspondiente utilizando el Renderer y pasa los datos preparados para la vista. */
 namespace Controllers\Playlistsongss;
 
 use Controllers\PrivateController;

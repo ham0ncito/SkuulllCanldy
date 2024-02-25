@@ -28,7 +28,27 @@ use Views\Renderer;
 use Dao\Offersubscriptions\Offersubscriptions as DAOOffersubscription;
 use Utilities\Site;
 use Utilities\Validators;
+/*
+Este fragmento de código PHP define una clase llamada Offersubscriptions en el espacio de nombres Controllers\Offersubscriptions. Aquí tienes un resumen de lo que hace esta clase:
+Espacio de nombres (namespace): La clase está dentro del espacio de nombres Controllers\Offersubscriptions, lo que sugiere que esta clase maneja la lógica relacionada con las suscripciones a ofertas.
 
+Uso de clases y namespaces: La clase utiliza clases y namespaces como Controllers\PrivateController, Views\Renderer, Dao\Offersubscriptions\Offersubscriptions, Utilities\Site y Utilities\Validators.
+
+Propiedades privadas: La clase tiene propiedades privadas que representan los datos relacionados con las suscripciones a ofertas, como el ID de oferta (id_offer), el ID de suscripción (id_subscription), y el precio de la oferta (price_offer).
+
+Método run(): Este método es el punto de entrada de la clase. Inicializa la clase, procesa el envío del formulario si lo hay, prepara los datos para la vista y finalmente renderiza la vista.
+
+Inicialización: El método init() inicializa la clase, determinando el modo de operación (INS, UPD, DEL, DSP) y obteniendo los datos de la oferta si es necesario.
+
+Manejo de errores: El método handleError() redirige al usuario a la lista de ofertas con un mensaje de error si ocurre algún problema.
+
+Validación de datos del formulario: El método validateFormData() valida los datos del formulario, como si los campos obligatorios están vacíos.
+
+Procesamiento de la acción: El método processAction() ejecuta la acción correspondiente (INS, UPD, DEL) según el modo de operación.
+
+Preparación de datos para la vista: El método prepareViewData() prepara los datos necesarios para la vista, como los datos de la oferta, el modo de operación, los mensajes de error, etc.
+
+Renderizado de la vista: El método render() renderiza la vista correspondiente utilizando el Renderer y pasa los datos preparados para la vista. */
 class Offersubscriptions extends PrivateController
 {
     private $id_offer;

@@ -21,6 +21,8 @@
  * @link       https://www.php.net/docs.php
  */
 namespace Dao\Usuarios; 
+/*El siguiente codigo se encarga de hacer las consultas CRUD para la clase del mismo nombre*/
+
 use Dao\Table; 
 class Usuarios extends Table{
     

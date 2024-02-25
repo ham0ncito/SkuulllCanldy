@@ -22,7 +22,7 @@
  */
 
 namespace Dao\Cart;
-
+/*El siguiente codigo se encarga de hacer las consultas CRUD para la clase del mismo nombre*/
 class Cart extends \Dao\Table
 {
     public static function getProductosDisponibles()

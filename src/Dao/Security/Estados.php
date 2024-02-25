@@ -20,7 +20,7 @@
  * @author     SkullCanldy
  * @link       https://www.php.net/docs.php
  */
-
+/*Una clase de tipos */
 namespace Dao\Security;
 
 final class Estados extends \Utilities\Enum

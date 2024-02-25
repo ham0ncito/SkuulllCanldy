@@ -20,6 +20,24 @@
  * @author     SkullCanldy
  * @link       https://www.php.net/docs.php
  */
+
+ /*Este código PHP define una clase llamada Security en el espacio de nombres Dao\Security. Aquí hay un resumen de las características y funcionalidades principales de esta clase:
+
+Espacio de nombres (namespace): La clase está dentro del espacio de nombres Dao\Security, lo que indica que está relacionada con aspectos de seguridad dentro de la capa de acceso a datos.
+
+Uso de clases y namespaces: La clase hace uso de otras clases y namespaces como Utilities\User, Utilities\Secrets\Secrets, Utilities\Context, y Utilities\Paging.
+
+Constantes definidas: Se define una constante llamada PASSWORD_ALGORITHM que determina el algoritmo de cifrado de contraseñas basado en la versión de PHP.
+
+Métodos estáticos: La clase define varios métodos estáticos para realizar operaciones relacionadas con la seguridad de usuarios, como obtener usuarios, agregar nuevos usuarios, obtener información sobre usuarios por correo electrónico, verificar contraseñas, etc.
+
+Manejo de contraseñas: La clase implementa métodos para cifrar y verificar contraseñas utilizando la función password_hash() y password_verify() para garantizar la seguridad de las contraseñas de los usuarios.
+
+Consultas SQL: La clase utiliza consultas SQL para interactuar con la base de datos y realizar operaciones como la obtención de usuarios, roles, funciones, etc.
+
+Validación de datos: Se realizan validaciones de datos, como validar correos electrónicos y contraseñas antes de procesarlos.
+
+Seguridad adicional: Se implementan funciones para verificar los roles de los usuarios, agregar nuevas funciones y roles, y manejar la asignación de funciones a roles y roles a usuarios. */
 namespace Dao\Security;
 Use Utilities\User as User; 
 Use Utilities\Secrets\Secrets as Secret; 

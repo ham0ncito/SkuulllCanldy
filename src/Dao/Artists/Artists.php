@@ -22,6 +22,7 @@
  */
 namespace Dao\Artists; 
 use Dao\Table; 
+/*El siguiente codigo se encarga de hacer las consultas CRUD para la clase del mismo nombre*/
 class Artists extends Table{
     
   private $id_artist;

@@ -22,7 +22,7 @@
  */
 
 namespace Utilities\Escupitajo;
-
+/*Generador del MVC segun el nombre de una tabla dentro de la base de datos. Funciona tomando el nombre, consultando, luego toma la estructura de los campos, y va generando rutas con el nombre; luego va generando los archivos de manera automatica */
 use Dao\Table;
 
 class GenerateCRUD extends Table
