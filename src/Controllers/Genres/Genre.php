@@ -5,6 +5,18 @@
  *
  * @Date 22/08/23
  * @Last Update 20/2/24
+ * Updated by Skuul2candly
+ * Issue Number : 23
+ * Ticker Number : 23
+ * Changes Approved on 20/2/24
+ * Tested by Skullcanldy
+ * Description: 
+	This is the first documentation commit
+ * Disclosure Agreement: 
+	Keep this information in secret
+ * Last changes done: 
+	Documentation Added
+	
  * @author     SkullCanldy
  * @link       https://www.php.net/docs.php
  */
@@ -19,7 +31,19 @@ use Utilities\Site;
 use Utilities\Validators;
 use Utilities\Context;
 use Utilities\Paging;
+/*Este código PHP define un controlador llamado Genre que se encarga de manejar los géneros de una aplicación. Aquí está su funcionalidad:
 
+Espacio de nombres (namespace): El controlador está dentro del espacio de nombres Controllers\Genres, lo que sugiere que pertenece a un conjunto de controladores relacionados con los géneros de la aplicación.
+
+Uso de clases y funciones de otros archivos: El controlador utiliza la clase PrivateController y la clase Renderer del espacio de nombres Views, así como la clase Genre del espacio de nombres Dao\Genres. Además, utiliza las clases Site y Validators del espacio de nombres Utilities.
+
+Atributos privados: El controlador tiene varios atributos privados, como $id_genre, $name_genre, $description_genre, $status_genre y $image_genre, que almacenan datos relacionados con los géneros y su gestión.
+
+Método run(): Este método se ejecuta cuando se solicita el controlador y se encarga de agregar enlaces CSS, preparar los datos para la vista y renderizar la plantilla correspondiente.
+
+Preparación de datos para la vista: El controlador prepara los datos necesarios para la vista, incluyendo los nombres de los campos, los datos de los géneros obtenidos a través de DAOGenre::getGenre() y las comprobaciones de permisos de usuario.
+
+Renderización de la vista: Finalmente, el controlador renderiza la plantilla de lista de géneros utilizando el motor de renderización Renderer y pasa los datos preparados en el array $viewData. */
 class Genre extends PrivateController
 {
     private $id_genre;

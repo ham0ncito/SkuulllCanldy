@@ -5,6 +5,18 @@
  *
  * @Date 22/08/23
  * @Last Update 20/2/24
+ * Updated by Skuul2candly
+ * Issue Number : 23
+ * Ticker Number : 23
+ * Changes Approved on 20/2/24
+ * Tested by Skullcanldy
+ * Description: 
+	This is the first documentation commit
+ * Disclosure Agreement: 
+	Keep this information in secret
+ * Last changes done: 
+	Documentation Added
+	
  * @author     SkullCanldy
  * @link       https://www.php.net/docs.php
  */
@@ -17,6 +29,28 @@ use Views\Renderer;
 use Dao\Genres\Genres as DAOGenre;
 use Utilities\Site;
 use Utilities\Validators;
+
+/*
+
+Este código PHP define un controlador llamado Genres que se encarga de manejar los géneros de una aplicación. Aquí está su funcionalidad:
+
+Espacio de nombres (namespace): El controlador está dentro del espacio de nombres Controllers\Genres, lo que sugiere que pertenece a un conjunto de controladores relacionados con los géneros de la aplicación.
+
+Uso de clases y funciones de otros archivos: El controlador utiliza la clase PrivateController del mismo espacio de nombres, la clase Renderer del espacio de nombres Views, así como la clase Genres del espacio de nombres Dao\Genres. Además, utiliza las clases Site y Validators del espacio de nombres Utilities.
+
+Atributos privados: El controlador tiene varios atributos privados, como $id_genre, $name_genre, $description_genre, $status_genre y $image_genre, que almacenan datos relacionados con los géneros y su gestión. También hay un atributo $genre, que es un array asociativo con los mismos nombres de los atributos anteriores, pero inicializados a valores vacíos.
+
+Método run(): Este método se ejecuta cuando se solicita el controlador y se encarga de inicializar el controlador, procesar los datos del formulario si se ha enviado un formulario (isPostBack()), preparar los datos para la vista y renderizar la plantilla correspondiente.
+
+Inicialización: El método init() se encarga de inicializar el modo del controlador ($mode) y los datos del género dependiendo de si se está insertando uno nuevo (INS) o se está actualizando, eliminando o mostrando detalles de uno existente.
+
+Validación de datos del formulario: El método validateFormData() valida los datos del formulario, verificando si los campos obligatorios están vacíos y estableciendo mensajes de error si es necesario.
+
+Procesamiento de acciones: El método processAction() realiza las acciones correspondientes según el modo en el que se encuentre el controlador: inserción, actualización o eliminación de un género.
+
+Preparación de datos para la vista: El método prepareViewData() prepara los datos necesarios para la vista, incluyendo el modo, los datos del género, los mensajes de error, el token XSS para protección contra ataques CSRF, y los permisos de usuario.
+
+Renderización de la vista: Finalmente, el método render() renderiza la plantilla de formulario de género utilizando el motor de renderización Renderer y pasa los datos preparados en el array $viewData. */
 
 class Genres extends PrivateController
 {

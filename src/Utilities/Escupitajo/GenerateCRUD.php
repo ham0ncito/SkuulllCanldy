@@ -5,6 +5,18 @@
  *
  * @Date 22/08/23
  * @Last Update 20/2/24
+ * Updated by Skuul2candly
+ * Issue Number : 23
+ * Ticker Number : 23
+ * Changes Approved on 20/2/24
+ * Tested by Skullcanldy
+ * Description: 
+	This is the first documentation commit
+ * Disclosure Agreement: 
+	Keep this information in secret
+ * Last changes done: 
+	Documentation Added
+	
  * @author     SkullCanldy
  * @link       https://www.php.net/docs.php
  */
@@ -292,6 +304,18 @@ class GenerateCRUD extends Table
  *
  * @Date 22/08/23
  * @Last Update 20/2/24
+ * Updated by Skuul2candly
+ * Issue Number : 23
+ * Ticker Number : 23
+ * Changes Approved on 20/2/24
+ * Tested by Skullcanldy
+ * Description: 
+	This is the first documentation commit
+ * Disclosure Agreement: 
+	Keep this information in secret
+ * Last changes done: 
+	Documentation Added
+	
  * @author     SkullCanldy
  * @link       https://www.php.net/docs.php
  */' . PHP_EOL . "namespace Controllers\\{$fields}s;\n{$uses}\nclass {$fields}s extends PublicController {\n{$fieldsContent}{$variables}{$run}{$init}{$validator}{$process}{$viewData}{$render}\n}" . PHP_EOL;
@@ -586,6 +610,18 @@ class GenerateCRUD extends Table
  *
  * @Date 22/08/23
  * @Last Update 20/2/24
+ * Updated by Skuul2candly
+ * Issue Number : 23
+ * Ticker Number : 23
+ * Changes Approved on 20/2/24
+ * Tested by Skullcanldy
+ * Description: 
+	This is the first documentation commit
+ * Disclosure Agreement: 
+	Keep this information in secret
+ * Last changes done: 
+	Documentation Added
+	
  * @author     SkullCanldy
  * @link       https://www.php.net/docs.php
  */' . PHP_EOL . "namespace Controllers\\{$fields}s;\n{$uses}\nuse Utilities\Context;\nuse Utilities\Paging;\nclass {$fields} extends PublicController {\n{$fieldsContent}{$run}\n}" . PHP_EOL;
@@ -721,6 +757,18 @@ class GenerateCRUD extends Table
  *
  * @Date 22/08/23
  * @Last Update 20/2/24
+ * Updated by Skuul2candly
+ * Issue Number : 23
+ * Ticker Number : 23
+ * Changes Approved on 20/2/24
+ * Tested by Skullcanldy
+ * Description: 
+	This is the first documentation commit
+ * Disclosure Agreement: 
+	Keep this information in secret
+ * Last changes done: 
+	Documentation Added
+	
  * @author     SkullCanldy
  * @link       https://www.php.net/docs.php
  */

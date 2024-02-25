@@ -5,10 +5,28 @@
  *
  * @Date 22/08/23
  * @Last Update 20/2/24
+ * Updated by Skuul2candly
+ * Issue Number : 23
+ * Ticker Number : 23
+ * Changes Approved on 20/2/24
+ * Tested by Skullcanldy
+ * Description: 
+	This is the first documentation commit
+ * Disclosure Agreement: 
+	Keep this information in secret
+ * Last changes done: 
+	Documentation Added
+	
  * @author     SkullCanldy
  * @link       https://www.php.net/docs.php
  */
+/*Este controlador PHP, llamado "Funciones", se encarga de gestionar las funciones de una aplicación web. Aquí está su funcionalidad:
 
+run(): Este método se ejecuta cuando se accede a la página de gestión de funciones. Agrega un enlace al archivo CSS correspondiente, inicializa los datos necesarios y verifica si el usuario tiene permisos de administrador. Si es un administrador, obtiene las funciones desde la base de datos y las almacena en $viewData['funciones']. Luego, renderiza la vista "funcioneslist" pasando los datos necesarios.
+
+prepareViewData(): Este método prepara los datos necesarios para renderizar la vista. Incluye los datos de las funciones, así como información sobre si la lista de funciones está vacía y los permisos del usuario.
+
+render(): Este método renderiza la vista "funcioneslist" utilizando el motor de renderización Renderer, pasando los datos preparados en el array $viewData. */
 namespace Controllers\Funcioness;
 
 use Controllers\PrivateController;

@@ -5,10 +5,36 @@
  *
  * @Date 22/08/23
  * @Last Update 20/2/24
+ * Updated by Skuul2candly
+ * Issue Number : 23
+ * Ticker Number : 23
+ * Changes Approved on 20/2/24
+ * Tested by Skullcanldy
+ * Description: 
+	This is the first documentation commit
+ * Disclosure Agreement: 
+	Keep this information in secret
+ * Last changes done: 
+	Documentation Added
+	
  * @author     SkullCanldy
  * @link       https://www.php.net/docs.php
  */
+/*Este controlador PHP, llamado "Funcionesroless", se encarga de gestionar las funciones relacionadas con roles de skullcanldy. Aquí está su funcionalidad:
 
+run(): Este método se ejecuta cuando se accede a la página de gestión de funciones relacionadas con roles. Inicializa los datos necesarios y verifica si se está enviando un formulario mediante el método POST. Si es así, valida los datos del formulario y procesa la acción correspondiente. Luego, prepara los datos necesarios para renderizar la vista y la muestra.
+
+init(): Este método inicializa el controlador, verificando si se proporciona un modo de operación válido a través de la URL y obteniendo los datos de la función relacionada con roles si es necesario.
+
+handleError(): Este método redirige al usuario a la página de listado de funciones relacionadas con roles con un mensaje de error en caso de que ocurra un problema durante la ejecución.
+
+validateFormData(): Este método valida los datos enviados a través del formulario, como el código de roles, el código de función, el rol de función y la explicación de la función. Si hay errores de validación, los almacena en el array $error.
+
+processAction(): Este método procesa la acción según el modo de operación especificado (INS para insertar, UPD para actualizar, DEL para eliminar). Realiza la operación correspondiente en la base de datos y redirige al usuario a la página de listado de funciones relacionadas con roles con un mensaje apropiado.
+
+prepareViewData(): Este método prepara los datos necesarios para renderizar la vista. Incluye el modo de operación, los datos de la función relacionada con roles, los permisos de usuario y un token XSS para protección contra ataques CSRF.
+
+render(): Este método renderiza la vista "funciones_rolesform" utilizando el motor de renderización Renderer, pasando los datos preparados en el array $viewData. */
 namespace Controllers\Funcionesroless;
 
 use Controllers\PrivateController;

@@ -5,10 +5,42 @@
  *
  * @Date 22/08/23
  * @Last Update 20/2/24
+ * Updated by Skuul2candly
+ * Issue Number : 23
+ * Ticker Number : 23
+ * Changes Approved on 20/2/24
+ * Tested by Skullcanldy
+ * Description: 
+	This is the first documentation commit
+ * Disclosure Agreement: 
+	Keep this information in secret
+ * Last changes done: 
+	Documentation Added
+	
  * @author     SkullCanldy
  * @link       https://www.php.net/docs.php
  */
+/*Este código PHP define un controlador llamado Funcioness que se encarga de manejar las funciones de una aplicación web. Aquí está su funcionalidad:
 
+Espacio de nombres (namespace): El controlador está dentro del espacio de nombres Controllers\Funcioness, lo que sugiere que pertenece a un conjunto de controladores relacionados con las funciones de la aplicación.
+
+Uso de clases y funciones de otros archivos: El controlador utiliza la clase PrivateController y la clase Renderer del espacio de nombres Views, así como la clase Funcioness del espacio de nombres Dao\Funcioness. Además, utiliza las clases Site y Validators del espacio de nombres Utilities.
+
+Atributos privados: El controlador tiene varios atributos privados, como $fncod, $fndsc, $fnest, $fntyp, $funciones, $listUrl, $mode, $viewData, $error, $xss_token_funciones y $modes, que almacenan datos relacionados con las funciones y la gestión de formularios.
+
+Método run(): Este método se ejecuta cuando se solicita el controlador y se encarga de inicializar el controlador, procesar los datos del formulario si se ha enviado uno y preparar los datos para renderizar la vista correspondiente.
+
+Método init(): Este método inicializa el controlador, estableciendo el modo en función de los parámetros de la solicitud GET y obteniendo los datos de la función si es necesario.
+
+Método handleError(): Este método redirige al usuario a la página de lista de funciones con un mensaje de error en caso de que ocurra algún error durante el procesamiento.
+
+Método validateFormData(): Este método valida los datos enviados a través del formulario, verificando si los campos obligatorios están presentes y maneja los errores si es necesario.
+
+Método processAction(): Este método procesa la acción realizada por el usuario, ya sea insertar, actualizar o eliminar una función, según el modo en que se encuentre el formulario.
+
+Método prepareViewData(): Este método prepara los datos necesarios para renderizar la vista, incluyendo los datos de las funciones, los mensajes de error, los tokens XSS y otros datos relacionados con la interfaz de usuario.
+
+Método render(): Este método renderiza la vista correspondiente utilizando el motor de renderización Renderer y pasa los datos preparados en el array $this->viewData. */
 namespace Controllers\Funcioness;
 
 use Controllers\PrivateController;

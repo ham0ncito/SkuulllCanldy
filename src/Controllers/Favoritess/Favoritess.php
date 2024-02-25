@@ -5,10 +5,22 @@
  *
  * @Date 22/08/23
  * @Last Update 20/2/24
+ * Updated by Skuul2candly
+ * Issue Number : 23
+ * Ticker Number : 23
+ * Changes Approved on 20/2/24
+ * Tested by Skullcanldy
+ * Description: 
+	This is the first documentation commit
+ * Disclosure Agreement: 
+	Keep this information in secret
+ * Last changes done: 
+	Documentation Added
+	
  * @author     SkullCanldy
  * @link       https://www.php.net/docs.php
  */
-/*Este controlador PHP, llamado "Favoritess", se encarga de gestionar la creación, edición y eliminación de favoritos en una aplicación web. Aquí está su funcionalidad:
+/*Este controlador PHP, llamado "Favoritess", se encarga de gestionar la creación, edición y eliminación de favoritos de skullcanldy. Aquí está su funcionalidad:
 
 run(): Este método se ejecuta cuando se accede a la página de gestión de favoritos. Inicializa los datos necesarios, valida los datos del formulario si se ha enviado un POST y procesa la acción correspondiente.
 
