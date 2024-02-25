@@ -136,8 +136,10 @@
     </div>
 
   
-    <button onclick="scrollToTop()" class="fixed bottom-8 right-8 bg-blue-500 text-white px-4 py-2 rounded-md shadow-md hover:bg-blue-600 focus:outline-none">
-      Scroll to Top
+    <button onclick="scrollToTop()" class="fixed bottom-8 right-8 bg-blue-500 text-white p-2 rounded-full shadow-md hover:bg-blue-600 focus:outline-none transition-colors duration-300">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block m-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+      </svg>
     </button>
   </footer>
   

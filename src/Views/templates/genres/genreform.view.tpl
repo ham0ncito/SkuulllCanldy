@@ -1,4 +1,4 @@
-<section class="bg-gray-100  rounded-lg shadow-lg p-4 mx-8">
+<section class="bg-gray-100 text-black rounded-lg shadow-lg p-4 mx-8">
     <h1 class="text-6xl font-bold mb-4 text-center"> Descripcion genre {{modedsc}}</h2>
     
 {{with genre}}

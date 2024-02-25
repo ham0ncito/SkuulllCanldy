@@ -136,9 +136,9 @@ class Store extends PrivateController
     $_SESSION['token'] = $this->viewData['token'];
     $this->viewData['tokenSub'] = md5($phrase . 'subscription' . date('Ymdhisu') . 'subscription');
 
-    $_SESSION['items'] = Products::getProducts();
-   self::calculate();
-
+    $_SESSION['items'] = 
+  
+   $this->viewData['products'] =Products::getProducts();
     Renderer::render("store\store", $viewData);
   }
 private function calculate()
@@ -149,9 +149,9 @@ private function calculate()
         $pagination = Paging::getPagination($totalProducts, $itemsPerPage, $currentPage, "index.php?page=Store_Store", "Store_Store");
         $offset = ($currentPage - 1) * $itemsPerPage;
         $products = Products::getProductsPaginated($itemsPerPage, $offset);
-        $this->viewData['products'] = $products;
+        
         $this->viewData['pagination'] = $pagination;
-        Renderer::render("store\store", $this->viewData);
+      
     }
 
   static private function cart()
