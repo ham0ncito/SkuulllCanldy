@@ -20,7 +20,37 @@
  * @author     SkullCanldy
  * @link       https://www.php.net/docs.php
  */
+/*
+Este fragmento de código PHP define una clase llamada Subscriptions dentro del espacio de nombres Controllers\Subscriptions. Aquí tienes una descripción de lo que hace esta clase:
 
+
+Espacio de nombres (namespace): La clase está dentro del espacio de nombres Controllers\Subscriptions, lo que sugiere que esta clase se encarga de la lógica relacionada con las suscripciones en el sistema.
+
+Clase Subscriptions: Esta clase extiende la clase PrivateController, lo que podría implicar que las funcionalidades proporcionadas por esta clase están destinadas a ser accedidas solo por usuarios autenticados.
+
+Propiedades de la clase:
+
+$id_subscription, $subscription_description, $subscription_duration y $subscription_price: Son propiedades privadas que almacenan información sobre una suscripción.
+$subscription: Es un array que contiene los datos de una suscripción, inicialmente vacío.
+$listUrl: Es una cadena que representa la URL de la lista de suscripciones.
+$mode: Es una cadena que indica el modo de operación actual (por defecto es "INS" para inserción).
+$viewData: Es un array que almacenará los datos necesarios para renderizar la vista.
+$error: Es un array que almacenará mensajes de error de validación de datos.
+$xss_token_subscription: Es una cadena que contendrá un token para prevenir ataques XSS.
+$modes: Es un array que mapea los modos de operación con sus descripciones.
+Método run(): Este método es público y no devuelve ningún valor (void). Se encarga de ejecutar la lógica principal de la clase. Dentro de este método, se inicializan las propiedades, se procesa el envío del formulario, se preparan los datos de vista y se renderiza la vista.
+
+Método init(): Este método privado se encarga de inicializar la clase, verificando el modo de operación y obteniendo los datos de la suscripción si es necesario.
+
+Método handleError(): Este método privado redirige a la URL de la lista de suscripciones con un mensaje de error en caso de algún problema.
+
+Método validateFormData(): Este método privado valida los datos enviados a través del formulario, verificando que los campos obligatorios no estén vacíos.
+
+Método processAction(): Este método privado procesa la acción según el modo de operación actual (inserción, actualización o eliminación) utilizando los datos de la suscripción.
+
+Método prepareViewData(): Este método privado prepara los datos necesarios para renderizar la vista, incluyendo los datos de la suscripción, mensajes de error, token XSS, etc.
+
+Método render(): Este método privado renderiza la vista correspondiente utilizando el objeto Renderer. */
 namespace Controllers\Subscriptions;
 
 use Controllers\PrivateController;

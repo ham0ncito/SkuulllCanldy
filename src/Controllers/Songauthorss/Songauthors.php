@@ -20,7 +20,18 @@
  * @author     SkullCanldy
  * @link       https://www.php.net/docs.php
  */
+/*
+Este fragmento de código PHP define una clase llamada Songauthors dentro del espacio de nombres Controllers\Songauthorss. Aquí hay una descripción de lo que hace esta clase:
 
+Espacio de nombres (namespace): La clase está dentro del espacio de nombres Controllers\Songauthorss, lo que sugiere que esta clase se encarga de la lógica relacionada con los autores de canciones en el sistema.
+
+Clase Songauthors: Esta clase extiende la clase PrivateController, lo que podría implicar que las funcionalidades proporcionadas por esta clase están destinadas a ser accesibles solo para usuarios autenticados.
+
+Propiedades privadas: La clase tiene varias propiedades privadas que representan los atributos de un autor de canción, como artist_id, song_id, song_author_created_at, etc.
+
+Método run(): Este método es público y no devuelve ningún valor (void). Se encarga de ejecutar la lógica principal de la clase, que incluye agregar un enlace al estilo de los autores de canciones, obtener los datos de los autores de canciones, verificar si están vacíos y renderizar la vista correspondiente.
+
+Renderización de la vista: Utiliza el motor de plantillas Renderer para renderizar la vista "songauthors/songauthorslist" con los datos obtenido */
 namespace Controllers\Songauthorss;
 
 use Controllers\PrivateController;

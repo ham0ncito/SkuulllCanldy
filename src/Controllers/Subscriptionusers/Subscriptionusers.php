@@ -20,7 +20,23 @@
  * @author     SkullCanldy
  * @link       https://www.php.net/docs.php
  */
+/*
+Este fragmento de código PHP define una clase llamada Subscriptionusers dentro del espacio de nombres Controllers\Subscriptionusers. Aquí hay una descripción de lo que hace esta clase:
+Espacio de nombres (namespace): La clase está dentro del espacio de nombres Controllers\Subscriptionusers, lo que sugiere que esta clase se encarga de la lógica relacionada con los usuarios de suscripción en el sistema.
 
+Clase Subscriptionusers: Esta clase extiende la clase PrivateController, lo que podría implicar que las funcionalidades proporcionadas por esta clase están destinadas a ser accedidas solo por usuarios autenticados.
+
+Método run(): Este método es público y no devuelve ningún valor (void). Se encarga de inicializar la clase, procesar los datos del formulario si se envía y preparar los datos de la vista antes de renderizarla.
+
+Métodos init() y handleError(): init() inicializa la clase y maneja los posibles errores, redirigiendo al usuario a la URL especificada con un mensaje de error.
+
+Método validateFormData(): Este método se encarga de validar los datos enviados a través del formulario. Comprueba si los campos obligatorios están vacíos y establece mensajes de error en consecuencia.
+
+Método processAction(): Este método procesa la acción según el modo en el que se encuentra la clase (INS, UPD, DEL). Realiza operaciones como inserción, actualización o eliminación de usuarios de suscripción en la base de datos.
+
+Método prepareViewData(): Este método prepara los datos de vista necesarios para renderizar el formulario de usuario de suscripción. Establece el modo, los datos del usuario de suscripción, mensajes de error, y tokens XSS para protección contra ataques CSRF.
+
+Método render(): Este método renderiza la vista del formulario de usuario de suscripción utilizando el objeto Renderer. */
 namespace Controllers\Subscriptionusers;
 
 use Controllers\PrivateController;

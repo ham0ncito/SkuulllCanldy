@@ -21,6 +21,26 @@
  * @link       https://www.php.net/docs.php
  */
 
+/*Este fragmento de código PHP define una clase llamada Songs dentro del espacio de nombres Controllers\Songs. Aquí está una descripción de lo que hace esta clase:
+
+Espacio de nombres (namespace): La clase está dentro del espacio de nombres Controllers\Songs, lo que sugiere que esta clase se encarga de la lógica relacionada con las canciones en el sistema.
+
+Clase Songs: Esta clase extiende la clase PrivateController, lo que podría implicar que las funcionalidades proporcionadas por esta clase están destinadas a ser accesibles solo para usuarios autenticados.
+
+Propiedades privadas: La clase tiene varias propiedades privadas que representan los atributos de una canción, como id_song, title_song, duration, etc. También tiene un array llamado $song que contiene la estructura de datos de una canción.
+
+Método run(): Este método es público y no devuelve ningún valor (void). Se encarga de ejecutar la lógica principal de la clase, que incluye inicializar la clase, procesar los datos enviados por el formulario, preparar los datos para la vista y renderizar la vista correspondiente.
+
+Método init(): Este método inicializa la clase, determinando el modo de operación (INS, UPD, DEL, DSP) y obteniendo los datos de la canción si es necesario.
+
+Método validateFormData(): Este método valida los datos del formulario enviado por el usuario, verificando si todos los campos obligatorios están presentes y si el token de seguridad es válido.
+
+Método processAction(): Este método procesa la acción según el modo de operación. Inserta, actualiza o elimina una canción en función de la acción solicitada.
+
+Método prepareViewData(): Este método prepara los datos necesarios para renderizar la vista. Incluye información sobre el modo de operación, los errores de validación, y el token XSS para protección contra ataques XSS.
+
+Método render(): Este método renderiza la vista correspondiente utilizando el motor de plantillas Renderer, proporcionando los datos necesarios para la vista. */
+
 namespace Controllers\Songs;
 
 use Controllers\PrivateController;

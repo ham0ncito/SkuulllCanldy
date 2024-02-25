@@ -20,7 +20,19 @@
  * @author     SkullCanldy
  * @link       https://www.php.net/docs.php
  */
+/*
+Este fragmento de código PHP define una clase llamada Videos dentro del espacio de nombres Controllers\Videos. Aquí está una descripción de lo que hace esta clase:
+Espacio de nombres (namespace): La clase está dentro del espacio de nombres Controllers\Videos, lo que sugiere que forma parte de un conjunto de controladores relacionados con videos en la aplicación.
 
+Clase Videos: Esta clase extiende la clase PrivateController, lo que indica que probablemente se requiera autenticación para acceder a las funcionalidades relacionadas con los videos.
+
+Propiedades privadas: La clase tiene varias propiedades privadas que representan los campos de un video, así como otras propiedades como listUrl, mode, viewData, error, y xss_token_video.
+
+Método run(): Este método es público y no devuelve ningún valor (void). Se encarga de inicializar la clase, procesar cualquier acción de formulario, preparar los datos de vista y renderizar la vista correspondiente.
+
+Métodos privados: La clase tiene varios métodos privados para ayudar con la inicialización, manejo de errores, validación de datos de formulario, procesamiento de acciones y preparación de datos de vista.
+
+Renderizado de vista: La clase utiliza el objeto Renderer para renderizar la vista videoform con los datos preparados */
 namespace Controllers\Videos;
 
 use Controllers\PrivateController;

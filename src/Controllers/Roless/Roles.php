@@ -21,6 +21,18 @@
  * @link       https://www.php.net/docs.php
  */
 
+/*Este archivo PHP define una clase llamada Roles dentro del espacio de nombres Controllers\Roless. Aquí tienes un resumen de lo que hace esta clase:
+
+Espacio de nombres (namespace): La clase está dentro del espacio de nombres Controllers\Roless, lo que sugiere que esta clase se encarga de la lógica relacionada con los roles.
+
+Uso de clases y namespaces: La clase utiliza clases y namespaces como Controllers\PrivateController, Views\Renderer, Dao\Roless\Roless, Utilities\Site, Utilities\Validators, Utilities\Context y Utilities\Paging.
+
+Propiedades privadas: La clase tiene varias propiedades privadas que representan los datos relacionados con los roles, como el código de rol (rolescod), la descripción del rol (rolesdsc) y el estado del rol (rolesest).
+
+Método run(): Este método es público y no devuelve ningún valor (void). Se encarga de agregar un enlace al estilo de los roles, preparar los datos para la vista y renderizarla. Además, verifica si el usuario tiene el rol de administrador antes de recuperar y mostrar los roles.
+
+Renderizado de la vista: Utiliza el Renderer para renderizar la vista roless/roleslist con los datos preparados. */
+
 namespace Controllers\Roless;
 
 use Controllers\PrivateController;

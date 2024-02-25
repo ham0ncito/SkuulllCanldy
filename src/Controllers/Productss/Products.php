@@ -20,7 +20,23 @@
  * @author     SkullCanldy
  * @link       https://www.php.net/docs.php
  */
+/*Este archivo PHP define una clase llamada Products dentro del espacio de nombres Controllers\Productss. Aquí hay un resumen de lo que hace esta clase:
 
+Espacio de nombres (namespace): La clase está dentro del espacio de nombres Controllers\Productss, lo que sugiere que esta clase se encarga de la lógica relacionada con la gestión de productos.
+
+Uso de clases y namespaces: La clase utiliza clases y namespaces como Controllers\PrivateController, Views\Renderer, Dao\Productss\Productss, Utilities\Site y Utilities\Validators.
+
+Propiedades privadas: La clase tiene varias propiedades privadas que representan los datos relacionados con los productos, como el ID del producto (productId), el nombre (productName), la descripción (productDescription), el precio (productPrice), la URL de la imagen (productImgUrl), el stock (productStock) y el estado (productStatus).
+
+Inicialización y renderización de la vista: El método run() se encarga de inicializar la clase, preparar los datos necesarios para la vista y luego renderizar la vista correspondiente.
+
+Obtención de datos de productos: La clase obtiene los datos de los productos utilizando el DAO (Objeto de Acceso a Datos) DAOProducts::getProducts() y los pasa a la vista para ser mostrados.
+
+Verificación de permisos de usuario: La clase verifica si el usuario tiene permisos de administrador para acceder a la lista de productos.
+
+Preparación de datos para la vista: La clase prepara los datos necesarios para renderizar la vista, incluyendo los datos de los productos, indicadores de vacío, y los permisos de usuario.
+
+Renderización de la vista: Finalmente, la clase renderiza la vista correspondiente utilizando el renderizador de vistas proporcionado. */
 namespace Controllers\Productss;
 
 use Controllers\PrivateController;

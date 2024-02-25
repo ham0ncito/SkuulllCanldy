@@ -34,7 +34,27 @@ use DAO\Subscriptions\Subscriptions as Subscription;
 use Utilities\Validators;
 use Utilities\Context;
 use Utilities\Paging;
+/*Este fragmento de código PHP define una clase llamada Store dentro del espacio de nombres Controllers\Store. Aquí está una descripción de lo que hace esta clase:
 
+Espacio de nombres (namespace): La clase está dentro del espacio de nombres Controllers\Store, lo que sugiere que esta clase se encarga de la lógica relacionada con la tienda en el sistema.
+
+Clase Store: Esta clase extiende la clase PrivateController, lo que podría implicar que las funcionalidades proporcionadas por esta clase están destinadas a ser accedidas solo por usuarios autenticados.
+
+Propiedades de la clase:
+
+Varias propiedades que almacenan información sobre las suscripciones, productos, carrito de compras, etc.
+$viewData: Un array que almacenará los datos necesarios para renderizar la vista.
+$error: Un array que almacenará mensajes de error.
+$productsSearch: Un array que almacenará los resultados de la búsqueda de productos.
+$productCount: Un contador para el número total de productos.
+Varias otras propiedades para controlar la paginación y la URL de la lista de productos.
+Método run(): Este método es público y no devuelve ningún valor (void). Se encarga de ejecutar la lógica principal de la clase, que incluye obtener parámetros, realizar una búsqueda de productos, configurar la paginación, obtener datos de sesión, calcular el carrito de compras y renderizar la vista de la tienda.
+
+Método calculate(): Este método privado calcula la paginación y obtiene los productos para mostrar en la vista de la tienda.
+
+Método cart(): Este método estático maneja la lógica relacionada con el carrito de compras. Verifica si se ha enviado un formulario de agregar al carrito, actualiza el carrito en consecuencia y muestra una alerta.
+
+Métodos privados getParams(), getParamsFromContext(), setParamsToContext() y setParamsToDataView(): Estos métodos se utilizan para obtener y establecer parámetros relacionados con la paginación y la búsqueda de productos. */
 class Store extends PrivateController
 {
   private $id_subscription;

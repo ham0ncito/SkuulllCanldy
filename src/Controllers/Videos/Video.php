@@ -21,6 +21,14 @@
  * @link       https://www.php.net/docs.php
  */
 
+ /*Este fragmento de código PHP define una clase llamada Video dentro del espacio de nombres Controllers\Videos. Aquí hay un resumen de lo que hace esta clase:
+
+Espacio de nombres (namespace): La clase está dentro del espacio de nombres Controllers\Videos, lo que sugiere que forma parte de un conjunto de controladores relacionados con vídeos en la aplicación.
+
+Clase Video: Esta clase extiende la clase PrivateController, lo que indica que probablemente se requiera autenticación para acceder a las funcionalidades relacionadas con los vídeos.
+
+Método run(): Este método es público y no devuelve ningún valor (void). Se encarga de agregar un enlace al estilo de los vídeos, luego prepara los datos de vista con nombres de campos de vídeo y verifica si hay datos de vídeo disponibles llamando a un método getVideo() en la clase DAOVideo. Luego, verifica si los datos de vídeo están vacíos y establece una bandera en consecuencia. Finalmente, prepara los datos de vista con información sobre el tipo de usuario y renderiza la vista de lista de vídeos. */
+
 namespace Controllers\Videos;
 
 use Controllers\PrivateController;

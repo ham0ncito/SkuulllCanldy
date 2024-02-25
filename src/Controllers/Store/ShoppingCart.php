@@ -21,6 +21,19 @@
  * @link       https://www.php.net/docs.php
  */
 
+/*
+Este fragmento de código PHP define una clase llamada ShoppingCart dentro del espacio de nombres Controllers\Store. Aquí está una descripción de lo que hace esta clase:
+
+Espacio de nombres (namespace): La clase está dentro del espacio de nombres Controllers\Store, lo que sugiere que esta clase se encarga de la lógica relacionada con la tienda en el sistema.
+
+Clase ShoppingCart: Esta clase extiende la clase PublicController, lo que podría implicar que las funcionalidades proporcionadas por esta clase están destinadas a ser accesibles públicamente.
+
+Método run(): Este método es público y no devuelve ningún valor (void). Se encarga de ejecutar la lógica principal de la clase, que incluye obtener información del carrito de compras, calcular el total de productos y su cantidad, establecer tokens de seguridad, y renderizar la vista del carrito de compras.
+
+Método privado deleteCarrito(): Este método maneja la lógica para eliminar el carrito de compras. Verifica si se ha enviado un formulario para eliminar el carrito y elimina los datos del carrito de la sesión.
+
+Método privado Carrito(): Este método maneja la lógica para modificar el carrito de compras. Verifica si se ha enviado un formulario para eliminar un ítem del carrito y elimina el ítem correspondiente de la sesión del carrito. */
+
 namespace Controllers\Store;
 
 use Controllers\PrivateController;

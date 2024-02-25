@@ -28,7 +28,26 @@ use Views\Renderer;
 use Dao\Popularitys\Popularitys as DAOPopularity;
 use Utilities\Site;
 use Utilities\Validators;
+/*
+Este archivo PHP define una clase llamada Popularitys dentro del espacio de nombres Controllers\Popularitys. Aquí hay un resumen de lo que hace esta clase:
 
+Espacio de nombres (namespace): La clase está dentro del espacio de nombres Controllers\Popularitys, lo que sugiere que esta clase se encarga de la lógica relacionada con la popularidad de algún tipo de objeto.
+
+Uso de clases y namespaces: La clase utiliza clases y namespaces como Controllers\PrivateController, Views\Renderer, Dao\Popularitys\Popularitys, Utilities\Site y Utilities\Validators.
+
+Propiedades privadas: La clase tiene varias propiedades privadas que representan los datos relacionados con la popularidad, como el ID de popularidad (id_popularity), el ID del objeto (id_object), el contador de "no me gusta" (dislike_count), el contador de "me gusta" (like_count), el porcentaje de "no me gusta" (percent_dislike), el porcentaje de "me gusta" (percent_like) y el tipo de objeto (type_object). También hay propiedades para almacenar datos adicionales como la lista de popularidad, la URL de la lista, el modo actual, los datos de la vista, los errores y los tokens XSS.
+
+Inicialización y renderización de la vista: El método run() se encarga de inicializar la clase, procesar los datos del formulario en caso de una solicitud POST, preparar los datos necesarios para la vista y luego renderizar la vista correspondiente.
+
+Obtención de datos de popularidad: La clase puede obtener datos de popularidad utilizando el DAO (Objeto de Acceso a Datos) DAOPopularity::getPopularity() y los pasa a la vista para ser mostrados.
+
+Validación de datos del formulario: La clase valida los datos del formulario para garantizar que los campos requeridos estén presentes y no estén vacíos.
+
+Procesamiento de acciones: La clase procesa las acciones del formulario según el modo actual (INS para inserción, UPD para actualización, DEL para eliminación) utilizando métodos del DAO correspondiente.
+
+Preparación de datos para la vista: La clase prepara los datos necesarios para renderizar la vista, incluyendo los datos de popularidad, indicadores de modo, mensajes de error y tokens XSS para evitar ataques de tipo Cross-Site Scripting.
+
+Renderización de la vista: Finalmente, la clase renderiza la vista correspondiente utilizando el renderizador de vistas proporcionado. */
 class Popularitys extends PrivateController
 {
     private $id_popularity;

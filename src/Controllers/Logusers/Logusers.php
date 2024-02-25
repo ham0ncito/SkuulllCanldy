@@ -20,7 +20,21 @@
  * @author     SkullCanldy
  * @link       https://www.php.net/docs.php
  */
+/*
+Este fragmento de código PHP define un controlador llamado Logusers dentro del espacio de nombres Controllers\Logusers. Aquí tienes un resumen de su funcionalidad:
 
+
+Espacio de nombres (namespace): El controlador está dentro del espacio de nombres Controllers\Logusers, lo que sugiere que se ocupa de la gestión de logs relacionados con usuarios.
+
+Uso de clases y funciones de otros archivos: El controlador utiliza la clase Logusers del espacio de nombres Dao\Logusers para acceder a los logs de usuarios. También utiliza la clase PrivateController del espacio de nombres Controllers y la clase Renderer del espacio de nombres Views.
+
+Método run(): Este método se ejecuta cuando se solicita el controlador y se encarga de inicializar, procesar y preparar los datos para la vista, así como de renderizar la vista.
+
+Inicialización de datos: El método run() inicializa los datos necesarios para la vista, como los códigos de usuario y de log, así como la fecha.
+
+Preparación de datos para la vista: Prepara los datos necesarios para renderizar la vista, incluyendo los datos de los logs de usuarios y la información sobre los permisos de los usuarios.
+
+Renderización de la vista: El método render() renderiza la plantilla de formulario de logs de usuarios con los datos preparados para la vista. */
 namespace Controllers\Logusers;
 
 use Controllers\PrivateController;

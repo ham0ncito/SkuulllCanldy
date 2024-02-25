@@ -20,7 +20,19 @@
  * @author     SkullCanldy
  * @link       https://www.php.net/docs.php
  */
+/*Este fragmento de código PHP define un controlador llamado Offers dentro del espacio de nombres Controllers\Offers. Aquí está un resumen de su funcionalidad:
 
+Espacio de nombres (namespace): El controlador está dentro del espacio de nombres Controllers\Offers, lo que sugiere que se ocupa de la gestión de ofertas dentro de la aplicación.
+
+Uso de clases y funciones de otros archivos: El controlador utiliza la clase Offers del espacio de nombres Dao\Offers para acceder a las ofertas. También utiliza la clase PrivateController del espacio de nombres Controllers y la clase Renderer del espacio de nombres Views.
+
+Método run(): Este método se ejecuta cuando se solicita el controlador y se encarga de inicializar, procesar y preparar los datos para la vista, así como de renderizar la vista.
+
+Inicialización de datos: El método run() inicializa los datos necesarios para la vista, como el ID de la oferta, la descripción de la oferta, las fechas de inicio y fin de la oferta, y el estado de la oferta.
+
+Preparación de datos para la vista: Prepara los datos necesarios para renderizar la vista, incluyendo los datos de las ofertas y la información sobre los permisos de los usuarios.
+
+Renderización de la vista: El método render() renderiza la plantilla del formulario de oferta con los datos preparados para la vista. */
 namespace Controllers\Offers;
 
 use Controllers\PrivateController;

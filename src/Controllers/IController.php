@@ -20,7 +20,7 @@
  * @author     SkullCanldy
  * @link       https://www.php.net/docs.php
  */
-
+/*Not implemented */
   namespace Controllers;
 
   interface IController

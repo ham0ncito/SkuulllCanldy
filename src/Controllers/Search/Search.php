@@ -20,6 +20,20 @@
  * @author     SkullCanldy
  * @link       https://www.php.net/docs.php
  */
+
+ /*
+Este fragmento de código PHP define una clase llamada Search dentro del espacio de nombres Controllers\Search. Aquí tienes un resumen de lo que hace esta clase:
+
+
+Espacio de nombres (namespace): La clase está dentro del espacio de nombres Controllers\Search, lo que sugiere que esta clase se encarga de la lógica relacionada con la búsqueda de elementos, como canciones, artistas y álbumes.
+
+Uso de clases y namespaces: La clase utiliza clases y namespaces como DAO\Genres\Genres, DAO\Artists\Artists, Dao\Songs\Songs, Dao\Albums\Albums, Controllers\PrivateController, Controllers\PublicController, Utilities\Context, Utilities\Paging y \Views\Renderer.
+
+Propiedades privadas: La clase tiene varias propiedades privadas que representan el nombre parcial de la búsqueda (partialName), el criterio de ordenamiento (orderBy), la bandera de orden descendente (orderDescending), el número de página actual (pageNumber), el número de elementos por página (itemsPerPage), datos relacionados con canciones, artistas y álbumes, y datos de vista (viewData).
+
+Método run(): Este método es público y no devuelve ningún valor (void). Se encarga de ejecutar la lógica principal de la clase, que incluye obtener parámetros de la consulta, realizar la búsqueda de canciones, artistas y álbumes, configurar los datos de la vista y renderizar la plantilla de búsqueda.
+
+Métodos privados getParams(), getParamsFromContext(), setParamsToContext() y setParamsToDataView(): Estos métodos privados se encargan de obtener y establecer los parámetros de la consulta y de la vista. Esto incluye el nombre parcial de la búsqueda, el criterio de ordenamiento, la bandera de orden descendente, el número de página y el número de elementos por página. */
 namespace Controllers\Search;
 use DAO\Genres\Genres as DAOGenre; 
 use DAO\Artists\Artists as DAOArtist; 

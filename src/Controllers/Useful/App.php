@@ -20,7 +20,7 @@
  * @author     SkullCanldy
  * @link       https://www.php.net/docs.php
  */
-
+/*Crea y genera la app */
 namespace Controllers\Useful;
 
 use Controllers\PublicController;

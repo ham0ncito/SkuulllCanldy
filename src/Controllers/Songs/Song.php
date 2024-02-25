@@ -20,7 +20,14 @@
  * @author     SkullCanldy
  * @link       https://www.php.net/docs.php
  */
+/*
+Este fragmento de código PHP define una clase llamada Song dentro del espacio de nombres Controllers\Songs. Aquí está una descripción de lo que hace esta clase:
 
+Espacio de nombres (namespace): La clase está dentro del espacio de nombres Controllers\Songs, lo que sugiere que esta clase se encarga de la lógica relacionada con las canciones en el sistema.
+
+Clase Song: Esta clase extiende la clase PrivateController, lo que podría implicar que las funcionalidades proporcionadas por esta clase están destinadas a ser accesibles solo para usuarios autenticados.
+
+Método run(): Este método es público y no devuelve ningún valor (void). Se encarga de ejecutar la lógica principal de la clase, que incluye obtener información de las canciones, verificar si la lista de canciones está vacía y renderizar la vista de la lista de canciones. */
 namespace Controllers\Songs;
 
 use Controllers\PrivateController;

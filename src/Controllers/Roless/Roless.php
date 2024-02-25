@@ -20,7 +20,26 @@
  * @author     SkullCanldy
  * @link       https://www.php.net/docs.php
  */
+/*
+Este archivo PHP define una clase llamada Roless dentro del espacio de nombres Controllers\Roless. Aquí tienes un resumen de lo que hace esta clase:
 
+Espacio de nombres (namespace): La clase está dentro del espacio de nombres Controllers\Roless, lo que sugiere que esta clase se encarga de la lógica relacionada con los roles.
+
+Uso de clases y namespaces: La clase utiliza clases y namespaces como Controllers\PrivateController, Views\Renderer, Dao\Roless\Roless, Utilities\Site y Utilities\Validators.
+
+Propiedades privadas: La clase tiene varias propiedades privadas que representan los datos relacionados con los roles, como el código de rol (rolescod), la descripción del rol (rolesdsc) y el estado del rol (rolesest).
+
+Método run(): Este método es público y no devuelve ningún valor (void). Se encarga de inicializar la acción, validar los datos del formulario si se ha enviado, preparar los datos para la vista y renderizarla.
+
+Método init(): Se encarga de inicializar la acción, verificando si se ha proporcionado un modo válido y si es una acción de inserción (INS) o actualización (UPD). También obtiene los datos del rol si se está actualizando.
+
+Método validateFormData(): Valida los datos del formulario, como el código de rol, la descripción del rol y el estado del rol. Si hay algún error de validación, se almacena en la propiedad $error.
+
+Método processAction(): Procesa la acción según el modo (INS, UPD, DEL) especificado. Inserta, actualiza o elimina el rol según corresponda.
+
+Método prepareViewData(): Prepara los datos necesarios para la vista, como el modo, los datos del rol, los mensajes de error, el token XSS y si el formulario debe mostrarse como de solo lectura o con confirmación.
+
+Método render(): Renderiza la vista roless/rolesform con los datos preparados. */
 namespace Controllers\Roless;
 
 use Controllers\PrivateController;

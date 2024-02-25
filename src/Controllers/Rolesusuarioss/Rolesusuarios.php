@@ -30,7 +30,18 @@ use Utilities\Site;
 use Utilities\Validators;
 use Utilities\Context;
 use Utilities\Paging;
+/*
+Este archivo PHP define una clase llamada Rolesusuarios dentro del espacio de nombres Controllers\Rolesusuarioss. Aquí tienes un resumen de lo que hace esta clase:
 
+Espacio de nombres (namespace): La clase está dentro del espacio de nombres Controllers\Rolesusuarioss, lo que sugiere que esta clase se encarga de la lógica relacionada con los roles de usuarios.
+
+Uso de clases y namespaces: La clase utiliza clases y namespaces como Controllers\PrivateController, Views\Renderer, Dao\Rolesusuarioss\Rolesusuarioss, Utilities\Site, Utilities\Validators, Utilities\Context y Utilities\Paging.
+
+Propiedades privadas: La clase tiene varias propiedades privadas que representan los datos relacionados con los roles de usuarios, como el código de usuario (usercod), el código de rol (rolescod), el estado del rol de usuario (roleuserest), la fecha del rol de usuario (roleuserfch) y la expiración del rol de usuario (roleuserexp).
+
+Método run(): Este método es público y no devuelve ningún valor (void). Se encarga de agregar un enlace al estilo de los roles de usuarios, preparar los datos para la vista y renderizarla. Además, verifica si el usuario tiene el rol de administrador antes de recuperar y mostrar los roles de usuarios.
+
+Renderizado de la vista: Utiliza el Renderer para renderizar la vista roles_usuarioss/roles_usuarioslist con los datos preparados. */
 class Rolesusuarios extends PrivateController
 {
     private $usercod;

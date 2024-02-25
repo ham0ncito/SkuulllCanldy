@@ -20,7 +20,22 @@
  * @author     SkullCanldy
  * @link       https://www.php.net/docs.php
  */
+/*
+Este archivo PHP define una clase llamada Purchases dentro del espacio de nombres Controllers\Purchases. Aquí está un resumen de lo que hace esta clase:
 
+Espacio de nombres (namespace): La clase está dentro del espacio de nombres Controllers\Purchases, lo que sugiere que esta clase se encarga de la lógica relacionada con las compras.
+
+Uso de clases y namespaces: La clase utiliza clases y namespaces como Controllers\PrivateController, Controllers\PublicController, Views\Renderer, Dao\Purchases\Purchases, Utilities\Site y Utilities\Validators.
+
+Propiedades privadas: La clase tiene varias propiedades privadas que representan los datos relacionados con una compra, como el ID de compra (id_purchase), la fecha de compra (purchase_date), el total (total), los detalles (details) y los pagos (payments).
+
+Inicialización y validación de datos: El método run() se encarga de inicializar la acción, validar los datos del formulario y procesar la acción correspondiente (insertar, actualizar o eliminar una compra).
+
+Preparación de datos para la vista: Se preparan los datos necesarios para la vista, como el ID de compra, la fecha de compra, el total, los detalles y los pagos, así como indicadores de modos de operación y errores de validación.
+
+Procesamiento de la acción: Dependiendo del modo de operación (INS, UPD, DEL), se realiza la acción correspondiente utilizando los métodos proporcionados por la clase DAOPurchase.
+
+Renderización de la vista: Se renderiza la vista purchases/purchaseform con los datos preparados. */
 namespace Controllers\Purchases;
 
 use Controllers\PrivateController;

@@ -20,7 +20,15 @@
  * @author     SkullCanldy
  * @link       https://www.php.net/docs.php
  */
+/*Este archivo PHP define una clase llamada Error dentro del espacio de nombres Controllers. Aquí está un resumen de su funcionalidad:
 
+
+
+Espacio de nombres (namespace): La clase está dentro del espacio de nombres Controllers, lo que sugiere que forma parte de un conjunto de controladores en la aplicación.
+
+Clase Error: Esta clase se utiliza como controlador para manejar errores en la aplicación.
+
+Método run(): Este método es público y no devuelve ningún valor (void). Se encarga de obtener el código de error del contexto y, en caso de no encontrar uno, establece el código de error predeterminado en 404. Luego, determina el mensaje de error en función del código recibido. Después, utiliza la función http_response_code() para establecer el código de respuesta HTTP y, finalmente, utiliza el renderer de vistas para renderizar la vista de error, pasando el código de error y el mensaje de error como datos de vista. */
 namespace Controllers;
 
 class Error extends PublicController

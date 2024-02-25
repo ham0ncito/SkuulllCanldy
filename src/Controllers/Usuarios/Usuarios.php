@@ -20,6 +20,17 @@
  * @author     SkullCanldy
  * @link       https://www.php.net/docs.php
  */
+/*Este fragmento de código PHP define una clase llamada Usuarios dentro del espacio de nombres Controllers\Usuarios. Aquí está una descripción de lo que hace esta clase:
+
+Espacio de nombres (namespace): La clase está dentro del espacio de nombres Controllers\Usuarios, lo que sugiere que forma parte de un conjunto de controladores relacionados con usuarios en la aplicación.
+
+Clase Usuarios: Esta clase extiende la clase PrivateController, lo que indica que probablemente se requiera autenticación para acceder a las funcionalidades relacionadas con los usuarios.
+
+Propiedades privadas: La clase tiene varias propiedades privadas que representan los campos de un usuario, como usercod, useremail, username, userpswd, entre otros. También tiene un arreglo llamado usuario que contiene los valores por defecto de estos campos.
+
+Método run(): Este método es público y no devuelve ningún valor (void). Se encarga de inicializar la clase, procesar los datos recibidos en caso de una petición POST, preparar los datos de vista y renderizar la vista correspondiente.
+
+Renderizado de vista: La clase utiliza el objeto Renderer para renderizar la vista usuarioform con los datos preparados. */
 
 namespace Controllers\Usuarios;
 

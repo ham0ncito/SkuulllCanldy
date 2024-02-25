@@ -1,5 +1,5 @@
--- Active: 1698162320673@@127.0.0.1@3306@skull2canldydb
 <?php
+
 /**
 
  * PHP version 8.2.4
@@ -8,7 +8,7 @@
  * @Last Update 20/2/24
  * Updated by Skuul2candly
  * Issue Number : 23
- * Ticket Number : 23
+ * Ticker Number : 23
  * Changes Approved on 20/2/24
  * Tested by Skullcanldy
  * Description: 
@@ -28,6 +28,17 @@ use Utilities\Site;
 use Utilities\Validators;
 use Utilities\Context;
 use Utilities\Paging;
+/*
+Este fragmento de código PHP define una clase llamada Useful dentro del espacio de nombres Controllers\Useful. Aquí está una descripción de lo que hace esta clase:
+
+
+Espacio de nombres (namespace): La clase está dentro del espacio de nombres Controllers\Useful, lo que sugiere que esta clase proporciona funcionalidades útiles dentro de la aplicación.
+
+Clase Useful: Esta clase extiende la clase PublicController, lo que podría implicar que las funcionalidades proporcionadas por esta clase son accesibles públicamente, es decir, sin necesidad de autenticación.
+
+Método run(): Este método es público y no devuelve ningún valor (void). Se encarga de preparar los datos de vista y renderizar la vista correspondiente. Los datos de vista incluyen información sobre enlaces útiles y sus descripciones generado el codigo.
+
+Renderizado de vista: La clase utiliza el objeto Renderer para renderizar la vista components\post con los datos preparados, que incluyen información sobre enlaces útiles y sus descripciones. */
 class Useful extends PublicController {
  
 

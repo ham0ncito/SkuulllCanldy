@@ -41,6 +41,21 @@ namespace Controllers;
  * @license  MIT http://
  * @link     http://
  */
+
+ /*Este archivo PHP define una clase abstracta llamada PrivateController dentro del espacio de nombres Controllers. Aquí hay un resumen de su funcionalidad:
+
+
+Espacio de nombres (namespace): La clase está dentro del espacio de nombres Controllers, que sugiere que forma parte de un conjunto de controladores en la aplicación.
+
+Clase abstracta: La clase es abstracta, lo que significa que no se puede instanciar directamente. Probablemente sirva como una clase base para otros controladores que requieren acceso privado.
+
+Método _isAuthorized(): Este método verifica si el usuario tiene autorización para acceder al controlador y lanza una excepción PrivateNoAuthException si no está autorizado.
+
+Método _isAuthenticated(): Este método verifica si el usuario está autenticado (logueado) y lanza una excepción PrivateNoLoggedException si no lo está.
+
+Método isFeatureAutorized($feature): Este método verifica si el usuario tiene autorización para una característica específica y devuelve un valor booleano.
+
+Constructor: El constructor llama a los métodos _isAuthenticated() y _isAuthorized() para verificar si el usuario está autenticado y autorizado cuando se instancia un controlador privado. */
 abstract class PrivateController extends PublicController
 {
     private function _isAuthorized()

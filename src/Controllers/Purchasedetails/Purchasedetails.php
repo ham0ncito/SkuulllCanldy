@@ -20,7 +20,23 @@
  * @author     SkullCanldy
  * @link       https://www.php.net/docs.php
  */
+/*Este archivo PHP define una clase llamada Purchasedetails dentro del espacio de nombres Controllers\Purchasedetails. Aquí está un resumen de lo que hace esta clase:
 
+Espacio de nombres (namespace): La clase está dentro del espacio de nombres Controllers\Purchasedetails, lo que sugiere que esta clase se encarga de la lógica relacionada con los detalles de las compras.
+
+Uso de clases y namespaces: La clase utiliza clases y namespaces como Controllers\PrivateController, Views\Renderer, Dao\Purchasedetails\Purchasedetails, Utilities\Site y Utilities\Validators.
+
+Propiedades privadas: La clase tiene varias propiedades privadas que representan los datos relacionados con los detalles de una compra, como el ID de compra (id_purchase), el ID del artículo de referencia (id_item_reference), la cantidad (quantity) y el precio unitario (unitary_price).
+
+Inicialización y renderización de la vista: El método run() se encarga de inicializar la clase, procesar los datos del formulario si se ha enviado, preparar los datos para la vista y luego renderizar la vista correspondiente.
+
+Validación de datos del formulario: La clase valida los datos del formulario para asegurarse de que los campos requeridos no estén vacíos.
+
+Procesamiento de acciones: La clase procesa las acciones como insertar (INS), actualizar (UPD) y eliminar (DEL) los detalles de la compra en función del modo actual.
+
+Preparación de datos para la vista: La clase prepara los datos necesarios para renderizar la vista, incluyendo el modo actual, los detalles de la compra, los mensajes de error, etc.
+
+Renderización de la vista: Finalmente, la clase renderiza la vista correspondiente utilizando el renderizador de vistas proporcionado. */
 namespace Controllers\Purchasedetails;
 
 use Controllers\PrivateController;

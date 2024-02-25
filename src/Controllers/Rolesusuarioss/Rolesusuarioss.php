@@ -20,7 +20,17 @@
  * @author     SkullCanldy
  * @link       https://www.php.net/docs.php
  */
+/*Este código PHP define una clase llamada Rolesusuarioss dentro del espacio de nombres Controllers\Rolesusuarioss. Aquí tienes un resumen de lo que hace esta clase:
 
+Espacio de nombres (namespace): La clase está dentro del espacio de nombres Controllers\Rolesusuarioss, lo que sugiere que esta clase se encarga de la lógica relacionada con los roles de usuarios.
+
+Uso de clases y namespaces: La clase utiliza clases y namespaces como Controllers\PrivateController, Views\Renderer, Dao\Rolesusuarioss\Rolesusuarioss, Utilities\Site y Utilities\Validators.
+
+Propiedades privadas: La clase tiene varias propiedades privadas que representan los datos relacionados con los roles de usuarios, como el código de usuario (usercod), el código de rol (rolescod), el estado del rol de usuario (roleuserest), la fecha del rol de usuario (roleuserfch) y la expiración del rol de usuario (roleuserexp). También hay propiedades relacionadas con la lógica del formulario, como la URL de la lista de roles de usuarios, el modo de operación (mode), errores, y un token XSS.
+
+Método run(): Este método es público y no devuelve ningún valor (void). Se encarga de inicializar la clase, procesar la acción según el modo (INS, UPD, DEL, DSP), preparar los datos para la vista y renderizarla.
+
+Métodos privados init(), handleError(), validateFormData(), processAction(), prepareViewData() y render(): Estos métodos privados se encargan de inicializar la clase, manejar errores, validar los datos del formulario, procesar la acción según el modo, preparar los datos para la vista y renderizarla. */
 namespace Controllers\Rolesusuarioss;
 
 use Controllers\PrivateController;

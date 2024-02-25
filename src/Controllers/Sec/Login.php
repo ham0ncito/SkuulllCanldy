@@ -34,7 +34,20 @@ class Login extends \Controllers\PublicController
     private $xss_login ="";
     private $hasError = false;
   
+/*Este fragmento de código PHP define una clase llamada Login dentro del espacio de nombres Controllers\Sec. Aquí tienes un resumen de lo que hace esta clase:
 
+
+Espacio de nombres (namespace): La clase está dentro del espacio de nombres Controllers\Sec, lo que sugiere que esta clase se encarga de la lógica relacionada con la seguridad, específicamente el inicio de sesión de usuarios.
+
+Uso de clases y namespaces: La clase utiliza clases y namespaces como DAO\Lognonusers\Lognonusers, Utilities\Functions, Utilities\Secur\Crypt, DAO\Security\Security, Utilities\Security, Utilities\Context, DAO\Logusers\Logusers y Utilities\Site.
+
+Propiedades privadas: La clase tiene varias propiedades privadas que representan el correo electrónico (txtEmail), la contraseña (txtPswd), errores relacionados con la validación del correo electrónico y la contraseña, errores generales, un token XSS para el inicio de sesión (xss_login), y un indicador para verificar si hay errores (hasError).
+
+Método run(): Este método es público y no devuelve ningún valor (void). Se encarga de ejecutar la lógica principal de la clase, que incluye validar los datos recibidos del formulario de inicio de sesión, verificar si hay errores, autenticar al usuario, y redirigirlo a la página de inicio si las credenciales son válidas.
+
+Generación de token XSS: Antes de renderizar la vista, se genera un token XSS para el formulario de inicio de sesión y se guarda en la sesión del usuario para evitar ataques de falsificación de solicitudes entre sitios (CSRF).
+
+Renderización de la vista: Utiliza el motor de plantillas Renderer para renderizar la vista "security/login" con los datos de la clase. */
 
     public function run() :void
     {
