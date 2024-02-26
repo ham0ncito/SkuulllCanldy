@@ -43,17 +43,9 @@
                   <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
                   <div x-show="showModal" class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
                     <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-                      <div class="sm:flex sm:items-start">
-                        <img class="m-auto h-14 w-14 rounded-full" src="https://th.bing.com/th/id/OIP.Gfp0lwE6h7139625a-r3aAHaHa?rs=1&pid=ImgDetMain" alt="Profile photo">
-                        <div class="mt-3 text-center sm:text-left sm:ml-4">
-                            <h3 class="text-lg font-medium leading-6 text-gray-900 whitespace-normal sm:whitespace-nowrap" id="modal-title">Your profile</h3>
-                            <div class="mt-2">
-                                <p class="text-sm text-gray-500">Username: <span class="font-bold">{{username}}</span></p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    
+                      <p class="text-lg text-center font-medium leading-6 text-gray-900 whitespace-normal sm:whitespace-nowrap" id="modal-title">Do you want to continue?</h3>
+                           
+      
                     </div>
                     
                     <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">

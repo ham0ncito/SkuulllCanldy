@@ -23,7 +23,7 @@
 <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-8">
     <h2 class="text-2xl font-bold mb-4 mx-4 col-span-full">PURCHASES</h2>
     {{foreach purchase}}
-    <div x-data="{ showModal: false, purchaseDetails: '' }" class="bg-white rounded-lg overflow-hidden shadow-md relative">
+    <div x-data="{ showModal: false, purchaseDetails: '' }" class="bg-white text-black rounded-lg overflow-hidden shadow-md relative">
         <div class="p-16 mx-2">
             <h3 class="text-xl mb-0 overflow-hidden overflow-ellipsis">Reference id: <span class="font-bold overflow-hidden overflow-ellipsis">{{id_purchase}}</span></h3>
             <p class="text-gray-600 mt-2">Date: <span class="text-xl text-blue-500">{{purchase_date}}</span></p>
