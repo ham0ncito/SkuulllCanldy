@@ -1,5 +1,5 @@
 <section>
-    <div class="relative w-full flex items-center">
+    <div class="relative flex w-1/2  items-center mx-4">
         <form action="index.php" method="get" class="w-full">
             <input type="hidden" name="page" value="Store_Store">
             <input type="text" id="partialName" name="partialName" placeholder="Search by Name or ID" class="relative w-full px-4 py-2 pl-10 pr-8 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" value={{partialName}} >
@@ -20,9 +20,10 @@
 
 
 
-<div x-data="{ selectedCategory: 'all' }">
+<div x-data="{ selectedCategory: 'all' }" class="mx-auto items-center justify-around">
  
-    <div class="mb-4">
+    <div class="mb-4 ml-4">
+       
         <select x-model="selectedCategory" @click.away="isOpen = false" @keydown.escape="isOpen = false" @click="isOpen = !isOpen" class="px-4 py-2 text-black my-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
             <option value="all">All Categories</option>
             <option value="category1">Subscription</option>

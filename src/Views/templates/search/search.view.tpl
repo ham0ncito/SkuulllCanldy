@@ -1,7 +1,7 @@
-<div class="flex flex-col items-center w-full">
+<div class="flex flex-col items-center w-full text-white">
   {{ifnot isCLN}}
   <div class="mdtext-left mx-8 my-2">
-    <h2 class="text-white text-6xl pb-4">Explore</h2>
+    <h2 class="text-white text-6xl p-4 m-2">Explore</h2>
     <form class="col-12 col-m-8" action="index.php" method=get >
       <div class="relative w-full mdw-auto mx-4 mb-4 ">
         <input type="hidden" name="page" value="Search_Search">

@@ -88,7 +88,7 @@
       </header>
       
       <div class="container align-center justify-center">
-        <div class="mt-16 mx-auto pb-16 text-white">
+        <div class="mt-16 mx-auto pb-16 text-blue-500">
           {{{page_content}}}
         </div>
       </div>
