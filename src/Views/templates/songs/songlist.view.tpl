@@ -31,9 +31,14 @@
         </div>
         <div class="flex flex-col mx-auto justify-around">
             <p class="text-gray-300 mb-2 py-4">Duration: {{duration}}</p>
-            <audio class="mr-4 w-40 justify-center" controls>
+            <audio id="playerId" class="mr-4 w-40 justify-center" controls 
+            data-artist="{{name_artist}}"
+            data-title="{{title_song}}"
+            data-cover="{{song_cover}}"
+            data-duration="{{duration}}">
+            
                 <source src="{{link_song}}" type="audio/mpeg">
-              </audio>
+            </audio>
               
             <div class="mx-auto my-4">
                 <a href="index.php?page=Songs_Songs&mode=DSP&id_song={{id_song}}" class="text-blue-500 hover:text-blue-700 mr-2">Details</a>
@@ -48,15 +53,20 @@
 </section>
 
 
-<script>
+<script defer>
     function playPauseAudio(playerId) {
         var audio = document.getElementById(playerId);
 
         if (audio.paused) {
             audio.play(); 
+            console.log("Pause Button");
         } else {
             audio.pause();
         }
+    }
+    const songElements = document.querySelectorAll('audio');
+    for (let i = 0; i < songElements.length;i++){
+        songElements[i].id = `playerId${i}`;
     }
 </script>{{endifnot isEmpty}}{{if isEmpty}}
 {{include components/tarjeta}}{{endif isEmpty}}
