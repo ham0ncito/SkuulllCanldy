@@ -32,8 +32,8 @@
 
 
 
-    <div x-show="selectedCategory === 'all' || selectedCategory === 'category1'">
-        <h2 class="text-2xl font-semibold mb-2">Explore Skuull2Canldy Subscriptions</h2>
+    <div x-show="selectedCategory === 'all' || selectedCategory === 'category1'" class="mx-auto">
+        <h2 class="text-2xl font-semibold p-4">Explore Skuull2Canldy Subscriptions</h2>
         <section class="py-12">
             <div class="container mx-auto px-4">
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -101,46 +101,31 @@
     </div>
 
 
-    <div x-show="selectedCategory === 'all' || selectedCategory === 'category2'">
+    <div x-show="selectedCategory === 'all' || selectedCategory === 'category2'" class="mx-auto">
 
-        <h2 class="text-2xl font-semibold mb-2">Merch</h2>
+        <h2 class="text-2xl font-semibold p-4">Merch</h2>
 
         
-/***//
-<div x-data="paginationData()">
+
+
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-6 gap-6 mx-auto  justify-around">
    
-    <template x-for="(item, index) in paginatedItems" :key="index">
-      
-        <div x-text="item"></div>
-    </template>
-   
-    <button @click="prevPage()" :disabled="isFirstPage()">Anterior</button>
-    <button @click="nextPage()" :disabled="isLastPage()">Siguiente</button>
-</div>
-
-
-
-/**/
-
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
-   
-    {{foreach products}}
-    <div x-data="{ showModal: false, showConfirm: false }" class="bg-white rounded-lg overflow-hidden shadow-md relative h-100">
-        <img src="{{productImgUrl}}" alt="Product" class="w-full h-60 object-cover">
-        <div class="p-4">
+    {{foreach productsSearch}}
+    <div x-data="{ showModal: false, showConfirm: false }" class="bg-white transition duration-300 ease-in-out transform hover:scale-110 rounded-lg overflow-hidden shadow-md relative h-100 ">
+        <img src="{{productImgUrl}}" alt="Product" class="w-full h-40 object-cover">
+        <div class="p-2">
             <h3 class="text-lg text-blue-500 font-semibold mb-2">{{productName}}</h3>
-            <p class="text-gray-600 mb-2">{{productDescription}}</p>
             <p class="text-gray-700 font-bold">${{productPrice}}</p>
-            <div class="h-20"></div>
+
         </div>
 
-        <div class="absolute bottom-0 left-0 right-0 bg-white p-4">
-            <div class="mt-4 flex justify-between items-center">
+       
+            <div class="flex flex-row items-center justify-around m-auto p-2">
                 <button @click="showConfirm = true" class="submitBtn text-pink-500">Add to Cart</button>
                 <a @click="showModal = true" class="text-green-500 hover:text-green-700">See more</a>
             </div>
-        </div>
-
+        
+        
         <div x-show="showModal || showConfirm" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="fixed inset-0 z-50 overflow-y-auto" style="display: none;">
             <div class="fixed inset-0 z-50 flex items-center justify-center overflow-auto bg-black bg-opacity-50">
                 <div class="bg-white rounded-lg shadow-xl p-8 max-w-2xl mx-auto">
@@ -151,7 +136,7 @@
                             <p class="text-gray-600 mb-2">Reference Code: <span class="text-blue-900 text-1xl">{{productId}}</span></p>
                             <p class="text-gray-600 mb-2">{{productDescription}}</p>
                             <p class="text-gray-700 font-bold text-2xl">${{productPrice}}</p>
-                            <p class="text-gray-700 py-2 font-bold">Quantity: <span x-text="quantities[productId] ? quantities[productId] : '1'"></span></p>
+                            <p class="text-gray-700 py-2 font-bold">Quantity: 1<span x-text="quantities[productId] ? quantities[productId] : '1'"></span></p>
                         </div>
                     </template>
                     <template x-if="showConfirm">
@@ -180,7 +165,7 @@
             </div>
         </div>
     </div>
-    {{endfor products}}
+    {{endfor productsSearch}}
     
 </div>
 

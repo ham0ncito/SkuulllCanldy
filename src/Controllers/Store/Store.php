@@ -138,7 +138,7 @@ class Store extends PrivateController
 
     $_SESSION['items'] = 
   
-   $this->viewData['products'] =Products::getProducts();
+   $this->viewData['productsSearcg'] =Products::getProducts();
     Renderer::render("store\store", $viewData);
   }
 private function calculate()

@@ -72,15 +72,22 @@
             <li><a href="index.php?page=Videos_Video" class="bg-gray-500 hover:bg-purple-700 p-2 font-bold rounded-full">Videos</a></li>
             <li><a href="index.php?page=Artists_Artist" class="bg-gray-500 hover:bg-purple-700 p-2 font-bold rounded-full">Artists</a></li>
             <li><a href="index.php?page=Albums_Album" class="bg-gray-500 hover:bg-purple-700 p-2 font-bold rounded-full">Albums</a></li>
-            {{endif ~isCLS}}
-            {{ifnot ~isADMIN}}
             <li><a href="index.php?page=Store_Store" class="bg-gray-500 hover:bg-purple-700 p-2 font-bold rounded-full">Store</a></li>
             <li><a href="index.php?page=Store_ShoppingCart" class="bg-gray-500 hover:bg-purple-700 p-2 font-bold rounded-full">Cart</a></li>
             <li><a href="index.php?page=Purchases_Purchase" class="bg-gray-500 hover:bg-purple-700 p-2 font-bold rounded-full">Purchases</a></li>
-            {{endifnot ~isADMIN}}
+            {{endif ~isCLS}}
+            {{if ~isCLN}}
+            <li><a href="index.php?page=Store_Store" class="bg-gray-500 hover:bg-purple-700 p-2 font-bold rounded-full">Store</a></li>
+            <li><a href="index.php?page=Store_ShoppingCart" class="bg-gray-500 hover:bg-purple-700 p-2 font-bold rounded-full">Cart</a></li>
+            <li><a href="index.php?page=Purchases_Purchase" class="bg-gray-500 hover:bg-purple-700 p-2 font-bold rounded-full">Purchases</a></li>
+            {{endif ~isCLN}}
             {{if ~isADMIN}}
+            <li><a href="index.php?page=Admin_Dashboard" class="bg-gray-500 hover:bg-purple-700 p-2 font-bold rounded-full">Dashboard</a></li>
+            <li><a href="index.php?page=Escupitajo_GenerarCrud" class="bg-gray-500 hover:bg-purple-700 p-2 font-bold rounded-full">Create Controllers</a></li>
+           
             {{endif ~isADMIN}}
             {{if ~isAUDIT}}
+            <li><a href="index.php?page=Audit_Audit" class="bg-gray-500 hover:bg-purple-700 p-2 font-bold rounded-full">Audit</a></li>
             {{endif ~isAUDIT}}
         </ul>
         
@@ -89,7 +96,7 @@
       </header>
       
       <div class="container align-center justify-center">
-        <div class="mt-16 mx-auto mb-16 text-white">
+        <div class="mt-16 mx-auto pb-16 text-white">
           {{{page_content}}}
         </div>
       </div>

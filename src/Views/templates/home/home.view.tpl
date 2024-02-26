@@ -16,14 +16,21 @@
             </div>
         </div>
     </section>
-    
+    <div x-data="{ pulse: true }">
+        <a :href="pulse ? 'index.php?page=Store_ShoppingCart' : 'index.php?page=Store_Store'" x-on:mouseover="pulse = false" x-on:mouseleave="pulse = true" :class="{ 'animate-pulse': pulse }" class="relative inline-block bottom-4 left-4 bg-white p-2 rounded-full shadow-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.293 5.293l-1.482-1.482A1 1 0 0 0 13.5 4H6.5a1 1 0 0 0-.809.418L4.207 5.293a1 1 0 0 0 0 1.414l.082.082 2 2a1 1 0 0 0 1.32.083l.094-.083L9.5 7.414V14a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2V7.414l.295.295a1 1 0 0 0 1.32.083l.094-.083 2-2a1 1 0 0 0 0-1.414zM7 16a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm6-2a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+            </svg>
+            <span class="absolute bottom-0 left-0 w-full h-1 bg-blue-500 rounded-b-full"></span>
+        </a>
+    </div>
     
     {{endif ~isCLN}}
 </section>
 
 <section class="container">
     
-    {{ifnot ~isCLN}}
+    {{if ~isCLS}}
     <div>
       
         <div class="container mx-auto flex flex-wrap justify-evenly items-center align-center pb-4">
@@ -109,18 +116,35 @@
           </div>          
           {{endfor albums}}      
     </div>
-    {{endifnot ~isCLN}}
+    {{endif ~isCLS}}
 </section>
-
-<div x-data="{ pulse: true }">
-    <a :href="pulse ? 'index.php?page=Store_ShoppingCart' : 'index.php?page=Store_Store'" x-on:mouseover="pulse = false" x-on:mouseleave="pulse = true" :class="{ 'animate-pulse': pulse }" class="relative inline-block bottom-4 left-4 bg-white p-2 rounded-full shadow-lg">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M16.293 5.293l-1.482-1.482A1 1 0 0 0 13.5 4H6.5a1 1 0 0 0-.809.418L4.207 5.293a1 1 0 0 0 0 1.414l.082.082 2 2a1 1 0 0 0 1.32.083l.094-.083L9.5 7.414V14a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2V7.414l.295.295a1 1 0 0 0 1.32.083l.094-.083 2-2a1 1 0 0 0 0-1.414zM7 16a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm6-2a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-        </svg>
-        <span class="absolute bottom-0 left-0 w-full h-1 bg-blue-500 rounded-b-full"></span>
-    </a>
+{{if ~isADMIN}}
+<div x-data="{ isAdmin: true }" x-show="isAdmin" class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
+    <strong class="font-bold p-4">Welcome back Manager!</strong>
+    <span class="block sm:inline">You've been granted with unique settings</span>
+    <span class="absolute top-0 bottom-0 mx-auto px-4 py-3 bg-green-100">
+        <svg x-on:click="isAdmin = false" class="fill-current h-6 w-6 text-green-500" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849c-.469.469-1.229.469-1.697 0L10 11.819l-2.651 3.029c-.469.469-1.229.469-1.697 0-.469-.469-.469-1.229 0-1.697L8.303 10 5.652 6.971c-.469-.469-.469-1.229 0-1.697.469-.469 1.229-.469 1.697 0L10 8.181l2.651-3.029c.469-.469 1.229-.469 1.697 0 .469.469.469 1.229 0 1.697L11.697 10l2.651 3.029c.469.469.469 1.229 0 1.697z"/></svg>
+    </span>
 </div>
+<div class="w-64 my-6 mx-auto">
+    <img src="public/imgs/logo/logoSkuul.png" alt="Imagen" class="bg-white my-auto w-full h-auto rounded-full shadow-md transform hover:scale-105 transition duration-300">
+  </div>
+  
+{{endif ~isADMIN}}
+{{if ~isAUDIT}}
+<div x-data="{ isAdmin: true }" x-show="isAdmin" class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
+    <strong class="font-bold p-4">Welcome back Auditor!</strong>
+    <span class="block sm:inline">We look forward to make easier your auditory with this dashboard</span>
+    <span class="absolute top-0 bottom-0 mx-auto px-4 py-3 bg-green-100">
+        <svg x-on:click="isAdmin = false" class="fill-current h-6 w-6 text-green-500" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849c-.469.469-1.229.469-1.697 0L10 11.819l-2.651 3.029c-.469.469-1.229.469-1.697 0-.469-.469-.469-1.229 0-1.697L8.303 10 5.652 6.971c-.469-.469-.469-1.229 0-1.697.469-.469 1.229-.469 1.697 0L10 8.181l2.651-3.029c.469-.469 1.229-.469 1.697 0 .469.469.469 1.229 0 1.697L11.697 10l2.651 3.029c.469.469.469 1.229 0 1.697z"/></svg>
+    </span>
+</div>
+<div class="w-64 my-6 mx-auto">
+    <img src="public/imgs/logo/logoSkuul.png" alt="Imagen" class="bg-white my-auto w-full h-auto rounded-full shadow-md transform hover:scale-105 transition duration-300">
+  </div>
+  
 
+{{endif ~isAUDIT}}
 <style>
     .text-animation {
         color: #ffffff;
