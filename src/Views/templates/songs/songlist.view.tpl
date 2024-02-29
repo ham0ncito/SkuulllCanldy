@@ -1,13 +1,13 @@
 <div class="flex items-center justify-between mb-4 mx-4">
     <div class="relative w-full flex items-center">
-        <input type="text" id="searchbar" name="searchbar" placeholder="Name or ID" class="w-2/3 px-4 py-2 pl-10 pr-8 border border-gray-300 rounded-md mx-4">
+        <input type="text" id="searchbar" name="searchbar" placeholder="Name or ID" class="w-5/6 px-4 py-2 pl-10 pr-8 border border-gray-300 rounded-md ml-3" >
         <div class="absolute inset-y-0 left-0 flex items-center pl-3 ml-4">
             <svg class="h-6 w-5 text-gray-400 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-5.2-5.2m2.8 5.2a9 9 0 11-12.727-12.727 9 9 0 1112.727 12.727z" />
             </svg>
         </div>
         <div class="absolute inset-y-0 right-0 flex items-center pr-3">
-            <button id="searchbutton" name="searchbutton" class="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700 mr-2">
+            <button id="searchbutton" name="searchbutton" class="w-full px-8 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700 mr-6 ml-4">
                 Search
             </button>
             {{if ~isADMIN}}
@@ -27,18 +27,12 @@
             <h3 class="text-3xl text-pink-500 font-semibold">{{name_artist}}</h3>
             <h3 class="text-2xl text-blue-500 font-semibold ">{{title_album}}</h3>
             <h3 class="text-xl font-bold text-center text-white">{{title_song}}</h3>
-             <h3 class="text-xl font-bold text-center text-white">{{title_song}}</h3>
         </div>
         <div class="flex flex-col mx-auto justify-around">
             <p class="text-gray-300 mb-2 py-4">Duration: {{duration}}</p>
-            <audio id="playerId" class="mr-4 w-40 justify-center" controls 
-            data-artist="{{name_artist}}"
-            data-title="{{title_song}}"
-            data-cover="{{song_cover}}"
-            data-duration="{{duration}}">
-            
+            <audio id="playerId" class="mr-4 w-40 justify-center" controls data-artist="{{name_artist}}" data-title="{{title_song}}" data-cover="{{song_cover}}" data-duration="{{duration}}">
                 <source src="{{link_song}}" type="audio/mpeg">
-            </audio>
+              </audio>
               
             <div class="mx-auto my-4">
                 <a href="index.php?page=Songs_Songs&mode=DSP&id_song={{id_song}}" class="text-blue-500 hover:text-blue-700 mr-2">Details</a>
@@ -51,22 +45,11 @@
     </div>
     {{endfor song}}
 </section>
-
-
-<script defer>
-    function playPauseAudio(playerId) {
-        var audio = document.getElementById(playerId);
-
-        if (audio.paused) {
-            audio.play(); 
-            console.log("Pause Button");
-        } else {
-            audio.pause();
-        }
-    }
-    const songElements = document.querySelectorAll('audio');
-    for (let i = 0; i < songElements.length;i++){
-        songElements[i].id = `playerId${i}`;
+    
+<script>
+    MelodyElements = document.querySelectorAll('audio');
+    for (let i = 0; i < MelodyElements.length;i++){
+        MelodyElements[i].id = `playerId${i}`;
     }
 </script>{{endifnot isEmpty}}{{if isEmpty}}
 {{include components/tarjeta}}{{endif isEmpty}}
